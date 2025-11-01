@@ -1,0 +1,31 @@
+{
+  "name": "clash-of-code",
+  "version": "1.0.0",
+  "description": "platform to play dsa with friends",
+  "keywords": [
+    "dsa",
+    "friendly",
+    "battle"
+  ],
+  "homepage": "https://github.com/007Gowtham/clash-of-code#readme",
+  "bugs": {
+    "url": "https://github.com/007Gowtham/clash-of-code/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/007Gowtham/clash-of-code.git"
+  },
+  "license": "ISC",
+  "author": "Gowtham",
+  "type": "module",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node src/index.js"
+  },
+  "dependencies": {
+    "express": "^5.1.0",
+    "morgan": "^1.10.1",
+    "winston": "^3.18.3"
+  }
+}
