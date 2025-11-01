@@ -24,8 +24,13 @@
     "start": "node src/index.js"
   },
   "dependencies": {
+    "@prisma/client": "^6.18.0",
+    "dotenv": "^17.2.3",
     "express": "^5.1.0",
     "morgan": "^1.10.1",
     "winston": "^3.18.3"
+  },
+  "devDependencies": {
+    "prisma": "^6.18.0"
   }
 }
