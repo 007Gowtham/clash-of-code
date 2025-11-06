@@ -1,4 +1,3 @@
-
 generator client {
   provider = "prisma-client-js"
 }
@@ -8,4 +7,35 @@ datasource db {
   url       = env("DATABASE_URL")
   directUrl = env("DIRECT_URL")
 }
-        
+
+model User {
+  id                        Int        @id @default(autoincrement())
+  email                     String     @unique
+  name                      String?
+  avatar                    String?
+  password                  String?
+  loginType                 LoginType  @default(EMAIL_PASSWORD)
+  role                      Role       @default(USER)
+  isEmailVerified           Boolean    @default(false)
+  refreshToken              String?
+  forgetPasswordToken       String?
+  forgetPasswordExpiry      DateTime?
+  emailVerificationToken    String?
+  emailVerificationExpiry   DateTime?
+
+  createdAt                 DateTime   @default(now())
+  updatedAt                 DateTime   @updatedAt
+}
+
+enum Role {
+  USER
+  ADMIN_ROOM
+  TEAM_LEADER
+  TEAM_MEMBER
+}
+
+enum LoginType {
+  GOOGLE
+  GITHUB
+  EMAIL_PASSWORD
+}
