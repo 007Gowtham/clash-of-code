@@ -1,4 +1,14 @@
 node_modules
 
 /generated/prisma
-.env  -+
+
+# Environment Variables
+.env
+.env.local
+.env.*.local
+.env.development
+.env.test
+.env.production
+
+# Keep example file
+!.env.example  
