@@ -4,18 +4,18 @@ import {
     generateRefreshToken,
     isPasswordCorrect,
     generateTemporaryToken
-} from "../../models/apps/auth/user.model.js";
+} from "../../../models/apps/auth/user.model.js";
 import {
     sendEmail,
     emailVerification,
     forgotPassword  
-} from "../../utils/mail.js";
-import { asyncHandler } from "../../utils/asyncHandler.js";
-import { ApiError } from "../../utils/ApiError.js";
-import { ApiResponse } from "../../utils/ApiResponse.js";
-import { prisma } from "../../db/index.js";
-import { LoginTypesEnum } from "../../constants.js";
-import logger from "../../logger/winston.logger.js";
+} from "../../../utils/mail.js";
+import { asyncHandler } from "../../../utils/asyncHandler.js";
+import { ApiError } from "../../../utils/ApiError.js";
+import { ApiResponse } from "../../../utils/ApiResponse.js";
+import { prisma } from "../../../db/index.js";
+import { LoginTypesEnum } from "../../../constants.js";
+import logger from "../../../logger/winston.logger.js";
 import jwt from 'jsonwebtoken';
 import bcrypt from 'bcryptjs';
 import crypto from 'crypto';

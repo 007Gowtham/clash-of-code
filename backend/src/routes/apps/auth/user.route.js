@@ -1,7 +1,7 @@
 import { 
     userRegisterValidator,
     userloginValidator
-} from "../../../validators/apps/user.validator.js";
+} from "../../../validators/apps/auth/user.validator.js";
 
 import { 
     UserRegisterController,
