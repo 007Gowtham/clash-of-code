@@ -3,3 +3,1312 @@
 [01 Nov, 2025 - 12:10:21:1021] [34minfo[39m: [34m🚀 Server is running on http://localhost:3000[39m
 [01 Nov, 2025 - 12:11:01:111] [34minfo[39m: [34m🚀 Server is running on http://localhost:3000[39m
 [01 Nov, 2025 - 12:11:14:1114] [34minfo[39m: [34mHome route accessed[39m
+[01 Nov, 2025 - 17:49:05:495] [34minfo[39m: [34m🚀 Server is running on http://localhost:3000[39m
+[03 Nov, 2025 - 20:12:02:122] [34minfo[39m: [34m🚀 Server is running on http://localhost:3000[39m
+[03 Nov, 2025 - 21:54:16:5416] [34minfo[39m: [34m🚀 Server is running on http://localhost:3000[39m
+[03 Nov, 2025 - 21:55:22:5522] [34minfo[39m: [34mHome route accessed[39m
+[03 Nov, 2025 - 22:16:48:1648] [34minfo[39m: [34m🚀 Server is running on http://localhost:3000[39m
+[03 Nov, 2025 - 22:23:32:2332] [34minfo[39m: [34m🚀 Server is running on http://localhost:3000[39m
+[03 Nov, 2025 - 22:24:36:2436] [34minfo[39m: [34m🚀 Server is running on http://localhost:3000[39m
+[03 Nov, 2025 - 22:27:48:2748] [34minfo[39m: [34m🚀 Server is running on http://localhost:3000[39m
+[03 Nov, 2025 - 22:28:12:2812] [31merror[39m: [31mExpected double-quoted property name in JSON at position 96 (line 6 column 1)[39m
+[03 Nov, 2025 - 22:31:05:315] [34minfo[39m: [34m🚀 Server is running on http://localhost:3000[39m
+[03 Nov, 2025 - 22:31:07:317] [31merror[39m: [31mValidation Error[39m
+[03 Nov, 2025 - 22:31:16:3116] [31merror[39m: [31mEmail already in use[39m
+[03 Nov, 2025 - 22:57:21:5721] [34minfo[39m: [34m🚀 Server is running on http://localhost:3000[39m
+[03 Nov, 2025 - 22:57:41:5741] [31merror[39m: [31mCannot read properties of undefined (reading 'password')[39m
+[03 Nov, 2025 - 23:00:03:03] [34minfo[39m: [34m🚀 Server is running on http://localhost:3000[39m
+[03 Nov, 2025 - 23:02:43:243] [34minfo[39m: [34m🚀 Server is running on http://localhost:3000[39m
+[03 Nov, 2025 - 23:02:46:246] [31merror[39m: [31mCannot read properties of undefined (reading 'accessToken')[39m
+[03 Nov, 2025 - 23:02:54:254] [31merror[39m: [31mCannot read properties of undefined (reading 'accessToken')[39m
+[03 Nov, 2025 - 23:03:04:34] [31merror[39m: [31mCannot read properties of undefined (reading 'accessToken')[39m
+[03 Nov, 2025 - 23:03:08:38] [31merror[39m: [31mCannot read properties of undefined (reading 'accessToken')[39m
+[03 Nov, 2025 - 23:03:51:351] [31merror[39m: [31mCannot read properties of undefined (reading 'accessToken')[39m
+[03 Nov, 2025 - 23:03:56:356] [31merror[39m: [31mCannot read properties of undefined (reading 'accessToken')[39m
+[03 Nov, 2025 - 23:04:21:421] [31merror[39m: [31mCannot read properties of undefined (reading 'accessToken')[39m
+[03 Nov, 2025 - 23:04:28:428] [34minfo[39m: [34m🚀 Server is running on http://localhost:3000[39m
+[03 Nov, 2025 - 23:04:50:450] [34minfo[39m: [34m🚀 Server is running on http://localhost:3000[39m
+[03 Nov, 2025 - 23:43:14:4314] [34minfo[39m: [34m🚀 Server is running on http://localhost:3000[39m
+[03 Nov, 2025 - 23:46:36:4636] [34minfo[39m: [34m🚀 Server is running on http://localhost:3000[39m
+[03 Nov, 2025 - 23:46:37:4637] [31merror[39m: [31mCannot read properties of undefined (reading 'authToken')[39m
+[03 Nov, 2025 - 23:46:57:4657] [31merror[39m: [31mCannot read properties of undefined (reading 'authToken')[39m
+[03 Nov, 2025 - 23:47:02:472] [34minfo[39m: [34m🚀 Server is running on http://localhost:3000[39m
+[03 Nov, 2025 - 23:47:03:473] [31merror[39m: [31mCannot read properties of undefined (reading 'accessToken')[39m
+[03 Nov, 2025 - 23:47:13:4713] [31merror[39m: [31mCannot read properties of undefined (reading 'accessToken')[39m
+[03 Nov, 2025 - 23:47:27:4727] [34minfo[39m: [34m🚀 Server is running on http://localhost:3000[39m
+[03 Nov, 2025 - 23:47:28:4728] [34minfo[39m: [34mVerifying token: undefined[39m
+[03 Nov, 2025 - 23:47:28:4728] [31merror[39m: [31mNo token provided[39m
+[03 Nov, 2025 - 23:47:43:4743] [34minfo[39m: [34mVerifying token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MiwiaWF0IjoxNzYyMTkzNjYyLCJleHAiOjE3NjI3OTg0NjJ9.-ELW8SYZN8xL6i2zBW-jFlofG9_eQUcHeXjGtkIzeqs[39m
+[03 Nov, 2025 - 23:47:43:4743] [31merror[39m: [31muser is not defined[39m
+[03 Nov, 2025 - 23:48:22:4822] [34minfo[39m: [34m🚀 Server is running on http://localhost:3000[39m
+[03 Nov, 2025 - 23:48:27:4827] [34minfo[39m: [34mVerifying token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MiwiaWF0IjoxNzYyMTkzNjYyLCJleHAiOjE3NjI3OTg0NjJ9.-ELW8SYZN8xL6i2zBW-jFlofG9_eQUcHeXjGtkIzeqs[39m
+[03 Nov, 2025 - 23:48:27:4827] [31merror[39m: [31muser is not defined[39m
+[03 Nov, 2025 - 23:48:44:4844] [34minfo[39m: [34mVerifying token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MiwiaWF0IjoxNzYyMTkzOTA0LCJleHAiOjE3NjI3OTg3MDR9.bMyj6shob4mxj2YupmjI5RLFFmkdUPhTNfpt3_31ano[39m
+[03 Nov, 2025 - 23:48:44:4844] [31merror[39m: [31muser is not defined[39m
+[03 Nov, 2025 - 23:49:33:4933] [34minfo[39m: [34m🚀 Server is running on http://localhost:3000[39m
+[03 Nov, 2025 - 23:49:38:4938] [34minfo[39m: [34mVerifying token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MiwiaWF0IjoxNzYyMTkzOTA0LCJleHAiOjE3NjI3OTg3MDR9.bMyj6shob4mxj2YupmjI5RLFFmkdUPhTNfpt3_31ano[39m
+[03 Nov, 2025 - 23:49:38:4938] [34minfo[39m: [34mDecoded token: 2[39m
+[03 Nov, 2025 - 23:49:39:4939] [31merror[39m: [31muser is not defined[39m
+[03 Nov, 2025 - 23:50:52:5052] [34minfo[39m: [34m🚀 Server is running on http://localhost:3000[39m
+[03 Nov, 2025 - 23:50:56:5056] [34minfo[39m: [34mVerifying token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MiwiaWF0IjoxNzYyMTkzOTA0LCJleHAiOjE3NjI3OTg3MDR9.bMyj6shob4mxj2YupmjI5RLFFmkdUPhTNfpt3_31ano[39m
+[03 Nov, 2025 - 23:50:56:5056] [34minfo[39m: [34mDecoded token: 2[39m
+[03 Nov, 2025 - 23:50:56:5056] [34minfo[39m: [34mUser fetched from DB: {"id":2,"email":"aswbnn@example.com","name":"aswin_teamlead","avatar":null,"password":"$2b$10$MVQbTX8gVHLHaMQTsxie0.md2u4GX1x4j3lGZTtk2AJS8dzJCiANm","loginType":"EMAIL_PASSWORD","role":"USER","isEmailVerified":false,"refreshToken":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MiwiaWF0IjoxNzYyMTk0MDUzLCJleHAiOjE3NjIxOTQ5NTN9.ds109xyWNmNd_c6KOHa9vvC7JSR0UEUlWs-klN-Tc1w","forgetPasswordToken":null,"forgetPasswordExpiry":null,"emailVerificationToken":null,"emailVerificationExpiry":null,"createdAt":"2025-11-03T16:58:43.924Z","updatedAt":"2025-11-03T18:20:53.689Z"}[39m
+[03 Nov, 2025 - 23:50:56:5056] [31merror[39m: [31muser is not defined[39m
+[03 Nov, 2025 - 23:54:04:544] [34minfo[39m: [34m🚀 Server is running on http://localhost:3000[39m
+[03 Nov, 2025 - 23:54:07:547] [34minfo[39m: [34mVerifying token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MiwiaWF0IjoxNzYyMTkzOTA0LCJleHAiOjE3NjI3OTg3MDR9.bMyj6shob4mxj2YupmjI5RLFFmkdUPhTNfpt3_31ano[39m
+[03 Nov, 2025 - 23:54:07:547] [34minfo[39m: [34mDecoded token: 2[39m
+[03 Nov, 2025 - 23:54:07:547] [34minfo[39m: [34mUser fetched from DB: {"id":2,"email":"aswbnn@example.com","name":"aswin_teamlead","avatar":null,"password":"$2b$10$MVQbTX8gVHLHaMQTsxie0.md2u4GX1x4j3lGZTtk2AJS8dzJCiANm","loginType":"EMAIL_PASSWORD","role":"USER","isEmailVerified":false,"refreshToken":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MiwiaWF0IjoxNzYyMTk0MDUzLCJleHAiOjE3NjIxOTQ5NTN9.ds109xyWNmNd_c6KOHa9vvC7JSR0UEUlWs-klN-Tc1w","forgetPasswordToken":null,"forgetPasswordExpiry":null,"emailVerificationToken":null,"emailVerificationExpiry":null,"createdAt":"2025-11-03T16:58:43.924Z","updatedAt":"2025-11-03T18:20:53.689Z"}[39m
+[03 Nov, 2025 - 23:54:30:5430] [34minfo[39m: [34mVerifying token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MiwiaWF0IjoxNzYyMTk0MDUzLCJleHAiOjE3NjI3OTg4NTN9.B88xyf7WG2QZluJYbv_ptf5NRKOz-3asoVJ9O4VvvHI[39m
+[03 Nov, 2025 - 23:54:30:5430] [34minfo[39m: [34mDecoded token: 2[39m
+[03 Nov, 2025 - 23:54:30:5430] [34minfo[39m: [34mUser fetched from DB: {"id":2,"email":"aswbnn@example.com","name":"aswin_teamlead","avatar":null,"password":"$2b$10$MVQbTX8gVHLHaMQTsxie0.md2u4GX1x4j3lGZTtk2AJS8dzJCiANm","loginType":"EMAIL_PASSWORD","role":"USER","isEmailVerified":false,"refreshToken":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MiwiaWF0IjoxNzYyMTk0MDUzLCJleHAiOjE3NjIxOTQ5NTN9.ds109xyWNmNd_c6KOHa9vvC7JSR0UEUlWs-klN-Tc1w","forgetPasswordToken":null,"forgetPasswordExpiry":null,"emailVerificationToken":null,"emailVerificationExpiry":null,"createdAt":"2025-11-03T16:58:43.924Z","updatedAt":"2025-11-03T18:20:53.689Z"}[39m
+[03 Nov, 2025 - 23:55:16:5516] [34minfo[39m: [34m🚀 Server is running on http://localhost:3000[39m
+[03 Nov, 2025 - 23:55:17:5517] [34minfo[39m: [34mVerifying token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MiwiaWF0IjoxNzYyMTk0MDUzLCJleHAiOjE3NjI3OTg4NTN9.B88xyf7WG2QZluJYbv_ptf5NRKOz-3asoVJ9O4VvvHI[39m
+[03 Nov, 2025 - 23:55:17:5517] [34minfo[39m: [34mDecoded token: 2[39m
+[03 Nov, 2025 - 23:55:17:5517] [34minfo[39m: [34mUser fetched from DB: {"id":2,"email":"aswbnn@example.com","name":"aswin_teamlead","avatar":null,"password":"$2b$10$MVQbTX8gVHLHaMQTsxie0.md2u4GX1x4j3lGZTtk2AJS8dzJCiANm","loginType":"EMAIL_PASSWORD","role":"USER","isEmailVerified":false,"refreshToken":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MiwiaWF0IjoxNzYyMTk0MDUzLCJleHAiOjE3NjIxOTQ5NTN9.ds109xyWNmNd_c6KOHa9vvC7JSR0UEUlWs-klN-Tc1w","forgetPasswordToken":null,"forgetPasswordExpiry":null,"emailVerificationToken":null,"emailVerificationExpiry":null,"createdAt":"2025-11-03T16:58:43.924Z","updatedAt":"2025-11-03T18:20:53.689Z"}[39m
+[03 Nov, 2025 - 23:55:33:5533] [34minfo[39m: [34mVerifying token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MiwiaWF0IjoxNzYyMTk0MDUzLCJleHAiOjE3NjI3OTg4NTN9.B88xyf7WG2QZluJYbv_ptf5NRKOz-3asoVJ9O4VvvHI[39m
+[03 Nov, 2025 - 23:55:33:5533] [34minfo[39m: [34mDecoded token: 2[39m
+[03 Nov, 2025 - 23:55:34:5534] [34minfo[39m: [34mUser fetched from DB: {"id":2,"email":"aswbnn@example.com","name":"aswin_teamlead","avatar":null,"password":"$2b$10$MVQbTX8gVHLHaMQTsxie0.md2u4GX1x4j3lGZTtk2AJS8dzJCiANm","loginType":"EMAIL_PASSWORD","role":"USER","isEmailVerified":false,"refreshToken":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MiwiaWF0IjoxNzYyMTk0MzMwLCJleHAiOjE3NjIxOTUyMzB9.xmYcsFcm-tG9o9SeVd6vF8-JQYA-1kbqZzh82wxdhOU","forgetPasswordToken":null,"forgetPasswordExpiry":null,"emailVerificationToken":null,"emailVerificationExpiry":null,"createdAt":"2025-11-03T16:58:43.924Z","updatedAt":"2025-11-03T18:25:30.087Z"}[39m
+[03 Nov, 2025 - 23:59:18:5918] [31merror[39m: [31mValidation Error[39m
+[03 Nov, 2025 - 23:59:33:5933] [31merror[39m: [31mEmail already in use[39m
+[03 Nov, 2025 - 23:59:54:5954] [31merror[39m: [31mExpected double-quoted property name in JSON at position 67 (line 6 column 1)[39m
+[04 Nov, 2025 - 00:00:16:016] [34minfo[39m: [34mVerifying token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MywiaWF0IjoxNzYyMTk0NjAxLCJleHAiOjE3NjI3OTk0MDF9.nNz5slOuacvl2gf2lziiMRPTc7YLPSWBY1kddtl9WEI[39m
+[04 Nov, 2025 - 00:00:16:016] [34minfo[39m: [34mDecoded token: 3[39m
+[04 Nov, 2025 - 00:00:17:017] [34minfo[39m: [34mUser fetched from DB: {"id":3,"email":"aswbvnn@example.com","name":"aswin_teamlead","avatar":null,"password":"$2b$10$tv73izHn32UME/nZV0fP5u3HFeya3VzeUY0mhZsAKZiPSccr10EK.","loginType":"EMAIL_PASSWORD","role":"USER","isEmailVerified":false,"refreshToken":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MywiaWF0IjoxNzYyMTk0NjAxLCJleHAiOjE3NjIxOTU1MDF9.HegADTWjbJKcKgifgFAi2dP5AekA7GoSmCv5SVlLoaw","forgetPasswordToken":null,"forgetPasswordExpiry":null,"emailVerificationToken":null,"emailVerificationExpiry":null,"createdAt":"2025-11-03T18:29:39.191Z","updatedAt":"2025-11-03T18:30:01.555Z"}[39m
+[04 Nov, 2025 - 00:02:22:222] [34minfo[39m: [34mVerifying token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MywiaWF0IjoxNzYyMTk0NjAxLCJleHAiOjE3NjI3OTk0MDF9.nNz5slOuacvl2gf2lziiMRPTc7YLPSWBY1kddtl9WEI[39m
+[04 Nov, 2025 - 00:02:22:222] [34minfo[39m: [34mDecoded token: 3[39m
+[04 Nov, 2025 - 00:02:23:223] [34minfo[39m: [34mUser fetched from DB: {"id":3,"email":"aswbvnn@example.com","name":"aswin_teamlead","avatar":null,"password":"$2b$10$tv73izHn32UME/nZV0fP5u3HFeya3VzeUY0mhZsAKZiPSccr10EK.","loginType":"EMAIL_PASSWORD","role":"USER","isEmailVerified":false,"refreshToken":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MywiaWF0IjoxNzYyMTk0NjAxLCJleHAiOjE3NjIxOTU1MDF9.HegADTWjbJKcKgifgFAi2dP5AekA7GoSmCv5SVlLoaw","forgetPasswordToken":null,"forgetPasswordExpiry":null,"emailVerificationToken":null,"emailVerificationExpiry":null,"createdAt":"2025-11-03T18:29:39.191Z","updatedAt":"2025-11-03T18:30:01.555Z"}[39m
+[04 Nov, 2025 - 00:02:32:232] [34minfo[39m: [34mVerifying token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MywiaWF0IjoxNzYyMTk0NjAxLCJleHAiOjE3NjI3OTk0MDF9.nNz5slOuacvl2gf2lziiMRPTc7YLPSWBY1kddtl9WEI[39m
+[04 Nov, 2025 - 00:02:32:232] [34minfo[39m: [34mDecoded token: 3[39m
+[04 Nov, 2025 - 00:02:32:232] [34minfo[39m: [34mUser fetched from DB: {"id":3,"email":"aswbvnn@example.com","name":"aswin_teamlead","avatar":null,"password":"$2b$10$tv73izHn32UME/nZV0fP5u3HFeya3VzeUY0mhZsAKZiPSccr10EK.","loginType":"EMAIL_PASSWORD","role":"USER","isEmailVerified":false,"refreshToken":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MywiaWF0IjoxNzYyMTk0NjAxLCJleHAiOjE3NjIxOTU1MDF9.HegADTWjbJKcKgifgFAi2dP5AekA7GoSmCv5SVlLoaw","forgetPasswordToken":null,"forgetPasswordExpiry":null,"emailVerificationToken":null,"emailVerificationExpiry":null,"createdAt":"2025-11-03T18:29:39.191Z","updatedAt":"2025-11-03T18:30:01.555Z"}[39m
+[04 Nov, 2025 - 00:03:40:340] [31merror[39m: [31mExpected ',' or '}' after property value in JSON at position 62 (line 3 column 26)[39m
+[04 Nov, 2025 - 00:04:04:44] [34minfo[39m: [34mVerifying token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NCwiaWF0IjoxNzYyMTk0ODMxLCJleHAiOjE3NjI3OTk2MzF9.cokD8HolTEdNybTseSKGV_9jbTZgNYGx1seHVU7FAI0[39m
+[04 Nov, 2025 - 00:04:04:44] [34minfo[39m: [34mDecoded token: 4[39m
+[04 Nov, 2025 - 00:04:04:44] [34minfo[39m: [34mUser fetched from DB: {"id":4,"email":"aswbvrnn@example.com","name":"aswin_teamlead","avatar":null,"password":"$2b$10$feyjUyZRLNiBoDCT0UqF2uETQ4ts69kBG9LcnfV7/ljtlrAuqHipi","loginType":"EMAIL_PASSWORD","role":"USER","isEmailVerified":false,"refreshToken":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NCwiaWF0IjoxNzYyMTk0ODMxLCJleHAiOjE3NjIxOTU3MzF9.Q6zVLfJiUAGKNcUtwu-v5-p52wrYX1qDilgUN8fEkCc","forgetPasswordToken":null,"forgetPasswordExpiry":null,"emailVerificationToken":null,"emailVerificationExpiry":null,"createdAt":"2025-11-03T18:33:25.822Z","updatedAt":"2025-11-03T18:33:51.743Z"}[39m
+[04 Nov, 2025 - 00:05:31:531] [34minfo[39m: [34mVerifying token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NCwiaWF0IjoxNzYyMTk0ODMxLCJleHAiOjE3NjI3OTk2MzF9.cokD8HolTEdNybTseSKGV_9jbTZgNYGx1seHVU7FAI0[39m
+[04 Nov, 2025 - 00:05:31:531] [34minfo[39m: [34mDecoded token: 4[39m
+[04 Nov, 2025 - 00:05:32:532] [34minfo[39m: [34mUser fetched from DB: {"id":4,"email":"aswbvrnn@example.com","name":"aswin_teamlead","avatar":null,"password":"$2b$10$feyjUyZRLNiBoDCT0UqF2uETQ4ts69kBG9LcnfV7/ljtlrAuqHipi","loginType":"EMAIL_PASSWORD","role":"USER","isEmailVerified":false,"refreshToken":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NCwiaWF0IjoxNzYyMTk0ODMxLCJleHAiOjE3NjIxOTU3MzF9.Q6zVLfJiUAGKNcUtwu-v5-p52wrYX1qDilgUN8fEkCc","forgetPasswordToken":null,"forgetPasswordExpiry":null,"emailVerificationToken":null,"emailVerificationExpiry":null,"createdAt":"2025-11-03T18:33:25.822Z","updatedAt":"2025-11-03T18:33:51.743Z"}[39m
+[04 Nov, 2025 - 00:06:19:619] [34minfo[39m: [34mVerifying token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NCwiaWF0IjoxNzYyMTk0ODMxLCJleHAiOjE3NjI3OTk2MzF9.cokD8HolTEdNybTseSKGV_9jbTZgNYGx1seHVU7FAI0[39m
+[04 Nov, 2025 - 00:06:19:619] [34minfo[39m: [34mDecoded token: 4[39m
+[04 Nov, 2025 - 00:06:19:619] [34minfo[39m: [34mUser fetched from DB: {"id":4,"email":"aswbvrnn@example.com","name":"aswin_teamlead","avatar":null,"password":"$2b$10$feyjUyZRLNiBoDCT0UqF2uETQ4ts69kBG9LcnfV7/ljtlrAuqHipi","loginType":"EMAIL_PASSWORD","role":"USER","isEmailVerified":false,"refreshToken":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NCwiaWF0IjoxNzYyMTk0ODMxLCJleHAiOjE3NjIxOTU3MzF9.Q6zVLfJiUAGKNcUtwu-v5-p52wrYX1qDilgUN8fEkCc","forgetPasswordToken":null,"forgetPasswordExpiry":null,"emailVerificationToken":null,"emailVerificationExpiry":null,"createdAt":"2025-11-03T18:33:25.822Z","updatedAt":"2025-11-03T18:33:51.743Z"}[39m
+[04 Nov, 2025 - 00:06:23:623] [34minfo[39m: [34mVerifying token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NCwiaWF0IjoxNzYyMTk0ODMxLCJleHAiOjE3NjI3OTk2MzF9.cokD8HolTEdNybTseSKGV_9jbTZgNYGx1seHVU7FAI0[39m
+[04 Nov, 2025 - 00:06:23:623] [34minfo[39m: [34mDecoded token: 4[39m
+[04 Nov, 2025 - 00:06:23:623] [34minfo[39m: [34mUser fetched from DB: {"id":4,"email":"aswbvrnn@example.com","name":"aswin_teamlead","avatar":null,"password":"$2b$10$feyjUyZRLNiBoDCT0UqF2uETQ4ts69kBG9LcnfV7/ljtlrAuqHipi","loginType":"EMAIL_PASSWORD","role":"USER","isEmailVerified":false,"refreshToken":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NCwiaWF0IjoxNzYyMTk0ODMxLCJleHAiOjE3NjIxOTU3MzF9.Q6zVLfJiUAGKNcUtwu-v5-p52wrYX1qDilgUN8fEkCc","forgetPasswordToken":null,"forgetPasswordExpiry":null,"emailVerificationToken":null,"emailVerificationExpiry":null,"createdAt":"2025-11-03T18:33:25.822Z","updatedAt":"2025-11-03T18:33:51.743Z"}[39m
+[04 Nov, 2025 - 00:08:53:853] [34minfo[39m: [34mVerifying token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NCwiaWF0IjoxNzYyMTk0ODMxLCJleHAiOjE3NjI3OTk2MzF9.cokD8HolTEdNybTseSKGV_9jbTZgNYGx1seHVU7FAI0[39m
+[04 Nov, 2025 - 00:08:53:853] [34minfo[39m: [34mDecoded token: 4[39m
+[04 Nov, 2025 - 00:08:53:853] [34minfo[39m: [34mUser fetched from DB: {"id":4,"email":"aswbvrnn@example.com","name":"aswin_teamlead","avatar":null,"password":"$2b$10$feyjUyZRLNiBoDCT0UqF2uETQ4ts69kBG9LcnfV7/ljtlrAuqHipi","loginType":"EMAIL_PASSWORD","role":"USER","isEmailVerified":false,"refreshToken":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NCwiaWF0IjoxNzYyMTk0ODMxLCJleHAiOjE3NjIxOTU3MzF9.Q6zVLfJiUAGKNcUtwu-v5-p52wrYX1qDilgUN8fEkCc","forgetPasswordToken":null,"forgetPasswordExpiry":null,"emailVerificationToken":null,"emailVerificationExpiry":null,"createdAt":"2025-11-03T18:33:25.822Z","updatedAt":"2025-11-03T18:33:51.743Z"}[39m
+[04 Nov, 2025 - 00:09:55:955] [34minfo[39m: [34mVerifying token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NCwiaWF0IjoxNzYyMTk0ODMxLCJleHAiOjE3NjI3OTk2MzF9.cokD8HolTEdNybTseSKGV_9jbTZgNYGx1seHVU7FAI0[39m
+[04 Nov, 2025 - 00:09:55:955] [34minfo[39m: [34mDecoded token: 4[39m
+[04 Nov, 2025 - 00:09:55:955] [34minfo[39m: [34mUser fetched from DB: {"id":4,"email":"aswbvrnn@example.com","name":"aswin_teamlead","avatar":null,"password":"$2b$10$feyjUyZRLNiBoDCT0UqF2uETQ4ts69kBG9LcnfV7/ljtlrAuqHipi","loginType":"EMAIL_PASSWORD","role":"USER","isEmailVerified":false,"refreshToken":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NCwiaWF0IjoxNzYyMTk0ODMxLCJleHAiOjE3NjIxOTU3MzF9.Q6zVLfJiUAGKNcUtwu-v5-p52wrYX1qDilgUN8fEkCc","forgetPasswordToken":null,"forgetPasswordExpiry":null,"emailVerificationToken":null,"emailVerificationExpiry":null,"createdAt":"2025-11-03T18:33:25.822Z","updatedAt":"2025-11-03T18:33:51.743Z"}[39m
+[04 Nov, 2025 - 00:10:04:104] [34minfo[39m: [34mVerifying token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NCwiaWF0IjoxNzYyMTk0ODMxLCJleHAiOjE3NjI3OTk2MzF9.cokD8HolTEdNybTseSKGV_9jbTZgNYGx1seHVU7FAI0[39m
+[04 Nov, 2025 - 00:10:04:104] [34minfo[39m: [34mDecoded token: 4[39m
+[04 Nov, 2025 - 00:10:04:104] [34minfo[39m: [34mUser fetched from DB: {"id":4,"email":"aswbvrnn@example.com","name":"aswin_teamlead","avatar":null,"password":"$2b$10$feyjUyZRLNiBoDCT0UqF2uETQ4ts69kBG9LcnfV7/ljtlrAuqHipi","loginType":"EMAIL_PASSWORD","role":"USER","isEmailVerified":false,"refreshToken":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NCwiaWF0IjoxNzYyMTk0ODMxLCJleHAiOjE3NjIxOTU3MzF9.Q6zVLfJiUAGKNcUtwu-v5-p52wrYX1qDilgUN8fEkCc","forgetPasswordToken":null,"forgetPasswordExpiry":null,"emailVerificationToken":null,"emailVerificationExpiry":null,"createdAt":"2025-11-03T18:33:25.822Z","updatedAt":"2025-11-03T18:33:51.743Z"}[39m
+[04 Nov, 2025 - 00:10:59:1059] [34minfo[39m: [34m🚀 Server is running on http://localhost:3000[39m
+[04 Nov, 2025 - 00:11:45:1145] [34minfo[39m: [34mVerifying token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NSwiaWF0IjoxNzYyMTk1Mjg0LCJleHAiOjE3NjIxOTUzNDR9.EvEFISroVGN3NKbtQG7r2IE8LwskO4mNkUbHu5uLo14[39m
+[04 Nov, 2025 - 00:11:45:1145] [34minfo[39m: [34mDecoded token: 5[39m
+[04 Nov, 2025 - 00:11:45:1145] [34minfo[39m: [34mUser fetched from DB: {"id":5,"email":"asRFSDFwbvrnn@example.com","name":"aswin_teamlead","avatar":null,"password":"$2b$10$QGNkHIMT8VoPNJomLpxwSOVax9zo4W5K5v3wNqzjIme/5mSx50N2O","loginType":"EMAIL_PASSWORD","role":"USER","isEmailVerified":false,"refreshToken":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NSwiaWF0IjoxNzYyMTk1Mjg0LCJleHAiOjE3NjI4MDAwODR9.tYW0728EnwGTu9OhGGtApujlGEwdpCzCDCfxrXiX0Fs","forgetPasswordToken":null,"forgetPasswordExpiry":null,"emailVerificationToken":null,"emailVerificationExpiry":null,"createdAt":"2025-11-03T18:41:08.733Z","updatedAt":"2025-11-03T18:41:24.233Z"}[39m
+[04 Nov, 2025 - 00:12:37:1237] [34minfo[39m: [34mVerifying token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NSwiaWF0IjoxNzYyMTk1Mjg0LCJleHAiOjE3NjIxOTUzNDR9.EvEFISroVGN3NKbtQG7r2IE8LwskO4mNkUbHu5uLo14[39m
+[04 Nov, 2025 - 00:12:37:1237] [31merror[39m: [31mInvalid token[39m
+[04 Nov, 2025 - 00:12:56:1256] [34minfo[39m: [34mVerifying token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NSwiaWF0IjoxNzYyMTk1Mjg0LCJleHAiOjE3NjIxOTUzNDR9.EvEFISroVGN3NKbtQG7r2IE8LwskO4mNkUbHu5uLo14[39m
+[04 Nov, 2025 - 00:12:56:1256] [31merror[39m: [31mInvalid token[39m
+[04 Nov, 2025 - 00:44:13:4413] [34minfo[39m: [34mVerifying token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NSwiaWF0IjoxNzYyMTk3MjQwLCJleHAiOjE3NjIxOTczMDB9.jq2tD6PEfr5kQRFTZk5US1e0ij6jM8M23SRNS6cnjnk[39m
+[04 Nov, 2025 - 00:44:13:4413] [34minfo[39m: [34mDecoded token: 5[39m
+[04 Nov, 2025 - 00:44:13:4413] [34minfo[39m: [34mUser fetched from DB: {"id":5,"email":"asRFSDFwbvrnn@example.com","name":"aswin_teamlead","avatar":null,"password":"$2b$10$QGNkHIMT8VoPNJomLpxwSOVax9zo4W5K5v3wNqzjIme/5mSx50N2O","loginType":"EMAIL_PASSWORD","role":"USER","isEmailVerified":false,"refreshToken":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NSwiaWF0IjoxNzYyMTk3MjQwLCJleHAiOjE3NjI4MDIwNDB9.oK2l90fOC5IIAW3JCv_6oPLj99X6PMtT-Rt9taz3vbA","forgetPasswordToken":null,"forgetPasswordExpiry":null,"emailVerificationToken":null,"emailVerificationExpiry":null,"createdAt":"2025-11-03T18:41:08.733Z","updatedAt":"2025-11-03T19:14:00.071Z"}[39m
+[04 Nov, 2025 - 00:55:51:5551] [34minfo[39m: [34m🚀 Server is running on http://localhost:3000[39m
+[04 Nov, 2025 - 00:55:56:5556] [34minfo[39m: [34mVerifying token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NSwiaWF0IjoxNzYyMTk3MjQwLCJleHAiOjE3NjIxOTczMDB9.jq2tD6PEfr5kQRFTZk5US1e0ij6jM8M23SRNS6cnjnk[39m
+[04 Nov, 2025 - 00:55:56:5556] [31merror[39m: [31mInvalid token[39m
+[04 Nov, 2025 - 00:57:00:570] [31merror[39m: [31mCannot read properties of undefined (reading 'refreshToken')[39m
+[04 Nov, 2025 - 00:57:41:5741] [34minfo[39m: [34m🚀 Server is running on http://localhost:3000[39m
+[04 Nov, 2025 - 00:57:43:5743] [31merror[39m: [31mInvalid token[39m
+[04 Nov, 2025 - 00:58:32:5832] [31merror[39m: [31mInvalid token[39m
+[04 Nov, 2025 - 01:00:25:025] [34minfo[39m: [34m🚀 Server is running on http://localhost:3000[39m
+[04 Nov, 2025 - 01:00:27:027] [34minfo[39m: [34mRefreshing access token with refresh token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NSwiaWF0IjoxNzYyMTk3MjQwLCJleHAiOjE3NjIxOTczMDB9.jq2tD6PEfr5kQRFTZk5US1e0ij6jM8M23SRNS6cnjnk[39m
+[04 Nov, 2025 - 01:00:27:027] [31merror[39m: [31mInvalid token[39m
+[04 Nov, 2025 - 01:00:57:057] [34minfo[39m: [34mRefreshing access token with refresh token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NSwiaWF0IjoxNzYyMTk4MjQzLCJleHAiOjE3NjI4MDMwNDN9.BjZcKDoAr-M7j8lX2c1l8amMjiyghOowFUWBlgg87t0[39m
+[04 Nov, 2025 - 01:00:57:057] [31merror[39m: [31mInvalid token[39m
+[04 Nov, 2025 - 01:01:05:15] [34minfo[39m: [34mRefreshing access token with refresh token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NSwiaWF0IjoxNzYyMTk4MjQzLCJleHAiOjE3NjI4MDMwNDN9.BjZcKDoAr-M7j8lX2c1l8amMjiyghOowFUWBlgg87t0[39m
+[04 Nov, 2025 - 01:01:05:15] [31merror[39m: [31mInvalid token[39m
+[04 Nov, 2025 - 01:01:29:129] [34minfo[39m: [34mRefreshing access token with refresh token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NSwiaWF0IjoxNzYyMTk4MjQzLCJleHAiOjE3NjI4MDMwNDN9.BjZcKDoAr-M7j8lX2c1l8amMjiyghOowFUWBlgg87t0[39m
+[04 Nov, 2025 - 01:01:29:129] [31merror[39m: [31mInvalid token[39m
+[04 Nov, 2025 - 01:03:10:310] [34minfo[39m: [34mRefreshing access token with refresh token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NSwiaWF0IjoxNzYyMTk4MjQzLCJleHAiOjE3NjI4MDMwNDN9.BjZcKDoAr-M7j8lX2c1l8amMjiyghOowFUWBlgg87t0[39m
+[04 Nov, 2025 - 01:03:10:310] [31merror[39m: [31mInvalid token[39m
+[04 Nov, 2025 - 01:03:56:356] [34minfo[39m: [34mRefreshing access token with refresh token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NSwiaWF0IjoxNzYyMTk4MjQzLCJleHAiOjE3NjI4MDMwNDN9.BjZcKDoAr-M7j8lX2c1l8amMjiyghOowFUWBlgg87t0eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NSwiaWF0IjoxNzYyMTk4MjQzLCJleHAiOjE3NjI4MDMwNDN9.BjZcKDoAr-M7j8lX2c1l8amMjiyghOowFUWBlgg87t0eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NSwiaWF0IjoxNzYyMTk4MjQzLCJleHAiOjE3NjI4MDMwNDN9.BjZcKDoAr-M7j8lX2c1l8amMjiyghOowFUWBlgg87t0[39m
+[04 Nov, 2025 - 01:03:56:356] [31merror[39m: [31mInvalid token[39m
+[04 Nov, 2025 - 01:04:07:47] [34minfo[39m: [34mVerifying token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NSwiaWF0IjoxNzYyMTk4MjQzLCJleHAiOjE3NjI4MDMwNDN9.BjZcKDoAr-M7j8lX2c1l8amMjiyghOowFUWBlgg87t0eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NSwiaWF0IjoxNzYyMTk4MjQzLCJleHAiOjE3NjI4MDMwNDN9.BjZcKDoAr-M7j8lX2c1l8amMjiyghOowFUWBlgg87t0eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NSwiaWF0IjoxNzYyMTk4MjQzLCJleHAiOjE3NjI4MDMwNDN9.BjZcKDoAr-M7j8lX2c1l8amMjiyghOowFUWBlgg87t0[39m
+[04 Nov, 2025 - 01:04:07:47] [31merror[39m: [31mInvalid token[39m
+[04 Nov, 2025 - 01:04:23:423] [34minfo[39m: [34mVerifying token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NSwiaWF0IjoxNzYyMTk4MjQzLCJleHAiOjE3NjIxOTgzMDN9.DhISDzdwoWD4GAmqYTp24tXoz58FclD43lWgJ2CQhbA[39m
+[04 Nov, 2025 - 01:04:23:423] [31merror[39m: [31mInvalid token[39m
+[04 Nov, 2025 - 01:04:43:443] [34minfo[39m: [34mVerifying token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NSwiaWF0IjoxNzYyMTk4NDY3LCJleHAiOjE3NjIxOTg1Mjd9.VwRGvZwbVBtbkVg5GD8dPmWzXJuOj2ZmQ0XGKTl59co[39m
+[04 Nov, 2025 - 01:04:43:443] [34minfo[39m: [34mDecoded token: 5[39m
+[04 Nov, 2025 - 01:04:43:443] [34minfo[39m: [34mUser fetched from DB: {"id":5,"email":"asRFSDFwbvrnn@example.com","name":"aswin_teamlead","avatar":null,"password":"$2b$10$QGNkHIMT8VoPNJomLpxwSOVax9zo4W5K5v3wNqzjIme/5mSx50N2O","loginType":"EMAIL_PASSWORD","role":"USER","isEmailVerified":false,"refreshToken":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NSwiaWF0IjoxNzYyMTk4NDY3LCJleHAiOjE3NjI4MDMyNjd9.4aL9s84E3yymYg4tolJIPS6RpfPyP-Tj4XGnYTAqLSo","forgetPasswordToken":null,"forgetPasswordExpiry":null,"emailVerificationToken":null,"emailVerificationExpiry":null,"createdAt":"2025-11-03T18:41:08.733Z","updatedAt":"2025-11-03T19:34:27.742Z"}[39m
+[04 Nov, 2025 - 01:05:18:518] [34minfo[39m: [34mRefreshing access token with refresh token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NSwiaWF0IjoxNzYyMTk4NDY3LCJleHAiOjE3NjI4MDMyNjd9.4aL9s84E3yymYg4tolJIPS6RpfPyP-Tj4XGnYTAqLSo[39m
+[04 Nov, 2025 - 01:05:18:518] [31merror[39m: [31mInvalid token[39m
+[04 Nov, 2025 - 01:09:56:956] [34minfo[39m: [34m🚀 Server is running on http://localhost:3000[39m
+[04 Nov, 2025 - 01:10:15:1015] [34minfo[39m: [34mVerifying token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NSwiaWF0IjoxNzYyMTk4ODAwLCJleHAiOjE3NjIxOTg4NjB9.3HCXYr0Odj_rxytJ4LWjtrMb_vvxC295HXQ-UmvbvKA[39m
+[04 Nov, 2025 - 01:10:15:1015] [31merror[39m: [31mInvalid token[39m
+[04 Nov, 2025 - 01:10:18:1018] [34minfo[39m: [34mVerifying token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NSwiaWF0IjoxNzYyMTk4ODAwLCJleHAiOjE3NjIxOTg4NjB9.3HCXYr0Odj_rxytJ4LWjtrMb_vvxC295HXQ-UmvbvKA[39m
+[04 Nov, 2025 - 01:10:18:1018] [31merror[39m: [31mInvalid token[39m
+[04 Nov, 2025 - 01:10:35:1035] [34minfo[39m: [34mVerifying token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NSwiaWF0IjoxNzYyMTk4ODAwLCJleHAiOjE3NjIxOTg4NjB9.3HCXYr0Odj_rxytJ4LWjtrMb_vvxC295HXQ-UmvbvKA[39m
+[04 Nov, 2025 - 01:10:35:1035] [31merror[39m: [31mInvalid token[39m
+[04 Nov, 2025 - 01:11:11:1111] [34minfo[39m: [34m🚀 Server is running on http://localhost:3000[39m
+[04 Nov, 2025 - 01:11:13:1113] [34minfo[39m: [34mVerifying token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NSwiaWF0IjoxNzYyMTk4ODAwLCJleHAiOjE3NjIxOTg4NjB9.3HCXYr0Odj_rxytJ4LWjtrMb_vvxC295HXQ-UmvbvKA[39m
+[04 Nov, 2025 - 01:11:13:1113] [31merror[39m: [31mInvalid token[39m
+[04 Nov, 2025 - 01:11:15:1115] [34minfo[39m: [34mVerifying token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NSwiaWF0IjoxNzYyMTk4ODAwLCJleHAiOjE3NjIxOTg4NjB9.3HCXYr0Odj_rxytJ4LWjtrMb_vvxC295HXQ-UmvbvKA[39m
+[04 Nov, 2025 - 01:11:15:1115] [31merror[39m: [31mInvalid token[39m
+[04 Nov, 2025 - 01:11:32:1132] [34minfo[39m: [34mVerifying token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NSwiaWF0IjoxNzYyMTk4ODgwLCJleHAiOjE3NjIxOTg5NDB9.vR2eb12M2joxJajFDzNNUSAN4YdusfpHkSlEAprT0bk[39m
+[04 Nov, 2025 - 01:11:32:1132] [34minfo[39m: [34mDecoded token: 5[39m
+[04 Nov, 2025 - 01:11:32:1132] [34minfo[39m: [34mUser fetched from DB: {"id":5,"email":"asRFSDFwbvrnn@example.com","name":"aswin_teamlead","avatar":null,"password":"$2b$10$QGNkHIMT8VoPNJomLpxwSOVax9zo4W5K5v3wNqzjIme/5mSx50N2O","loginType":"EMAIL_PASSWORD","role":"USER","isEmailVerified":false,"refreshToken":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NSwiaWF0IjoxNzYyMTk4ODgwLCJleHAiOjE3NjI4MDM2ODB9.XxOaEDz0Y6Ltj6ON1LFrlDZsO3ozJsft1tZb2O-9P_g","forgetPasswordToken":null,"forgetPasswordExpiry":null,"emailVerificationToken":null,"emailVerificationExpiry":null,"createdAt":"2025-11-03T18:41:08.733Z","updatedAt":"2025-11-03T19:41:20.086Z"}[39m
+[04 Nov, 2025 - 01:11:56:1156] [34minfo[39m: [34mVerifying token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NSwiaWF0IjoxNzYyMTk4ODgwLCJleHAiOjE3NjIxOTg5NDB9.vR2eb12M2joxJajFDzNNUSAN4YdusfpHkSlEAprT0bk[39m
+[04 Nov, 2025 - 01:11:56:1156] [34minfo[39m: [34mDecoded token: 5[39m
+[04 Nov, 2025 - 01:11:57:1157] [34minfo[39m: [34mUser fetched from DB: {"id":5,"email":"asRFSDFwbvrnn@example.com","name":"aswin_teamlead","avatar":null,"password":"$2b$10$QGNkHIMT8VoPNJomLpxwSOVax9zo4W5K5v3wNqzjIme/5mSx50N2O","loginType":"EMAIL_PASSWORD","role":"USER","isEmailVerified":false,"refreshToken":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NSwiaWF0IjoxNzYyMTk4ODgwLCJleHAiOjE3NjI4MDM2ODB9.XxOaEDz0Y6Ltj6ON1LFrlDZsO3ozJsft1tZb2O-9P_g","forgetPasswordToken":null,"forgetPasswordExpiry":null,"emailVerificationToken":null,"emailVerificationExpiry":null,"createdAt":"2025-11-03T18:41:08.733Z","updatedAt":"2025-11-03T19:41:20.086Z"}[39m
+[04 Nov, 2025 - 01:11:58:1158] [34minfo[39m: [34mVerifying token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NSwiaWF0IjoxNzYyMTk4ODgwLCJleHAiOjE3NjIxOTg5NDB9.vR2eb12M2joxJajFDzNNUSAN4YdusfpHkSlEAprT0bk[39m
+[04 Nov, 2025 - 01:11:58:1158] [34minfo[39m: [34mDecoded token: 5[39m
+[04 Nov, 2025 - 01:11:58:1158] [34minfo[39m: [34mUser fetched from DB: {"id":5,"email":"asRFSDFwbvrnn@example.com","name":"aswin_teamlead","avatar":null,"password":"$2b$10$QGNkHIMT8VoPNJomLpxwSOVax9zo4W5K5v3wNqzjIme/5mSx50N2O","loginType":"EMAIL_PASSWORD","role":"USER","isEmailVerified":false,"refreshToken":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NSwiaWF0IjoxNzYyMTk4ODgwLCJleHAiOjE3NjI4MDM2ODB9.XxOaEDz0Y6Ltj6ON1LFrlDZsO3ozJsft1tZb2O-9P_g","forgetPasswordToken":null,"forgetPasswordExpiry":null,"emailVerificationToken":null,"emailVerificationExpiry":null,"createdAt":"2025-11-03T18:41:08.733Z","updatedAt":"2025-11-03T19:41:20.086Z"}[39m
+[04 Nov, 2025 - 01:12:24:1224] [34minfo[39m: [34mVerifying token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NSwiaWF0IjoxNzYyMTk4ODgwLCJleHAiOjE3NjIxOTg5NDB9.vR2eb12M2joxJajFDzNNUSAN4YdusfpHkSlEAprT0bk[39m
+[04 Nov, 2025 - 01:12:24:1224] [31merror[39m: [31mInvalid token[39m
+[04 Nov, 2025 - 01:12:28:1228] [34minfo[39m: [34mRefreshing access token with refresh token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NSwiaWF0IjoxNzYyMTk4ODgwLCJleHAiOjE3NjI4MDM2ODB9.XxOaEDz0Y6Ltj6ON1LFrlDZsO3ozJsft1tZb2O-9P_g[39m
+[04 Nov, 2025 - 01:12:28:1228] [31merror[39m: [31mInvalid token[39m
+[04 Nov, 2025 - 01:12:30:1230] [34minfo[39m: [34mRefreshing access token with refresh token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NSwiaWF0IjoxNzYyMTk4ODgwLCJleHAiOjE3NjI4MDM2ODB9.XxOaEDz0Y6Ltj6ON1LFrlDZsO3ozJsft1tZb2O-9P_g[39m
+[04 Nov, 2025 - 01:12:30:1230] [31merror[39m: [31mInvalid token[39m
+[04 Nov, 2025 - 01:12:55:1255] [34minfo[39m: [34mRefreshing access token with refresh token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NSwiaWF0IjoxNzYyMTk4ODgwLCJleHAiOjE3NjI4MDM2ODB9.XxOaEDz0Y6Ltj6ON1LFrlDZsO3ozJsft1tZb2O-9P_g[39m
+[04 Nov, 2025 - 01:12:55:1255] [31merror[39m: [31mInvalid token[39m
+[04 Nov, 2025 - 01:13:18:1318] [34minfo[39m: [34m🚀 Server is running on http://localhost:3000[39m
+[04 Nov, 2025 - 01:13:19:1319] [34minfo[39m: [34mRefreshing access token with refresh token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NSwiaWF0IjoxNzYyMTk4ODgwLCJleHAiOjE3NjI4MDM2ODB9.XxOaEDz0Y6Ltj6ON1LFrlDZsO3ozJsft1tZb2O-9P_g[39m
+[04 Nov, 2025 - 01:13:19:1319] [31merror[39m: [31mInvalid token[39m
+[04 Nov, 2025 - 01:13:22:1322] [34minfo[39m: [34mRefreshing access token with refresh token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NSwiaWF0IjoxNzYyMTk4ODgwLCJleHAiOjE3NjI4MDM2ODB9.XxOaEDz0Y6Ltj6ON1LFrlDZsO3ozJsft1tZb2O-9P_g[39m
+[04 Nov, 2025 - 01:13:22:1322] [31merror[39m: [31mInvalid token[39m
+[04 Nov, 2025 - 01:16:03:163] [34minfo[39m: [34mRefreshing access token with refresh token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NSwiaWF0IjoxNzYyMTk4ODgwLCJleHAiOjE3NjI4MDM2ODB9.XxOaEDz0Y6Ltj6ON1LFrlDZsO3ozJsft1tZb2O-9P_g[39m
+[04 Nov, 2025 - 01:16:03:163] [31merror[39m: [31mInvalid token[39m
+[04 Nov, 2025 - 01:16:26:1626] [34minfo[39m: [34mRefreshing access token with refresh token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NSwiaWF0IjoxNzYyMTk5MTY5LCJleHAiOjE3NjI4MDM5Njl9.LC8yLttSymnJOQpJPkI4hVe0m5R9gvS5XckVen6R_ak[39m
+[04 Nov, 2025 - 01:16:26:1626] [31merror[39m: [31mInvalid token[39m
+[04 Nov, 2025 - 01:23:06:236] [34minfo[39m: [34m🚀 Server is running on http://localhost:3000[39m
+[04 Nov, 2025 - 01:23:10:2310] [34minfo[39m: [34mRefreshing access token with refresh token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NSwiaWF0IjoxNzYyMTk5MTY5LCJleHAiOjE3NjI4MDM5Njl9.LC8yLttSymnJOQpJPkI4hVe0m5R9gvS5XckVen6R_ak[39m
+[04 Nov, 2025 - 01:23:10:2310] [31merror[39m: [31mInvalid token[39m
+[04 Nov, 2025 - 01:23:15:2315] [31merror[39m: [31m[39m
+[31mInvalid `prisma.user.update()` invocation:[39m
+
+[31m{[39m
+[31m  where: {[39m
+[31m    id: 5[39m
+[31m  },[39m
+[31m  data: {[39m
+[31m    refreshToken: {}[39m
+[31m                  ~~[39m
+[31m  }[39m
+[31m}[39m
+
+[31mArgument `refreshToken`: Invalid value provided. Expected String or Null, provided Object.[39m
+[04 Nov, 2025 - 01:23:41:2341] [31merror[39m: [31m[39m
+[31mInvalid `prisma.user.update()` invocation:[39m
+
+[31m{[39m
+[31m  where: {[39m
+[31m    id: 4[39m
+[31m  },[39m
+[31m  data: {[39m
+[31m    refreshToken: {}[39m
+[31m                  ~~[39m
+[31m  }[39m
+[31m}[39m
+
+[31mArgument `refreshToken`: Invalid value provided. Expected String or Null, provided Object.[39m
+[04 Nov, 2025 - 01:25:18:2518] [34minfo[39m: [34m🚀 Server is running on http://localhost:3000[39m
+[04 Nov, 2025 - 01:25:21:2521] [31merror[39m: [31m[39m
+[31mInvalid `prisma.user.update()` invocation:[39m
+
+[31m{[39m
+[31m  where: {[39m
+[31m    id: 4[39m
+[31m  },[39m
+[31m  data: {[39m
+[31m    refreshToken: {}[39m
+[31m                  ~~[39m
+[31m  }[39m
+[31m}[39m
+
+[31mArgument `refreshToken`: Invalid value provided. Expected String or Null, provided Object.[39m
+[04 Nov, 2025 - 01:26:45:2645] [34minfo[39m: [34m🚀 Server is running on http://localhost:3000[39m
+[04 Nov, 2025 - 01:26:52:2652] [31merror[39m: [31m[39m
+[31mInvalid `prisma.user.update()` invocation:[39m
+
+[31m{[39m
+[31m  where: {[39m
+[31m    id: 4[39m
+[31m  },[39m
+[31m  data: {[39m
+[31m    refreshToken: {}[39m
+[31m                  ~~[39m
+[31m  }[39m
+[31m}[39m
+
+[31mArgument `refreshToken`: Invalid value provided. Expected String or Null, provided Object.[39m
+[04 Nov, 2025 - 01:26:52:2652] [34minfo[39m: [34mGenerated refresh token for user 4: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NCwiaWF0IjoxNzYyMTk5ODEyLCJleHAiOjE3NjI4MDQ2MTJ9.WdLtLw5OAezf_uVimvgbFnjCggnQvYYvP15UydOZG9U[39m
+[04 Nov, 2025 - 01:27:10:2710] [31merror[39m: [31m[39m
+[31mInvalid `prisma.user.update()` invocation:[39m
+
+[31m{[39m
+[31m  where: {[39m
+[31m    id: 4[39m
+[31m  },[39m
+[31m  data: {[39m
+[31m    refreshToken: {}[39m
+[31m                  ~~[39m
+[31m  }[39m
+[31m}[39m
+
+[31mArgument `refreshToken`: Invalid value provided. Expected String or Null, provided Object.[39m
+[04 Nov, 2025 - 01:27:11:2711] [34minfo[39m: [34mGenerated refresh token for user 4: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NCwiaWF0IjoxNzYyMTk5ODMxLCJleHAiOjE3NjI4MDQ2MzF9.mzihDVUoiUvuVBUNVvvazDKNpQci7Ye620dxvjBWXDA[39m
+[04 Nov, 2025 - 01:27:56:2756] [34minfo[39m: [34m🚀 Server is running on http://localhost:3000[39m
+[04 Nov, 2025 - 01:27:59:2759] [34minfo[39m: [34mGenerated refresh token for user 4: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NCwiaWF0IjoxNzYyMTk5ODc5LCJleHAiOjE3NjI4MDQ2Nzl9.pdduaV0bgU5IfnI_GL8GizuacYzdDWMqqyw19s0nGdo[39m
+[04 Nov, 2025 - 01:29:04:294] [34minfo[39m: [34mGenerated refresh token for user 4: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NCwiaWF0IjoxNzYyMTk5OTQ0LCJleHAiOjE3NjI4MDQ3NDR9.RF8CiON7LG7YGIACCkimBnTFhBhBSF3YqVdusgbAViY[39m
+[04 Nov, 2025 - 01:29:17:2917] [34minfo[39m: [34mGenerated refresh token for user 4: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NCwiaWF0IjoxNzYyMTk5OTU3LCJleHAiOjE3NjI4MDQ3NTd9.1HJwPui3mjIYpPuBH6khUv-vzlUvYXWg60_5364CNJ0[39m
+[04 Nov, 2025 - 01:29:24:2924] [34minfo[39m: [34m🚀 Server is running on http://localhost:3000[39m
+[04 Nov, 2025 - 01:29:26:2926] [31merror[39m: [31m[39m
+[31mInvalid `prisma.user.update()` invocation:[39m
+
+[31m{[39m
+[31m  where: {[39m
+[31m    id: 4[39m
+[31m  },[39m
+[31m  data: {[39m
+[31m    refreshToken: {}[39m
+[31m                  ~~[39m
+[31m  }[39m
+[31m}[39m
+
+[31mArgument `refreshToken`: Invalid value provided. Expected String or Null, provided Object.[39m
+[04 Nov, 2025 - 01:29:26:2926] [34minfo[39m: [34mGenerated refresh token for user 4: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NCwiaWF0IjoxNzYyMTk5OTY2LCJleHAiOjE3NjI4MDQ3NjZ9.77vwqtj16Nj_NTd4EfPYtcSMEKZZyDM9rTNL7jdUMrc[39m
+[04 Nov, 2025 - 01:30:22:3022] [34minfo[39m: [34m🚀 Server is running on http://localhost:3000[39m
+[04 Nov, 2025 - 01:30:49:3049] [34minfo[39m: [34mGenerated refresh token for user 4: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NCwiaWF0IjoxNzYyMjAwMDQ5LCJleHAiOjE3NjI4MDQ4NDl9.Q266dbyAkjyCht4RxAcC8BBMf8zU0_JKvqKE4o6BQsU[39m
+[04 Nov, 2025 - 01:31:08:318] [34minfo[39m: [34mRefreshing access token with refresh token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NCwiaWF0IjoxNzYyMjAwMDQ5LCJleHAiOjE3NjI4MDQ4NDl9.Q266dbyAkjyCht4RxAcC8BBMf8zU0_JKvqKE4o6BQsU[39m
+[04 Nov, 2025 - 01:31:08:318] [31merror[39m: [31mInvalid token[39m
+[04 Nov, 2025 - 01:33:05:335] [34minfo[39m: [34m🚀 Server is running on http://localhost:3000[39m
+[04 Nov, 2025 - 01:33:06:336] [34minfo[39m: [34mRefreshing access token with refresh token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NCwiaWF0IjoxNzYyMjAwMDQ5LCJleHAiOjE3NjI4MDQ4NDl9.Q266dbyAkjyCht4RxAcC8BBMf8zU0_JKvqKE4o6BQsU[39m
+[04 Nov, 2025 - 01:33:06:336] [34minfo[39m: [34mAttempting to verify token with secret: you...[39m
+[04 Nov, 2025 - 01:33:06:336] [34minfo[39m: [34mToken verified successfully. Decoded payload: {"id":4,"iat":1762200049,"exp":1762804849}[39m
+[04 Nov, 2025 - 01:33:07:337] [34minfo[39m: [34mGenerated new access token for user 4[39m
+[04 Nov, 2025 - 01:33:15:3315] [34minfo[39m: [34mVerifying token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NSwiaWF0IjoxNzYyMTk4ODgwLCJleHAiOjE3NjIxOTg5NDB9.vR2eb12M2joxJajFDzNNUSAN4YdusfpHkSlEAprT0bk[39m
+[04 Nov, 2025 - 01:33:15:3315] [31merror[39m: [31mInvalid token[39m
+[04 Nov, 2025 - 01:33:17:3317] [34minfo[39m: [34mVerifying token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NSwiaWF0IjoxNzYyMTk4ODgwLCJleHAiOjE3NjIxOTg5NDB9.vR2eb12M2joxJajFDzNNUSAN4YdusfpHkSlEAprT0bk[39m
+[04 Nov, 2025 - 01:33:17:3317] [31merror[39m: [31mInvalid token[39m
+[04 Nov, 2025 - 01:33:39:3339] [34minfo[39m: [34mVerifying token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NCwiZW1haWwiOiJhc3didnJubkBleGFtcGxlLmNvbSIsInJvbGUiOiJVU0VSIiwidXNlcm5hbWUiOiJhc3dpbl90ZWFtbGVhZCIsImlhdCI6MTc2MjIwMDE4NywiZXhwIjoxNzYyMjAwMjQ3fQ.f2u_I61tyB_p3e69N8iLwiLGyHkGAYWhDpPEEVJvo4Y[39m
+[04 Nov, 2025 - 01:33:39:3339] [34minfo[39m: [34mDecoded token: 4[39m
+[04 Nov, 2025 - 01:33:40:3340] [34minfo[39m: [34mUser fetched from DB: {"id":4,"email":"aswbvrnn@example.com","name":"aswin_teamlead","avatar":null,"password":"$2b$10$feyjUyZRLNiBoDCT0UqF2uETQ4ts69kBG9LcnfV7/ljtlrAuqHipi","loginType":"EMAIL_PASSWORD","role":"USER","isEmailVerified":false,"refreshToken":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NCwiaWF0IjoxNzYyMjAwMDQ5LCJleHAiOjE3NjI4MDQ4NDl9.Q266dbyAkjyCht4RxAcC8BBMf8zU0_JKvqKE4o6BQsU","forgetPasswordToken":null,"forgetPasswordExpiry":null,"emailVerificationToken":null,"emailVerificationExpiry":null,"createdAt":"2025-11-03T18:33:25.822Z","updatedAt":"2025-11-03T20:00:49.886Z"}[39m
+[04 Nov, 2025 - 23:11:04:114] [34minfo[39m: [34m🚀 Server is running on http://localhost:3000[39m
+[04 Nov, 2025 - 23:13:03:133] [31merror[39m: [31mEmail already in use[39m
+[04 Nov, 2025 - 23:13:11:1311] [31merror[39m: [31mgenerateTemporaryToken is not defined[39m
+[04 Nov, 2025 - 23:13:40:1340] [34minfo[39m: [34m🚀 Server is running on http://localhost:3000[39m
+[04 Nov, 2025 - 23:13:42:1342] [31merror[39m: [31mEmail already in use[39m
+[04 Nov, 2025 - 23:13:48:1348] [31merror[39m: [31m[39m
+[31mInvalid `prisma.user.update()` invocation:[39m
+
+[31m{[39m
+[31m  where: {[39m
+[31m    id: 7[39m
+[31m  },[39m
+[31m  data: {[39m
+[31m    emailVerificationToken: "5e1b3a86ff7bb4218103b3bd288b2d7c858a7a23b0561ef45dce99516419dc6f",[39m
+[31m    emailVerificationTokenExpires: 1762364628289,[39m
+[31m    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[39m
+[31m?   email?: String | StringFieldUpdateOperationsInput,[39m
+[31m?   name?: String | NullableStringFieldUpdateOperationsInput | Null,[39m
+[31m?   avatar?: String | NullableStringFieldUpdateOperationsInput | Null,[39m
+[31m?   password?: String | NullableStringFieldUpdateOperationsInput | Null,[39m
+[31m?   loginType?: LoginType | EnumLoginTypeFieldUpdateOperationsInput,[39m
+[31m?   role?: Role | EnumRoleFieldUpdateOperationsInput,[39m
+[31m?   isEmailVerified?: Boolean | BoolFieldUpdateOperationsInput,[39m
+[31m?   refreshToken?: String | NullableStringFieldUpdateOperationsInput | Null,[39m
+[31m?   forgetPasswordToken?: String | NullableStringFieldUpdateOperationsInput | Null,[39m
+[31m?   forgetPasswordExpiry?: DateTime | NullableDateTimeFieldUpdateOperationsInput | Null,[39m
+[31m?   emailVerificationExpiry?: DateTime | NullableDateTimeFieldUpdateOperationsInput | Null,[39m
+[31m?   createdAt?: DateTime | DateTimeFieldUpdateOperationsInput,[39m
+[31m?   updatedAt?: DateTime | DateTimeFieldUpdateOperationsInput[39m
+[31m  }[39m
+[31m}[39m
+
+[31mUnknown argument `emailVerificationTokenExpires`. Available options are marked with ?.[39m
+[04 Nov, 2025 - 23:15:15:1515] [34minfo[39m: [34m🚀 Server is running on http://localhost:3000[39m
+[04 Nov, 2025 - 23:15:20:1520] [31merror[39m: [31m[39m
+[31mInvalid `prisma.user.update()` invocation:[39m
+
+[31m{[39m
+[31m  where: {[39m
+[31m    id: 8[39m
+[31m  },[39m
+[31m  data: {[39m
+[31m    emailVerificationToken: "1c251a2afb60e459a3a9b92eef19911e4e504ebb21b8e43bc0a2251b12c02d34",[39m
+[31m    emailVerificationTokenExpires: 1762364720700,[39m
+[31m    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[39m
+[31m?   email?: String | StringFieldUpdateOperationsInput,[39m
+[31m?   name?: String | NullableStringFieldUpdateOperationsInput | Null,[39m
+[31m?   avatar?: String | NullableStringFieldUpdateOperationsInput | Null,[39m
+[31m?   password?: String | NullableStringFieldUpdateOperationsInput | Null,[39m
+[31m?   loginType?: LoginType | EnumLoginTypeFieldUpdateOperationsInput,[39m
+[31m?   role?: Role | EnumRoleFieldUpdateOperationsInput,[39m
+[31m?   isEmailVerified?: Boolean | BoolFieldUpdateOperationsInput,[39m
+[31m?   refreshToken?: String | NullableStringFieldUpdateOperationsInput | Null,[39m
+[31m?   forgetPasswordToken?: String | NullableStringFieldUpdateOperationsInput | Null,[39m
+[31m?   forgetPasswordExpiry?: DateTime | NullableDateTimeFieldUpdateOperationsInput | Null,[39m
+[31m?   emailVerificationExpiry?: DateTime | NullableDateTimeFieldUpdateOperationsInput | Null,[39m
+[31m?   createdAt?: DateTime | DateTimeFieldUpdateOperationsInput,[39m
+[31m?   updatedAt?: DateTime | DateTimeFieldUpdateOperationsInput[39m
+[31m  }[39m
+[31m}[39m
+
+[31mUnknown argument `emailVerificationTokenExpires`. Available options are marked with ?.[39m
+[04 Nov, 2025 - 23:16:23:1623] [34minfo[39m: [34m🚀 Server is running on http://localhost:3000[39m
+[04 Nov, 2025 - 23:16:25:1625] [31merror[39m: [31mEmail already in use[39m
+[04 Nov, 2025 - 23:16:31:1631] [31merror[39m: [31m[39m
+[31mInvalid `prisma.user.update()` invocation:[39m
+
+[31m{[39m
+[31m  where: {[39m
+[31m    id: 9[39m
+[31m  },[39m
+[31m  data: {[39m
+[31m    emailVerificationToken: "ce2e480db5352390a4b9fccd62c710ba4887a83a162a871700b838d773daad65",[39m
+[31m    emailVerificationTokenExpires: 1762278391512,[39m
+[31m    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[39m
+[31m?   email?: String | StringFieldUpdateOperationsInput,[39m
+[31m?   name?: String | NullableStringFieldUpdateOperationsInput | Null,[39m
+[31m?   avatar?: String | NullableStringFieldUpdateOperationsInput | Null,[39m
+[31m?   password?: String | NullableStringFieldUpdateOperationsInput | Null,[39m
+[31m?   loginType?: LoginType | EnumLoginTypeFieldUpdateOperationsInput,[39m
+[31m?   role?: Role | EnumRoleFieldUpdateOperationsInput,[39m
+[31m?   isEmailVerified?: Boolean | BoolFieldUpdateOperationsInput,[39m
+[31m?   refreshToken?: String | NullableStringFieldUpdateOperationsInput | Null,[39m
+[31m?   forgetPasswordToken?: String | NullableStringFieldUpdateOperationsInput | Null,[39m
+[31m?   forgetPasswordExpiry?: DateTime | NullableDateTimeFieldUpdateOperationsInput | Null,[39m
+[31m?   emailVerificationExpiry?: DateTime | NullableDateTimeFieldUpdateOperationsInput | Null,[39m
+[31m?   createdAt?: DateTime | DateTimeFieldUpdateOperationsInput,[39m
+[31m?   updatedAt?: DateTime | DateTimeFieldUpdateOperationsInput[39m
+[31m  }[39m
+[31m}[39m
+
+[31mUnknown argument `emailVerificationTokenExpires`. Available options are marked with ?.[39m
+[04 Nov, 2025 - 23:18:07:187] [34minfo[39m: [34m🚀 Server is running on http://localhost:3000[39m
+[04 Nov, 2025 - 23:18:08:188] [31merror[39m: [31mEmail already in use[39m
+[04 Nov, 2025 - 23:18:11:1811] [31merror[39m: [31m[39m
+[31mInvalid `prisma.user.update()` invocation:[39m
+
+[31m{[39m
+[31m  where: {[39m
+[31m    id: 10[39m
+[31m  },[39m
+[31m  data: {[39m
+[31m    emailVerificationToken: "f9156ad5efb826d8398993c303e0af2b8a935c1c11f29534b21434a6b729e043",[39m
+[31m    emailVerificationExpiry: 1762278491931[39m
+[31m                             ~~~~~~~~~~~~~[39m
+[31m  }[39m
+[31m}[39m
+
+[31mArgument `emailVerificationExpiry`: Invalid value provided. Expected DateTime, NullableDateTimeFieldUpdateOperationsInput or Null, provided Int.[39m
+[04 Nov, 2025 - 23:19:07:197] [34minfo[39m: [34m🚀 Server is running on http://localhost:3000[39m
+[04 Nov, 2025 - 23:19:09:199] [31merror[39m: [31mEmail already in use[39m
+[04 Nov, 2025 - 23:19:14:1914] [34minfo[39m: [34mGenerated email verification token for user: fvrvfvawefssRFdSDFfvwvwfwbvrnn@example.com[39m
+[04 Nov, 2025 - 23:19:15:1915] [31merror[39m: [31m❌ Email sending failed: The clashofcode.app domain is not verified. Please, add and verify your domain on https://resend.com/domains[39m
+[04 Nov, 2025 - 23:19:15:1915] [31merror[39m: [31m⚠️ Error sending email: Failed to send email[39m
+[04 Nov, 2025 - 23:19:15:1915] [31merror[39m: [31mError sending email[39m
+[04 Nov, 2025 - 23:23:56:2356] [34minfo[39m: [34m🚀 Server is running on http://localhost:3000[39m
+[04 Nov, 2025 - 23:24:01:241] [34minfo[39m: [34mGenerated email verification token for user: fvrvfvawefssRqFdSDFfvwvwfwbvrnn@example.com[39m
+[04 Nov, 2025 - 23:24:02:242] [31merror[39m: [31m❌ Email sending failed: You can only send testing emails to your own email address (727823tucs061@skct.edu.in). To send emails to other recipients, please verify a domain at resend.com/domains, and change the `from` address to an email using this domain.[39m
+[04 Nov, 2025 - 23:24:02:242] [31merror[39m: [31m⚠️ Error sending email: Failed to send email[39m
+[04 Nov, 2025 - 23:24:02:242] [31merror[39m: [31mError sending email[39m
+[04 Nov, 2025 - 23:24:48:2448] [34minfo[39m: [34m🚀 Server is running on http://localhost:3000[39m
+[04 Nov, 2025 - 23:24:52:2452] [34minfo[39m: [34mGenerated email verification token for user: fvrvfvawefssRqFdSDFfvwvdwfwbvrnn@example.com[39m
+[04 Nov, 2025 - 23:24:53:2453] [31merror[39m: [31m❌ Email sending failed: The skct.edu.in domain is not verified. Please, add and verify your domain on https://resend.com/domains[39m
+[04 Nov, 2025 - 23:24:53:2453] [31merror[39m: [31m⚠️ Error sending email: Failed to send email[39m
+[04 Nov, 2025 - 23:24:53:2453] [31merror[39m: [31mError sending email[39m
+[04 Nov, 2025 - 23:31:26:3126] [34minfo[39m: [34m🚀 Server is running on http://localhost:3000[39m
+[04 Nov, 2025 - 23:31:36:3136] [34minfo[39m: [34mGenerated email verification token for user: fvrvfvawefssRqFdSDFfvwqvdwfwbvrnn@example.com[39m
+[04 Nov, 2025 - 23:31:38:3138] [31merror[39m: [31m❌ Email sending failed: Missing `to` field.[39m
+[04 Nov, 2025 - 23:31:38:3138] [31merror[39m: [31m⚠️ Error sending email: Failed to send email[39m
+[04 Nov, 2025 - 23:31:38:3138] [31merror[39m: [31mError sending email[39m
+[04 Nov, 2025 - 23:32:54:3254] [34minfo[39m: [34m🚀 Server is running on http://localhost:3000[39m
+[04 Nov, 2025 - 23:32:56:3256] [31merror[39m: [31mEmail already in use[39m
+[04 Nov, 2025 - 23:33:02:332] [34minfo[39m: [34mGenerated email verification token for user: fvrvfvawefssRqFdSDFfvwqvdqwfwbvrnn@example.com[39m
+[04 Nov, 2025 - 23:33:02:332] [31merror[39m: [31m❌ Email sending failed: Missing `subject` field.[39m
+[04 Nov, 2025 - 23:33:02:332] [31merror[39m: [31m⚠️ Error sending email: Failed to send email[39m
+[04 Nov, 2025 - 23:33:02:332] [31merror[39m: [31mError sending email[39m
+[04 Nov, 2025 - 23:33:38:3338] [34minfo[39m: [34m🚀 Server is running on http://localhost:3000[39m
+[04 Nov, 2025 - 23:33:43:3343] [34minfo[39m: [34mGenerated email verification token for user: fvrvfvawefssRqFdSDFfvswqvdqwfwbvrnn@example.com[39m
+[04 Nov, 2025 - 23:33:44:3344] [31merror[39m: [31m❌ Email sending failed: The yourname.resend.dev domain is not verified. Please, add and verify your domain on https://resend.com/domains[39m
+[04 Nov, 2025 - 23:33:44:3344] [31merror[39m: [31m⚠️ Error sending email: Failed to send email[39m
+[04 Nov, 2025 - 23:33:44:3344] [31merror[39m: [31mError sending email[39m
+[04 Nov, 2025 - 23:36:22:3622] [34minfo[39m: [34m🚀 Server is running on http://localhost:3000[39m
+[04 Nov, 2025 - 23:36:26:3626] [34minfo[39m: [34mGenerated email verification token for user: fvrvfvawefssRqFdSDFfvswqvfvdqwfwbvrnn@example.com[39m
+[04 Nov, 2025 - 23:36:27:3627] [31merror[39m: [31m❌ Email sending failed: The gowtham.resend.dev domain is not verified. Please, add and verify your domain on https://resend.com/domains[39m
+[04 Nov, 2025 - 23:36:27:3627] [31merror[39m: [31m⚠️ Error sending email: Failed to send email[39m
+[04 Nov, 2025 - 23:36:27:3627] [31merror[39m: [31mError sending email[39m
+[04 Nov, 2025 - 23:39:37:3937] [34minfo[39m: [34mGenerated email verification token for user: fvrvfvawefssRqFdSDFfvsjwqvfvdqwfwbvrnn@example.com[39m
+[04 Nov, 2025 - 23:39:38:3938] [31merror[39m: [31m❌ Email sending failed: The gowtham.resend.dev domain is not verified. Please, add and verify your domain on https://resend.com/domains[39m
+[04 Nov, 2025 - 23:39:38:3938] [31merror[39m: [31m⚠️ Error sending email: Failed to send email[39m
+[04 Nov, 2025 - 23:39:38:3938] [31merror[39m: [31mError sending email[39m
+[04 Nov, 2025 - 23:40:42:4042] [34minfo[39m: [34m🚀 Server is running on http://localhost:3000[39m
+[04 Nov, 2025 - 23:40:54:4054] [34minfo[39m: [34mUser registered successfully: hfg@example.com[39m
+[05 Nov, 2025 - 00:43:42:4342] [34minfo[39m: [34m🚀 Server is running on http://localhost:3000[39m
+[05 Nov, 2025 - 00:46:03:463] [31merror[39m: [31mUnknown authentication strategy "github"[39m
+[05 Nov, 2025 - 00:48:44:4844] [34minfo[39m: [34m🚀 Server is running on http://localhost:3000[39m
+[05 Nov, 2025 - 00:48:52:4852] [31merror[39m: [31mUnknown authentication strategy "github"[39m
+[05 Nov, 2025 - 00:48:57:4857] [31merror[39m: [31mUnknown authentication strategy "github"[39m
+[05 Nov, 2025 - 00:52:07:527] [34minfo[39m: [34m🚀 Server is running on http://localhost:3000[39m
+[05 Nov, 2025 - 00:52:15:5215] [31merror[39m: [31mUnknown authentication strategy "github"[39m
+[05 Nov, 2025 - 00:52:24:5224] [31merror[39m: [31mUnknown authentication strategy "github"[39m
+[05 Nov, 2025 - 00:54:33:5433] [34minfo[39m: [34m🚀 Server is running on http://localhost:3000[39m
+[05 Nov, 2025 - 00:54:35:5435] [31merror[39m: [31mUnknown authentication strategy "github"[39m
+[05 Nov, 2025 - 00:58:45:5845] [34minfo[39m: [34mSetting up GitHub strategy[39m
+[05 Nov, 2025 - 00:58:46:5846] [34minfo[39m: [34m🚀 Server is running on http://localhost:3000[39m
+[05 Nov, 2025 - 01:00:15:015] [34minfo[39m: [34mSetting up GitHub strategy[39m
+[05 Nov, 2025 - 01:00:16:016] [34minfo[39m: [34m🚀 Server is running on http://localhost:3000[39m
+[05 Nov, 2025 - 01:01:13:113] [34minfo[39m: [34mSetting up GitHub strategy[39m
+[05 Nov, 2025 - 01:01:14:114] [34minfo[39m: [34m🚀 Server is running on http://localhost:3000[39m
+[05 Nov, 2025 - 01:03:09:39] [34minfo[39m: [34mSetting up GitHub strategy[39m
+[05 Nov, 2025 - 01:03:10:310] [34minfo[39m: [34m🚀 Server is running on http://localhost:3000[39m
+[05 Nov, 2025 - 01:03:39:339] [34minfo[39m: [34mSetting up GitHub strategy[39m
+[05 Nov, 2025 - 01:03:40:340] [34minfo[39m: [34m🚀 Server is running on http://localhost:3000[39m
+[05 Nov, 2025 - 01:04:02:42] [34minfo[39m: [34mSetting up GitHub strategy[39m
+[05 Nov, 2025 - 01:04:02:42] [34minfo[39m: [34m🚀 Server is running on http://localhost:3000[39m
+[05 Nov, 2025 - 01:04:23:423] [34minfo[39m: [34mRegistering new user via GitHub OAuth[39m
+[05 Nov, 2025 - 01:05:49:549] [34minfo[39m: [34mSetting up GitHub strategy[39m
+[05 Nov, 2025 - 01:05:50:550] [34minfo[39m: [34m🚀 Server is running on http://localhost:3000[39m
+[05 Nov, 2025 - 01:06:00:60] [34minfo[39m: [34mRegistering new user via GitHub OAuth[39m
+[05 Nov, 2025 - 01:06:00:60] [31merror[39m: [31muser.generateAuthToken is not a function[39m
+[05 Nov, 2025 - 01:07:11:711] [34minfo[39m: [34mSetting up GitHub strategy[39m
+[05 Nov, 2025 - 01:07:12:712] [34minfo[39m: [34m🚀 Server is running on http://localhost:3000[39m
+[05 Nov, 2025 - 01:07:18:718] [34minfo[39m: [34mExisting user found for GitHub OAuth login[39m
+[05 Nov, 2025 - 01:07:18:718] [33mwarn[39m: [33mLogin type mismatch: expected EMAIL_PASSWORD, got GitHub[39m
+[05 Nov, 2025 - 01:07:18:718] [31merror[39m: [31mPlease login using EMAIL_PASSWORD[39m
+[05 Nov, 2025 - 01:07:40:740] [34minfo[39m: [34mExisting user found for GitHub OAuth login[39m
+[05 Nov, 2025 - 01:07:40:740] [33mwarn[39m: [33mLogin type mismatch: expected EMAIL_PASSWORD, got GitHub[39m
+[05 Nov, 2025 - 01:07:40:740] [31merror[39m: [31mPlease login using EMAIL_PASSWORD[39m
+[05 Nov, 2025 - 01:08:05:85] [34minfo[39m: [34mExisting user found for GitHub OAuth login[39m
+[05 Nov, 2025 - 01:08:05:85] [33mwarn[39m: [33mLogin type mismatch: expected EMAIL_PASSWORD, got GitHub[39m
+[05 Nov, 2025 - 01:08:05:85] [31merror[39m: [31mPlease login using EMAIL_PASSWORD[39m
+[05 Nov, 2025 - 01:09:21:921] [34minfo[39m: [34mRegistering new user via GitHub OAuth[39m
+[05 Nov, 2025 - 01:10:01:101] [34minfo[39m: [34mExisting user found for GitHub OAuth login[39m
+[05 Nov, 2025 - 01:10:01:101] [33mwarn[39m: [33mLogin type mismatch: expected EMAIL_PASSWORD, got GitHub[39m
+[05 Nov, 2025 - 01:10:01:101] [31merror[39m: [31mPlease login using EMAIL_PASSWORD[39m
+[05 Nov, 2025 - 01:10:14:1014] [34minfo[39m: [34mExisting user found for GitHub OAuth login[39m
+[05 Nov, 2025 - 01:10:14:1014] [33mwarn[39m: [33mLogin type mismatch: expected EMAIL_PASSWORD, got GitHub[39m
+[05 Nov, 2025 - 01:10:14:1014] [31merror[39m: [31mPlease login using EMAIL_PASSWORD[39m
+[05 Nov, 2025 - 01:13:32:1332] [34minfo[39m: [34mRegistering new user via GitHub OAuth[39m
+[05 Nov, 2025 - 01:13:52:1352] [34minfo[39m: [34mSetting up GitHub strategy[39m
+[05 Nov, 2025 - 01:13:53:1353] [34minfo[39m: [34m🚀 Server is running on http://localhost:3000[39m
+[05 Nov, 2025 - 01:14:16:1416] [34minfo[39m: [34mRegistering new user via GitHub OAuth[39m
+[05 Nov, 2025 - 01:14:16:1416] [34minfo[39m: [34mNew user registered via GitHub OAuth[39m
+[05 Nov, 2025 - 01:17:18:1718] [34minfo[39m: [34mSetting up GitHub strategy[39m
+[05 Nov, 2025 - 01:17:18:1718] [34minfo[39m: [34m🚀 Server is running on http://localhost:3000[39m
+[05 Nov, 2025 - 01:17:39:1739] [34minfo[39m: [34mRegistering new user via GitHub OAuth[39m
+[05 Nov, 2025 - 01:17:39:1739] [31merror[39m: [31mError in GitHub OAuth strategy: [39m
+[31mInvalid `prisma.user.create()` invocation:[39m
+
+[31m{[39m
+[31m  data: {[39m
+[31m    name: "007Gowtham",[39m
+[31m    email: "gowthams200521@gmail.com",[39m
+[31m    password: "U_kgDOCrKC_g",[39m
+[31m    role: "USER",[39m
+[31m    loginType: "GOOGLE_OAUTH",[39m
+[31m               ~~~~~~~~~~~~~~[39m
+[31m    isEmailVerified: true[39m
+[31m  }[39m
+[31m}[39m
+
+[31mInvalid value for argument `loginType`. Expected LoginType.[39m
+[05 Nov, 2025 - 01:17:39:1739] [31merror[39m: [31m[39m
+[31mInvalid `prisma.user.create()` invocation:[39m
+
+[31m{[39m
+[31m  data: {[39m
+[31m    name: "007Gowtham",[39m
+[31m    email: "gowthams200521@gmail.com",[39m
+[31m    password: "U_kgDOCrKC_g",[39m
+[31m    role: "USER",[39m
+[31m    loginType: "GOOGLE_OAUTH",[39m
+[31m               ~~~~~~~~~~~~~~[39m
+[31m    isEmailVerified: true[39m
+[31m  }[39m
+[31m}[39m
+
+[31mInvalid value for argument `loginType`. Expected LoginType.[39m
+[05 Nov, 2025 - 01:18:07:187] [34minfo[39m: [34mSetting up GitHub strategy[39m
+[05 Nov, 2025 - 01:18:07:187] [34minfo[39m: [34m🚀 Server is running on http://localhost:3000[39m
+[05 Nov, 2025 - 01:18:14:1814] [34minfo[39m: [34mRegistering new user via GitHub OAuth[39m
+[05 Nov, 2025 - 01:18:15:1815] [34minfo[39m: [34mNew user registered via GitHub OAuth[39m
+[05 Nov, 2025 - 01:18:49:1849] [34minfo[39m: [34mSetting up GitHub strategy[39m
+[05 Nov, 2025 - 01:18:50:1850] [34minfo[39m: [34m🚀 Server is running on http://localhost:3000[39m
+[05 Nov, 2025 - 01:19:11:1911] [34minfo[39m: [34mRegistering new user via GitHub OAuth[39m
+[05 Nov, 2025 - 01:19:11:1911] [34minfo[39m: [34mNew user registered via GitHub OAuth[39m
+[05 Nov, 2025 - 01:19:17:1917] [34minfo[39m: [34mExisting user found for GitHub OAuth login[39m
+[05 Nov, 2025 - 01:19:17:1917] [33mwarn[39m: [33mLogin type mismatch: expected GITHUB, got GitHub[39m
+[05 Nov, 2025 - 01:19:17:1917] [31merror[39m: [31mPlease login using GITHUB[39m
+[05 Nov, 2025 - 01:19:31:1931] [34minfo[39m: [34mExisting user found for GitHub OAuth login[39m
+[05 Nov, 2025 - 01:19:31:1931] [33mwarn[39m: [33mLogin type mismatch: expected GITHUB, got GitHub[39m
+[05 Nov, 2025 - 01:19:31:1931] [31merror[39m: [31mPlease login using GITHUB[39m
+[05 Nov, 2025 - 01:20:51:2051] [34minfo[39m: [34mSetting up GitHub strategy[39m
+[05 Nov, 2025 - 01:20:52:2052] [34minfo[39m: [34m🚀 Server is running on http://localhost:3000[39m
+[05 Nov, 2025 - 01:20:58:2058] [34minfo[39m: [34mExisting user found for GitHub OAuth login[39m
+[05 Nov, 2025 - 01:20:58:2058] [33mwarn[39m: [33mLogin type mismatch: expected GITHUB, got undefined[39m
+[05 Nov, 2025 - 01:20:58:2058] [31merror[39m: [31mPlease login using GITHUB[39m
+[05 Nov, 2025 - 01:21:22:2122] [34minfo[39m: [34mSetting up GitHub strategy[39m
+[05 Nov, 2025 - 01:21:22:2122] [34minfo[39m: [34m🚀 Server is running on http://localhost:3000[39m
+[05 Nov, 2025 - 01:21:29:2129] [34minfo[39m: [34mExisting user found for GitHub OAuth login[39m
+[05 Nov, 2025 - 01:21:29:2129] [34minfo[39m: [34mExisting user logged in via GitHub OAuth[39m
+[05 Nov, 2025 - 01:24:56:2456] [34minfo[39m: [34mSetting up GitHub strategy[39m
+[05 Nov, 2025 - 01:24:56:2456] [34minfo[39m: [34m🚀 Server is running on http://localhost:3000[39m
+[05 Nov, 2025 - 01:24:59:2459] [31merror[39m: [31mreq#logout requires a callback function[39m
+[05 Nov, 2025 - 01:25:00:250] [31merror[39m: [31mreq#logout requires a callback function[39m
+[05 Nov, 2025 - 01:26:29:2629] [31merror[39m: [31mreq#logout requires a callback function[39m
+[05 Nov, 2025 - 01:26:33:2633] [31merror[39m: [31mreq#logout requires a callback function[39m
+[05 Nov, 2025 - 01:27:00:270] [34minfo[39m: [34mSetting up GitHub strategy[39m
+[05 Nov, 2025 - 01:27:00:270] [34minfo[39m: [34m🚀 Server is running on http://localhost:3000[39m
+[05 Nov, 2025 - 01:27:10:2710] [34minfo[39m: [34mExisting user found for GitHub OAuth login[39m
+[05 Nov, 2025 - 01:27:10:2710] [34minfo[39m: [34mExisting user logged in via GitHub OAuth[39m
+[05 Nov, 2025 - 01:27:23:2723] [34minfo[39m: [34mExisting user found for GitHub OAuth login[39m
+[05 Nov, 2025 - 01:27:23:2723] [34minfo[39m: [34mExisting user logged in via GitHub OAuth[39m
+[05 Nov, 2025 - 01:27:35:2735] [34minfo[39m: [34mExisting user found for GitHub OAuth login[39m
+[05 Nov, 2025 - 01:27:35:2735] [34minfo[39m: [34mExisting user logged in via GitHub OAuth[39m
+[05 Nov, 2025 - 01:28:11:2811] [34minfo[39m: [34mExisting user found for GitHub OAuth login[39m
+[05 Nov, 2025 - 01:28:11:2811] [34minfo[39m: [34mExisting user logged in via GitHub OAuth[39m
+[05 Nov, 2025 - 01:42:22:4222] [34minfo[39m: [34mSetting up GitHub strategy[39m
+[05 Nov, 2025 - 01:42:22:4222] [34minfo[39m: [34mSetting up Google strategy[39m
+[05 Nov, 2025 - 01:42:23:4223] [34minfo[39m: [34m🚀 Server is running on http://localhost:3000[39m
+[05 Nov, 2025 - 01:42:29:4229] [34minfo[39m: [34mSetting up GitHub strategy[39m
+[05 Nov, 2025 - 01:42:29:4229] [34minfo[39m: [34mSetting up Google strategy[39m
+[05 Nov, 2025 - 01:42:29:4229] [34minfo[39m: [34m🚀 Server is running on http://localhost:3000[39m
+[05 Nov, 2025 - 01:42:40:4240] [34minfo[39m: [34mSetting up GitHub strategy[39m
+[05 Nov, 2025 - 01:42:40:4240] [34minfo[39m: [34mSetting up Google strategy[39m
+[05 Nov, 2025 - 01:42:41:4241] [34minfo[39m: [34m🚀 Server is running on http://localhost:3000[39m
+[05 Nov, 2025 - 01:43:00:430] [34minfo[39m: [34mExisting user found for Google OAuth login[39m
+[05 Nov, 2025 - 01:43:00:430] [33mwarn[39m: [33mLogin type mismatch: expected GITHUB, got GOOGLE[39m
+[05 Nov, 2025 - 01:43:00:430] [31merror[39m: [31mPlease login using GITHUB[39m
+[05 Nov, 2025 - 01:43:29:4329] [34minfo[39m: [34mRegistering new user via Google OAuth[39m
+[05 Nov, 2025 - 01:43:30:4330] [34minfo[39m: [34mNew user registered via Google OAuth[39m
+[05 Nov, 2025 - 01:44:00:440] [34minfo[39m: [34mRegistering new user via Google OAuth[39m
+[05 Nov, 2025 - 01:44:01:441] [34minfo[39m: [34mNew user registered via Google OAuth[39m
+[05 Nov, 2025 - 11:39:19:3919] [34minfo[39m: [34mSetting up GitHub strategy[39m
+[05 Nov, 2025 - 11:39:19:3919] [34minfo[39m: [34mSetting up Google strategy[39m
+[05 Nov, 2025 - 11:57:14:5714] [34minfo[39m: [34mSetting up GitHub strategy[39m
+[05 Nov, 2025 - 11:57:14:5714] [34minfo[39m: [34mSetting up Google strategy[39m
+[05 Nov, 2025 - 11:57:15:5715] [34minfo[39m: [34m🚀 Server is running on http://localhost:3000[39m
+[05 Nov, 2025 - 11:57:34:5734] [34minfo[39m: [34mExisting user found for GitHub OAuth login[39m
+[05 Nov, 2025 - 11:57:34:5734] [33mwarn[39m: [33mLogin type mismatch: expected GOOGLE, got undefined[39m
+[05 Nov, 2025 - 11:57:34:5734] [31merror[39m: [31mPlease login using GOOGLE[39m
+[05 Nov, 2025 - 11:58:05:585] [34minfo[39m: [34mExisting user found for Google OAuth login[39m
+[05 Nov, 2025 - 11:58:05:585] [34minfo[39m: [34mExisting user logged in via Google OAuth[39m
+[05 Nov, 2025 - 18:29:36:2936] [34minfo[39m: [34mSetting up GitHub strategy[39m
+[05 Nov, 2025 - 18:29:36:2936] [34minfo[39m: [34mSetting up Google strategy[39m
+[05 Nov, 2025 - 18:29:37:2937] [34minfo[39m: [34m🚀 Server is running on http://localhost:3000[39m
+[05 Nov, 2025 - 18:29:56:2956] [34minfo[39m: [34mExisting user found for Google OAuth login[39m
+[05 Nov, 2025 - 18:29:56:2956] [34minfo[39m: [34mExisting user logged in via Google OAuth[39m
+[05 Nov, 2025 - 18:29:57:2957] [34minfo[39m: [34mGenerated refresh token for user 27: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MjcsImlhdCI6MTc2MjM0NzU5NywiZXhwIjoxNzYyOTUyMzk3fQ.LRBFkReVglH3Os6GaTQcGmUz-bZhVq9SctmMoCDknbg[39m
+[05 Nov, 2025 - 18:31:11:3111] [34minfo[39m: [34mSetting up GitHub strategy[39m
+[05 Nov, 2025 - 18:31:11:3111] [34minfo[39m: [34mSetting up Google strategy[39m
+[05 Nov, 2025 - 18:31:11:3111] [34minfo[39m: [34m🚀 Server is running on http://localhost:3000[39m
+[05 Nov, 2025 - 18:31:25:3125] [34minfo[39m: [34mExisting user found for GitHub OAuth login[39m
+[05 Nov, 2025 - 18:31:25:3125] [33mwarn[39m: [33mLogin type mismatch: expected GOOGLE, got undefined[39m
+[05 Nov, 2025 - 18:31:25:3125] [31merror[39m: [31mPlease login using GOOGLE[39m
+[05 Nov, 2025 - 18:52:50:5250] [31merror[39m: [31mFailed to obtain access token[39m
+[05 Nov, 2025 - 18:56:51:5651] [34minfo[39m: [34mRegistering new user via GitHub OAuth[39m
+[05 Nov, 2025 - 18:56:52:5652] [34minfo[39m: [34mNew user registered via GitHub OAuth[39m
+[05 Nov, 2025 - 18:56:52:5652] [34minfo[39m: [34mGenerated refresh token for user 28: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MjgsImlhdCI6MTc2MjM0OTIxMiwiZXhwIjoxNzYyOTU0MDEyfQ.FhCjCVOxMVpEWyeml-eCOk-A4J7aCsQ7TlyvDOGq4cE[39m
+[05 Nov, 2025 - 18:57:16:5716] [34minfo[39m: [34mExisting user found for Google OAuth login[39m
+[05 Nov, 2025 - 18:57:16:5716] [33mwarn[39m: [33mLogin type mismatch: expected GITHUB, got GOOGLE[39m
+[05 Nov, 2025 - 18:57:16:5716] [31merror[39m: [31mPlease login using GITHUB[39m
+[05 Nov, 2025 - 18:57:46:5746] [34minfo[39m: [34mRegistering new user via Google OAuth[39m
+[05 Nov, 2025 - 18:57:46:5746] [34minfo[39m: [34mNew user registered via Google OAuth[39m
+[05 Nov, 2025 - 18:57:47:5747] [34minfo[39m: [34mGenerated refresh token for user 29: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MjksImlhdCI6MTc2MjM0OTI2NywiZXhwIjoxNzYyOTU0MDY3fQ.o1lVKrn6FGNmtG34j9e3eJjJvx1MjOAm1FoFnbAxIqo[39m
+[05 Nov, 2025 - 19:00:36:036] [34minfo[39m: [34mSetting up GitHub strategy[39m
+[05 Nov, 2025 - 19:00:36:036] [34minfo[39m: [34mSetting up Google strategy[39m
+[05 Nov, 2025 - 19:00:37:037] [34minfo[39m: [34m🚀 Server is running on http://localhost:3000[39m
+[05 Nov, 2025 - 19:01:20:120] [34minfo[39m: [34mUser registered successfully: hfg@example.com[39m
+[05 Nov, 2025 - 19:02:25:225] [34minfo[39m: [34mSetting up GitHub strategy[39m
+[05 Nov, 2025 - 19:02:25:225] [34minfo[39m: [34mSetting up Google strategy[39m
+[05 Nov, 2025 - 19:02:26:226] [34minfo[39m: [34m🚀 Server is running on http://localhost:3000[39m
+[05 Nov, 2025 - 19:02:32:232] [31merror[39m: [31m❌ Email sending failed: You can only send testing emails to your own email address (727823tucs061@skct.edu.in). To send emails to other recipients, please verify a domain at resend.com/domains, and change the `from` address to an email using this domain.[39m
+[05 Nov, 2025 - 19:02:32:232] [31merror[39m: [31m⚠️ Error sending email: Failed to send email[39m
+[05 Nov, 2025 - 19:02:32:232] [31merror[39m: [31mError sending email[39m
+[05 Nov, 2025 - 19:03:40:340] [34minfo[39m: [34mSetting up GitHub strategy[39m
+[05 Nov, 2025 - 19:03:40:340] [34minfo[39m: [34mSetting up Google strategy[39m
+[05 Nov, 2025 - 19:03:40:340] [34minfo[39m: [34m🚀 Server is running on http://localhost:3000[39m
+[05 Nov, 2025 - 19:04:08:48] [31merror[39m: [31m❌ Email sending failed: The skct.edu.in domain is not verified. Please, add and verify your domain on https://resend.com/domains[39m
+[05 Nov, 2025 - 19:04:08:48] [31merror[39m: [31m⚠️ Error sending email: Failed to send email[39m
+[05 Nov, 2025 - 19:04:08:48] [31merror[39m: [31mError sending email[39m
+[05 Nov, 2025 - 19:20:07:207] [34minfo[39m: [34mSetting up GitHub strategy[39m
+[05 Nov, 2025 - 19:20:07:207] [34minfo[39m: [34mSetting up Google strategy[39m
+[05 Nov, 2025 - 19:20:08:208] [34minfo[39m: [34m🚀 Server is running on http://localhost:3000[39m
+[05 Nov, 2025 - 19:20:09:209] [34minfo[39m: [34m✅ Email service is ready to send emails[39m
+[05 Nov, 2025 - 19:20:13:2013] [31merror[39m: [31mEmail already in use[39m
+[05 Nov, 2025 - 19:20:20:2020] [34minfo[39m: [34m✅ Email sent successfully to hassfg@example.com | MessageID: <733c4955-6acf-eb66-9be0-1845759c8819@gmail.com>[39m
+[05 Nov, 2025 - 19:20:20:2020] [34minfo[39m: [34mUser registered successfully: hassfg@example.com[39m
+[05 Nov, 2025 - 19:21:12:2112] [31merror[39m: [31mEmail already in use[39m
+[05 Nov, 2025 - 19:21:42:2142] [34minfo[39m: [34m✅ Email sent successfully to 727823tucs061@skct.edu.in | MessageID: <4655c365-d509-e679-9ca6-de09e0b55b95@gmail.com>[39m
+[05 Nov, 2025 - 19:21:42:2142] [34minfo[39m: [34mUser registered successfully: 727823tucs061@skct.edu.in[39m
+[05 Nov, 2025 - 19:34:31:3431] [34minfo[39m: [34mSetting up GitHub strategy[39m
+[05 Nov, 2025 - 19:34:31:3431] [34minfo[39m: [34mSetting up Google strategy[39m
+[05 Nov, 2025 - 19:34:32:3432] [34minfo[39m: [34m🚀 Server is running on http://localhost:3000[39m
+[05 Nov, 2025 - 19:34:33:3433] [34minfo[39m: [34m✅ Email service is ready to send emails[39m
+[05 Nov, 2025 - 19:34:54:3454] [31merror[39m: [31mgenerateTemporaryToken is not a function or its return value is not iterable[39m
+[05 Nov, 2025 - 19:36:17:3617] [34minfo[39m: [34mSetting up GitHub strategy[39m
+[05 Nov, 2025 - 19:36:17:3617] [34minfo[39m: [34mSetting up Google strategy[39m
+[05 Nov, 2025 - 19:36:17:3617] [34minfo[39m: [34m🚀 Server is running on http://localhost:3000[39m
+[05 Nov, 2025 - 19:36:19:3619] [34minfo[39m: [34m✅ Email service is ready to send emails[39m
+[05 Nov, 2025 - 19:36:23:3623] [31merror[39m: [31mEmail already in use[39m
+[05 Nov, 2025 - 19:36:48:3648] [31merror[39m: [31m(intermediate value) is not iterable[39m
+[05 Nov, 2025 - 19:38:19:3819] [31merror[39m: [31m(intermediate value) is not iterable[39m
+[05 Nov, 2025 - 19:38:23:3823] [34minfo[39m: [34mSetting up GitHub strategy[39m
+[05 Nov, 2025 - 19:38:23:3823] [34minfo[39m: [34mSetting up Google strategy[39m
+[05 Nov, 2025 - 19:38:23:3823] [34minfo[39m: [34m🚀 Server is running on http://localhost:3000[39m
+[05 Nov, 2025 - 19:38:24:3824] [34minfo[39m: [34m✅ Email service is ready to send emails[39m
+[05 Nov, 2025 - 19:38:26:3826] [34minfo[39m: [34mGenerating email verification token for user: 7278q23stucs061@skct.edu.in[39m
+[05 Nov, 2025 - 19:38:26:3826] [31merror[39m: [31mgenerateTemporaryToken is not a function or its return value is not iterable[39m
+[05 Nov, 2025 - 19:39:34:3934] [34minfo[39m: [34mSetting up GitHub strategy[39m
+[05 Nov, 2025 - 19:39:34:3934] [34minfo[39m: [34mSetting up Google strategy[39m
+[05 Nov, 2025 - 19:39:35:3935] [34minfo[39m: [34m🚀 Server is running on http://localhost:3000[39m
+[05 Nov, 2025 - 19:39:36:3936] [34minfo[39m: [34m✅ Email service is ready to send emails[39m
+[05 Nov, 2025 - 19:39:37:3937] [31merror[39m: [31mEmail already in use[39m
+[05 Nov, 2025 - 19:39:43:3943] [34minfo[39m: [34mGenerating email verification token for user: 7278qq23stucs061@skct.edu.in[39m
+[05 Nov, 2025 - 19:39:43:3943] [31merror[39m: [31mgenerateTemporaryToken is not a function or its return value is not iterable[39m
+[05 Nov, 2025 - 19:41:31:4131] [34minfo[39m: [34mSetting up GitHub strategy[39m
+[05 Nov, 2025 - 19:41:31:4131] [34minfo[39m: [34mSetting up Google strategy[39m
+[05 Nov, 2025 - 19:41:32:4132] [34minfo[39m: [34m🚀 Server is running on http://localhost:3000[39m
+[05 Nov, 2025 - 19:41:33:4133] [34minfo[39m: [34m✅ Email service is ready to send emails[39m
+[05 Nov, 2025 - 19:42:13:4213] [34minfo[39m: [34mSetting up GitHub strategy[39m
+[05 Nov, 2025 - 19:42:13:4213] [34minfo[39m: [34mSetting up Google strategy[39m
+[05 Nov, 2025 - 19:42:14:4214] [34minfo[39m: [34m🚀 Server is running on http://localhost:3000[39m
+[05 Nov, 2025 - 19:42:15:4215] [34minfo[39m: [34m✅ Email service is ready to send emails[39m
+[05 Nov, 2025 - 19:42:38:4238] [34minfo[39m: [34mSetting up GitHub strategy[39m
+[05 Nov, 2025 - 19:42:38:4238] [34minfo[39m: [34mSetting up Google strategy[39m
+[05 Nov, 2025 - 19:42:39:4239] [34minfo[39m: [34m🚀 Server is running on http://localhost:3000[39m
+[05 Nov, 2025 - 19:42:40:4240] [34minfo[39m: [34m✅ Email service is ready to send emails[39m
+[05 Nov, 2025 - 19:43:30:4330] [34minfo[39m: [34mSetting up GitHub strategy[39m
+[05 Nov, 2025 - 19:43:30:4330] [34minfo[39m: [34mSetting up Google strategy[39m
+[05 Nov, 2025 - 19:43:31:4331] [34minfo[39m: [34m🚀 Server is running on http://localhost:3000[39m
+[05 Nov, 2025 - 19:43:32:4332] [34minfo[39m: [34m✅ Email service is ready to send emails[39m
+[05 Nov, 2025 - 19:43:38:4338] [34minfo[39m: [34mGenerating email verification token for user: 727823tucs061@skct.edu.in[39m
+[05 Nov, 2025 - 19:43:38:4338] [34minfo[39m: [34mStoring email verification token for user: 727823tucs061@skct.edu.in[39m
+[05 Nov, 2025 - 19:43:38:4338] [31merror[39m: [31m[39m
+[31mInvalid `prisma.user.update()` invocation:[39m
+
+[31m{[39m
+[31m  where: {[39m
+[31m    id: 40[39m
+[31m  },[39m
+[31m  data: {[39m
+[31m    emailVerificationToken: "25e282dad92e5b967a656532aaa2d3e6eb88fc46bffa6d5793ff11977f0daa51",[39m
+[31m    emailVerificationExpiry: 1762353218523[39m
+[31m                             ~~~~~~~~~~~~~[39m
+[31m  }[39m
+[31m}[39m
+
+[31mArgument `emailVerificationExpiry`: Invalid value provided. Expected DateTime, NullableDateTimeFieldUpdateOperationsInput or Null, provided Int.[39m
+[05 Nov, 2025 - 19:45:02:452] [34minfo[39m: [34mSetting up GitHub strategy[39m
+[05 Nov, 2025 - 19:45:02:452] [34minfo[39m: [34mSetting up Google strategy[39m
+[05 Nov, 2025 - 19:45:03:453] [34minfo[39m: [34m🚀 Server is running on http://localhost:3000[39m
+[05 Nov, 2025 - 19:45:04:454] [34minfo[39m: [34m✅ Email service is ready to send emails[39m
+[05 Nov, 2025 - 19:45:39:4539] [34minfo[39m: [34mSetting up GitHub strategy[39m
+[05 Nov, 2025 - 19:45:39:4539] [34minfo[39m: [34mSetting up Google strategy[39m
+[05 Nov, 2025 - 19:45:39:4539] [34minfo[39m: [34m🚀 Server is running on http://localhost:3000[39m
+[05 Nov, 2025 - 19:45:40:4540] [34minfo[39m: [34m✅ Email service is ready to send emails[39m
+[05 Nov, 2025 - 19:46:46:4646] [34minfo[39m: [34mGenerating email verification token for user: 727823tucs061@skct.edu.in[39m
+[05 Nov, 2025 - 19:46:46:4646] [34minfo[39m: [34mStoring email verification token for user: 727823tucs061@skct.edu.in[39m
+[05 Nov, 2025 - 19:46:50:4650] [34minfo[39m: [34m✅ Email sent successfully to 727823tucs061@skct.edu.in | MessageID: <7a476a1c-1ed8-5ce8-d0bc-e3b7be0cacc3@gmail.com>[39m
+[05 Nov, 2025 - 19:46:50:4650] [34minfo[39m: [34mUser registered successfully: 727823tucs061@skct.edu.in[39m
+[05 Nov, 2025 - 19:48:20:4820] [34minfo[39m: [34mSetting up GitHub strategy[39m
+[05 Nov, 2025 - 19:48:20:4820] [34minfo[39m: [34mSetting up Google strategy[39m
+[05 Nov, 2025 - 19:48:20:4820] [34minfo[39m: [34m🚀 Server is running on http://localhost:3000[39m
+[05 Nov, 2025 - 19:48:21:4821] [34minfo[39m: [34m✅ Email service is ready to send emails[39m
+[05 Nov, 2025 - 19:53:35:5335] [34minfo[39m: [34mSetting up GitHub strategy[39m
+[05 Nov, 2025 - 19:53:35:5335] [34minfo[39m: [34mSetting up Google strategy[39m
+[05 Nov, 2025 - 19:53:36:5336] [34minfo[39m: [34m🚀 Server is running on http://localhost:3000[39m
+[05 Nov, 2025 - 19:53:38:5338] [34minfo[39m: [34m✅ Email service is ready to send emails[39m
+[05 Nov, 2025 - 19:53:51:5351] [34minfo[39m: [34mGenerating email verification token for user: 727823tucs061@skct.edu.in[39m
+[05 Nov, 2025 - 19:53:51:5351] [34minfo[39m: [34mStoring email verification token for user: 727823tucs061@skct.edu.in[39m
+[05 Nov, 2025 - 19:53:55:5355] [34minfo[39m: [34m✅ Email sent successfully to 727823tucs061@skct.edu.in | MessageID: <9fc0eb56-b540-4155-5ffe-64a17f8f61db@gmail.com>[39m
+[05 Nov, 2025 - 19:53:55:5355] [34minfo[39m: [34mUser registered successfully: 727823tucs061@skct.edu.in[39m
+[05 Nov, 2025 - 19:56:47:5647] [34minfo[39m: [34mSetting up GitHub strategy[39m
+[05 Nov, 2025 - 19:56:47:5647] [34minfo[39m: [34mSetting up Google strategy[39m
+[05 Nov, 2025 - 19:56:48:5648] [34minfo[39m: [34m🚀 Server is running on http://localhost:3000[39m
+[05 Nov, 2025 - 19:56:49:5649] [34minfo[39m: [34m✅ Email service is ready to send emails[39m
+[05 Nov, 2025 - 19:57:09:579] [34minfo[39m: [34mGenerating email verification token for user: 727823tucs061@skct.edu.in[39m
+[05 Nov, 2025 - 19:57:09:579] [34minfo[39m: [34mStoring email verification token for user: 727823tucs061@skct.edu.in[39m
+[05 Nov, 2025 - 19:57:13:5713] [34minfo[39m: [34m✅ Email sent successfully to 727823tucs061@skct.edu.in | MessageID: <12b4674f-b664-bd04-e766-df3cd605add7@gmail.com>[39m
+[05 Nov, 2025 - 19:57:13:5713] [34minfo[39m: [34mUser registered successfully: 727823tucs061@skct.edu.in[39m
+[05 Nov, 2025 - 19:59:30:5930] [34minfo[39m: [34mStarting email verification process[39m
+[05 Nov, 2025 - 19:59:30:5930] [31merror[39m: [31mInvalid or expired email verification token[39m
+[05 Nov, 2025 - 20:00:17:017] [34minfo[39m: [34mStarting email verification process[39m
+[05 Nov, 2025 - 20:01:39:139] [34minfo[39m: [34mStarting email verification process[39m
+[05 Nov, 2025 - 20:01:49:149] [31merror[39m: [31m[39m
+[31mInvalid `prisma.user.findFirst()` invocation:[39m
+
+
+[31mTimed out fetching a new connection from the connection pool. More info: http://pris.ly/d/connection-pool (Current connection pool timeout: 10, connection limit: 5)[39m
+[05 Nov, 2025 - 20:02:06:26] [34minfo[39m: [34mStarting email verification process[39m
+[05 Nov, 2025 - 20:02:07:27] [31merror[39m: [31mInvalid or expired email verification token[39m
+[05 Nov, 2025 - 20:03:21:321] [34minfo[39m: [34mSetting up GitHub strategy[39m
+[05 Nov, 2025 - 20:03:21:321] [34minfo[39m: [34mSetting up Google strategy[39m
+[05 Nov, 2025 - 20:03:23:323] [34minfo[39m: [34m🚀 Server is running on http://localhost:3000[39m
+[05 Nov, 2025 - 20:03:23:323] [34minfo[39m: [34m✅ Email service is ready to send emails[39m
+[05 Nov, 2025 - 20:03:49:349] [34minfo[39m: [34mGenerating email verification token for user: 727823tucs061@skct.edu.in[39m
+[05 Nov, 2025 - 20:03:49:349] [34minfo[39m: [34mStoring email verification token for user: 727823tucs061@skct.edu.in[39m
+[05 Nov, 2025 - 20:03:53:353] [34minfo[39m: [34m✅ Email sent successfully to 727823tucs061@skct.edu.in | MessageID: <64d36812-b7f1-a65a-b899-fea81979a5e9@gmail.com>[39m
+[05 Nov, 2025 - 20:03:53:353] [34minfo[39m: [34mUser registered successfully: 727823tucs061@skct.edu.in[39m
+[05 Nov, 2025 - 20:56:29:5629] [34minfo[39m: [34mSetting up GitHub strategy[39m
+[05 Nov, 2025 - 20:56:29:5629] [34minfo[39m: [34mSetting up Google strategy[39m
+[05 Nov, 2025 - 20:56:30:5630] [34minfo[39m: [34m🚀 Server is running on http://localhost:3000[39m
+[05 Nov, 2025 - 20:56:31:5631] [34minfo[39m: [34m✅ Email service is ready to send emails[39m
+[05 Nov, 2025 - 21:02:35:235] [34minfo[39m: [34mGenerating email verification token for user: 727823tucs061@skct.edu.in[39m
+[05 Nov, 2025 - 21:02:35:235] [34minfo[39m: [34mStoring email verification token for user: 727823tucs061@skct.edu.in[39m
+[05 Nov, 2025 - 21:02:38:238] [34minfo[39m: [34m✅ Email sent successfully to 727823tucs061@skct.edu.in | MessageID: <f181eac0-7a3d-7b6f-ddd9-8dc843b5ca7a@gmail.com>[39m
+[05 Nov, 2025 - 21:02:38:238] [34minfo[39m: [34mUser registered successfully: 727823tucs061@skct.edu.in[39m
+[05 Nov, 2025 - 21:04:27:427] [34minfo[39m: [34mStarting email verification process[39m
+[05 Nov, 2025 - 21:07:33:733] [34minfo[39m: [34mSetting up GitHub strategy[39m
+[05 Nov, 2025 - 21:07:33:733] [34minfo[39m: [34mSetting up Google strategy[39m
+[05 Nov, 2025 - 21:07:34:734] [34minfo[39m: [34m🚀 Server is running on http://localhost:3000[39m
+[05 Nov, 2025 - 21:07:35:735] [34minfo[39m: [34m✅ Email service is ready to send emails[39m
+[05 Nov, 2025 - 21:07:41:741] [34minfo[39m: [34mStarting email verification process[39m
+[05 Nov, 2025 - 21:07:41:741] [31merror[39m: [31mInvalid or expired email verification token[39m
+[05 Nov, 2025 - 21:08:11:811] [34minfo[39m: [34mGenerating email verification token for user: 727823tucs061@skct.edu.in[39m
+[05 Nov, 2025 - 21:08:11:811] [34minfo[39m: [34mStoring email verification token for user: 727823tucs061@skct.edu.in[39m
+[05 Nov, 2025 - 21:08:15:815] [34minfo[39m: [34m✅ Email sent successfully to 727823tucs061@skct.edu.in | MessageID: <498ce30c-ffbd-0cdb-70be-c1f622fd6004@gmail.com>[39m
+[05 Nov, 2025 - 21:08:15:815] [34minfo[39m: [34mUser registered successfully: 727823tucs061@skct.edu.in[39m
+[05 Nov, 2025 - 21:08:53:853] [34minfo[39m: [34mStarting email verification process[39m
+[05 Nov, 2025 - 21:08:54:854] [31merror[39m: [31mCannot set headers after they are sent to the client[39m
+[05 Nov, 2025 - 21:10:35:1035] [34minfo[39m: [34mSetting up GitHub strategy[39m
+[05 Nov, 2025 - 21:10:35:1035] [34minfo[39m: [34mSetting up Google strategy[39m
+[05 Nov, 2025 - 21:10:36:1036] [34minfo[39m: [34m🚀 Server is running on http://localhost:3000[39m
+[05 Nov, 2025 - 21:10:37:1037] [34minfo[39m: [34m✅ Email service is ready to send emails[39m
+[05 Nov, 2025 - 21:10:39:1039] [34minfo[39m: [34mStarting email verification process[39m
+[05 Nov, 2025 - 21:10:40:1040] [31merror[39m: [31mInvalid or expired email verification token[39m
+[05 Nov, 2025 - 21:11:05:115] [34minfo[39m: [34mGenerating email verification token for user: 727823tucs061@skct.edu.in[39m
+[05 Nov, 2025 - 21:11:05:115] [34minfo[39m: [34mStoring email verification token for user: 727823tucs061@skct.edu.in[39m
+[05 Nov, 2025 - 21:11:09:119] [34minfo[39m: [34m✅ Email sent successfully to 727823tucs061@skct.edu.in | MessageID: <6d22d4ab-0ec3-3654-fdb0-e01b3eefae34@gmail.com>[39m
+[05 Nov, 2025 - 21:11:09:119] [34minfo[39m: [34mUser registered successfully: 727823tucs061@skct.edu.in[39m
+[05 Nov, 2025 - 21:11:26:1126] [34minfo[39m: [34mStarting email verification process[39m
+[05 Nov, 2025 - 21:11:29:1129] [31merror[39m: [31mCannot set headers after they are sent to the client[39m
+[05 Nov, 2025 - 21:18:23:1823] [34minfo[39m: [34mSetting up GitHub strategy[39m
+[05 Nov, 2025 - 21:18:23:1823] [34minfo[39m: [34mSetting up Google strategy[39m
+[05 Nov, 2025 - 21:18:24:1824] [34minfo[39m: [34m🚀 Server is running on http://localhost:3000[39m
+[05 Nov, 2025 - 21:18:25:1825] [34minfo[39m: [34m✅ Email service is ready to send emails[39m
+[05 Nov, 2025 - 21:24:58:2458] [34minfo[39m: [34mSetting up GitHub strategy[39m
+[05 Nov, 2025 - 21:24:58:2458] [34minfo[39m: [34mSetting up Google strategy[39m
+[05 Nov, 2025 - 21:24:59:2459] [34minfo[39m: [34m🚀 Server is running on http://localhost:3000[39m
+[05 Nov, 2025 - 21:25:00:250] [34minfo[39m: [34m✅ Email service is ready to send emails[39m
+[05 Nov, 2025 - 21:25:28:2528] [31merror[39m: [31mCannot destructure property 'email' of 'req.body' as it is undefined.[39m
+[05 Nov, 2025 - 21:26:23:2623] [34minfo[39m: [34mGenerating password reset token for user: 727823tucs061@skct.edu.in[39m
+[05 Nov, 2025 - 21:26:23:2623] [34minfo[39m: [34mStoring password reset token for user: 727823tucs061@skct.edu.in[39m
+[05 Nov, 2025 - 21:26:23:2623] [31merror[39m: [31m[39m
+[31mInvalid `prisma.user.update()` invocation:[39m
+
+[31m{[39m
+[31m  where: {[39m
+[31m    id: 47[39m
+[31m  },[39m
+[31m  data: {[39m
+[31m    passwordResetToken: "d20065929808df112c0624c2e8ca04936b1023e667fc0466215935d8e865a7ff",[39m
+[31m    ~~~~~~~~~~~~~~~~~~[39m
+[31m    passwordResetExpiry: new Date("2025-11-05T16:16:23.669Z"),[39m
+[31m?   email?: String | StringFieldUpdateOperationsInput,[39m
+[31m?   name?: String | NullableStringFieldUpdateOperationsInput | Null,[39m
+[31m?   avatar?: String | NullableStringFieldUpdateOperationsInput | Null,[39m
+[31m?   password?: String | NullableStringFieldUpdateOperationsInput | Null,[39m
+[31m?   loginType?: LoginType | EnumLoginTypeFieldUpdateOperationsInput,[39m
+[31m?   role?: Role | EnumRoleFieldUpdateOperationsInput,[39m
+[31m?   isEmailVerified?: Boolean | BoolFieldUpdateOperationsInput,[39m
+[31m?   refreshToken?: String | NullableStringFieldUpdateOperationsInput | Null,[39m
+[31m?   forgetPasswordToken?: String | NullableStringFieldUpdateOperationsInput | Null,[39m
+[31m?   forgetPasswordExpiry?: DateTime | NullableDateTimeFieldUpdateOperationsInput | Null,[39m
+[31m?   emailVerificationToken?: String | NullableStringFieldUpdateOperationsInput | Null,[39m
+[31m?   emailVerificationExpiry?: DateTime | NullableDateTimeFieldUpdateOperationsInput | Null,[39m
+[31m?   createdAt?: DateTime | DateTimeFieldUpdateOperationsInput,[39m
+[31m?   updatedAt?: DateTime | DateTimeFieldUpdateOperationsInput[39m
+[31m  }[39m
+[31m}[39m
+
+[31mUnknown argument `passwordResetToken`. Available options are marked with ?.[39m
+[05 Nov, 2025 - 21:27:33:2733] [34minfo[39m: [34mSetting up GitHub strategy[39m
+[05 Nov, 2025 - 21:27:33:2733] [34minfo[39m: [34mSetting up Google strategy[39m
+[05 Nov, 2025 - 21:27:34:2734] [34minfo[39m: [34m🚀 Server is running on http://localhost:3000[39m
+[05 Nov, 2025 - 21:27:34:2734] [34minfo[39m: [34m✅ Email service is ready to send emails[39m
+[05 Nov, 2025 - 21:27:36:2736] [34minfo[39m: [34mGenerating password reset token for user: 727823tucs061@skct.edu.in[39m
+[05 Nov, 2025 - 21:27:36:2736] [34minfo[39m: [34mStoring password reset token for user: 727823tucs061@skct.edu.in[39m
+[05 Nov, 2025 - 21:27:40:2740] [34minfo[39m: [34m✅ Email sent successfully to 727823tucs061@skct.edu.in | MessageID: <03112791-aa95-2e55-1477-777f37fc137e@gmail.com>[39m
+[05 Nov, 2025 - 21:27:40:2740] [34minfo[39m: [34mPassword reset email sent to: 727823tucs061@skct.edu.in[39m
+[05 Nov, 2025 - 21:31:56:3156] [31merror[39m: [31mExpected ',' or '}' after property value in JSON at position 99 (line 4 column 31)[39m
+[05 Nov, 2025 - 21:32:03:323] [31merror[39m: [31mEmail already in use[39m
+[05 Nov, 2025 - 21:32:36:3236] [34minfo[39m: [34mGenerating email verification token for user: gowthams200521@gmail.com[39m
+[05 Nov, 2025 - 21:32:36:3236] [34minfo[39m: [34mStoring email verification token for user: gowthams200521@gmail.com[39m
+[05 Nov, 2025 - 21:32:40:3240] [34minfo[39m: [34m✅ Email sent successfully to gowthams200521@gmail.com | MessageID: <d6ac8022-5851-f072-25b3-74f25aebaee7@gmail.com>[39m
+[05 Nov, 2025 - 21:32:40:3240] [34minfo[39m: [34mUser registered successfully: gowthams200521@gmail.com[39m
+[05 Nov, 2025 - 21:33:01:331] [34minfo[39m: [34mStarting email verification process[39m
+[05 Nov, 2025 - 21:33:01:331] [31merror[39m: [31mCannot set headers after they are sent to the client[39m
+[05 Nov, 2025 - 21:34:53:3453] [34minfo[39m: [34mSetting up GitHub strategy[39m
+[05 Nov, 2025 - 21:34:53:3453] [34minfo[39m: [34mSetting up Google strategy[39m
+[05 Nov, 2025 - 21:34:54:3454] [34minfo[39m: [34m🚀 Server is running on http://localhost:3000[39m
+[05 Nov, 2025 - 21:34:55:3455] [34minfo[39m: [34m✅ Email service is ready to send emails[39m
+[05 Nov, 2025 - 21:35:09:359] [31merror[39m: [31mExpected ',' or '}' after property value in JSON at position 99 (line 4 column 31)[39m
+[05 Nov, 2025 - 21:35:15:3515] [34minfo[39m: [34mGenerating password reset token for user: 727823tucs061@skct.edu.in[39m
+[05 Nov, 2025 - 21:35:15:3515] [34minfo[39m: [34mStoring password reset token for user: 727823tucs061@skct.edu.in[39m
+[05 Nov, 2025 - 21:35:18:3518] [34minfo[39m: [34m✅ Email sent successfully to 727823tucs061@skct.edu.in | MessageID: <49b8511b-532a-4cce-8fcd-9de46f6ad7be@gmail.com>[39m
+[05 Nov, 2025 - 21:35:18:3518] [34minfo[39m: [34mPassword reset email sent to: 727823tucs061@skct.edu.in[39m
+[05 Nov, 2025 - 21:35:32:3532] [34minfo[39m: [34mStarting password reset token verification process[39m
+[05 Nov, 2025 - 21:35:32:3532] [31merror[39m: [31m[39m
+[31mInvalid `prisma.user.findFirst()` invocation:[39m
+
+[31m{[39m
+[31m  where: {[39m
+[31m    passwordResetToken: "e52d2d8294be66717b9fcf6bea8b51efa07d99b22fc74defd1bb4f7f51eb179c",[39m
+[31m    ~~~~~~~~~~~~~~~~~~[39m
+[31m    passwordResetExpiry: {[39m
+[31m      gt: new Date("2025-11-05T16:05:32.117Z")[39m
+[31m    },[39m
+[31m?   AND?: UserWhereInput | UserWhereInput[],[39m
+[31m?   OR?: UserWhereInput[],[39m
+[31m?   NOT?: UserWhereInput | UserWhereInput[],[39m
+[31m?   id?: IntFilter | Int,[39m
+[31m?   email?: StringFilter | String,[39m
+[31m?   name?: StringNullableFilter | String | Null,[39m
+[31m?   avatar?: StringNullableFilter | String | Null,[39m
+[31m?   password?: StringNullableFilter | String | Null,[39m
+[31m?   loginType?: EnumLoginTypeFilter | LoginType,[39m
+[31m?   role?: EnumRoleFilter | Role,[39m
+[31m?   isEmailVerified?: BoolFilter | Boolean,[39m
+[31m?   refreshToken?: StringNullableFilter | String | Null,[39m
+[31m?   forgetPasswordToken?: StringNullableFilter | String | Null,[39m
+[31m?   forgetPasswordExpiry?: DateTimeNullableFilter | DateTime | Null,[39m
+[31m?   emailVerificationToken?: StringNullableFilter | String | Null,[39m
+[31m?   emailVerificationExpiry?: DateTimeNullableFilter | DateTime | Null,[39m
+[31m?   createdAt?: DateTimeFilter | DateTime,[39m
+[31m?   updatedAt?: DateTimeFilter | DateTime[39m
+[31m  }[39m
+[31m}[39m
+
+[31mUnknown argument `passwordResetToken`. Available options are marked with ?.[39m
+[05 Nov, 2025 - 21:36:43:3643] [34minfo[39m: [34mSetting up GitHub strategy[39m
+[05 Nov, 2025 - 21:36:43:3643] [34minfo[39m: [34mSetting up Google strategy[39m
+[05 Nov, 2025 - 21:36:43:3643] [34minfo[39m: [34m🚀 Server is running on http://localhost:3000[39m
+[05 Nov, 2025 - 21:36:45:3645] [34minfo[39m: [34m✅ Email service is ready to send emails[39m
+[05 Nov, 2025 - 21:36:46:3646] [34minfo[39m: [34mGenerating password reset token for user: 727823tucs061@skct.edu.in[39m
+[05 Nov, 2025 - 21:36:46:3646] [34minfo[39m: [34mStoring password reset token for user: 727823tucs061@skct.edu.in[39m
+[05 Nov, 2025 - 21:37:18:3718] [31merror[39m: [31m❌ Email sending failed:[39m
+[05 Nov, 2025 - 21:37:18:3718] [31merror[39m: [31mFailed to send email. Please try again later.[39m
+[05 Nov, 2025 - 21:37:25:3725] [34minfo[39m: [34mGenerating password reset token for user: 727823tucs061@skct.edu.in[39m
+[05 Nov, 2025 - 21:37:25:3725] [34minfo[39m: [34mStoring password reset token for user: 727823tucs061@skct.edu.in[39m
+[05 Nov, 2025 - 21:37:29:3729] [34minfo[39m: [34m✅ Email sent successfully to 727823tucs061@skct.edu.in | MessageID: <91687e25-9022-a428-76df-bc700d141f4a@gmail.com>[39m
+[05 Nov, 2025 - 21:37:29:3729] [34minfo[39m: [34mPassword reset email sent to: 727823tucs061@skct.edu.in[39m
+[05 Nov, 2025 - 21:37:42:3742] [34minfo[39m: [34mStarting password reset token verification process[39m
+[05 Nov, 2025 - 21:37:42:3742] [31merror[39m: [31mInvalid or expired password reset token[39m
+[05 Nov, 2025 - 21:38:52:3852] [34minfo[39m: [34mSetting up GitHub strategy[39m
+[05 Nov, 2025 - 21:38:52:3852] [34minfo[39m: [34mSetting up Google strategy[39m
+[05 Nov, 2025 - 21:38:52:3852] [34minfo[39m: [34m🚀 Server is running on http://localhost:3000[39m
+[05 Nov, 2025 - 21:38:53:3853] [34minfo[39m: [34m✅ Email service is ready to send emails[39m
+[05 Nov, 2025 - 21:39:00:390] [34minfo[39m: [34mGenerating password reset token for user: 727823tucs061@skct.edu.in[39m
+[05 Nov, 2025 - 21:39:00:390] [34minfo[39m: [34mStoring password reset token for user: 727823tucs061@skct.edu.in[39m
+[05 Nov, 2025 - 21:39:03:393] [34minfo[39m: [34m✅ Email sent successfully to 727823tucs061@skct.edu.in | MessageID: <f51df749-d988-438b-5204-f52265e843ab@gmail.com>[39m
+[05 Nov, 2025 - 21:39:03:393] [34minfo[39m: [34mPassword reset email sent to: 727823tucs061@skct.edu.in[39m
+[05 Nov, 2025 - 21:39:18:3918] [34minfo[39m: [34mStarting password reset token verification process[39m
+[05 Nov, 2025 - 21:39:19:3919] [31merror[39m: [31mCannot set headers after they are sent to the client[39m
+[05 Nov, 2025 - 21:41:58:4158] [34minfo[39m: [34mSetting up GitHub strategy[39m
+[05 Nov, 2025 - 21:41:58:4158] [34minfo[39m: [34mSetting up Google strategy[39m
+[05 Nov, 2025 - 21:41:59:4159] [34minfo[39m: [34m🚀 Server is running on http://localhost:3000[39m
+[05 Nov, 2025 - 21:42:00:420] [34minfo[39m: [34m✅ Email service is ready to send emails[39m
+[05 Nov, 2025 - 21:42:04:424] [34minfo[39m: [34mGenerating password reset token for user: 727823tucs061@skct.edu.in[39m
+[05 Nov, 2025 - 21:42:04:424] [34minfo[39m: [34mStoring password reset token for user: 727823tucs061@skct.edu.in[39m
+[05 Nov, 2025 - 21:42:07:427] [34minfo[39m: [34m✅ Email sent successfully to 727823tucs061@skct.edu.in | MessageID: <2022c012-fb74-1c45-9a93-f0bd344a6d3d@gmail.com>[39m
+[05 Nov, 2025 - 21:42:07:427] [34minfo[39m: [34mPassword reset email sent to: 727823tucs061@skct.edu.in[39m
+[05 Nov, 2025 - 21:42:17:4217] [34minfo[39m: [34mStarting password reset token verification process[39m
+[05 Nov, 2025 - 22:20:40:2040] [34minfo[39m: [34mSetting up GitHub strategy[39m
+[05 Nov, 2025 - 22:20:40:2040] [34minfo[39m: [34mSetting up Google strategy[39m
+[05 Nov, 2025 - 22:20:41:2041] [34minfo[39m: [34m🚀 Server is running on http://localhost:3000[39m
+[05 Nov, 2025 - 22:20:42:2042] [34minfo[39m: [34m✅ Email service is ready to send emails[39m
+[05 Nov, 2025 - 22:21:43:2143] [34minfo[39m: [34mVerifying token: undefined[39m
+[05 Nov, 2025 - 22:21:43:2143] [31merror[39m: [31mNo token provided[39m
+[05 Nov, 2025 - 22:22:36:2236] [34minfo[39m: [34mGenerated refresh token for user 48: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NDgsImlhdCI6MTc2MjM2MTU1NiwiZXhwIjoxNzYyOTY2MzU2fQ.NgsXgv6sj7SH0TC9UBOtKItbbkm6pGHwLvLJrHwgJS8[39m
+[05 Nov, 2025 - 22:23:09:239] [34minfo[39m: [34mVerifying token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NDgsImVtYWlsIjoiZ293dGhhbXMyMDA1MjFAZ21haWwuY29tIiwicm9sZSI6IlVTRVIiLCJ1c2VybmFtZSI6ImFzd2luX3RlYW1sZWFkIiwiaWF0IjoxNzYyMzYxNTU2LCJleHAiOjE3NjIzNjE2MTZ9.74Re_x758mgeuyl8zevviD7M1qxoLqerjaE-wlvpR88[39m
+[05 Nov, 2025 - 22:23:09:239] [34minfo[39m: [34mDecoded token: 48[39m
+[05 Nov, 2025 - 22:23:10:2310] [34minfo[39m: [34mUser fetched from DB: {"id":48,"email":"gowthams200521@gmail.com","name":"aswin_teamlead","avatar":null,"password":"$2b$10$C.vSYWwe.FlE3D9XyBs5hOsmD/PiFYRpbhkEfAHPSLMtRsPq66k/m","loginType":"EMAIL_PASSWORD","role":"USER","isEmailVerified":true,"refreshToken":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NDgsImlhdCI6MTc2MjM2MTU1NiwiZXhwIjoxNzYyOTY2MzU2fQ.NgsXgv6sj7SH0TC9UBOtKItbbkm6pGHwLvLJrHwgJS8","forgetPasswordToken":null,"forgetPasswordExpiry":null,"emailVerificationToken":null,"emailVerificationExpiry":null,"createdAt":"2025-11-05T16:02:36.107Z","updatedAt":"2025-11-05T16:52:36.932Z"}[39m
+[05 Nov, 2025 - 22:23:10:2310] [31merror[39m: [31mEmail is already verified[39m
+[05 Nov, 2025 - 22:23:32:2332] [34minfo[39m: [34mVerifying token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NDgsImVtYWlsIjoiZ293dGhhbXMyMDA1MjFAZ21haWwuY29tIiwicm9sZSI6IlVTRVIiLCJ1c2VybmFtZSI6ImFzd2luX3RlYW1sZWFkIiwiaWF0IjoxNzYyMzYxNTU2LCJleHAiOjE3NjIzNjE2MTZ9.74Re_x758mgeuyl8zevviD7M1qxoLqerjaE-wlvpR88[39m
+[05 Nov, 2025 - 22:23:32:2332] [34minfo[39m: [34mDecoded token: 48[39m
+[05 Nov, 2025 - 22:23:32:2332] [34minfo[39m: [34mUser fetched from DB: {"id":48,"email":"gowthams200521@gmail.com","name":"aswin_teamlead","avatar":null,"password":"$2b$10$C.vSYWwe.FlE3D9XyBs5hOsmD/PiFYRpbhkEfAHPSLMtRsPq66k/m","loginType":"EMAIL_PASSWORD","role":"USER","isEmailVerified":true,"refreshToken":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NDgsImlhdCI6MTc2MjM2MTU1NiwiZXhwIjoxNzYyOTY2MzU2fQ.NgsXgv6sj7SH0TC9UBOtKItbbkm6pGHwLvLJrHwgJS8","forgetPasswordToken":null,"forgetPasswordExpiry":null,"emailVerificationToken":null,"emailVerificationExpiry":null,"createdAt":"2025-11-05T16:02:36.107Z","updatedAt":"2025-11-05T16:52:36.932Z"}[39m
+[05 Nov, 2025 - 22:23:32:2332] [31merror[39m: [31mEmail is already verified[39m
+[05 Nov, 2025 - 22:24:06:246] [34minfo[39m: [34mVerifying token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NDgsImVtYWlsIjoiZ293dGhhbXMyMDA1MjFAZ21haWwuY29tIiwicm9sZSI6IlVTRVIiLCJ1c2VybmFtZSI6ImFzd2luX3RlYW1sZWFkIiwiaWF0IjoxNzYyMzYxNTU2LCJleHAiOjE3NjIzNjE2MTZ9.74Re_x758mgeuyl8zevviD7M1qxoLqerjaE-wlvpR88[39m
+[05 Nov, 2025 - 22:24:06:246] [31merror[39m: [31mInvalid token[39m
+[05 Nov, 2025 - 22:24:38:2438] [34minfo[39m: [34mGenerating email verification token for user: gowthams200521@gmail.com[39m
+[05 Nov, 2025 - 22:24:38:2438] [34minfo[39m: [34mStoring email verification token for user: gowthams200521@gmail.com[39m
+[05 Nov, 2025 - 22:24:42:2442] [34minfo[39m: [34m✅ Email sent successfully to gowthams200521@gmail.com | MessageID: <286e1e42-963b-9d96-054d-ea73af12ee70@gmail.com>[39m
+[05 Nov, 2025 - 22:24:42:2442] [34minfo[39m: [34mUser registered successfully: gowthams200521@gmail.com[39m
+[05 Nov, 2025 - 22:24:52:2452] [34minfo[39m: [34mVerifying token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NDgsImVtYWlsIjoiZ293dGhhbXMyMDA1MjFAZ21haWwuY29tIiwicm9sZSI6IlVTRVIiLCJ1c2VybmFtZSI6ImFzd2luX3RlYW1sZWFkIiwiaWF0IjoxNzYyMzYxNTU2LCJleHAiOjE3NjIzNjE2MTZ9.74Re_x758mgeuyl8zevviD7M1qxoLqerjaE-wlvpR88[39m
+[05 Nov, 2025 - 22:24:52:2452] [31merror[39m: [31mInvalid token[39m
+[05 Nov, 2025 - 22:25:04:254] [34minfo[39m: [34mGenerated refresh token for user 49: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NDksImlhdCI6MTc2MjM2MTcwNCwiZXhwIjoxNzYyOTY2NTA0fQ.a9PSsGHSYszWLVxTu7TzJWWZ6BYG0SHFm1BQIX7vsjY[39m
+[05 Nov, 2025 - 22:25:21:2521] [34minfo[39m: [34mVerifying token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NDksImVtYWlsIjoiZ293dGhhbXMyMDA1MjFAZ21haWwuY29tIiwicm9sZSI6IlVTRVIiLCJ1c2VybmFtZSI6ImFzd2luX3RlYW1sZWFkIiwiaWF0IjoxNzYyMzYxNzA0LCJleHAiOjE3NjIzNjE3NjR9.oBrll4j5vY01_tkMybQfg2KipNnYhNocO5saIJRiYoo[39m
+[05 Nov, 2025 - 22:25:21:2521] [34minfo[39m: [34mDecoded token: 49[39m
+[05 Nov, 2025 - 22:25:21:2521] [34minfo[39m: [34mUser fetched from DB: {"id":49,"email":"gowthams200521@gmail.com","name":"aswin_teamlead","avatar":null,"password":"$2b$10$aTnMiMcPFDQgZ68qk9KCUuXmGugvXt2wQSy1d8fnGc.zdjV2Fhz0.","loginType":"EMAIL_PASSWORD","role":"USER","isEmailVerified":false,"refreshToken":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NDksImlhdCI6MTc2MjM2MTcwNCwiZXhwIjoxNzYyOTY2NTA0fQ.a9PSsGHSYszWLVxTu7TzJWWZ6BYG0SHFm1BQIX7vsjY","forgetPasswordToken":null,"forgetPasswordExpiry":null,"emailVerificationToken":"fb9335429f54a605c50800c0f7dc36a76b2d951da746f5cc399a5587fcbd6084","emailVerificationExpiry":"2025-11-05T17:14:38.030Z","createdAt":"2025-11-05T16:54:37.705Z","updatedAt":"2025-11-05T16:55:04.422Z"}[39m
+[05 Nov, 2025 - 22:25:22:2522] [34minfo[39m: [34mGenerating new email verification token for user: gowthams200521@gmail.com[39m
+[05 Nov, 2025 - 22:25:22:2522] [34minfo[39m: [34mStoring new email verification token for user: gowthams200521@gmail.com[39m
+[05 Nov, 2025 - 22:25:25:2525] [34minfo[39m: [34m✅ Email sent successfully to gowthams200521@gmail.com | MessageID: <53060ea7-b967-7282-42b6-96629901dfaf@gmail.com>[39m
+[05 Nov, 2025 - 22:25:25:2525] [34minfo[39m: [34mResent email verification to: gowthams200521@gmail.com[39m
+[05 Nov, 2025 - 22:26:05:265] [34minfo[39m: [34mStarting email verification process[39m
+[05 Nov, 2025 - 22:26:10:2610] [31merror[39m: [31m[39m
+[31mInvalid `prisma.user.findFirst()` invocation:[39m
+
+
+[31mCan't reach database server at `aws-1-ap-south-1.pooler.supabase.com:6543`[39m
+
+[31mPlease make sure your database server is running at `aws-1-ap-south-1.pooler.supabase.com:6543`.[39m
+[05 Nov, 2025 - 22:27:13:2713] [34minfo[39m: [34mStarting email verification process[39m
+[05 Nov, 2025 - 22:32:36:3236] [34minfo[39m: [34mSetting up GitHub strategy[39m
+[05 Nov, 2025 - 22:32:36:3236] [34minfo[39m: [34mSetting up Google strategy[39m
+[05 Nov, 2025 - 22:32:36:3236] [34minfo[39m: [34m🚀 Server is running on http://localhost:3000[39m
+[05 Nov, 2025 - 22:32:37:3237] [34minfo[39m: [34m✅ Email service is ready to send emails[39m
+[05 Nov, 2025 - 22:33:58:3358] [34minfo[39m: [34mSetting up GitHub strategy[39m
+[05 Nov, 2025 - 22:33:58:3358] [34minfo[39m: [34mSetting up Google strategy[39m
+[05 Nov, 2025 - 22:33:58:3358] [34minfo[39m: [34m🚀 Server is running on http://localhost:3000[39m
+[05 Nov, 2025 - 22:33:59:3359] [34minfo[39m: [34m✅ Email service is ready to send emails[39m
+[05 Nov, 2025 - 22:34:08:348] [34minfo[39m: [34mVerifying token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NDksImVtYWlsIjoiZ293dGhhbXMyMDA1MjFAZ21haWwuY29tIiwicm9sZSI6IlVTRVIiLCJ1c2VybmFtZSI6ImFzd2luX3RlYW1sZWFkIiwiaWF0IjoxNzYyMzYxNzA0LCJleHAiOjE3NjIzNjE3NjR9.oBrll4j5vY01_tkMybQfg2KipNnYhNocO5saIJRiYoo[39m
+[05 Nov, 2025 - 22:34:08:348] [31merror[39m: [31mInvalid token[39m
+[05 Nov, 2025 - 22:34:19:3419] [34minfo[39m: [34mGenerated refresh token for user 49: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NDksImlhdCI6MTc2MjM2MjI1OSwiZXhwIjoxNzYyOTY3MDU5fQ.WSOpykNCjoirR88zS8s_Qav3lZhlceDUo-Cczhdh0GI[39m
+[05 Nov, 2025 - 22:34:36:3436] [34minfo[39m: [34mVerifying token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NDksImVtYWlsIjoiZ293dGhhbXMyMDA1MjFAZ21haWwuY29tIiwicm9sZSI6IlVTRVIiLCJ1c2VybmFtZSI6ImFzd2luX3RlYW1sZWFkIiwiaWF0IjoxNzYyMzYyMjU5LCJleHAiOjE3NjIzNjIzMTl9.SArSIZjAsG2LNnA1CGeXl48GZgPrzavEY9ZcvW0tu1A[39m
+[05 Nov, 2025 - 22:34:36:3436] [34minfo[39m: [34mDecoded token: 49[39m
+[05 Nov, 2025 - 22:34:37:3437] [34minfo[39m: [34mUser fetched from DB: {"id":49,"email":"gowthams200521@gmail.com","name":"aswin_teamlead","avatar":null,"password":"$2b$10$aTnMiMcPFDQgZ68qk9KCUuXmGugvXt2wQSy1d8fnGc.zdjV2Fhz0.","loginType":"EMAIL_PASSWORD","role":"USER","isEmailVerified":true,"refreshToken":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NDksImlhdCI6MTc2MjM2MjI1OSwiZXhwIjoxNzYyOTY3MDU5fQ.WSOpykNCjoirR88zS8s_Qav3lZhlceDUo-Cczhdh0GI","forgetPasswordToken":null,"forgetPasswordExpiry":null,"emailVerificationToken":null,"emailVerificationExpiry":null,"createdAt":"2025-11-05T16:54:37.705Z","updatedAt":"2025-11-05T17:04:19.683Z"}[39m
+[05 Nov, 2025 - 22:34:37:3437] [31merror[39m: [31mPassword reset token is required[39m
+[05 Nov, 2025 - 22:36:51:3651] [34minfo[39m: [34mSetting up GitHub strategy[39m
+[05 Nov, 2025 - 22:36:51:3651] [34minfo[39m: [34mSetting up Google strategy[39m
+[05 Nov, 2025 - 22:36:52:3652] [34minfo[39m: [34m🚀 Server is running on http://localhost:3000[39m
+[05 Nov, 2025 - 22:36:53:3653] [34minfo[39m: [34m✅ Email service is ready to send emails[39m
+[05 Nov, 2025 - 22:38:09:389] [34minfo[39m: [34mGenerating password reset token for user: gowthams200521@gmail.com[39m
+[05 Nov, 2025 - 22:38:09:389] [34minfo[39m: [34mStoring password reset token for user: gowthams200521@gmail.com[39m
+[05 Nov, 2025 - 22:38:13:3813] [34minfo[39m: [34m✅ Email sent successfully to gowthams200521@gmail.com | MessageID: <760566c2-45ef-ccb5-04dd-5084aadc03f0@gmail.com>[39m
+[05 Nov, 2025 - 22:38:13:3813] [34minfo[39m: [34mPassword reset email sent to: gowthams200521@gmail.com[39m
+[05 Nov, 2025 - 22:38:28:3828] [34minfo[39m: [34mStarting password reset token verification process[39m
+[05 Nov, 2025 - 22:39:18:3918] [34minfo[39m: [34mSetting up GitHub strategy[39m
+[05 Nov, 2025 - 22:39:18:3918] [34minfo[39m: [34mSetting up Google strategy[39m
+[05 Nov, 2025 - 22:39:19:3919] [34minfo[39m: [34m🚀 Server is running on http://localhost:3000[39m
+[05 Nov, 2025 - 22:39:19:3919] [34minfo[39m: [34m✅ Email service is ready to send emails[39m
+[05 Nov, 2025 - 22:39:20:3920] [34minfo[39m: [34mStarting password reset token verification process[39m
+[05 Nov, 2025 - 22:39:20:3920] [34minfo[39m: [34mVerifying password reset token: 929fac76c98e398b0b987bcc645b58fe8e526c1e[39m
+[05 Nov, 2025 - 22:39:20:3920] [31merror[39m: [31mInvalid or expired password reset token[39m
+[05 Nov, 2025 - 22:39:28:3928] [34minfo[39m: [34mGenerating password reset token for user: gowthams200521@gmail.com[39m
+[05 Nov, 2025 - 22:39:28:3928] [34minfo[39m: [34mStoring password reset token for user: gowthams200521@gmail.com[39m
+[05 Nov, 2025 - 22:39:31:3931] [34minfo[39m: [34m✅ Email sent successfully to gowthams200521@gmail.com | MessageID: <6d7d1b92-0c93-6384-6b9f-de9f7aa828b9@gmail.com>[39m
+[05 Nov, 2025 - 22:39:31:3931] [34minfo[39m: [34mPassword reset email sent to: gowthams200521@gmail.com[39m
+[05 Nov, 2025 - 22:39:41:3941] [34minfo[39m: [34mStarting password reset token verification process[39m
+[05 Nov, 2025 - 22:39:41:3941] [34minfo[39m: [34mVerifying password reset token: ef39dcc55de8949fdf170135e89200e67fb861fa[39m
+[05 Nov, 2025 - 22:40:07:407] [31merror[39m: [31mThe "data" argument must be of type string or an instance of Buffer, TypedArray, or DataView. Received [Object: null prototype][39m
+[05 Nov, 2025 - 22:40:33:4033] [31merror[39m: [31mThe "data" argument must be of type string or an instance of Buffer, TypedArray, or DataView. Received [Object: null prototype][39m
+[05 Nov, 2025 - 22:40:37:4037] [31merror[39m: [31mThe "data" argument must be of type string or an instance of Buffer, TypedArray, or DataView. Received [Object: null prototype][39m
+[05 Nov, 2025 - 22:40:45:4045] [31merror[39m: [31mThe "data" argument must be of type string or an instance of Buffer, TypedArray, or DataView. Received [Object: null prototype][39m
+[05 Nov, 2025 - 22:41:22:4122] [31merror[39m: [31mThe "data" argument must be of type string or an instance of Buffer, TypedArray, or DataView. Received [Object: null prototype][39m
+[05 Nov, 2025 - 22:41:55:4155] [34minfo[39m: [34mSetting up GitHub strategy[39m
+[05 Nov, 2025 - 22:41:55:4155] [34minfo[39m: [34mSetting up Google strategy[39m
+[05 Nov, 2025 - 22:41:56:4156] [34minfo[39m: [34m🚀 Server is running on http://localhost:3000[39m
+[05 Nov, 2025 - 22:41:57:4157] [34minfo[39m: [34m✅ Email service is ready to send emails[39m
+[05 Nov, 2025 - 22:41:57:4157] [31merror[39m: [31mThe "data" argument must be of type string or an instance of Buffer, TypedArray, or DataView. Received [Object: null prototype][39m
+[05 Nov, 2025 - 22:43:11:4311] [34minfo[39m: [34mSetting up GitHub strategy[39m
+[05 Nov, 2025 - 22:43:11:4311] [34minfo[39m: [34mSetting up Google strategy[39m
+[05 Nov, 2025 - 22:43:12:4312] [34minfo[39m: [34m🚀 Server is running on http://localhost:3000[39m
+[05 Nov, 2025 - 22:43:12:4312] [34minfo[39m: [34m✅ Email service is ready to send emails[39m
+[05 Nov, 2025 - 22:43:33:4333] [34minfo[39m: [34mSetting up GitHub strategy[39m
+[05 Nov, 2025 - 22:43:33:4333] [34minfo[39m: [34mSetting up Google strategy[39m
+[05 Nov, 2025 - 22:43:33:4333] [34minfo[39m: [34m🚀 Server is running on http://localhost:3000[39m
+[05 Nov, 2025 - 22:43:34:4334] [34minfo[39m: [34m✅ Email service is ready to send emails[39m
+[05 Nov, 2025 - 22:43:57:4357] [34minfo[39m: [34mSetting up GitHub strategy[39m
+[05 Nov, 2025 - 22:43:57:4357] [34minfo[39m: [34mSetting up Google strategy[39m
+[05 Nov, 2025 - 22:43:58:4358] [34minfo[39m: [34m🚀 Server is running on http://localhost:3000[39m
+[05 Nov, 2025 - 22:43:59:4359] [34minfo[39m: [34m✅ Email service is ready to send emails[39m
+[05 Nov, 2025 - 22:44:02:442] [31merror[39m: [31mThe "data" argument must be of type string or an instance of Buffer, TypedArray, or DataView. Received [Object: null prototype][39m
+[05 Nov, 2025 - 22:45:18:4518] [34minfo[39m: [34mSetting up GitHub strategy[39m
+[05 Nov, 2025 - 22:45:18:4518] [34minfo[39m: [34mSetting up Google strategy[39m
+[05 Nov, 2025 - 22:45:19:4519] [34minfo[39m: [34m🚀 Server is running on http://localhost:3000[39m
+[05 Nov, 2025 - 22:45:20:4520] [34minfo[39m: [34m✅ Email service is ready to send emails[39m
+[05 Nov, 2025 - 22:45:20:4520] [31merror[39m: [31mInvalid or expired password reset token[39m
+[05 Nov, 2025 - 22:45:30:4530] [34minfo[39m: [34mGenerating password reset token for user: gowthams200521@gmail.com[39m
+[05 Nov, 2025 - 22:45:30:4530] [34minfo[39m: [34mStoring password reset token for user: gowthams200521@gmail.com[39m
+[05 Nov, 2025 - 22:45:34:4534] [34minfo[39m: [34m✅ Email sent successfully to gowthams200521@gmail.com | MessageID: <53d89fa4-e273-8078-8d97-2705a3ee7f80@gmail.com>[39m
+[05 Nov, 2025 - 22:45:34:4534] [34minfo[39m: [34mPassword reset email sent to: gowthams200521@gmail.com[39m
+[05 Nov, 2025 - 22:46:21:4621] [34minfo[39m: [34mStarting password reset token verification process[39m
+[05 Nov, 2025 - 22:46:21:4621] [34minfo[39m: [34mVerifying password reset token: c5194133fd923e08322dc13505b468038fd0a39a[39m
+[05 Nov, 2025 - 22:46:45:4645] [31merror[39m: [31mInvalid or expired password reset token[39m
+[05 Nov, 2025 - 22:50:55:5055] [34minfo[39m: [34mSetting up GitHub strategy[39m
+[05 Nov, 2025 - 22:50:55:5055] [34minfo[39m: [34mSetting up Google strategy[39m
+[05 Nov, 2025 - 22:50:55:5055] [31merror[39m: [31m❌ Email transporter configuration failed: getaddrinfo EAI_AGAIN smtp.gmail.com[39m
+[05 Nov, 2025 - 22:51:08:518] [34minfo[39m: [34mSetting up GitHub strategy[39m
+[05 Nov, 2025 - 22:51:08:518] [34minfo[39m: [34mSetting up Google strategy[39m
+[05 Nov, 2025 - 22:51:08:518] [31merror[39m: [31m❌ Email transporter configuration failed: getaddrinfo EAI_AGAIN smtp.gmail.com[39m
+[05 Nov, 2025 - 22:51:16:5116] [34minfo[39m: [34mSetting up GitHub strategy[39m
+[05 Nov, 2025 - 22:51:16:5116] [34minfo[39m: [34mSetting up Google strategy[39m
+[05 Nov, 2025 - 22:51:16:5116] [31merror[39m: [31m❌ Email transporter configuration failed: getaddrinfo EAI_AGAIN smtp.gmail.com[39m
+[05 Nov, 2025 - 22:51:25:5125] [34minfo[39m: [34mSetting up GitHub strategy[39m
+[05 Nov, 2025 - 22:51:25:5125] [34minfo[39m: [34mSetting up Google strategy[39m
+[05 Nov, 2025 - 22:51:25:5125] [31merror[39m: [31m❌ Email transporter configuration failed: getaddrinfo EAI_AGAIN smtp.gmail.com[39m
+[05 Nov, 2025 - 22:52:01:521] [34minfo[39m: [34mSetting up GitHub strategy[39m
+[05 Nov, 2025 - 22:52:01:521] [34minfo[39m: [34mSetting up Google strategy[39m
+[05 Nov, 2025 - 22:52:02:522] [34minfo[39m: [34m🚀 Server is running on http://localhost:3000[39m
+[05 Nov, 2025 - 22:52:03:523] [34minfo[39m: [34m✅ Email service is ready to send emails[39m
+[05 Nov, 2025 - 22:52:07:527] [31merror[39m: [31mInvalid or expired password reset token[39m
+[05 Nov, 2025 - 22:53:05:535] [31merror[39m: [31mInvalid or expired password reset token[39m
+[05 Nov, 2025 - 23:01:32:132] [31merror[39m: [31mInvalid or expired password reset token[39m
+[05 Nov, 2025 - 23:01:54:154] [34minfo[39m: [34mSetting up GitHub strategy[39m
+[05 Nov, 2025 - 23:01:54:154] [34minfo[39m: [34mSetting up Google strategy[39m
+[05 Nov, 2025 - 23:01:55:155] [34minfo[39m: [34m🚀 Server is running on http://localhost:3000[39m
+[05 Nov, 2025 - 23:01:56:156] [34minfo[39m: [34mStarting password reset process with token: c5194133fd...[39m
+[05 Nov, 2025 - 23:01:56:156] [34minfo[39m: [34m✅ Email service is ready to send emails[39m
+[05 Nov, 2025 - 23:01:57:157] [31merror[39m: [31mInvalid or expired password reset token[39m
+[05 Nov, 2025 - 23:03:14:314] [34minfo[39m: [34mSetting up GitHub strategy[39m
+[05 Nov, 2025 - 23:03:14:314] [34minfo[39m: [34mSetting up Google strategy[39m
+[05 Nov, 2025 - 23:03:14:314] [34minfo[39m: [34m🚀 Server is running on http://localhost:3000[39m
+[05 Nov, 2025 - 23:03:15:315] [34minfo[39m: [34m✅ Email service is ready to send emails[39m
+[05 Nov, 2025 - 23:03:17:317] [34minfo[39m: [34mStarting password reset process with token: c5194133fd923e08322dc13505b468038fd0a39a...[39m
+[05 Nov, 2025 - 23:03:18:318] [31merror[39m: [31mInvalid or expired password reset token[39m
+[05 Nov, 2025 - 23:03:48:348] [34minfo[39m: [34mGenerating password reset token for user: gowthams200521@gmail.com[39m
+[05 Nov, 2025 - 23:03:48:348] [34minfo[39m: [34mGenerated tokens for gowthams200521@gmail.com:[39m
+[05 Nov, 2025 - 23:03:48:348] [34minfo[39m: [34m- Unhashed (first 10): b1eee0e019...[39m
+[05 Nov, 2025 - 23:03:48:348] [34minfo[39m: [34m- Hashed (first 10): 98984c409c...[39m
+[05 Nov, 2025 - 23:03:48:348] [34minfo[39m: [34m- Expires: Wed Nov 05 2025 23:23:48 GMT+0530 (India Standard Time)[39m
+[05 Nov, 2025 - 23:03:48:348] [34minfo[39m: [34mStoring password reset token for user: gowthams200521@gmail.com[39m
+[05 Nov, 2025 - 23:03:49:349] [34minfo[39m: [34mToken stored. Verification:[39m
+[34m        - Token stored: 98984c409c...[39m
+[34m        - Expiry set to: Wed Nov 05 2025 23:23:48 GMT+0530 (India Standard Time)[39m
+[34m    [39m
+[05 Nov, 2025 - 23:03:52:352] [34minfo[39m: [34m✅ Email sent successfully to gowthams200521@gmail.com | MessageID: <63d71c6c-9c7a-44a3-c847-30385771552e@gmail.com>[39m
+[05 Nov, 2025 - 23:03:52:352] [34minfo[39m: [34mPassword reset email sent to: gowthams200521@gmail.com[39m
+[05 Nov, 2025 - 23:04:00:40] [34minfo[39m: [34mStarting password reset token verification process[39m
+[05 Nov, 2025 - 23:04:00:40] [34minfo[39m: [34mReceived token: b1eee0e019...[39m
+[05 Nov, 2025 - 23:04:00:40] [34minfo[39m: [34mHashed token: 98984c409c...[39m
+[05 Nov, 2025 - 23:04:00:40] [34minfo[39m: [34mSearching for user with criteria:[39m
+[05 Nov, 2025 - 23:04:00:40] [34minfo[39m: [34mFound user with ID: 49. Token is valid.[39m
+[05 Nov, 2025 - 23:07:10:710] [34minfo[39m: [34mSetting up GitHub strategy[39m
+[05 Nov, 2025 - 23:07:10:710] [34minfo[39m: [34mSetting up Google strategy[39m
+[05 Nov, 2025 - 23:07:11:711] [34minfo[39m: [34m🚀 Server is running on http://localhost:3000[39m
+[05 Nov, 2025 - 23:07:12:712] [34minfo[39m: [34m✅ Email service is ready to send emails[39m
+[05 Nov, 2025 - 23:07:19:719] [34minfo[39m: [34mGenerating password reset token for user: gowthams200521@gmail.com[39m
+[05 Nov, 2025 - 23:07:19:719] [34minfo[39m: [34mGenerated tokens for gowthams200521@gmail.com:[39m
+[05 Nov, 2025 - 23:07:19:719] [34minfo[39m: [34m- Unhashed (first 10): de042a937a...[39m
+[05 Nov, 2025 - 23:07:19:719] [34minfo[39m: [34m- Hashed (first 10): 9fe8f35f43...[39m
+[05 Nov, 2025 - 23:07:19:719] [34minfo[39m: [34m- Expires: Wed Nov 05 2025 23:27:19 GMT+0530 (India Standard Time)[39m
+[05 Nov, 2025 - 23:07:19:719] [34minfo[39m: [34mStoring password reset token for user: gowthams200521@gmail.com[39m
+[05 Nov, 2025 - 23:07:19:719] [34minfo[39m: [34mToken stored. Verification:[39m
+[34m        - Token stored: 9fe8f35f43...[39m
+[34m        - Expiry set to: Wed Nov 05 2025 23:27:19 GMT+0530 (India Standard Time)[39m
+[34m    [39m
+[05 Nov, 2025 - 23:07:23:723] [34minfo[39m: [34m✅ Email sent successfully to gowthams200521@gmail.com | MessageID: <5f90833b-c76c-2466-b430-b56fca40869e@gmail.com>[39m
+[05 Nov, 2025 - 23:07:23:723] [34minfo[39m: [34mPassword reset email sent to: gowthams200521@gmail.com[39m
+[05 Nov, 2025 - 23:07:43:743] [34minfo[39m: [34mStarting password reset token verification process[39m
+[05 Nov, 2025 - 23:07:43:743] [34minfo[39m: [34mReceived token: de042a937a...[39m
+[05 Nov, 2025 - 23:07:43:743] [34minfo[39m: [34mHashed token: 9fe8f35f43...[39m
+[05 Nov, 2025 - 23:07:43:743] [34minfo[39m: [34mSearching for user with criteria:[39m
+[05 Nov, 2025 - 23:07:43:743] [34minfo[39m: [34mFound user with ID: 49. Token is valid.[39m
+[05 Nov, 2025 - 23:08:12:812] [34minfo[39m: [34mStarting password reset process with token: de042a937a7cf56e6752cb8dd95dcb36b288d5b...[39m
+[05 Nov, 2025 - 23:08:13:813] [31merror[39m: [31mInvalid or expired password reset token[39m
+[05 Nov, 2025 - 23:08:52:852] [34minfo[39m: [34mStarting password reset process with token: 9fe8f35f432cd2ddb34a45edf368e42ad80eace7d0c8eab2ead06d75983ebbe4...[39m
+[05 Nov, 2025 - 23:08:53:853] [31merror[39m: [31mInvalid or expired password reset token[39m
+[05 Nov, 2025 - 23:09:45:945] [34minfo[39m: [34mStarting password reset process with token: 9fe8f35f432cd2ddb34a45edf368e42ad80eace7d0c8eab2ead06d75983ebbe4....[39m
+[05 Nov, 2025 - 23:09:46:946] [31merror[39m: [31mInvalid or expired password reset token[39m
+[05 Nov, 2025 - 23:11:33:1133] [34minfo[39m: [34mSetting up GitHub strategy[39m
+[05 Nov, 2025 - 23:11:33:1133] [34minfo[39m: [34mSetting up Google strategy[39m
+[05 Nov, 2025 - 23:11:34:1134] [34minfo[39m: [34m🚀 Server is running on http://localhost:3000[39m
+[05 Nov, 2025 - 23:11:35:1135] [34minfo[39m: [34m✅ Email service is ready to send emails[39m
+[05 Nov, 2025 - 23:11:35:1135] [34minfo[39m: [34mStarting password reset process with token: 9fe8f35f432cd2ddb34a45edf368e42ad80eace7d0c8eab2ead06d75983ebbe4....[39m
+[05 Nov, 2025 - 23:11:35:1135] [31merror[39m: [31mInvalid or expired password reset token[39m
+[05 Nov, 2025 - 23:12:16:1216] [34minfo[39m: [34mStarting password reset process with token: 9fe8f35f432cd2ddb34a45edf368e42ad80eace7d0c8eab2ead06d75983ebbe4....[39m
+[05 Nov, 2025 - 23:12:16:1216] [31merror[39m: [31mInvalid or expired password reset token[39m
+[05 Nov, 2025 - 23:12:25:1225] [34minfo[39m: [34mStarting password reset process with token: 9fe8f35f432cd2ddb34a45edf368e42ad80eace7d0c8eab2ead06d75983ebbe4...[39m
+[05 Nov, 2025 - 23:12:26:1226] [31merror[39m: [31mbcrypt is not defined[39m
+[05 Nov, 2025 - 23:12:59:1259] [34minfo[39m: [34mSetting up GitHub strategy[39m
+[05 Nov, 2025 - 23:12:59:1259] [34minfo[39m: [34mSetting up Google strategy[39m
+[05 Nov, 2025 - 23:13:00:130] [34minfo[39m: [34m🚀 Server is running on http://localhost:3000[39m
+[05 Nov, 2025 - 23:13:01:131] [34minfo[39m: [34m✅ Email service is ready to send emails[39m
+[05 Nov, 2025 - 23:13:02:132] [34minfo[39m: [34mStarting password reset process with token: 9fe8f35f432cd2ddb34a45edf368e42ad80eace7d0c8eab2ead06d75983ebbe4...[39m
+[05 Nov, 2025 - 23:25:00:250] [34minfo[39m: [34mSetting up GitHub strategy[39m
+[05 Nov, 2025 - 23:25:00:250] [34minfo[39m: [34mSetting up Google strategy[39m
+[05 Nov, 2025 - 23:25:01:251] [34minfo[39m: [34m🚀 Server is running on http://localhost:3000[39m
+[05 Nov, 2025 - 23:25:02:252] [34minfo[39m: [34m✅ Email service is ready to send emails[39m
+[05 Nov, 2025 - 23:25:50:2550] [34minfo[39m: [34mGenerating email verification token for user: test@example.com[39m
+[05 Nov, 2025 - 23:25:50:2550] [34minfo[39m: [34mStoring email verification token for user: test@example.com[39m
+[05 Nov, 2025 - 23:25:54:2554] [34minfo[39m: [34m✅ Email sent successfully to test@example.com | MessageID: <143d3ca6-daa2-bd84-2c8a-b1700d00fffd@gmail.com>[39m
+[05 Nov, 2025 - 23:25:54:2554] [34minfo[39m: [34mUser registered successfully: test@example.com[39m
+[05 Nov, 2025 - 23:26:11:2611] [34minfo[39m: [34mGenerated refresh token for user 50: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NTAsImlhdCI6MTc2MjM2NTM3MSwiZXhwIjoxNzYyOTcwMTcxfQ.BSccs1q_UNM4hZvq73CTZBEd74RUGjt3WZ4y5MMk7n0[39m
+[05 Nov, 2025 - 23:26:39:2639] [34minfo[39m: [34mRefreshing access token with refresh token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NTAsImlhdCI6MTc2MjM2NTM3MSwiZXhwIjoxNzYyOTcwMTcxfQ.BSccs1q_UNM4hZvq73CTZBEd74RUGjt3WZ4y5MMk7no[39m
+[05 Nov, 2025 - 23:26:39:2639] [34minfo[39m: [34mAttempting to verify token with secret: you...[39m
+[05 Nov, 2025 - 23:26:39:2639] [31merror[39m: [31mToken verification failed: invalid signature[39m
+[05 Nov, 2025 - 23:26:39:2639] [31merror[39m: [31mInvalid token: invalid signature[39m
+[05 Nov, 2025 - 23:27:00:270] [34minfo[39m: [34mRefreshing access token with refresh token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NTAsImlhdCI6MTc2MjM2NTM3MSwiZXhwIjoxNzYyOTcwMTcxfQ.BSccs1q_UNM4hZvq73CTZBEd74RUGjt3WZ4y5MMk7n0[39m
+[05 Nov, 2025 - 23:27:00:270] [34minfo[39m: [34mAttempting to verify token with secret: you...[39m
+[05 Nov, 2025 - 23:27:00:270] [34minfo[39m: [34mToken verified successfully. Decoded payload: {"id":50,"iat":1762365371,"exp":1762970171}[39m
+[05 Nov, 2025 - 23:27:01:271] [34minfo[39m: [34mGenerated new access token for user 50[39m
+[05 Nov, 2025 - 23:27:10:2710] [34minfo[39m: [34mVerifying token: null[39m
+[05 Nov, 2025 - 23:27:10:2710] [31merror[39m: [31mInvalid token[39m
+[05 Nov, 2025 - 23:27:33:2733] [34minfo[39m: [34mVerifying token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NTAsImVtYWlsIjoidGVzdEBleGFtcGxlLmNvbSIsInJvbGUiOiJVU0VSIiwidXNlcm5hbWUiOiJ0ZXN0dXNlciIsImlhdCI6MTc2MjM2NTQyMSwiZXhwIjoxNzYyMzY1NDgxfQ.IKjXOjV1itEea9vkeP22T9i4NVltXfPeKb-Ue8zW0_E[39m
+[05 Nov, 2025 - 23:27:33:2733] [34minfo[39m: [34mDecoded token: 50[39m
+[05 Nov, 2025 - 23:27:33:2733] [34minfo[39m: [34mUser fetched from DB: {"id":50,"email":"test@example.com","name":"testuser","avatar":null,"password":"$2b$10$b0EDvYgBat0fmuOxGqs6KeA8yp0zQ/dzPAlzPyEKZD8OW212yJ/P6","loginType":"EMAIL_PASSWORD","role":"USER","isEmailVerified":false,"refreshToken":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NTAsImlhdCI6MTc2MjM2NTM3MSwiZXhwIjoxNzYyOTcwMTcxfQ.BSccs1q_UNM4hZvq73CTZBEd74RUGjt3WZ4y5MMk7n0","forgetPasswordToken":null,"forgetPasswordExpiry":null,"emailVerificationToken":"90a512059cd096a285cd6a8ddd9116b05fdf64570d5ec6148e32dc721c63b3cd","emailVerificationExpiry":"2025-11-05T18:15:50.410Z","createdAt":"2025-11-05T17:55:49.970Z","updatedAt":"2025-11-05T17:56:11.798Z"}[39m
+[05 Nov, 2025 - 23:27:33:2733] [31merror[39m: [31mCannot read properties of undefined (reading 'id')[39m
+[05 Nov, 2025 - 23:27:45:2745] [34minfo[39m: [34mVerifying token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NTAsImVtYWlsIjoidGVzdEBleGFtcGxlLmNvbSIsInJvbGUiOiJVU0VSIiwidXNlcm5hbWUiOiJ0ZXN0dXNlciIsImlhdCI6MTc2MjM2NTQyMSwiZXhwIjoxNzYyMzY1NDgxfQ.IKjXOjV1itEea9vkeP22T9i4NVltXfPeKb-Ue8zW0_E[39m
+[05 Nov, 2025 - 23:27:45:2745] [34minfo[39m: [34mDecoded token: 50[39m
+[05 Nov, 2025 - 23:27:46:2746] [34minfo[39m: [34mUser fetched from DB: {"id":50,"email":"test@example.com","name":"testuser","avatar":null,"password":"$2b$10$b0EDvYgBat0fmuOxGqs6KeA8yp0zQ/dzPAlzPyEKZD8OW212yJ/P6","loginType":"EMAIL_PASSWORD","role":"USER","isEmailVerified":false,"refreshToken":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NTAsImlhdCI6MTc2MjM2NTM3MSwiZXhwIjoxNzYyOTcwMTcxfQ.BSccs1q_UNM4hZvq73CTZBEd74RUGjt3WZ4y5MMk7n0","forgetPasswordToken":null,"forgetPasswordExpiry":null,"emailVerificationToken":"90a512059cd096a285cd6a8ddd9116b05fdf64570d5ec6148e32dc721c63b3cd","emailVerificationExpiry":"2025-11-05T18:15:50.410Z","createdAt":"2025-11-05T17:55:49.970Z","updatedAt":"2025-11-05T17:56:11.798Z"}[39m
+[05 Nov, 2025 - 23:27:46:2746] [31merror[39m: [31mCannot read properties of undefined (reading 'id')[39m
+[05 Nov, 2025 - 23:28:15:2815] [34minfo[39m: [34mVerifying token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NTAsImVtYWlsIjoidGVzdEBleGFtcGxlLmNvbSIsInJvbGUiOiJVU0VSIiwidXNlcm5hbWUiOiJ0ZXN0dXNlciIsImlhdCI6MTc2MjM2NTQyMSwiZXhwIjoxNzYyMzY1NDgxfQ.IKjXOjV1itEea9vkeP22T9i4NVltXfPeKb-Ue8zW0_E[39m
+[05 Nov, 2025 - 23:28:15:2815] [31merror[39m: [31mInvalid token[39m
+[05 Nov, 2025 - 23:29:02:292] [34minfo[39m: [34mVerifying token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NTAsImVtYWlsIjoidGVzdEBleGFtcGxlLmNvbSIsInJvbGUiOiJVU0VSIiwidXNlcm5hbWUiOiJ0ZXN0dXNlciIsImlhdCI6MTc2MjM2NTQyMSwiZXhwIjoxNzYyMzY1NDgxfQ.IKjXOjV1itEea9vkeP22T9i4NVltXfPeKb-Ue8zW0_E[39m
+[05 Nov, 2025 - 23:29:02:292] [31merror[39m: [31mInvalid token[39m
+[06 Nov, 2025 - 00:39:02:392] [34minfo[39m: [34mSetting up GitHub strategy[39m
+[06 Nov, 2025 - 00:39:02:392] [34minfo[39m: [34mSetting up Google strategy[39m
+[06 Nov, 2025 - 00:39:03:393] [34minfo[39m: [34m🚀 Server is running on http://localhost:3000[39m
+[06 Nov, 2025 - 00:39:05:395] [34minfo[39m: [34m✅ Email service is ready to send emails[39m
+[06 Nov, 2025 - 00:39:12:3912] [34minfo[39m: [34mVerifying token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NTAsImVtYWlsIjoidGVzdEBleGFtcGxlLmNvbSIsInJvbGUiOiJVU0VSIiwidXNlcm5hbWUiOiJ0ZXN0dXNlciIsImlhdCI6MTc2MjM2NTQyMSwiZXhwIjoxNzYyMzY1NDgxfQ.IKjXOjV1itEea9vkeP22T9i4NVltXfPeKb-Ue8zW0_E[39m
+[06 Nov, 2025 - 00:39:12:3912] [31merror[39m: [31mInvalid token[39m
+[06 Nov, 2025 - 00:39:20:3920] [34minfo[39m: [34mRefreshing access token with refresh token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NTAsImlhdCI6MTc2MjM2NTM3MSwiZXhwIjoxNzYyOTcwMTcxfQ.BSccs1q_UNM4hZvq73CTZBEd74RUGjt3WZ4y5MMk7n0[39m
+[06 Nov, 2025 - 00:39:20:3920] [34minfo[39m: [34mAttempting to verify token with secret: you...[39m
+[06 Nov, 2025 - 00:39:20:3920] [34minfo[39m: [34mToken verified successfully. Decoded payload: {"id":50,"iat":1762365371,"exp":1762970171}[39m
+[06 Nov, 2025 - 00:39:21:3921] [34minfo[39m: [34mGenerated new access token for user 50[39m
+[06 Nov, 2025 - 00:39:36:3936] [34minfo[39m: [34mVerifying token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NTAsImVtYWlsIjoidGVzdEBleGFtcGxlLmNvbSIsInJvbGUiOiJVU0VSIiwidXNlcm5hbWUiOiJ0ZXN0dXNlciIsImlhdCI6MTc2MjM2OTc2MSwiZXhwIjoxNzYyMzY5ODIxfQ.DMq0s8pxOY0w4bW4mxt1-Pj3GTNMlQXiH6E4KwTBrvc[39m
+[06 Nov, 2025 - 00:39:36:3936] [34minfo[39m: [34mDecoded token: 50[39m
+[06 Nov, 2025 - 00:39:37:3937] [34minfo[39m: [34mUser fetched from DB: {"id":50,"email":"test@example.com","name":"testuser","avatar":null,"password":"$2b$10$b0EDvYgBat0fmuOxGqs6KeA8yp0zQ/dzPAlzPyEKZD8OW212yJ/P6","loginType":"EMAIL_PASSWORD","role":"USER","isEmailVerified":false,"refreshToken":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NTAsImlhdCI6MTc2MjM2NTM3MSwiZXhwIjoxNzYyOTcwMTcxfQ.BSccs1q_UNM4hZvq73CTZBEd74RUGjt3WZ4y5MMk7n0","forgetPasswordToken":null,"forgetPasswordExpiry":null,"emailVerificationToken":"90a512059cd096a285cd6a8ddd9116b05fdf64570d5ec6148e32dc721c63b3cd","emailVerificationExpiry":"2025-11-05T18:15:50.410Z","createdAt":"2025-11-05T17:55:49.970Z","updatedAt":"2025-11-05T17:56:11.798Z"}[39m
+[06 Nov, 2025 - 00:39:37:3937] [34minfo[39m: [34mFetching current user with ID: 50[39m
+[06 Nov, 2025 - 00:39:37:3937] [31merror[39m: [31muserId is not defined[39m
+[06 Nov, 2025 - 00:39:55:3955] [34minfo[39m: [34mSetting up GitHub strategy[39m
+[06 Nov, 2025 - 00:39:55:3955] [34minfo[39m: [34mSetting up Google strategy[39m
+[06 Nov, 2025 - 00:39:56:3956] [34minfo[39m: [34m🚀 Server is running on http://localhost:3000[39m
+[06 Nov, 2025 - 00:39:57:3957] [34minfo[39m: [34m✅ Email service is ready to send emails[39m
+[06 Nov, 2025 - 00:39:58:3958] [34minfo[39m: [34mVerifying token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NTAsImVtYWlsIjoidGVzdEBleGFtcGxlLmNvbSIsInJvbGUiOiJVU0VSIiwidXNlcm5hbWUiOiJ0ZXN0dXNlciIsImlhdCI6MTc2MjM2OTc2MSwiZXhwIjoxNzYyMzY5ODIxfQ.DMq0s8pxOY0w4bW4mxt1-Pj3GTNMlQXiH6E4KwTBrvc[39m
+[06 Nov, 2025 - 00:39:58:3958] [34minfo[39m: [34mDecoded token: 50[39m
+[06 Nov, 2025 - 00:39:59:3959] [34minfo[39m: [34mUser fetched from DB: {"id":50,"email":"test@example.com","name":"testuser","avatar":null,"password":"$2b$10$b0EDvYgBat0fmuOxGqs6KeA8yp0zQ/dzPAlzPyEKZD8OW212yJ/P6","loginType":"EMAIL_PASSWORD","role":"USER","isEmailVerified":false,"refreshToken":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NTAsImlhdCI6MTc2MjM2NTM3MSwiZXhwIjoxNzYyOTcwMTcxfQ.BSccs1q_UNM4hZvq73CTZBEd74RUGjt3WZ4y5MMk7n0","forgetPasswordToken":null,"forgetPasswordExpiry":null,"emailVerificationToken":"90a512059cd096a285cd6a8ddd9116b05fdf64570d5ec6148e32dc721c63b3cd","emailVerificationExpiry":"2025-11-05T18:15:50.410Z","createdAt":"2025-11-05T17:55:49.970Z","updatedAt":"2025-11-05T17:56:11.798Z"}[39m
+[06 Nov, 2025 - 00:39:59:3959] [34minfo[39m: [34mToken verified successfully for user ID: 50[39m
+[06 Nov, 2025 - 00:39:59:3959] [34minfo[39m: [34mFetching current user with ID: 50[39m
+[06 Nov, 2025 - 00:39:59:3959] [31merror[39m: [31muserId is not defined[39m
+[06 Nov, 2025 - 00:40:52:4052] [34minfo[39m: [34mSetting up GitHub strategy[39m
+[06 Nov, 2025 - 00:40:52:4052] [34minfo[39m: [34mSetting up Google strategy[39m
+[06 Nov, 2025 - 00:40:54:4054] [34minfo[39m: [34m🚀 Server is running on http://localhost:3000[39m
+[06 Nov, 2025 - 00:40:54:4054] [34minfo[39m: [34m✅ Email service is ready to send emails[39m
+[06 Nov, 2025 - 00:41:01:411] [34minfo[39m: [34mVerifying token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NTAsImVtYWlsIjoidGVzdEBleGFtcGxlLmNvbSIsInJvbGUiOiJVU0VSIiwidXNlcm5hbWUiOiJ0ZXN0dXNlciIsImlhdCI6MTc2MjM2OTc2MSwiZXhwIjoxNzYyMzY5ODIxfQ.DMq0s8pxOY0w4bW4mxt1-Pj3GTNMlQXiH6E4KwTBrvc[39m
+[06 Nov, 2025 - 00:41:01:411] [31merror[39m: [31mInvalid token[39m
+[06 Nov, 2025 - 00:41:29:4129] [34minfo[39m: [34mSetting up GitHub strategy[39m
+[06 Nov, 2025 - 00:41:29:4129] [34minfo[39m: [34mSetting up Google strategy[39m
+[06 Nov, 2025 - 00:41:30:4130] [34minfo[39m: [34m✅ Email service is ready to send emails[39m
+[06 Nov, 2025 - 00:41:30:4130] [34minfo[39m: [34m🚀 Server is running on http://localhost:3000[39m
+[06 Nov, 2025 - 00:41:32:4132] [34minfo[39m: [34mRefreshing access token with refresh token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NTAsImlhdCI6MTc2MjM2NTM3MSwiZXhwIjoxNzYyOTcwMTcxfQ.BSccs1q_UNM4hZvq73CTZBEd74RUGjt3WZ4y5MMk7n0[39m
+[06 Nov, 2025 - 00:41:32:4132] [34minfo[39m: [34mAttempting to verify token with secret: you...[39m
+[06 Nov, 2025 - 00:41:32:4132] [34minfo[39m: [34mToken verified successfully. Decoded payload: {"id":50,"iat":1762365371,"exp":1762970171}[39m
+[06 Nov, 2025 - 00:41:33:4133] [34minfo[39m: [34mGenerated new access token for user 50[39m
+[06 Nov, 2025 - 00:42:01:421] [34minfo[39m: [34mVerifying token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NTAsImVtYWlsIjoidGVzdEBleGFtcGxlLmNvbSIsInJvbGUiOiJVU0VSIiwidXNlcm5hbWUiOiJ0ZXN0dXNlciIsImlhdCI6MTc2MjM2OTg5MywiZXhwIjoxNzYyMzcwNzkzfQ.ihZeqfas515KYfdtpxJYMiepjcjX4Xl87GlC0M128Co[39m
+[06 Nov, 2025 - 00:42:01:421] [34minfo[39m: [34mDecoded token: 50[39m
+[06 Nov, 2025 - 00:42:02:422] [34minfo[39m: [34mUser fetched from DB: {"id":50,"email":"test@example.com","name":"testuser","avatar":null,"password":"$2b$10$b0EDvYgBat0fmuOxGqs6KeA8yp0zQ/dzPAlzPyEKZD8OW212yJ/P6","loginType":"EMAIL_PASSWORD","role":"USER","isEmailVerified":false,"refreshToken":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NTAsImlhdCI6MTc2MjM2NTM3MSwiZXhwIjoxNzYyOTcwMTcxfQ.BSccs1q_UNM4hZvq73CTZBEd74RUGjt3WZ4y5MMk7n0","forgetPasswordToken":null,"forgetPasswordExpiry":null,"emailVerificationToken":"90a512059cd096a285cd6a8ddd9116b05fdf64570d5ec6148e32dc721c63b3cd","emailVerificationExpiry":"2025-11-05T18:15:50.410Z","createdAt":"2025-11-05T17:55:49.970Z","updatedAt":"2025-11-05T17:56:11.798Z"}[39m
+[06 Nov, 2025 - 00:42:02:422] [34minfo[39m: [34mToken verified successfully for user ID: 50[39m
+[06 Nov, 2025 - 00:42:02:422] [34minfo[39m: [34mFetching current user with ID: 50[39m
+[06 Nov, 2025 - 00:42:18:4218] [34minfo[39m: [34mVerifying token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NTAsImVtYWlsIjoidGVzdEBleGFtcGxlLmNvbSIsInJvbGUiOiJVU0VSIiwidXNlcm5hbWUiOiJ0ZXN0dXNlciIsImlhdCI6MTc2MjM2NTQyMSwiZXhwIjoxNzYyMzY1NDgxfQ.IKjXOjV1itEea9vkeP22T9i4NVltXfPeKb-Ue8zW0_E[39m
+[06 Nov, 2025 - 00:42:18:4218] [31merror[39m: [31mInvalid token[39m
+[06 Nov, 2025 - 00:42:24:4224] [34minfo[39m: [34mVerifying token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NTAsImVtYWlsIjoidGVzdEBleGFtcGxlLmNvbSIsInJvbGUiOiJVU0VSIiwidXNlcm5hbWUiOiJ0ZXN0dXNlciIsImlhdCI6MTc2MjM2OTg5MywiZXhwIjoxNzYyMzcwNzkzfQ.ihZeqfas515KYfdtpxJYMiepjcjX4Xl87GlC0M128Co[39m
+[06 Nov, 2025 - 00:42:24:4224] [34minfo[39m: [34mDecoded token: 50[39m
+[06 Nov, 2025 - 00:42:25:4225] [34minfo[39m: [34mUser fetched from DB: {"id":50,"email":"test@example.com","name":"testuser","avatar":null,"password":"$2b$10$b0EDvYgBat0fmuOxGqs6KeA8yp0zQ/dzPAlzPyEKZD8OW212yJ/P6","loginType":"EMAIL_PASSWORD","role":"USER","isEmailVerified":false,"refreshToken":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NTAsImlhdCI6MTc2MjM2NTM3MSwiZXhwIjoxNzYyOTcwMTcxfQ.BSccs1q_UNM4hZvq73CTZBEd74RUGjt3WZ4y5MMk7n0","forgetPasswordToken":null,"forgetPasswordExpiry":null,"emailVerificationToken":"90a512059cd096a285cd6a8ddd9116b05fdf64570d5ec6148e32dc721c63b3cd","emailVerificationExpiry":"2025-11-05T18:15:50.410Z","createdAt":"2025-11-05T17:55:49.970Z","updatedAt":"2025-11-05T17:56:11.798Z"}[39m
+[06 Nov, 2025 - 00:42:25:4225] [34minfo[39m: [34mToken verified successfully for user ID: 50[39m
+[06 Nov, 2025 - 00:42:35:4235] [34minfo[39m: [34mRefreshing access token with refresh token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NTAsImlhdCI6MTc2MjM2NTM3MSwiZXhwIjoxNzYyOTcwMTcxfQ.BSccs1q_UNM4hZvq73CTZBEd74RUGjt3WZ4y5MMk7n0[39m
+[06 Nov, 2025 - 00:42:35:4235] [34minfo[39m: [34mAttempting to verify token with secret: you...[39m
+[06 Nov, 2025 - 00:42:35:4235] [34minfo[39m: [34mToken verified successfully. Decoded payload: {"id":50,"iat":1762365371,"exp":1762970171}[39m
+[06 Nov, 2025 - 00:42:35:4235] [31merror[39m: [31mToken mismatch. Stored: undefined..., Received: eyJhbGciOi...[39m
+[06 Nov, 2025 - 00:42:35:4235] [31merror[39m: [31mToken verification failed: Refresh token is expired or used[39m
+[06 Nov, 2025 - 00:42:35:4235] [31merror[39m: [31mInvalid token: Refresh token is expired or used[39m
+[06 Nov, 2025 - 00:42:47:4247] [34minfo[39m: [34mGenerated refresh token for user 50: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NTAsImlhdCI6MTc2MjM2OTk2NywiZXhwIjoxNzYyOTc0NzY3fQ.64uFZIFeusfVex-fqDe68aH9O_HOnP3z0MxX-TwyQBI[39m
+[06 Nov, 2025 - 00:43:04:434] [34minfo[39m: [34mVerifying token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NTAsImVtYWlsIjoidGVzdEBleGFtcGxlLmNvbSIsInJvbGUiOiJVU0VSIiwidXNlcm5hbWUiOiJ0ZXN0dXNlciIsImlhdCI6MTc2MjM2OTk2NywiZXhwIjoxNzYyMzcwODY3fQ.i3gRG6qk2oxKoe23krvYMfeC86PDmgJrGidD28h3owc[39m
+[06 Nov, 2025 - 00:43:04:434] [34minfo[39m: [34mDecoded token: 50[39m
+[06 Nov, 2025 - 00:43:04:434] [34minfo[39m: [34mUser fetched from DB: {"id":50,"email":"test@example.com","name":"testuser","avatar":null,"password":"$2b$10$b0EDvYgBat0fmuOxGqs6KeA8yp0zQ/dzPAlzPyEKZD8OW212yJ/P6","loginType":"EMAIL_PASSWORD","role":"USER","isEmailVerified":false,"refreshToken":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NTAsImlhdCI6MTc2MjM2OTk2NywiZXhwIjoxNzYyOTc0NzY3fQ.64uFZIFeusfVex-fqDe68aH9O_HOnP3z0MxX-TwyQBI","forgetPasswordToken":null,"forgetPasswordExpiry":null,"emailVerificationToken":"90a512059cd096a285cd6a8ddd9116b05fdf64570d5ec6148e32dc721c63b3cd","emailVerificationExpiry":"2025-11-05T18:15:50.410Z","createdAt":"2025-11-05T17:55:49.970Z","updatedAt":"2025-11-05T19:12:47.523Z"}[39m
+[06 Nov, 2025 - 00:43:04:434] [34minfo[39m: [34mToken verified successfully for user ID: 50[39m
+[06 Nov, 2025 - 00:43:33:4333] [34minfo[39m: [34mGenerating password reset token for user: test@example.com[39m
+[06 Nov, 2025 - 00:43:33:4333] [34minfo[39m: [34mGenerated tokens for test@example.com:[39m
+[06 Nov, 2025 - 00:43:33:4333] [34minfo[39m: [34m- Unhashed (first 10): fc1d97a850...[39m
+[06 Nov, 2025 - 00:43:33:4333] [34minfo[39m: [34m- Hashed (first 10): fcd50bdcf3...[39m
+[06 Nov, 2025 - 00:43:33:4333] [34minfo[39m: [34m- Expires: Thu Nov 06 2025 01:03:33 GMT+0530 (India Standard Time)[39m
+[06 Nov, 2025 - 00:43:33:4333] [34minfo[39m: [34mStoring password reset token for user: test@example.com[39m
+[06 Nov, 2025 - 00:43:34:4334] [34minfo[39m: [34mToken stored. Verification:[39m
+[34m        - Token stored: fcd50bdcf3...[39m
+[34m        - Expiry set to: Thu Nov 06 2025 01:03:33 GMT+0530 (India Standard Time)[39m
+[34m    [39m
+[06 Nov, 2025 - 00:43:36:4336] [34minfo[39m: [34m✅ Email sent successfully to test@example.com | MessageID: <6c75a38c-a1fb-8441-bc72-68f01d0ed823@gmail.com>[39m
+[06 Nov, 2025 - 00:43:36:4336] [34minfo[39m: [34mPassword reset email sent to: test@example.com[39m
+[06 Nov, 2025 - 00:44:19:4419] [34minfo[39m: [34mStarting password reset token verification process[39m
+[06 Nov, 2025 - 00:44:19:4419] [34minfo[39m: [34mReceived token: fc1d97a850...[39m
+[06 Nov, 2025 - 00:44:19:4419] [34minfo[39m: [34mHashed token: fcd50bdcf3...[39m
+[06 Nov, 2025 - 00:44:19:4419] [34minfo[39m: [34mSearching for user with criteria:[39m
+[06 Nov, 2025 - 00:44:19:4419] [34minfo[39m: [34mFound user with ID: 50. Token is valid.[39m
+[06 Nov, 2025 - 00:44:56:4456] [34minfo[39m: [34mStarting password reset process with token: fc1d97a850ee646c37c04fad93a95bd0ce841bfd...[39m
+[06 Nov, 2025 - 00:44:56:4456] [31merror[39m: [31mInvalid or expired password reset token[39m
+[06 Nov, 2025 - 00:45:10:4510] [34minfo[39m: [34mStarting password reset token verification process[39m
+[06 Nov, 2025 - 00:45:10:4510] [34minfo[39m: [34mReceived token: fc1d97a850...[39m
+[06 Nov, 2025 - 00:45:10:4510] [34minfo[39m: [34mHashed token: fcd50bdcf3...[39m
+[06 Nov, 2025 - 00:45:10:4510] [34minfo[39m: [34mSearching for user with criteria:[39m
+[06 Nov, 2025 - 00:45:10:4510] [34minfo[39m: [34mFound user with ID: 50. Token is valid.[39m
+[06 Nov, 2025 - 00:45:33:4533] [34minfo[39m: [34mStarting password reset process with token: fc1d97a850ee646c37c04fad93a95bd0ce841bfd...[39m
+[06 Nov, 2025 - 00:45:34:4534] [31merror[39m: [31mInvalid or expired password reset token[39m
+[06 Nov, 2025 - 00:46:55:4655] [34minfo[39m: [34mStarting password reset token verification process[39m
+[06 Nov, 2025 - 00:46:55:4655] [34minfo[39m: [34mReceived token: fc1d97a850...[39m
+[06 Nov, 2025 - 00:46:55:4655] [34minfo[39m: [34mHashed token: fcd50bdcf3...[39m
+[06 Nov, 2025 - 00:46:55:4655] [34minfo[39m: [34mSearching for user with criteria:[39m
+[06 Nov, 2025 - 00:46:56:4656] [34minfo[39m: [34mFound user with ID: 50. Token is valid.[39m
+[06 Nov, 2025 - 00:48:28:4828] [34minfo[39m: [34mStarting password reset token verification process[39m
+[06 Nov, 2025 - 00:48:28:4828] [34minfo[39m: [34mReceived token: fc1d97a850...[39m
+[06 Nov, 2025 - 00:48:28:4828] [34minfo[39m: [34mHashed token: fcd50bdcf3...[39m
+[06 Nov, 2025 - 00:48:28:4828] [34minfo[39m: [34mSearching for user with criteria:[39m
+[06 Nov, 2025 - 00:48:28:4828] [34minfo[39m: [34mFound user with ID: 50. Token is valid.[39m
+[06 Nov, 2025 - 00:49:18:4918] [34minfo[39m: [34mGenerating password reset token for user: test@example.com[39m
+[06 Nov, 2025 - 00:49:18:4918] [34minfo[39m: [34mGenerated tokens for test@example.com:[39m
+[06 Nov, 2025 - 00:49:18:4918] [34minfo[39m: [34m- Unhashed (first 10): cc3eb845cf...[39m
+[06 Nov, 2025 - 00:49:18:4918] [34minfo[39m: [34m- Hashed (first 10): 7bd7b3d57d...[39m
+[06 Nov, 2025 - 00:49:18:4918] [34minfo[39m: [34m- Expires: Thu Nov 06 2025 01:09:18 GMT+0530 (India Standard Time)[39m
+[06 Nov, 2025 - 00:49:18:4918] [34minfo[39m: [34mStoring password reset token for user: test@example.com[39m
+[06 Nov, 2025 - 00:49:18:4918] [34minfo[39m: [34mToken stored. Verification:[39m
+[34m        - Token stored: 7bd7b3d57d...[39m
+[34m        - Expiry set to: Thu Nov 06 2025 01:09:18 GMT+0530 (India Standard Time)[39m
+[34m    [39m
+[06 Nov, 2025 - 00:49:22:4922] [34minfo[39m: [34m✅ Email sent successfully to test@example.com | MessageID: <23fbd3f6-f4d8-6f37-0290-e5cc012644b2@gmail.com>[39m
+[06 Nov, 2025 - 00:49:22:4922] [34minfo[39m: [34mPassword reset email sent to: test@example.com[39m
+[06 Nov, 2025 - 00:49:33:4933] [34minfo[39m: [34mStarting password reset token verification process[39m
+[06 Nov, 2025 - 00:49:33:4933] [34minfo[39m: [34mReceived token: cc3eb845cf...[39m
+[06 Nov, 2025 - 00:49:33:4933] [34minfo[39m: [34mHashed token: 7bd7b3d57d...[39m
+[06 Nov, 2025 - 00:49:33:4933] [34minfo[39m: [34mSearching for user with criteria:[39m
+[06 Nov, 2025 - 00:49:34:4934] [34minfo[39m: [34mFound user with ID: 50. Token is valid.[39m
+[06 Nov, 2025 - 00:50:19:5019] [31merror[39m: [31mUser not found[39m
+[06 Nov, 2025 - 00:50:33:5033] [34minfo[39m: [34mGenerating password reset token for user: gowthams200521@gmail.com[39m
+[06 Nov, 2025 - 00:50:33:5033] [34minfo[39m: [34mGenerated tokens for gowthams200521@gmail.com:[39m
+[06 Nov, 2025 - 00:50:33:5033] [34minfo[39m: [34m- Unhashed (first 10): fce5eeca1b...[39m
+[06 Nov, 2025 - 00:50:33:5033] [34minfo[39m: [34m- Hashed (first 10): f52b22d9b2...[39m
+[06 Nov, 2025 - 00:50:33:5033] [34minfo[39m: [34m- Expires: Thu Nov 06 2025 01:10:33 GMT+0530 (India Standard Time)[39m
+[06 Nov, 2025 - 00:50:33:5033] [34minfo[39m: [34mStoring password reset token for user: gowthams200521@gmail.com[39m
+[06 Nov, 2025 - 00:50:33:5033] [34minfo[39m: [34mToken stored. Verification:[39m
+[34m        - Token stored: f52b22d9b2...[39m
+[34m        - Expiry set to: Thu Nov 06 2025 01:10:33 GMT+0530 (India Standard Time)[39m
+[34m    [39m
+[06 Nov, 2025 - 00:50:36:5036] [34minfo[39m: [34m✅ Email sent successfully to gowthams200521@gmail.com | MessageID: <9800f928-f2c0-9245-8940-52abbbeb3f74@gmail.com>[39m
+[06 Nov, 2025 - 00:50:36:5036] [34minfo[39m: [34mPassword reset email sent to: gowthams200521@gmail.com[39m
+[06 Nov, 2025 - 00:50:59:5059] [34minfo[39m: [34mStarting password reset token verification process[39m
+[06 Nov, 2025 - 00:50:59:5059] [34minfo[39m: [34mReceived token: fce5eeca1b...[39m
+[06 Nov, 2025 - 00:50:59:5059] [34minfo[39m: [34mHashed token: f52b22d9b2...[39m
+[06 Nov, 2025 - 00:50:59:5059] [34minfo[39m: [34mSearching for user with criteria:[39m
+[06 Nov, 2025 - 00:50:59:5059] [34minfo[39m: [34mFound user with ID: 49. Token is valid.[39m
+[06 Nov, 2025 - 00:51:52:5152] [34minfo[39m: [34mStarting password reset process with token: fce5eeca1bf6b42f7ed0e2dbb6963a2b6899d6c2...[39m
+[06 Nov, 2025 - 00:51:52:5152] [31merror[39m: [31mInvalid or expired password reset token[39m
+[06 Nov, 2025 - 00:54:13:5413] [34minfo[39m: [34mGenerating password reset token for user: gowthams200521@gmail.com[39m
+[06 Nov, 2025 - 00:54:13:5413] [34minfo[39m: [34mGenerated tokens for gowthams200521@gmail.com:[39m
+[06 Nov, 2025 - 00:54:13:5413] [34minfo[39m: [34m- Unhashed (first 10): 1e4530e644...[39m
+[06 Nov, 2025 - 00:54:13:5413] [34minfo[39m: [34m- Hashed (first 10): a08c36ea96...[39m
+[06 Nov, 2025 - 00:54:13:5413] [34minfo[39m: [34m- Expires: Thu Nov 06 2025 01:14:13 GMT+0530 (India Standard Time)[39m
+[06 Nov, 2025 - 00:54:13:5413] [34minfo[39m: [34mStoring password reset token for user: gowthams200521@gmail.com[39m
+[06 Nov, 2025 - 00:54:13:5413] [34minfo[39m: [34mToken stored. Verification:[39m
+[34m        - Token stored: a08c36ea96...[39m
+[34m        - Expiry set to: Thu Nov 06 2025 01:14:13 GMT+0530 (India Standard Time)[39m
+[34m    [39m
+[06 Nov, 2025 - 00:54:16:5416] [34minfo[39m: [34m✅ Email sent successfully to gowthams200521@gmail.com | MessageID: <d608a277-e73a-8fe7-7057-1d99df3d21a0@gmail.com>[39m
+[06 Nov, 2025 - 00:54:16:5416] [34minfo[39m: [34mPassword reset email sent to: gowthams200521@gmail.com[39m
+[06 Nov, 2025 - 00:54:24:5424] [34minfo[39m: [34mStarting password reset token verification process[39m
+[06 Nov, 2025 - 00:54:24:5424] [34minfo[39m: [34mReceived token: 1e4530e644...[39m
+[06 Nov, 2025 - 00:54:24:5424] [34minfo[39m: [34mHashed token: a08c36ea96...[39m
+[06 Nov, 2025 - 00:54:24:5424] [34minfo[39m: [34mSearching for user with criteria:[39m
+[06 Nov, 2025 - 00:54:24:5424] [34minfo[39m: [34mFound user with ID: 49. Token is valid.[39m
+[06 Nov, 2025 - 00:54:49:5449] [34minfo[39m: [34mStarting password reset process with token: 1e4530e644534049349cf79ea12f77a683777dae...[39m
+[06 Nov, 2025 - 00:54:50:5450] [31merror[39m: [31mInvalid or expired password reset token[39m
+[06 Nov, 2025 - 00:55:21:5521] [34minfo[39m: [34mStarting password reset process with token: 1e4530e644534049349cf79ea12f77a683777dae...[39m
+[06 Nov, 2025 - 00:55:21:5521] [31merror[39m: [31mInvalid or expired password reset token[39m
+[06 Nov, 2025 - 01:02:29:229] [34minfo[39m: [34mSetting up GitHub strategy[39m
+[06 Nov, 2025 - 01:02:29:229] [34minfo[39m: [34mSetting up Google strategy[39m
+[06 Nov, 2025 - 01:02:29:229] [34minfo[39m: [34m🚀 Server is running on http://localhost:3000[39m
+[06 Nov, 2025 - 01:02:30:230] [34minfo[39m: [34m✅ Email service is ready to send emails[39m
+[06 Nov, 2025 - 01:02:36:236] [34minfo[39m: [34mStarting password reset process with token: 1e4530e644534049349cf79ea12f77a683777dae...[39m
+[06 Nov, 2025 - 01:04:08:48] [34minfo[39m: [34mExisting user found for GitHub OAuth login[39m
+[06 Nov, 2025 - 01:04:08:48] [33mwarn[39m: [33mLogin type mismatch: expected EMAIL_PASSWORD, got undefined[39m
+[06 Nov, 2025 - 01:04:08:48] [31merror[39m: [31mPlease login using EMAIL_PASSWORD[39m

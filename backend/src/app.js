@@ -1,6 +1,10 @@
 import express from "express";
 import morganMiddleware from "./logger/morgan.logger.js";
 import logger from "./logger/winston.logger.js";
+import userRouter from "./routes/apps/auth/user.route.js";
+import { errorHandler } from "./middlewares/error.middlewares.js";
+import passport from "passport";
+import './passport/index.js';
 
 const app = express();
 
@@ -10,19 +14,18 @@ app.use(express.json());
 // HTTP logging
 app.use(morganMiddleware);
 
+// Initialize Passport
+app.use(passport.initialize());
+
+// Error handling middleware
+
 // Routes
 app.get("/", (req, res) => {
   logger.info("Home route accessed");
   res.send("Hello from Express with Morgan + Winston!");
 });
 
-app.get("/error", (req, res) => {
-  try {
-    throw new Error("Test error for logging");
-  } catch (err) {
-    logger.error(err.message);
-    res.status(500).send("Something went wrong!");
-  }
-});
+app.use("/api/v1/users", userRouter);
 
+app.use(errorHandler);
 export default app;
