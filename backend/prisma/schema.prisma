@@ -1,359 +1,360 @@
-generator client {
-  provider = "prisma-client-js"
-}
+  generator client {
+    provider = "prisma-client-js"
+  }
 
-datasource db {
-  provider  = "postgresql"
-  url       = env("DATABASE_URL")
-  directUrl = env("DIRECT_URL")
-}
+  datasource db {
+    provider  = "postgresql"
+    url       = env("DATABASE_URL")
+    directUrl = env("DIRECT_URL")
+  }
 
-//
-// ========== USER MANAGEMENT ==========
-//
-model User {
-  id                      Int                 @id @default(autoincrement())
-  email                   String              @unique
-  name                    String?
-  avatar                  String?
-  password                String?
-  loginType               LoginType           @default(EMAIL_PASSWORD)
-  role                    Role                @default(USER)
-  isEmailVerified         Boolean             @default(false)
-  refreshToken            String?
-  forgetPasswordToken     String?
-  forgetPasswordExpiry    DateTime?
-  emailVerificationToken  String?
-  emailVerificationExpiry DateTime?
-  createdAt               DateTime            @default(now())
-  updatedAt               DateTime            @updatedAt
+  //
+  // ========== USER MANAGEMENT ==========
+  //
+  model User {
+    id                      Int                 @id @default(autoincrement())
+    email                   String              @unique
+    name                    String?
+    avatar                  String?
+    password                String?
+    loginType               LoginType           @default(EMAIL_PASSWORD)
+    role                    Role                @default(USER)
+    isEmailVerified         Boolean             @default(false)
+    refreshToken            String?
+    forgetPasswordToken     String?
+    forgetPasswordExpiry    DateTime?
+    emailVerificationToken  String?
+    emailVerificationExpiry DateTime?
+    createdAt               DateTime            @default(now())
+    updatedAt               DateTime            @updatedAt
 
-  // Relations
-  createdRooms            Room[]              @relation("RoomCreator")
-  roomMemberships         RoomMembership[]
-  teamMemberships         TeamMembership[]
-  createdTeams            Team[]              @relation("TeamCreator")
-  submissions             Submission[]
-  notifications           Notification[]
+    // Relations
+    createdRooms            Room[]              @relation("RoomCreator")
+    roomMemberships         RoomMembership[]
+    teamMemberships         TeamMembership[]
+    createdTeams            Team[]              @relation("TeamCreator")
+    submissions             Submission[]
+    notifications           Notification[]
 
-  @@index([email])
-}
+    @@index([email])
+  }
 
-enum Role {
-  USER
-  ADMIN_ROOM
-  TEAM_LEADER
-  TEAM_MEMBER
-}
+  enum Role {
+    USER
+    ADMIN_ROOM
+    TEAM_LEADER
+    TEAM_MEMBER
+  }
 
-enum LoginType {
-  GOOGLE
-  GITHUB
-  EMAIL_PASSWORD
-}
+  enum LoginType {
+    GOOGLE
+    GITHUB
+    EMAIL_PASSWORD
+  }
 
-//
-// ========== ROOM MANAGEMENT ==========
-//
-model Room {
-  id              String            @id @default(cuid())
-  name            String
-  password        String            // Hashed password for room access
-  maxTeams        Int
-  maxTeamSize     Int
-  duration        Int               // in minutes
-  status          RoomStatus        @default(WAITING)
-  startTime       DateTime?
-  endTime         DateTime?
-  createdById     Int
-  createdBy       User              @relation("RoomCreator", fields: [createdById], references: [id])
-  adminToken      String            @unique // JWT for admin access
-  createdAt       DateTime          @default(now())
-  updatedAt       DateTime          @updatedAt
+  //
+  // ========== ROOM MANAGEMENT ==========
+  //
+  model Room {
+    id              String            @id @default(cuid())
+    name            String
+    password        String            // Hashed password for room access
+    maxTeams        Int
+    maxTeamSize     Int
+    duration        Int               // in minutes
+    status          RoomStatus        @default(WAITING)
+    startTime       DateTime?
+    endTime         DateTime?
+    createdById     Int
+    createdBy       User              @relation("RoomCreator", fields: [createdById], references: [id])
+    adminToken      String            @unique // JWT for admin access
+    createdAt       DateTime          @default(now())
+    updatedAt       DateTime          @updatedAt
 
-  // Relations
-  questions       Question[]
-  teams           Team[]
-  memberships     RoomMembership[]
-  leaderboard     Leaderboard?
+    // Relations
+    questions       Question[]
+    teams           Team[]
+    memberships     RoomMembership[]
+    leaderboard     Leaderboard?
 
-  @@index([createdById])
-  @@index([status])
-}
+    @@index([createdById])
+    @@index([status])
+  }
 
-enum RoomStatus {
-  WAITING
-  IN_PROGRESS
-  COMPLETED
-  CANCELLED
-}
+  enum RoomStatus {
+    WAITING
+    IN_PROGRESS
+    COMPLETED
+    CANCELLED
+  }
 
-//
-// ========== ROOM MEMBERSHIP ==========
-//
-model RoomMembership {
-  id        Int       @id @default(autoincrement())
-  userId    Int
-  user      User      @relation(fields: [userId], references: [id])
-  roomId    String
-  room      Room      @relation(fields: [roomId], references: [id], onDelete: Cascade)
-  joinedAt  DateTime  @default(now())
+  //
+  // ========== ROOM MEMBERSHIP ==========
+  //
+  model RoomMembership {
+    id        Int       @id @default(autoincrement())
+    userId    Int
+    user      User      @relation(fields: [userId], references: [id])
+    roomId    String
+    room      Room      @relation(fields: [roomId], references: [id], onDelete: Cascade)
+    joinedAt  DateTime  @default(now())
 
-  @@unique([userId, roomId])
-  @@index([roomId])
-}
+    @@unique([userId, roomId])
+    @@index([roomId])
+  }
 
-//
-// ========== QUESTION MANAGEMENT ==========
-//
-model Question {
-  id              Int              @id @default(autoincrement())
-  roomId          String
-  room            Room             @relation(fields: [roomId], references: [id], onDelete: Cascade)
-  title           String
-  description     String           @db.Text
-  topic           String
-  difficulty      Difficulty
-  constraints     String?          @db.Text
-  inputFormat     String?          @db.Text
-  outputFormat    String?          @db.Text
-  timeLimit       Int              @default(2000)
-  memoryLimit     Int              @default(256)
-  points          Int
-  createdAt       DateTime         @default(now())
-  updatedAt       DateTime         @updatedAt
+  //
+  // ========== QUESTION MANAGEMENT ==========
+  //
+  model Question {
+    id              Int              @id @default(autoincrement())
+    roomId          String
+    room            Room             @relation(fields: [roomId], references: [id], onDelete: Cascade)
+    title           String
+    description     String           @db.Text
+    topic           String
+    difficulty      Difficulty
+    constraints     String?          @db.Text
+    inputFormat     String?          @db.Text
+    outputFormat    String?          @db.Text
+    timeLimit       Int              @default(2000)
+    memoryLimit     Int              @default(256)
+    points          Int
+    createdAt       DateTime         @default(now())
+    updatedAt       DateTime         @updatedAt
 
-  // Relations
-  testCases       TestCase[]
-  examples        Example[]
-  submissions     Submission[]
-  solveRequests   SolveRequest[]
+    // Relations
+    testCases       TestCase[]
+    examples        Example[]
+    submissions     Submission[]
+    solveRequests   SolveRequest[]
 
-  @@index([roomId])
-  @@index([difficulty])
-}
+    @@index([roomId])
+    @@index([difficulty])
+  }
 
-enum Difficulty {
-  EASY
-  MEDIUM
-  HARD
-}
+  enum Difficulty {
+    EASY
+    MEDIUM
+    HARD
+  }
 
-model TestCase {
-  id             Int       @id @default(autoincrement())
-  questionId     Int
-  question       Question  @relation(fields: [questionId], references: [id], onDelete: Cascade)
-  input          String    @db.Text
-  expectedOutput String    @db.Text
-  isHidden       Boolean   @default(false)
-  points         Int       @default(0)
-  createdAt      DateTime  @default(now())
+  model TestCase {
+    id             Int       @id @default(autoincrement())
+    questionId     Int
+    question       Question  @relation(fields: [questionId], references: [id], onDelete: Cascade)
+    input          String    @db.Text
+    expectedOutput String    @db.Text
+    isHidden       Boolean   @default(false)
+    points         Int       @default(0)
+    createdAt      DateTime  @default(now())
 
-  @@index([questionId])
-}
+    @@index([questionId])
+  }
 
-model Example {
-  id           Int       @id @default(autoincrement())
-  questionId   Int
-  question     Question  @relation(fields: [questionId], references: [id], onDelete: Cascade)
-  input        String    @db.Text
-  output       String    @db.Text
-  explanation  String?   @db.Text
-  orderIndex   Int
-  createdAt    DateTime  @default(now())
+  model Example {
+    id           Int       @id @default(autoincrement())
+    questionId   Int
+    question     Question  @relation(fields: [questionId], references: [id], onDelete: Cascade)
+    input        String    @db.Text
+    output       String    @db.Text
+    explanation  String?   @db.Text
+    orderIndex   Int
+    createdAt    DateTime  @default(now())
 
-  @@index([questionId])
-}
+    @@index([questionId])
+  }
 
-//
-// ========== TEAM MANAGEMENT ==========
-//
-model Team {
-  id            String            @id @default(cuid())
-  name          String
-  roomId        String
-  room          Room              @relation(fields: [roomId], references: [id], onDelete: Cascade)
-  leaderId      Int
-  leader        User              @relation("TeamCreator", fields: [leaderId], references: [id])
-  leaderToken   String            @unique
-  totalScore    Int               @default(0)
-  rank          Int?
-  createdAt     DateTime          @default(now())
-  updatedAt     DateTime          @updatedAt
+  //
+  // ========== TEAM MANAGEMENT ==========
+  //
+  model Team {
+    id            String            @id @default(cuid())
+    name          String
+    roomId        String
+    room          Room              @relation(fields: [roomId], references: [id], onDelete: Cascade)
+    leaderId      Int
+    leader        User              @relation("TeamCreator", fields: [leaderId], references: [id])
+    leaderToken   String            @unique
+    totalScore    Int               @default(0)
+    rank          Int?
+    createdAt     DateTime          @default(now())
+    updatedAt     DateTime          @updatedAt
 
-  memberships   TeamMembership[]
-  submissions   Submission[]
-  solveRequests SolveRequest[]
+    memberships   TeamMembership[]
+    submissions   Submission[]
+    solveRequests SolveRequest[]
 
-  @@unique([roomId, name])
-  @@index([roomId])
-  @@index([leaderId])
-}
+    @@unique([roomId, name])
+    @@index([roomId])
+    @@index([leaderId])
+  }
 
-model TeamMembership {
-  id            Int                 @id @default(autoincrement())
-  userId        Int
-  user          User                @relation(fields: [userId], references: [id])
-  teamId        String
-  team          Team                @relation(fields: [teamId], references: [id], onDelete: Cascade)
-  status        MembershipStatus    @default(PENDING)
-  memberToken   String?             @unique
-  joinedAt      DateTime            @default(now())
-  approvedAt    DateTime?
+  model TeamMembership {
+    id            Int                 @id @default(autoincrement())
+    userId        Int
+    user          User                @relation(fields: [userId], references: [id])
+    teamId        String
+    team          Team                @relation(fields: [teamId], references: [id], onDelete: Cascade)
+    status        MembershipStatus    @default(PENDING)
+    memberToken   String?             @unique
+    joinedAt      DateTime            @default(now())
+    approvedAt    DateTime?
 
-  @@unique([userId, teamId])
-  @@index([teamId])
-  @@index([status])
-}
+    @@unique([userId, teamId])
+    @@index([teamId])
+    @@index([status])
+  }
 
-enum MembershipStatus {
-  PENDING
-  APPROVED
-  REJECTED
-  LEFT
-}
+  enum MembershipStatus {
+    PENDING
+    APPROVED
+    REJECTED
+    LEFT
+  }
 
-//
-// ========== SOLVE REQUEST SYSTEM ==========
-//
-model SolveRequest {
-  id            Int           @id @default(autoincrement())
-  teamId        String
-  team          Team          @relation(fields: [teamId], references: [id], onDelete: Cascade)
-  questionId    Int
-  question      Question      @relation(fields: [questionId], references: [id], onDelete: Cascade)
-  requestedById Int
-  status        RequestStatus @default(PENDING)
-  requestedAt   DateTime      @default(now())
-  respondedAt   DateTime?
+  //
+  // ========== SOLVE REQUEST SYSTEM ==========
+  //
+  model SolveRequest {
+    id            Int           @id @default(autoincrement())
+    teamId        String
+    team          Team          @relation(fields: [teamId], references: [id], onDelete: Cascade)
+    questionId    Int
+    question      Question      @relation(fields: [questionId], references: [id], onDelete: Cascade)
+    requestedById Int
+    status        RequestStatus @default(PENDING)
+    requestedAt   DateTime      @default(now())
+    respondedAt   DateTime?
 
-  @@unique([teamId, questionId, requestedById])
-  @@index([teamId])
-  @@index([status])
-}
+    @@unique([teamId, questionId, requestedById])
+    @@index([teamId])
+    @@index([status])
+  }
 
-enum RequestStatus {
-  PENDING
-  APPROVED
-  REJECTED
-}
+  enum RequestStatus {
+    PENDING
+    APPROVED
+    REJECTED
+  }
 
-//
-// ========== SUBMISSION SYSTEM ==========
-//
-model Submission {
-  id             Int                 @id @default(autoincrement())
-  teamId         String
-  team           Team                @relation(fields: [teamId], references: [id], onDelete: Cascade)
-  questionId     Int
-  question       Question            @relation(fields: [questionId], references: [id], onDelete: Cascade)
-  userId         Int
-  user           User                @relation(fields: [userId], references: [id])
-  code           String              @db.Text
-  language       ProgrammingLanguage
-  status         SubmissionStatus
-  score          Int                 @default(0)
-  executionTime  Int?
-  memoryUsed     Int?
-  submittedAt    DateTime            @default(now())
+  //
+  // ========== SUBMISSION SYSTEM ==========
+  //
+  model Submission {
+    id             Int                 @id @default(autoincrement())
+    teamId         String
+    team           Team                @relation(fields: [teamId], references: [id], onDelete: Cascade)
+    questionId     Int
+    question       Question            @relation(fields: [questionId], references: [id], onDelete: Cascade)
+    userId         Int
+    user           User                @relation(fields: [userId], references: [id])
+    code           String              @db.Text
+    language       ProgrammingLanguage
+    status         SubmissionStatus
+    score          Int                 @default(0)
+    executionTime  Int?
+    memoryUsed     Int?
+    submittedAt    DateTime            @default(now())
 
-  testResults    TestResult[]
+    testResults    TestResult[]
 
-  @@index([teamId, questionId])
-  @@index([userId])
-  @@index([status])
-}
+    @@index([teamId, questionId])
+    @@index([userId])
+    @@index([status])
+  }
 
-enum ProgrammingLanguage {
-  JAVASCRIPT
-  PYTHON
-  JAVA
-  CPP
-  C
-  GO
-  RUST
-}
+  enum ProgrammingLanguage {
+    JAVASCRIPT
+    PYTHON
+    JAVA
+    CPP
+    C
+    GO
+    RUST
+  }
 
-enum SubmissionStatus {
-  PENDING
-  RUNNING
-  ACCEPTED
-  WRONG_ANSWER
-  TIME_LIMIT
-  MEMORY_LIMIT
-  RUNTIME_ERROR
-  COMPILE_ERROR
-}
+  enum SubmissionStatus {
+    PENDING
+    RUNNING
+    ACCEPTED
+    WRONG_ANSWER
+    TIME_LIMIT
+    MEMORY_LIMIT
+    RUNTIME_ERROR
+    COMPILE_ERROR
+  }
 
-model TestResult {
-  id            Int           @id @default(autoincrement())
-  submissionId  Int
-  submission    Submission    @relation(fields: [submissionId], references: [id], onDelete: Cascade)
-  testCaseId    Int
-  passed        Boolean
-  output        String?       @db.Text
-  error         String?       @db.Text
-  executionTime Int?
-  memoryUsed    Int?
+  model TestResult {
+    id            Int           @id @default(autoincrement())
+    submissionId  Int
+    submission    Submission    @relation(fields: [submissionId], references: [id], onDelete: Cascade)
+    testCaseId    Int
+    passed        Boolean
+    output        String?       @db.Text
+    error         String?       @db.Text
+    executionTime Int?
+    memoryUsed    Int?
 
-  @@index([submissionId])
-}
+    @@index([submissionId])
+  }
 
-//
-// ========== LIVE CODE COLLABORATION ==========
-//
-model LiveCode {
-  id             String               @id @default(cuid())
-  teamId         String
-  questionId     Int
-  userId         Int
-  code           String               @db.Text
-  language       ProgrammingLanguage
-  cursorPosition Int?
-  lastUpdated    DateTime             @default(now())
+  //
+  // ========== LIVE CODE COLLABORATION ==========
+  //
+  model LiveCode {
+    id             String               @id @default(cuid())
+    teamId         String
+    questionId     Int
+    userId         Int
+    code           String               @db.Text
+    language       ProgrammingLanguage
+    cursorPosition Int?
+    lastUpdated    DateTime             @default(now())
 
-  @@unique([teamId, questionId, userId])
-  @@index([teamId])
-}
+    @@unique([teamId, questionId, userId])
+    @@index([teamId])
+  }
 
-//
-// ========== LEADERBOARD ==========
-//
-model Leaderboard {
-  id          Int       @id @default(autoincrement())
-  roomId      String    @unique
-  room        Room      @relation(fields: [roomId], references: [id], onDelete: Cascade)
-  rankings    Json
-  generatedAt DateTime  @default(now())
-  updatedAt   DateTime  @updatedAt
-}
+  //
+  // ========== LEADERBOARD ==========
+  //
+  model Leaderboard {
+    id          Int       @id @default(autoincrement())
+    roomId      String    @unique
+    room        Room      @relation(fields: [roomId], references: [id], onDelete: Cascade)
+    rankings    Json
+    generatedAt DateTime  @default(now())
+    updatedAt   DateTime  @updatedAt
+  }
 
-//
-// ========== NOTIFICATIONS ==========
-//
-model Notification {
-  id         Int               @id @default(autoincrement())
-  userId     Int
-  user       User              @relation(fields: [userId], references: [id], onDelete: Cascade)
-  type       NotificationType
-  title      String
-  message    String            @db.Text
-  isRead     Boolean           @default(false)
-  metadata   Json?
-  createdAt  DateTime          @default(now())
+  //
+  // ========== NOTIFICATIONS ==========
+  //
+  model Notification {
+    id         Int               @id @default(autoincrement())
+    userId     Int
+    user       User              @relation(fields: [userId], references: [id], onDelete: Cascade)
+    type       NotificationType
+    title      String
+    message    String            @db.Text
+    isRead     Boolean           @default(false)
+    metadata   Json?
+    createdAt  DateTime          @default(now())
 
-  @@index([userId, isRead])
-}
+    @@index([userId, isRead])
+  }
 
-enum NotificationType {
-  ROOM_STARTED
-  ROOM_ENDING_SOON
-  TEAM_JOIN_REQUEST
-  TEAM_JOIN_APPROVED
-  TEAM_JOIN_REJECTED
-  SOLVE_REQUEST
-  SOLVE_APPROVED
-  SOLVE_REJECTED
-  NEW_SUBMISSION
-  ROOM_COMPLETED
-}
+  enum NotificationType {
+    ROOM_STARTED
+    ROOM_ENDING_SOON
+    TEAM_JOIN_REQUEST
+    TEAM_JOIN_APPROVED
+    TEAM_JOIN_REJECTED
+    SOLVE_REQUEST
+    SOLVE_APPROVED
+    SOLVE_REJECTED
+    NEW_SUBMISSION
+    ROOM_COMPLETED
+  }
+    

@@ -497,3 +497,62 @@
 [06 Nov, 2025 - 00:54:50:5450] [31merror[39m: [31mInvalid or expired password reset token[39m
 [06 Nov, 2025 - 00:55:21:5521] [31merror[39m: [31mInvalid or expired password reset token[39m
 [06 Nov, 2025 - 01:04:08:48] [31merror[39m: [31mPlease login using EMAIL_PASSWORD[39m
+[08 Nov, 2025 - 11:02:35:235] [31merror[39m: [31mCannot read properties of null (reading 'loginType')[39m
+[08 Nov, 2025 - 11:03:05:35] [31merror[39m: [31mCannot read properties of null (reading 'loginType')[39m
+[08 Nov, 2025 - 11:04:47:447] [31merror[39m: [31muser not found please provide correct email[39m
+[08 Nov, 2025 - 11:05:01:51] [31merror[39m: [31mplease verify your the email [39m
+[08 Nov, 2025 - 11:08:55:855] [31merror[39m: [31msecretOrPrivateKey must have a value[39m
+[08 Nov, 2025 - 11:12:29:1229] [31merror[39m: [31mInvalid token[39m
+[08 Nov, 2025 - 11:21:51:2151] [31merror[39m: [31mInvalid token[39m
+[08 Nov, 2025 - 11:41:05:415] [31merror[39m: [31mInvalid token[39m
+[08 Nov, 2025 - 11:41:19:4119] [31merror[39m: [31mNo token provided[39m
+[08 Nov, 2025 - 11:41:27:4127] [31merror[39m: [31mNo token provided[39m
+[08 Nov, 2025 - 11:48:24:4824] [31merror[39m: [31mroom not found[39m
+[08 Nov, 2025 - 11:48:39:4839] [31merror[39m: [31mtoken is not defined[39m
+[08 Nov, 2025 - 11:50:14:5014] [31merror[39m: [31mEmail already in use[39m
+[08 Nov, 2025 - 11:51:13:5113] [31merror[39m: [31mplease verify your the email [39m
+[08 Nov, 2025 - 11:52:11:5211] [31merror[39m: [31myou not permission to access these service[39m
+[08 Nov, 2025 - 11:52:46:5246] [31merror[39m: [31mCannot start room with status: IN_PROGRESS[39m
+[08 Nov, 2025 - 16:28:56:2856] [31merror[39m: [31mToken mismatch. Stored: eyJhbGciOi..., Received: eyJhbGciOi...[39m
+[08 Nov, 2025 - 16:28:56:2856] [31merror[39m: [31mToken verification failed: Refresh token is expired or used[39m
+[08 Nov, 2025 - 16:28:56:2856] [31merror[39m: [31mInvalid token: Refresh token is expired or used[39m
+[08 Nov, 2025 - 16:29:26:2926] [31merror[39m: [31mToken verification failed: invalid signature[39m
+[08 Nov, 2025 - 16:29:26:2926] [31merror[39m: [31mInvalid token: invalid signature[39m
+[08 Nov, 2025 - 16:31:15:3115] [31merror[39m: [31mInvalid token[39m
+[08 Nov, 2025 - 18:33:10:3310] [31merror[39m: [31mInvalid token[39m
+[09 Nov, 2025 - 07:11:16:1116] [31merror[39m: [31m[39m
+[31mInvalid `prisma.user.findUnique()` invocation:[39m
+
+
+[31mTimed out fetching a new connection from the connection pool. More info: http://pris.ly/d/connection-pool (Current connection pool timeout: 10, connection limit: 5)[39m
+[09 Nov, 2025 - 07:13:37:1337] [31merror[39m: [31mInvalid token[39m
+[09 Nov, 2025 - 07:13:45:1345] [31merror[39m: [31mYou are already in a team for this room[39m
+[09 Nov, 2025 - 07:14:21:1421] [31merror[39m: [31mInvalid token[39m
+[09 Nov, 2025 - 07:14:49:1449] [31merror[39m: [31mInvalid token[39m
+[09 Nov, 2025 - 07:15:15:1515] [31merror[39m: [31mInvalid token[39m
+[09 Nov, 2025 - 07:15:27:1527] [31merror[39m: [31mYou are already in a team for this room[39m
+[09 Nov, 2025 - 07:16:03:163] [31merror[39m: [31muser not found please provide correct email[39m
+[09 Nov, 2025 - 07:17:08:178] [31merror[39m: [31mInvalid token[39m
+[09 Nov, 2025 - 07:17:24:1724] [31merror[39m: [31mOnly team leader can view pending memberships[39m
+[09 Nov, 2025 - 07:17:57:1757] [31merror[39m: [31mInvalid token[39m
+[09 Nov, 2025 - 07:19:06:196] [31merror[39m: [31mInvalid token[39m
+[09 Nov, 2025 - 07:20:44:2044] [31merror[39m: [31mYou are already in a team for this room[39m
+[09 Nov, 2025 - 07:21:01:211] [31merror[39m: [31mInvalid token[39m
+[09 Nov, 2025 - 07:21:11:2111] [31merror[39m: [31mTeam leader cannot leave. Delete the team instead.[39m
+[09 Nov, 2025 - 07:21:58:2158] [31merror[39m: [31mInvalid token[39m
+[09 Nov, 2025 - 07:22:06:226] [31merror[39m: [31mCannot remove yourself. Delete the team instead.[39m
+[09 Nov, 2025 - 07:22:36:2236] [31merror[39m: [31mInvalid token[39m
+[09 Nov, 2025 - 07:27:38:2738] [31merror[39m: [31mMembership request not found[39m
+[09 Nov, 2025 - 07:28:02:282] [31merror[39m: [31mMembership request not found[39m
+[09 Nov, 2025 - 07:29:09:299] [31merror[39m: [31mTeam leader cannot leave. Delete the team instead.[39m
+[09 Nov, 2025 - 07:29:38:2938] [31merror[39m: [31mValidation Error[39m
+[09 Nov, 2025 - 07:31:41:3141] [31merror[39m: [31mNo token provided[39m
+[09 Nov, 2025 - 07:49:45:4945] [31merror[39m: [31mInvalid token[39m
+[09 Nov, 2025 - 07:50:37:5037] [31merror[39m: [31m[39m
+[31mInvalid `prisma.user.findUnique()` invocation:[39m
+
+
+[31mTimed out fetching a new connection from the connection pool. More info: http://pris.ly/d/connection-pool (Current connection pool timeout: 10, connection limit: 5)[39m
+[09 Nov, 2025 - 07:51:13:5113] [31merror[39m: [31mValidation Error[39m
+[09 Nov, 2025 - 07:53:05:535] [31merror[39m: [31mInvalid token[39m
+[09 Nov, 2025 - 07:53:58:5358] [31merror[39m: [31mOnly room creator can add test cases[39m

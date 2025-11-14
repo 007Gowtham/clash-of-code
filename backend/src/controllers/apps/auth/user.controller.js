@@ -93,11 +93,23 @@ export const UserLoginController = asyncHandler(async (req, res, next) => {
             email: email,
         },
     });
+
+
+     if(!user)
+     {
+        throw new ApiError(404,"user not found please provide correct email");
+     }
+
       
     if(user.loginType !==LoginTypesEnum.EMAIL_PASSWORD){
         throw new ApiError(400, `Please login using ${user.loginType}`);
     }
     
+    if(!user.isEmailVerified)
+    {
+        throw new ApiError(403,"please verify your the email ");
+        logger.error("email is not verifyed");
+    }
     if (!user) {
         throw new ApiError(404, 'User not found');
     }

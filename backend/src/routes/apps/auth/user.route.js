@@ -17,7 +17,7 @@ import {
     UserLogoutController,
     ChangePasswordController,
 
-} from "../../../controllers/auth/user.controller.js";
+} from "../../../controllers/apps/auth/user.controller.js";
 
 import { validate } from "../../../validators/validate.js";
 import { Router } from "express";

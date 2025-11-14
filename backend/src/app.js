@@ -1,7 +1,6 @@
 import express from "express";
 import morganMiddleware from "./logger/morgan.logger.js";
 import logger from "./logger/winston.logger.js";
-import userRouter from "./routes/apps/auth/user.route.js";
 import { errorHandler } from "./middlewares/error.middlewares.js";
 import passport from "passport";
 import './passport/index.js';
@@ -25,7 +24,15 @@ app.get("/", (req, res) => {
   res.send("Hello from Express with Morgan + Winston!");
 });
 
+import userRouter from "./routes/apps/auth/user.route.js";
+import roomRouter from './routes/apps/room/romm.routes.js';
+import teamRouter from './routes/apps/team/team.route.js'
+import questionRouter from './routes/apps/question/question.route.js'
+
 app.use("/api/v1/users", userRouter);
+app.use('/api/v1/rooms',roomRouter);
+app.use('/api/v1/teams',teamRouter);
+app.use('/api/v1/questions',questionRouter);
 
 app.use(errorHandler);
 export default app;
