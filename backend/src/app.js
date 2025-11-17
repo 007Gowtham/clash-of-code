@@ -4,6 +4,7 @@ import logger from "./logger/winston.logger.js";
 import { errorHandler } from "./middlewares/error.middlewares.js";
 import passport from "passport";
 import './passport/index.js';
+import { swaggerSpec,swaggerUi } from "./swagger/swagger.js";
 
 const app = express();
 
@@ -17,6 +18,10 @@ app.use(morganMiddleware);
 app.use(passport.initialize());
 
 // Error handling middleware
+
+
+app.use("/api-docs", swaggerUi.serve, swaggerUi.setup(swaggerSpec));
+
 
 // Routes
 app.get("/", (req, res) => {

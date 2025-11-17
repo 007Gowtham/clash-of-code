@@ -93,7 +93,31 @@ const router = Router();
  * @param {string} roomId - Room ID
  * @returns {Object} Room statistics and analytics
  */
-
+/**
+ * @openapi
+ * /api/v1/rooms:
+ *   get:
+ *     tags:
+ *       - Rooms
+ *     summary: Get all rooms
+ *     description: Returns a list of rooms.
+ *     responses:
+ *       200:
+ *         description: List of rooms
+ *         content:
+ *           application/json:
+ *             schema:
+ *               type: array
+ *               items:
+ *                 type: object
+ *                 properties:
+ *                   id:
+ *                     type: string
+ *                     example: "room_123"
+ *                   name:
+ *                     type: string
+ *                     example: "DSA Practice Room"
+ */
 router.route('/')
     .post(verifyToken, createRoomValidator(), validate, CreateRoomController)
     .get(verifyToken,listRoomsValidator(), validate, ListRoomsController);

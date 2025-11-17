@@ -2243,3 +2243,55 @@
 [09 Nov, 2025 - 07:53:58:5358] [34minfo[39m: [34mUser 54 attempting to add test case to question: 1[39m
 [09 Nov, 2025 - 07:53:58:5358] [31merror[39m: [31mOnly room creator can add test cases[39m
 [09 Nov, 2025 - 07:53:58:5358] [35mhttp[39m: [35m::1 POST /api/v1/questions/1/testcases 403 - 661.527 ms[39m
+[17 Nov, 2025 - 18:45:39:4539] [34minfo[39m: [34mSetting up GitHub strategy[39m
+[17 Nov, 2025 - 18:45:39:4539] [34minfo[39m: [34mSetting up Google strategy[39m
+[17 Nov, 2025 - 18:45:42:4542] [34minfo[39m: [34m🚀 Server is running on http://localhost:3000[39m
+[17 Nov, 2025 - 18:45:43:4543] [34minfo[39m: [34m✅ Email service is ready to send emails[39m
+[17 Nov, 2025 - 18:46:11:4611] [35mhttp[39m: [35m::1 GET /api-docs 301 - 5.147 ms[39m
+[17 Nov, 2025 - 18:46:11:4611] [35mhttp[39m: [35m::1 GET /api-docs/ 200 - 7.845 ms[39m
+[17 Nov, 2025 - 18:46:11:4611] [35mhttp[39m: [35m::1 GET /api-docs/swagger-ui.css 200 - 5.255 ms[39m
+[17 Nov, 2025 - 18:46:11:4611] [35mhttp[39m: [35m::1 GET /api-docs/swagger-ui-init.js 200 - 0.624 ms[39m
+[17 Nov, 2025 - 18:46:11:4611] [35mhttp[39m: [35m::1 GET /api-docs/swagger-ui-standalone-preset.js 200 - 8.700 ms[39m
+[17 Nov, 2025 - 18:46:11:4611] [35mhttp[39m: [35m::1 GET /api-docs/swagger-ui-bundle.js 200 - 9.070 ms[39m
+[17 Nov, 2025 - 18:46:11:4611] [35mhttp[39m: [35m::1 GET /api-docs/favicon-32x32.png 200 - 3.500 ms[39m
+[17 Nov, 2025 - 18:49:40:4940] [34minfo[39m: [34mSetting up GitHub strategy[39m
+[17 Nov, 2025 - 18:49:40:4940] [34minfo[39m: [34mSetting up Google strategy[39m
+[17 Nov, 2025 - 18:49:44:4944] [34minfo[39m: [34m✅ Email service is ready to send emails[39m
+[17 Nov, 2025 - 18:49:44:4944] [34minfo[39m: [34m🚀 Server is running on http://localhost:3000[39m
+[17 Nov, 2025 - 18:49:45:4945] [35mhttp[39m: [35m::1 GET /api-docs/ 304 - 8.087 ms[39m
+[17 Nov, 2025 - 18:49:45:4945] [35mhttp[39m: [35m::1 GET /api-docs/swagger-ui.css 304 - 2.188 ms[39m
+[17 Nov, 2025 - 18:49:45:4945] [35mhttp[39m: [35m::1 GET /api-docs/swagger-ui-bundle.js 304 - 2.107 ms[39m
+[17 Nov, 2025 - 18:49:45:4945] [35mhttp[39m: [35m::ffff:127.0.0.1 GET /api-docs/swagger-ui-standalone-preset.js 304 - 2.548 ms[39m
+[17 Nov, 2025 - 18:49:45:4945] [35mhttp[39m: [35m::1 GET /api-docs/swagger-ui-init.js 200 - 1.215 ms[39m
+[17 Nov, 2025 - 18:49:45:4945] [35mhttp[39m: [35m::1 GET /api-docs/favicon-32x32.png 304 - 1.221 ms[39m
+[17 Nov, 2025 - 18:50:38:5038] [34minfo[39m: [34mSetting up GitHub strategy[39m
+[17 Nov, 2025 - 18:50:38:5038] [34minfo[39m: [34mSetting up Google strategy[39m
+[17 Nov, 2025 - 18:50:40:5040] [34minfo[39m: [34m🚀 Server is running on http://localhost:3000[39m
+[17 Nov, 2025 - 18:50:41:5041] [34minfo[39m: [34m✅ Email service is ready to send emails[39m
+[17 Nov, 2025 - 18:50:44:5044] [35mhttp[39m: [35m::1 GET /api-docs/ 304 - 11.837 ms[39m
+[17 Nov, 2025 - 18:50:44:5044] [35mhttp[39m: [35m::1 GET /api-docs/swagger-ui.css 304 - 3.733 ms[39m
+[17 Nov, 2025 - 18:50:44:5044] [35mhttp[39m: [35m::1 GET /api-docs/swagger-ui-init.js 304 - 1.527 ms[39m
+[17 Nov, 2025 - 18:50:44:5044] [35mhttp[39m: [35m::1 GET /api-docs/swagger-ui-bundle.js 304 - 16.668 ms[39m
+[17 Nov, 2025 - 18:50:44:5044] [35mhttp[39m: [35m::1 GET /api-docs/swagger-ui-standalone-preset.js 304 - 19.819 ms[39m
+[17 Nov, 2025 - 18:50:44:5044] [35mhttp[39m: [35m::1 GET /api-docs/favicon-32x32.png 304 - 1.442 ms[39m
+[17 Nov, 2025 - 18:52:49:5249] [34minfo[39m: [34mSetting up GitHub strategy[39m
+[17 Nov, 2025 - 18:52:49:5249] [34minfo[39m: [34mSetting up Google strategy[39m
+[17 Nov, 2025 - 18:52:51:5251] [34minfo[39m: [34m🚀 Server is running on http://localhost:3000[39m
+[17 Nov, 2025 - 18:52:51:5251] [34minfo[39m: [34m✅ Email service is ready to send emails[39m
+[17 Nov, 2025 - 18:54:36:5436] [34minfo[39m: [34mSetting up GitHub strategy[39m
+[17 Nov, 2025 - 18:54:36:5436] [34minfo[39m: [34mSetting up Google strategy[39m
+[17 Nov, 2025 - 18:54:37:5437] [34minfo[39m: [34m🚀 Server is running on http://localhost:3000[39m
+[17 Nov, 2025 - 18:54:38:5438] [34minfo[39m: [34m✅ Email service is ready to send emails[39m
+[17 Nov, 2025 - 18:55:20:5520] [34minfo[39m: [34mSetting up GitHub strategy[39m
+[17 Nov, 2025 - 18:55:20:5520] [34minfo[39m: [34mSetting up Google strategy[39m
+[17 Nov, 2025 - 18:55:22:5522] [34minfo[39m: [34m🚀 Server is running on http://localhost:3000[39m
+[17 Nov, 2025 - 18:55:23:5523] [34minfo[39m: [34m✅ Email service is ready to send emails[39m
+[17 Nov, 2025 - 18:55:26:5526] [35mhttp[39m: [35m::1 GET /api-docs/ 304 - 9.333 ms[39m
+[17 Nov, 2025 - 18:55:26:5526] [35mhttp[39m: [35m::1 GET /api-docs/swagger-ui.css 304 - 2.217 ms[39m
+[17 Nov, 2025 - 18:55:26:5526] [35mhttp[39m: [35m::1 GET /api-docs/swagger-ui-init.js 200 - 1.623 ms[39m
+[17 Nov, 2025 - 18:55:26:5526] [35mhttp[39m: [35m::1 GET /api-docs/swagger-ui-bundle.js 304 - 10.211 ms[39m
+[17 Nov, 2025 - 18:55:26:5526] [35mhttp[39m: [35m::1 GET /api-docs/swagger-ui-standalone-preset.js 304 - 11.951 ms[39m
+[17 Nov, 2025 - 18:55:26:5526] [35mhttp[39m: [35m::1 GET /api-docs/favicon-32x32.png 304 - 1.780 ms[39m
+[17 Nov, 2025 - 18:55:37:5537] [34minfo[39m: [34mVerifying token: undefined[39m
+[17 Nov, 2025 - 18:55:37:5537] [31merror[39m: [31mNo token provided[39m
+[17 Nov, 2025 - 18:55:37:5537] [35mhttp[39m: [35m::1 GET /api/v1/rooms 401 - 9.148 ms[39m

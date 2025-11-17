@@ -1733,3 +1733,29 @@
 [09 Nov, 2025 - 07:53:58:5358] [34minfo[39m: [34mToken verified successfully for user ID: 54[39m
 [09 Nov, 2025 - 07:53:58:5358] [34minfo[39m: [34mUser 54 attempting to add test case to question: 1[39m
 [09 Nov, 2025 - 07:53:58:5358] [31merror[39m: [31mOnly room creator can add test cases[39m
+[17 Nov, 2025 - 18:45:39:4539] [34minfo[39m: [34mSetting up GitHub strategy[39m
+[17 Nov, 2025 - 18:45:39:4539] [34minfo[39m: [34mSetting up Google strategy[39m
+[17 Nov, 2025 - 18:45:42:4542] [34minfo[39m: [34m🚀 Server is running on http://localhost:3000[39m
+[17 Nov, 2025 - 18:45:43:4543] [34minfo[39m: [34m✅ Email service is ready to send emails[39m
+[17 Nov, 2025 - 18:49:40:4940] [34minfo[39m: [34mSetting up GitHub strategy[39m
+[17 Nov, 2025 - 18:49:40:4940] [34minfo[39m: [34mSetting up Google strategy[39m
+[17 Nov, 2025 - 18:49:44:4944] [34minfo[39m: [34m✅ Email service is ready to send emails[39m
+[17 Nov, 2025 - 18:49:44:4944] [34minfo[39m: [34m🚀 Server is running on http://localhost:3000[39m
+[17 Nov, 2025 - 18:50:38:5038] [34minfo[39m: [34mSetting up GitHub strategy[39m
+[17 Nov, 2025 - 18:50:38:5038] [34minfo[39m: [34mSetting up Google strategy[39m
+[17 Nov, 2025 - 18:50:40:5040] [34minfo[39m: [34m🚀 Server is running on http://localhost:3000[39m
+[17 Nov, 2025 - 18:50:41:5041] [34minfo[39m: [34m✅ Email service is ready to send emails[39m
+[17 Nov, 2025 - 18:52:49:5249] [34minfo[39m: [34mSetting up GitHub strategy[39m
+[17 Nov, 2025 - 18:52:49:5249] [34minfo[39m: [34mSetting up Google strategy[39m
+[17 Nov, 2025 - 18:52:51:5251] [34minfo[39m: [34m🚀 Server is running on http://localhost:3000[39m
+[17 Nov, 2025 - 18:52:51:5251] [34minfo[39m: [34m✅ Email service is ready to send emails[39m
+[17 Nov, 2025 - 18:54:36:5436] [34minfo[39m: [34mSetting up GitHub strategy[39m
+[17 Nov, 2025 - 18:54:36:5436] [34minfo[39m: [34mSetting up Google strategy[39m
+[17 Nov, 2025 - 18:54:37:5437] [34minfo[39m: [34m🚀 Server is running on http://localhost:3000[39m
+[17 Nov, 2025 - 18:54:38:5438] [34minfo[39m: [34m✅ Email service is ready to send emails[39m
+[17 Nov, 2025 - 18:55:20:5520] [34minfo[39m: [34mSetting up GitHub strategy[39m
+[17 Nov, 2025 - 18:55:20:5520] [34minfo[39m: [34mSetting up Google strategy[39m
+[17 Nov, 2025 - 18:55:22:5522] [34minfo[39m: [34m🚀 Server is running on http://localhost:3000[39m
+[17 Nov, 2025 - 18:55:23:5523] [34minfo[39m: [34m✅ Email service is ready to send emails[39m
+[17 Nov, 2025 - 18:55:37:5537] [34minfo[39m: [34mVerifying token: undefined[39m
+[17 Nov, 2025 - 18:55:37:5537] [31merror[39m: [31mNo token provided[39m
