@@ -1759,3 +1759,899 @@
 [17 Nov, 2025 - 18:55:23:5523] [34minfo[39m: [34m✅ Email service is ready to send emails[39m
 [17 Nov, 2025 - 18:55:37:5537] [34minfo[39m: [34mVerifying token: undefined[39m
 [17 Nov, 2025 - 18:55:37:5537] [31merror[39m: [31mNo token provided[39m
+[18 Nov, 2025 - 19:11:10:1110] [34minfo[39m: [34mSetting up GitHub strategy[39m
+[18 Nov, 2025 - 19:11:10:1110] [34minfo[39m: [34mSetting up Google strategy[39m
+[18 Nov, 2025 - 19:11:11:1111] [34minfo[39m: [34m🚀 Server is running on http://localhost:3000[39m
+[18 Nov, 2025 - 19:11:12:1112] [34minfo[39m: [34m✅ Email service is ready to send emails[39m
+[18 Nov, 2025 - 19:15:47:1547] [34minfo[39m: [34mGenerated refresh token for user 53: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NTMsImlhdCI6MTc2MzQ3MzU0NywiZXhwIjoxNzY0MDc4MzQ3fQ.p9XwLVTLnvnFuSPaQuiep1ZEnL4PA1JDM7-gYEA-JD8[39m
+[18 Nov, 2025 - 19:17:01:171] [34minfo[39m: [34mVerifying token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NTMsImVtYWlsIjoiZ293dGhhbXMyMDA1MjFAZ21haWwuY29tIiwicm9sZSI6IlVTRVIiLCJ1c2VybmFtZSI6InRlc3R1c2VyIiwiaWF0IjoxNzYyNTgyNTY2LCJleHAiOjE3NjI1ODM0NjZ9.Jeo5JybkKt55j-DxwBXzBlTnQH5RlqO7mi1aaLMCRkE[39m
+[18 Nov, 2025 - 19:17:01:171] [31merror[39m: [31mInvalid token[39m
+[18 Nov, 2025 - 19:17:08:178] [34minfo[39m: [34mVerifying token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NTMsImVtYWlsIjoiZ293dGhhbXMyMDA1MjFAZ21haWwuY29tIiwicm9sZSI6IlVTRVIiLCJ1c2VybmFtZSI6InRlc3R1c2VyIiwiaWF0IjoxNzYzNDczNTQ2LCJleHAiOjE3NjM0NzQ0NDZ9.-QKRS_A8-3Q5BBk-q0RVB7HrtTkA9Q9v-rHXAlllPmE[39m
+[18 Nov, 2025 - 19:17:08:178] [34minfo[39m: [34mDecoded token: 53[39m
+[18 Nov, 2025 - 19:17:09:179] [34minfo[39m: [34mUser fetched from DB: {"id":53,"email":"gowthams200521@gmail.com","name":"testuser","avatar":null,"password":"$2b$10$HLTHNnES0cT3BxY1K0u47OQaJHpv4RlHeLqXIL8FysqOq3V7kLmc.","loginType":"EMAIL_PASSWORD","role":"USER","isEmailVerified":true,"refreshToken":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NTMsImlhdCI6MTc2MzQ3MzU0NywiZXhwIjoxNzY0MDc4MzQ3fQ.p9XwLVTLnvnFuSPaQuiep1ZEnL4PA1JDM7-gYEA-JD8","forgetPasswordToken":null,"forgetPasswordExpiry":null,"emailVerificationToken":null,"emailVerificationExpiry":null,"createdAt":"2025-11-08T05:32:25.636Z","updatedAt":"2025-11-18T13:45:47.029Z"}[39m
+[18 Nov, 2025 - 19:17:09:179] [34minfo[39m: [34mToken verified successfully for user ID: 53[39m
+[18 Nov, 2025 - 19:17:09:179] [34minfo[39m: [34mFetching rooms - Page: 1, Limit: 10[39m
+[18 Nov, 2025 - 19:17:09:179] [34minfo[39m: [34mRetrieved 3 rooms out of 3 total[39m
+[18 Nov, 2025 - 19:28:10:2810] [34minfo[39m: [34mSetting up GitHub strategy[39m
+[18 Nov, 2025 - 19:28:10:2810] [34minfo[39m: [34mSetting up Google strategy[39m
+[18 Nov, 2025 - 19:28:12:2812] [34minfo[39m: [34m🚀 Server is running on http://localhost:3000[39m
+[18 Nov, 2025 - 19:28:12:2812] [34minfo[39m: [34m✅ Email service is ready to send emails[39m
+[18 Nov, 2025 - 19:28:20:2820] [34minfo[39m: [34mVerifying token: Bearer[39m
+[18 Nov, 2025 - 19:28:20:2820] [31merror[39m: [31mInvalid token[39m
+[18 Nov, 2025 - 19:28:29:2829] [34minfo[39m: [34mVerifying token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NTMsImVtYWlsIjoiZ293dGhhbXMyMDA1MjFAZ21haWwuY29tIiwicm9sZSI6IlVTRVIiLCJ1c2VybmFtZSI6InRlc3R1c2VyIiwiaWF0IjoxNzYzNDczNTQ2LCJleHAiOjE3NjM0NzQ0NDZ9.-QKRS_A8-3Q5BBk-q0RVB7HrtTkA9Q9v-rHXAlllPmE[39m
+[18 Nov, 2025 - 19:28:29:2829] [34minfo[39m: [34mDecoded token: 53[39m
+[18 Nov, 2025 - 19:28:29:2829] [34minfo[39m: [34mUser fetched from DB: {"id":53,"email":"gowthams200521@gmail.com","name":"testuser","avatar":null,"password":"$2b$10$HLTHNnES0cT3BxY1K0u47OQaJHpv4RlHeLqXIL8FysqOq3V7kLmc.","loginType":"EMAIL_PASSWORD","role":"USER","isEmailVerified":true,"refreshToken":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NTMsImlhdCI6MTc2MzQ3MzU0NywiZXhwIjoxNzY0MDc4MzQ3fQ.p9XwLVTLnvnFuSPaQuiep1ZEnL4PA1JDM7-gYEA-JD8","forgetPasswordToken":null,"forgetPasswordExpiry":null,"emailVerificationToken":null,"emailVerificationExpiry":null,"createdAt":"2025-11-08T05:32:25.636Z","updatedAt":"2025-11-18T13:45:47.029Z"}[39m
+[18 Nov, 2025 - 19:28:29:2829] [34minfo[39m: [34mToken verified successfully for user ID: 53[39m
+[18 Nov, 2025 - 19:28:29:2829] [34minfo[39m: [34mUser 53 creating solve request for team cmhr1tjh90001c1re86jg84zl, question 3[39m
+[18 Nov, 2025 - 19:28:30:2830] [31merror[39m: [31mYou are not a member of this team[39m
+[18 Nov, 2025 - 19:29:38:2938] [34minfo[39m: [34mVerifying token: Bearer[39m
+[18 Nov, 2025 - 19:29:38:2938] [31merror[39m: [31mInvalid token[39m
+[18 Nov, 2025 - 19:29:44:2944] [34minfo[39m: [34mVerifying token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NTMsImVtYWlsIjoiZ293dGhhbXMyMDA1MjFAZ21haWwuY29tIiwicm9sZSI6IlVTRVIiLCJ1c2VybmFtZSI6InRlc3R1c2VyIiwiaWF0IjoxNzYzNDczNTQ2LCJleHAiOjE3NjM0NzQ0NDZ9.-QKRS_A8-3Q5BBk-q0RVB7HrtTkA9Q9v-rHXAlllPmE[39m
+[18 Nov, 2025 - 19:29:44:2944] [34minfo[39m: [34mDecoded token: 53[39m
+[18 Nov, 2025 - 19:29:45:2945] [34minfo[39m: [34mUser fetched from DB: {"id":53,"email":"gowthams200521@gmail.com","name":"testuser","avatar":null,"password":"$2b$10$HLTHNnES0cT3BxY1K0u47OQaJHpv4RlHeLqXIL8FysqOq3V7kLmc.","loginType":"EMAIL_PASSWORD","role":"USER","isEmailVerified":true,"refreshToken":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NTMsImlhdCI6MTc2MzQ3MzU0NywiZXhwIjoxNzY0MDc4MzQ3fQ.p9XwLVTLnvnFuSPaQuiep1ZEnL4PA1JDM7-gYEA-JD8","forgetPasswordToken":null,"forgetPasswordExpiry":null,"emailVerificationToken":null,"emailVerificationExpiry":null,"createdAt":"2025-11-08T05:32:25.636Z","updatedAt":"2025-11-18T13:45:47.029Z"}[39m
+[18 Nov, 2025 - 19:29:45:2945] [34minfo[39m: [34mToken verified successfully for user ID: 53[39m
+[18 Nov, 2025 - 19:29:45:2945] [34minfo[39m: [34mUser 53 attempting to create team: Code Warriors in room: cmhr37puh0001c1ilt6ny06j8[39m
+[18 Nov, 2025 - 19:29:49:2949] [34minfo[39m: [34mTeam created successfully with ID: cmi4n49n20001h8uwfdxwq24o[39m
+[18 Nov, 2025 - 19:30:14:3014] [34minfo[39m: [34mVerifying token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NTMsImVtYWlsIjoiZ293dGhhbXMyMDA1MjFAZ21haWwuY29tIiwicm9sZSI6IlVTRVIiLCJ1c2VybmFtZSI6InRlc3R1c2VyIiwiaWF0IjoxNzYzNDczNTQ2LCJleHAiOjE3NjM0NzQ0NDZ9.-QKRS_A8-3Q5BBk-q0RVB7HrtTkA9Q9v-rHXAlllPmE[39m
+[18 Nov, 2025 - 19:30:14:3014] [34minfo[39m: [34mDecoded token: 53[39m
+[18 Nov, 2025 - 19:30:15:3015] [34minfo[39m: [34mUser fetched from DB: {"id":53,"email":"gowthams200521@gmail.com","name":"testuser","avatar":null,"password":"$2b$10$HLTHNnES0cT3BxY1K0u47OQaJHpv4RlHeLqXIL8FysqOq3V7kLmc.","loginType":"EMAIL_PASSWORD","role":"USER","isEmailVerified":true,"refreshToken":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NTMsImlhdCI6MTc2MzQ3MzU0NywiZXhwIjoxNzY0MDc4MzQ3fQ.p9XwLVTLnvnFuSPaQuiep1ZEnL4PA1JDM7-gYEA-JD8","forgetPasswordToken":null,"forgetPasswordExpiry":null,"emailVerificationToken":null,"emailVerificationExpiry":null,"createdAt":"2025-11-08T05:32:25.636Z","updatedAt":"2025-11-18T13:45:47.029Z"}[39m
+[18 Nov, 2025 - 19:30:15:3015] [34minfo[39m: [34mToken verified successfully for user ID: 53[39m
+[18 Nov, 2025 - 19:30:15:3015] [34minfo[39m: [34mUser 53 creating solve request for team cmi4n49n20001h8uwfdxwq24o, question 3[39m
+[18 Nov, 2025 - 19:30:19:3019] [34minfo[39m: [34mSolve request created with ID: 1[39m
+[18 Nov, 2025 - 19:31:05:315] [34minfo[39m: [34mVerifying token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NTMsImVtYWlsIjoiZ293dGhhbXMyMDA1MjFAZ21haWwuY29tIiwicm9sZSI6IlVTRVIiLCJ1c2VybmFtZSI6InRlc3R1c2VyIiwiaWF0IjoxNzYzNDczNTQ2LCJleHAiOjE3NjM0NzQ0NDZ9.-QKRS_A8-3Q5BBk-q0RVB7HrtTkA9Q9v-rHXAlllPmE[39m
+[18 Nov, 2025 - 19:31:05:315] [31merror[39m: [31mInvalid token[39m
+[18 Nov, 2025 - 19:31:12:3112] [34minfo[39m: [34mVerifying token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NTMsImVtYWlsIjoiZ293dGhhbXMyMDA1MjFAZ21haWwuY29tIiwicm9sZSI6IlVTRVIiLCJ1c2VybmFtZSI6InRlc3R1c2VyIiwiaWF0IjoxNzYzNDczNTQ2LCJleHAiOjE3NjM0NzQ0NDZ9.-QKRS_A8-3Q5BBk-q0RVB7HrtTkA9Q9v-rHXAlllPmE[39m
+[18 Nov, 2025 - 19:31:12:3112] [31merror[39m: [31mInvalid token[39m
+[18 Nov, 2025 - 19:31:40:3140] [34minfo[39m: [34mGenerated refresh token for user 53: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NTMsImlhdCI6MTc2MzQ3NDUwMCwiZXhwIjoxNzY0MDc5MzAwfQ._wspJ90ejD7UIiQksQdf01zwp7HoDAdVPeTWHMCqeXs[39m
+[18 Nov, 2025 - 19:31:58:3158] [34minfo[39m: [34mVerifying token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NTMsImVtYWlsIjoiZ293dGhhbXMyMDA1MjFAZ21haWwuY29tIiwicm9sZSI6IlVTRVIiLCJ1c2VybmFtZSI6InRlc3R1c2VyIiwiaWF0IjoxNzYzNDc0NDk5LCJleHAiOjE3NjM0NzUzOTl9.CiiXrPrsLA1rsCgmwW-8qa799X9Ub_OlVs4spt7Svuk[39m
+[18 Nov, 2025 - 19:31:58:3158] [34minfo[39m: [34mDecoded token: 53[39m
+[18 Nov, 2025 - 19:31:59:3159] [34minfo[39m: [34mUser fetched from DB: {"id":53,"email":"gowthams200521@gmail.com","name":"testuser","avatar":null,"password":"$2b$10$HLTHNnES0cT3BxY1K0u47OQaJHpv4RlHeLqXIL8FysqOq3V7kLmc.","loginType":"EMAIL_PASSWORD","role":"USER","isEmailVerified":true,"refreshToken":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NTMsImlhdCI6MTc2MzQ3NDUwMCwiZXhwIjoxNzY0MDc5MzAwfQ._wspJ90ejD7UIiQksQdf01zwp7HoDAdVPeTWHMCqeXs","forgetPasswordToken":null,"forgetPasswordExpiry":null,"emailVerificationToken":null,"emailVerificationExpiry":null,"createdAt":"2025-11-08T05:32:25.636Z","updatedAt":"2025-11-18T14:01:40.160Z"}[39m
+[18 Nov, 2025 - 19:31:59:3159] [34minfo[39m: [34mToken verified successfully for user ID: 53[39m
+[18 Nov, 2025 - 19:31:59:3159] [34minfo[39m: [34mUser 53 updating solve request 1 to APPROVED[39m
+[18 Nov, 2025 - 19:32:01:321] [34minfo[39m: [34mSolve request 1 approved successfully[39m
+[18 Nov, 2025 - 19:36:24:3624] [34minfo[39m: [34mSetting up GitHub strategy[39m
+[18 Nov, 2025 - 19:36:24:3624] [34minfo[39m: [34mSetting up Google strategy[39m
+[18 Nov, 2025 - 19:36:28:3628] [34minfo[39m: [34m🚀 Server is running on http://localhost:3000[39m
+[18 Nov, 2025 - 19:36:28:3628] [34minfo[39m: [34m✅ Email service is ready to send emails[39m
+[18 Nov, 2025 - 19:36:50:3650] [31merror[39m: [31mobject is not iterable (cannot read property Symbol(Symbol.iterator))[39m
+[18 Nov, 2025 - 19:38:00:380] [34minfo[39m: [34mSetting up GitHub strategy[39m
+[18 Nov, 2025 - 19:38:00:380] [34minfo[39m: [34mSetting up Google strategy[39m
+[18 Nov, 2025 - 19:38:04:384] [34minfo[39m: [34m🚀 Server is running on http://localhost:3000[39m
+[18 Nov, 2025 - 19:38:04:384] [31merror[39m: [31mobject is not iterable (cannot read property Symbol(Symbol.iterator))[39m
+[18 Nov, 2025 - 19:38:05:385] [34minfo[39m: [34m✅ Email service is ready to send emails[39m
+[18 Nov, 2025 - 19:41:05:415] [34minfo[39m: [34mSetting up GitHub strategy[39m
+[18 Nov, 2025 - 19:41:05:415] [34minfo[39m: [34mSetting up Google strategy[39m
+[18 Nov, 2025 - 19:41:06:416] [34minfo[39m: [34m🚀 Server is running on http://localhost:3000[39m
+[18 Nov, 2025 - 19:41:06:416] [34minfo[39m: [34m✅ Email service is ready to send emails[39m
+[18 Nov, 2025 - 19:41:11:4111] [34minfo[39m: [34mstart the submission[39m
+[18 Nov, 2025 - 19:41:11:4111] [31merror[39m: [31mobject is not iterable (cannot read property Symbol(Symbol.iterator))[39m
+[18 Nov, 2025 - 19:41:34:4134] [34minfo[39m: [34mstart the submission[39m
+[18 Nov, 2025 - 19:41:34:4134] [31merror[39m: [31mobject is not iterable (cannot read property Symbol(Symbol.iterator))[39m
+[18 Nov, 2025 - 19:42:19:4219] [34minfo[39m: [34mSetting up GitHub strategy[39m
+[18 Nov, 2025 - 19:42:19:4219] [34minfo[39m: [34mSetting up Google strategy[39m
+[18 Nov, 2025 - 19:42:22:4222] [34minfo[39m: [34m🚀 Server is running on http://localhost:3000[39m
+[18 Nov, 2025 - 19:42:23:4223] [34minfo[39m: [34m✅ Email service is ready to send emails[39m
+[18 Nov, 2025 - 19:42:24:4224] [34minfo[39m: [34mstart the submission[39m
+[18 Nov, 2025 - 19:42:24:4224] [31merror[39m: [31mquestionId is not defined[39m
+[18 Nov, 2025 - 19:43:15:4315] [34minfo[39m: [34mSetting up GitHub strategy[39m
+[18 Nov, 2025 - 19:43:15:4315] [34minfo[39m: [34mSetting up Google strategy[39m
+[18 Nov, 2025 - 19:43:16:4316] [34minfo[39m: [34m🚀 Server is running on http://localhost:3000[39m
+[18 Nov, 2025 - 19:43:16:4316] [34minfo[39m: [34m✅ Email service is ready to send emails[39m
+[18 Nov, 2025 - 19:43:18:4318] [34minfo[39m: [34mstart the submission[39m
+[18 Nov, 2025 - 19:43:18:4318] [34minfo[39m: [34mitem getted[39m
+[18 Nov, 2025 - 19:43:19:4319] [31merror[39m: [31m[39m
+[31mInvalid `prisma.solveRequest.findUnique()` invocation:[39m
+
+[31m{[39m
+[31m  where: {[39m
+[31m    teamId: "cmi4n49n20001h8uwfdxwq24o",[39m
+[31m    requestedById: 53,[39m
+[31m    status: "APPROVED",[39m
+[31m?   id?: Int,[39m
+[31m?   teamId_questionId_requestedById?: SolveRequestTeamIdQuestionIdRequestedByIdCompoundUniqueInput,[39m
+[31m?   AND?: SolveRequestWhereInput | SolveRequestWhereInput[],[39m
+[31m?   OR?: SolveRequestWhereInput[],[39m
+[31m?   NOT?: SolveRequestWhereInput | SolveRequestWhereInput[],[39m
+[31m?   questionId?: IntFilter | Int,[39m
+[31m?   requestedAt?: DateTimeFilter | DateTime,[39m
+[31m?   respondedAt?: DateTimeNullableFilter | DateTime | Null,[39m
+[31m?   team?: TeamScalarRelationFilter | TeamWhereInput,[39m
+[31m?   question?: QuestionScalarRelationFilter | QuestionWhereInput[39m
+[31m  }[39m
+[31m}[39m
+
+[31mArgument `where` of type SolveRequestWhereUniqueInput needs at least one of `id` or `teamId_questionId_requestedById` arguments. Available options are marked with ?.[39m
+[18 Nov, 2025 - 19:45:15:4515] [34minfo[39m: [34mSetting up GitHub strategy[39m
+[18 Nov, 2025 - 19:45:15:4515] [34minfo[39m: [34mSetting up Google strategy[39m
+[18 Nov, 2025 - 19:45:18:4518] [34minfo[39m: [34m🚀 Server is running on http://localhost:3000[39m
+[18 Nov, 2025 - 19:45:18:4518] [34minfo[39m: [34m✅ Email service is ready to send emails[39m
+[18 Nov, 2025 - 19:45:21:4521] [34minfo[39m: [34mstart the submission[39m
+[18 Nov, 2025 - 19:45:21:4521] [34minfo[39m: [34mitem getted[39m
+[18 Nov, 2025 - 19:47:51:4751] [34minfo[39m: [34mstart the submission[39m
+[18 Nov, 2025 - 19:47:51:4751] [34minfo[39m: [34mitem getted[39m
+[18 Nov, 2025 - 19:47:52:4752] [33mwarn[39m: [33mquestion not found[39m
+[18 Nov, 2025 - 19:47:52:4752] [31merror[39m: [31mquestion not found in the db[39m
+[18 Nov, 2025 - 19:47:59:4759] [34minfo[39m: [34mstart the submission[39m
+[18 Nov, 2025 - 19:47:59:4759] [34minfo[39m: [34mitem getted[39m
+[18 Nov, 2025 - 19:48:21:4821] [34minfo[39m: [34mFetching questions for room: cmhr37puh0001c1ilt6ny06j8[39m
+[18 Nov, 2025 - 19:48:22:4822] [34minfo[39m: [34mRetrieved 3 questions out of 3 total[39m
+[18 Nov, 2025 - 19:48:58:4858] [34minfo[39m: [34mVerifying token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NTMsImVtYWlsIjoiZ293dGhhbXMyMDA1MjFAZ21haWwuY29tIiwicm9sZSI6IlVTRVIiLCJ1c2VybmFtZSI6InRlc3R1c2VyIiwiaWF0IjoxNzYzNDczNTQ2LCJleHAiOjE3NjM0NzQ0NDZ9.-QKRS_A8-3Q5BBk-q0RVB7HrtTkA9Q9v-rHXAlllPmE[39m
+[18 Nov, 2025 - 19:48:58:4858] [31merror[39m: [31mInvalid token[39m
+[18 Nov, 2025 - 19:49:07:497] [34minfo[39m: [34mVerifying token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NTMsImVtYWlsIjoiZ293dGhhbXMyMDA1MjFAZ21haWwuY29tIiwicm9sZSI6IlVTRVIiLCJ1c2VybmFtZSI6InRlc3R1c2VyIiwiaWF0IjoxNzYzNDczNTQ2LCJleHAiOjE3NjM0NzQ0NDZ9.-QKRS_A8-3Q5BBk-q0RVB7HrtTkA9Q9v-rHXAlllPmE[39m
+[18 Nov, 2025 - 19:49:07:497] [31merror[39m: [31mInvalid token[39m
+[18 Nov, 2025 - 19:49:28:4928] [34minfo[39m: [34mVerifying token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NTMsImVtYWlsIjoiZ293dGhhbXMyMDA1MjFAZ21haWwuY29tIiwicm9sZSI6IlVTRVIiLCJ1c2VybmFtZSI6InRlc3R1c2VyIiwiaWF0IjoxNzYzNDczNTQ2LCJleHAiOjE3NjM0NzQ0NDZ9.-QKRS_A8-3Q5BBk-q0RVB7HrtTkA9Q9v-rHXAlllPmE[39m
+[18 Nov, 2025 - 19:49:28:4928] [31merror[39m: [31mInvalid token[39m
+[18 Nov, 2025 - 19:49:43:4943] [34minfo[39m: [34mGenerated refresh token for user 53: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NTMsImlhdCI6MTc2MzQ3NTU4MywiZXhwIjoxNzY0MDgwMzgzfQ.f3e9wf6TIfTiEKC-wCuoT0JWCR5eOQElbqc4UGfVG44[39m
+[18 Nov, 2025 - 19:50:15:5015] [34minfo[39m: [34mVerifying token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NTMsImVtYWlsIjoiZ293dGhhbXMyMDA1MjFAZ21haWwuY29tIiwicm9sZSI6IlVTRVIiLCJ1c2VybmFtZSI6InRlc3R1c2VyIiwiaWF0IjoxNzYzNDc1NTgzLCJleHAiOjE3NjM0NzY0ODN9.p_uoVxQ4ZGfBrlNFtvJgS44A0sR231P6zs077FFxxS4[39m
+[18 Nov, 2025 - 19:50:15:5015] [34minfo[39m: [34mDecoded token: 53[39m
+[18 Nov, 2025 - 19:50:15:5015] [34minfo[39m: [34mUser fetched from DB: {"id":53,"email":"gowthams200521@gmail.com","name":"testuser","avatar":null,"password":"$2b$10$HLTHNnES0cT3BxY1K0u47OQaJHpv4RlHeLqXIL8FysqOq3V7kLmc.","loginType":"EMAIL_PASSWORD","role":"USER","isEmailVerified":true,"refreshToken":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NTMsImlhdCI6MTc2MzQ3NTU4MywiZXhwIjoxNzY0MDgwMzgzfQ.f3e9wf6TIfTiEKC-wCuoT0JWCR5eOQElbqc4UGfVG44","forgetPasswordToken":null,"forgetPasswordExpiry":null,"emailVerificationToken":null,"emailVerificationExpiry":null,"createdAt":"2025-11-08T05:32:25.636Z","updatedAt":"2025-11-18T14:19:43.300Z"}[39m
+[18 Nov, 2025 - 19:50:15:5015] [34minfo[39m: [34mToken verified successfully for user ID: 53[39m
+[18 Nov, 2025 - 19:50:15:5015] [34minfo[39m: [34mFetching solve requests for team: cmi4n49n20001h8uwfdxwq24o[39m
+[18 Nov, 2025 - 19:50:16:5016] [34minfo[39m: [34mRetrieved 1 solve requests out of 1 total[39m
+[18 Nov, 2025 - 19:51:19:5119] [34minfo[39m: [34mSetting up GitHub strategy[39m
+[18 Nov, 2025 - 19:51:19:5119] [34minfo[39m: [34mSetting up Google strategy[39m
+[18 Nov, 2025 - 19:51:20:5120] [34minfo[39m: [34m🚀 Server is running on http://localhost:3000[39m
+[18 Nov, 2025 - 19:51:21:5121] [34minfo[39m: [34m✅ Email service is ready to send emails[39m
+[18 Nov, 2025 - 19:51:21:5121] [34minfo[39m: [34mstart the submission[39m
+[18 Nov, 2025 - 19:51:21:5121] [34minfo[39m: [34mitem getted[39m
+[18 Nov, 2025 - 19:51:44:5144] [34minfo[39m: [34mstart the submission[39m
+[18 Nov, 2025 - 19:51:44:5144] [34minfo[39m: [34mitem getted[39m
+[18 Nov, 2025 - 19:52:47:5247] [34minfo[39m: [34mSetting up GitHub strategy[39m
+[18 Nov, 2025 - 19:52:47:5247] [34minfo[39m: [34mSetting up Google strategy[39m
+[18 Nov, 2025 - 19:52:48:5248] [34minfo[39m: [34m🚀 Server is running on http://localhost:3000[39m
+[18 Nov, 2025 - 19:52:49:5249] [34minfo[39m: [34m✅ Email service is ready to send emails[39m
+[18 Nov, 2025 - 19:52:51:5251] [34minfo[39m: [34mstart the submission[39m
+[18 Nov, 2025 - 19:52:51:5251] [34minfo[39m: [34mitem getted[39m
+[18 Nov, 2025 - 19:52:52:5252] [31merror[39m: [31mThe question not assign to the current user[39m
+[18 Nov, 2025 - 19:53:18:5318] [34minfo[39m: [34mVerifying token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NTMsImVtYWlsIjoiZ293dGhhbXMyMDA1MjFAZ21haWwuY29tIiwicm9sZSI6IlVTRVIiLCJ1c2VybmFtZSI6InRlc3R1c2VyIiwiaWF0IjoxNzYzNDczNTQ2LCJleHAiOjE3NjM0NzQ0NDZ9.-QKRS_A8-3Q5BBk-q0RVB7HrtTkA9Q9v-rHXAlllPmE[39m
+[18 Nov, 2025 - 19:53:18:5318] [31merror[39m: [31mInvalid token[39m
+[18 Nov, 2025 - 19:53:27:5327] [34minfo[39m: [34mVerifying token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NTMsImVtYWlsIjoiZ293dGhhbXMyMDA1MjFAZ21haWwuY29tIiwicm9sZSI6IlVTRVIiLCJ1c2VybmFtZSI6InRlc3R1c2VyIiwiaWF0IjoxNzYzNDczNTQ2LCJleHAiOjE3NjM0NzQ0NDZ9.-QKRS_A8-3Q5BBk-q0RVB7HrtTkA9Q9v-rHXAlllPmE[39m
+[18 Nov, 2025 - 19:53:27:5327] [31merror[39m: [31mInvalid token[39m
+[18 Nov, 2025 - 19:53:44:5344] [34minfo[39m: [34mVerifying token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NTMsImVtYWlsIjoiZ293dGhhbXMyMDA1MjFAZ21haWwuY29tIiwicm9sZSI6IlVTRVIiLCJ1c2VybmFtZSI6InRlc3R1c2VyIiwiaWF0IjoxNzYzNDc1NTgzLCJleHAiOjE3NjM0NzY0ODN9.p_uoVxQ4ZGfBrlNFtvJgS44A0sR231P6zs077FFxxS4[39m
+[18 Nov, 2025 - 19:53:44:5344] [34minfo[39m: [34mDecoded token: 53[39m
+[18 Nov, 2025 - 19:53:45:5345] [34minfo[39m: [34mUser fetched from DB: {"id":53,"email":"gowthams200521@gmail.com","name":"testuser","avatar":null,"password":"$2b$10$HLTHNnES0cT3BxY1K0u47OQaJHpv4RlHeLqXIL8FysqOq3V7kLmc.","loginType":"EMAIL_PASSWORD","role":"USER","isEmailVerified":true,"refreshToken":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NTMsImlhdCI6MTc2MzQ3NTU4MywiZXhwIjoxNzY0MDgwMzgzfQ.f3e9wf6TIfTiEKC-wCuoT0JWCR5eOQElbqc4UGfVG44","forgetPasswordToken":null,"forgetPasswordExpiry":null,"emailVerificationToken":null,"emailVerificationExpiry":null,"createdAt":"2025-11-08T05:32:25.636Z","updatedAt":"2025-11-18T14:19:43.300Z"}[39m
+[18 Nov, 2025 - 19:53:45:5345] [34minfo[39m: [34mToken verified successfully for user ID: 53[39m
+[18 Nov, 2025 - 19:53:45:5345] [34minfo[39m: [34mUser 53 creating solve request for team cmi4n49n20001h8uwfdxwq24o, question 2[39m
+[18 Nov, 2025 - 19:53:46:5346] [34minfo[39m: [34mSolve request created with ID: 2[39m
+[18 Nov, 2025 - 19:53:53:5353] [34minfo[39m: [34mVerifying token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NTMsImVtYWlsIjoiZ293dGhhbXMyMDA1MjFAZ21haWwuY29tIiwicm9sZSI6IlVTRVIiLCJ1c2VybmFtZSI6InRlc3R1c2VyIiwiaWF0IjoxNzYzNDc0NDk5LCJleHAiOjE3NjM0NzUzOTl9.CiiXrPrsLA1rsCgmwW-8qa799X9Ub_OlVs4spt7Svuk[39m
+[18 Nov, 2025 - 19:53:53:5353] [31merror[39m: [31mInvalid token[39m
+[18 Nov, 2025 - 19:54:09:549] [34minfo[39m: [34mVerifying token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NTMsImVtYWlsIjoiZ293dGhhbXMyMDA1MjFAZ21haWwuY29tIiwicm9sZSI6IlVTRVIiLCJ1c2VybmFtZSI6InRlc3R1c2VyIiwiaWF0IjoxNzYzNDc1NTgzLCJleHAiOjE3NjM0NzY0ODN9.p_uoVxQ4ZGfBrlNFtvJgS44A0sR231P6zs077FFxxS4[39m
+[18 Nov, 2025 - 19:54:09:549] [34minfo[39m: [34mDecoded token: 53[39m
+[18 Nov, 2025 - 19:54:09:549] [34minfo[39m: [34mUser fetched from DB: {"id":53,"email":"gowthams200521@gmail.com","name":"testuser","avatar":null,"password":"$2b$10$HLTHNnES0cT3BxY1K0u47OQaJHpv4RlHeLqXIL8FysqOq3V7kLmc.","loginType":"EMAIL_PASSWORD","role":"USER","isEmailVerified":true,"refreshToken":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NTMsImlhdCI6MTc2MzQ3NTU4MywiZXhwIjoxNzY0MDgwMzgzfQ.f3e9wf6TIfTiEKC-wCuoT0JWCR5eOQElbqc4UGfVG44","forgetPasswordToken":null,"forgetPasswordExpiry":null,"emailVerificationToken":null,"emailVerificationExpiry":null,"createdAt":"2025-11-08T05:32:25.636Z","updatedAt":"2025-11-18T14:19:43.300Z"}[39m
+[18 Nov, 2025 - 19:54:09:549] [34minfo[39m: [34mToken verified successfully for user ID: 53[39m
+[18 Nov, 2025 - 19:54:09:549] [34minfo[39m: [34mUser 53 updating solve request 2 to APPROVED[39m
+[18 Nov, 2025 - 19:54:10:5410] [34minfo[39m: [34mSolve request 2 approved successfully[39m
+[18 Nov, 2025 - 19:54:20:5420] [34minfo[39m: [34mstart the submission[39m
+[18 Nov, 2025 - 19:54:20:5420] [34minfo[39m: [34mitem getted[39m
+[18 Nov, 2025 - 20:15:15:1515] [34minfo[39m: [34mSetting up GitHub strategy[39m
+[18 Nov, 2025 - 20:15:15:1515] [34minfo[39m: [34mSetting up Google strategy[39m
+[18 Nov, 2025 - 20:15:16:1516] [34minfo[39m: [34m🚀 Server is running on http://localhost:3000[39m
+[18 Nov, 2025 - 20:15:16:1516] [34minfo[39m: [34m✅ Email service is ready to send emails[39m
+[18 Nov, 2025 - 20:15:19:1519] [34minfo[39m: [34mstart the submission[39m
+[18 Nov, 2025 - 20:15:19:1519] [34minfo[39m: [34mitem getted[39m
+[18 Nov, 2025 - 20:15:20:1520] [31merror[39m: [31m[39m
+[31mInvalid `prisma.question.findFirst()` invocation:[39m
+
+[31m{[39m
+[31m  where: {[39m
+[31m    question: 2,[39m
+[31m    ~~~~~~~~[39m
+[31m?   AND?: QuestionWhereInput | QuestionWhereInput[],[39m
+[31m?   OR?: QuestionWhereInput[],[39m
+[31m?   NOT?: QuestionWhereInput | QuestionWhereInput[],[39m
+[31m?   id?: IntFilter | Int,[39m
+[31m?   roomId?: StringFilter | String,[39m
+[31m?   title?: StringFilter | String,[39m
+[31m?   description?: StringFilter | String,[39m
+[31m?   topic?: StringFilter | String,[39m
+[31m?   difficulty?: EnumDifficultyFilter | Difficulty,[39m
+[31m?   constraints?: StringNullableFilter | String | Null,[39m
+[31m?   inputFormat?: StringNullableFilter | String | Null,[39m
+[31m?   outputFormat?: StringNullableFilter | String | Null,[39m
+[31m?   timeLimit?: IntFilter | Int,[39m
+[31m?   memoryLimit?: IntFilter | Int,[39m
+[31m?   points?: IntFilter | Int,[39m
+[31m?   createdAt?: DateTimeFilter | DateTime,[39m
+[31m?   updatedAt?: DateTimeFilter | DateTime,[39m
+[31m?   room?: RoomScalarRelationFilter | RoomWhereInput,[39m
+[31m?   testCases?: TestCaseListRelationFilter,[39m
+[31m?   examples?: ExampleListRelationFilter,[39m
+[31m?   submissions?: SubmissionListRelationFilter,[39m
+[31m?   solveRequests?: SolveRequestListRelationFilter[39m
+[31m  },[39m
+[31m  select: {[39m
+[31m    testCases: true[39m
+[31m  }[39m
+[31m}[39m
+
+[31mUnknown argument `question`. Available options are marked with ?.[39m
+[18 Nov, 2025 - 20:17:12:1712] [34minfo[39m: [34mstart the submission[39m
+[18 Nov, 2025 - 20:17:12:1712] [34minfo[39m: [34mitem getted[39m
+[18 Nov, 2025 - 20:17:13:1713] [31merror[39m: [31m[39m
+[31mInvalid `prisma.question.findFirst()` invocation:[39m
+
+[31m{[39m
+[31m  where: {[39m
+[31m    question: 2,[39m
+[31m    ~~~~~~~~[39m
+[31m?   AND?: QuestionWhereInput | QuestionWhereInput[],[39m
+[31m?   OR?: QuestionWhereInput[],[39m
+[31m?   NOT?: QuestionWhereInput | QuestionWhereInput[],[39m
+[31m?   id?: IntFilter | Int,[39m
+[31m?   roomId?: StringFilter | String,[39m
+[31m?   title?: StringFilter | String,[39m
+[31m?   description?: StringFilter | String,[39m
+[31m?   topic?: StringFilter | String,[39m
+[31m?   difficulty?: EnumDifficultyFilter | Difficulty,[39m
+[31m?   constraints?: StringNullableFilter | String | Null,[39m
+[31m?   inputFormat?: StringNullableFilter | String | Null,[39m
+[31m?   outputFormat?: StringNullableFilter | String | Null,[39m
+[31m?   timeLimit?: IntFilter | Int,[39m
+[31m?   memoryLimit?: IntFilter | Int,[39m
+[31m?   points?: IntFilter | Int,[39m
+[31m?   createdAt?: DateTimeFilter | DateTime,[39m
+[31m?   updatedAt?: DateTimeFilter | DateTime,[39m
+[31m?   room?: RoomScalarRelationFilter | RoomWhereInput,[39m
+[31m?   testCases?: TestCaseListRelationFilter,[39m
+[31m?   examples?: ExampleListRelationFilter,[39m
+[31m?   submissions?: SubmissionListRelationFilter,[39m
+[31m?   solveRequests?: SolveRequestListRelationFilter[39m
+[31m  },[39m
+[31m  select: {[39m
+[31m    testCases: true[39m
+[31m  }[39m
+[31m}[39m
+
+[31mUnknown argument `question`. Available options are marked with ?.[39m
+[18 Nov, 2025 - 20:17:39:1739] [34minfo[39m: [34mstart the submission[39m
+[18 Nov, 2025 - 20:17:39:1739] [34minfo[39m: [34mitem getted[39m
+[18 Nov, 2025 - 20:17:39:1739] [31merror[39m: [31m[39m
+[31mInvalid `prisma.question.findFirst()` invocation:[39m
+
+[31m{[39m
+[31m  where: {[39m
+[31m    question: 2,[39m
+[31m    ~~~~~~~~[39m
+[31m?   AND?: QuestionWhereInput | QuestionWhereInput[],[39m
+[31m?   OR?: QuestionWhereInput[],[39m
+[31m?   NOT?: QuestionWhereInput | QuestionWhereInput[],[39m
+[31m?   id?: IntFilter | Int,[39m
+[31m?   roomId?: StringFilter | String,[39m
+[31m?   title?: StringFilter | String,[39m
+[31m?   description?: StringFilter | String,[39m
+[31m?   topic?: StringFilter | String,[39m
+[31m?   difficulty?: EnumDifficultyFilter | Difficulty,[39m
+[31m?   constraints?: StringNullableFilter | String | Null,[39m
+[31m?   inputFormat?: StringNullableFilter | String | Null,[39m
+[31m?   outputFormat?: StringNullableFilter | String | Null,[39m
+[31m?   timeLimit?: IntFilter | Int,[39m
+[31m?   memoryLimit?: IntFilter | Int,[39m
+[31m?   points?: IntFilter | Int,[39m
+[31m?   createdAt?: DateTimeFilter | DateTime,[39m
+[31m?   updatedAt?: DateTimeFilter | DateTime,[39m
+[31m?   room?: RoomScalarRelationFilter | RoomWhereInput,[39m
+[31m?   testCases?: TestCaseListRelationFilter,[39m
+[31m?   examples?: ExampleListRelationFilter,[39m
+[31m?   submissions?: SubmissionListRelationFilter,[39m
+[31m?   solveRequests?: SolveRequestListRelationFilter[39m
+[31m  },[39m
+[31m  select: {[39m
+[31m    testCases: true[39m
+[31m  }[39m
+[31m}[39m
+
+[31mUnknown argument `question`. Available options are marked with ?.[39m
+[18 Nov, 2025 - 20:17:43:1743] [34minfo[39m: [34mstart the submission[39m
+[18 Nov, 2025 - 20:17:43:1743] [34minfo[39m: [34mitem getted[39m
+[18 Nov, 2025 - 20:17:43:1743] [31merror[39m: [31m[39m
+[31mInvalid `prisma.question.findFirst()` invocation:[39m
+
+[31m{[39m
+[31m  where: {[39m
+[31m    question: 2,[39m
+[31m    ~~~~~~~~[39m
+[31m?   AND?: QuestionWhereInput | QuestionWhereInput[],[39m
+[31m?   OR?: QuestionWhereInput[],[39m
+[31m?   NOT?: QuestionWhereInput | QuestionWhereInput[],[39m
+[31m?   id?: IntFilter | Int,[39m
+[31m?   roomId?: StringFilter | String,[39m
+[31m?   title?: StringFilter | String,[39m
+[31m?   description?: StringFilter | String,[39m
+[31m?   topic?: StringFilter | String,[39m
+[31m?   difficulty?: EnumDifficultyFilter | Difficulty,[39m
+[31m?   constraints?: StringNullableFilter | String | Null,[39m
+[31m?   inputFormat?: StringNullableFilter | String | Null,[39m
+[31m?   outputFormat?: StringNullableFilter | String | Null,[39m
+[31m?   timeLimit?: IntFilter | Int,[39m
+[31m?   memoryLimit?: IntFilter | Int,[39m
+[31m?   points?: IntFilter | Int,[39m
+[31m?   createdAt?: DateTimeFilter | DateTime,[39m
+[31m?   updatedAt?: DateTimeFilter | DateTime,[39m
+[31m?   room?: RoomScalarRelationFilter | RoomWhereInput,[39m
+[31m?   testCases?: TestCaseListRelationFilter,[39m
+[31m?   examples?: ExampleListRelationFilter,[39m
+[31m?   submissions?: SubmissionListRelationFilter,[39m
+[31m?   solveRequests?: SolveRequestListRelationFilter[39m
+[31m  },[39m
+[31m  select: {[39m
+[31m    testCases: true[39m
+[31m  }[39m
+[31m}[39m
+
+[31mUnknown argument `question`. Available options are marked with ?.[39m
+[18 Nov, 2025 - 20:18:03:183] [34minfo[39m: [34mSetting up GitHub strategy[39m
+[18 Nov, 2025 - 20:18:03:183] [34minfo[39m: [34mSetting up Google strategy[39m
+[18 Nov, 2025 - 20:18:05:185] [34minfo[39m: [34m🚀 Server is running on http://localhost:3000[39m
+[18 Nov, 2025 - 20:18:05:185] [34minfo[39m: [34m✅ Email service is ready to send emails[39m
+[18 Nov, 2025 - 20:18:10:1810] [34minfo[39m: [34mstart the submission[39m
+[18 Nov, 2025 - 20:18:10:1810] [34minfo[39m: [34mitem getted[39m
+[18 Nov, 2025 - 20:41:12:4112] [34minfo[39m: [34mstart the submission[39m
+[18 Nov, 2025 - 20:41:12:4112] [34minfo[39m: [34mitem getted[39m
+[18 Nov, 2025 - 20:45:47:4547] [34minfo[39m: [34mSetting up GitHub strategy[39m
+[18 Nov, 2025 - 20:45:47:4547] [34minfo[39m: [34mSetting up Google strategy[39m
+[18 Nov, 2025 - 20:45:49:4549] [34minfo[39m: [34m🚀 Server is running on http://localhost:3000[39m
+[18 Nov, 2025 - 20:45:51:4551] [34minfo[39m: [34m✅ Email service is ready to send emails[39m
+[18 Nov, 2025 - 20:45:55:4555] [34minfo[39m: [34mstart the submission[39m
+[18 Nov, 2025 - 20:45:55:4555] [34minfo[39m: [34mitem getted[39m
+[18 Nov, 2025 - 20:55:19:5519] [34minfo[39m: [34mstart the submission[39m
+[18 Nov, 2025 - 20:55:19:5519] [34minfo[39m: [34mitem getted[39m
+[18 Nov, 2025 - 20:57:53:5753] [34minfo[39m: [34mstart the submission[39m
+[18 Nov, 2025 - 20:57:53:5753] [34minfo[39m: [34mitem getted[39m
+[18 Nov, 2025 - 20:59:37:5937] [34minfo[39m: [34mstart the submission[39m
+[18 Nov, 2025 - 20:59:37:5937] [34minfo[39m: [34mitem getted[39m
+[18 Nov, 2025 - 21:28:57:2857] [34minfo[39m: [34mSetting up GitHub strategy[39m
+[18 Nov, 2025 - 21:28:57:2857] [34minfo[39m: [34mSetting up Google strategy[39m
+[18 Nov, 2025 - 21:28:58:2858] [34minfo[39m: [34m🚀 Server is running on http://localhost:3000[39m
+[18 Nov, 2025 - 21:29:00:290] [34minfo[39m: [34m✅ Email service is ready to send emails[39m
+[18 Nov, 2025 - 21:29:02:292] [34minfo[39m: [34mstart the submission[39m
+[18 Nov, 2025 - 21:29:02:292] [34minfo[39m: [34mitem getted[39m
+[18 Nov, 2025 - 21:29:03:293] [31merror[39m: [31mlanguageCode is not defined[39m
+[18 Nov, 2025 - 21:31:34:3134] [34minfo[39m: [34mstart the submission[39m
+[18 Nov, 2025 - 21:31:34:3134] [34minfo[39m: [34mitem getted[39m
+[18 Nov, 2025 - 21:31:35:3135] [31merror[39m: [31mlanguageCode is not defined[39m
+[18 Nov, 2025 - 21:32:25:3225] [34minfo[39m: [34mstart the submission[39m
+[18 Nov, 2025 - 21:32:25:3225] [34minfo[39m: [34mitem getted[39m
+[18 Nov, 2025 - 21:32:26:3226] [31merror[39m: [31mlanguageCode is not defined[39m
+[18 Nov, 2025 - 21:32:56:3256] [34minfo[39m: [34mSetting up GitHub strategy[39m
+[18 Nov, 2025 - 21:32:56:3256] [34minfo[39m: [34mSetting up Google strategy[39m
+[18 Nov, 2025 - 21:32:57:3257] [34minfo[39m: [34m🚀 Server is running on http://localhost:3000[39m
+[18 Nov, 2025 - 21:32:58:3258] [34minfo[39m: [34m✅ Email service is ready to send emails[39m
+[18 Nov, 2025 - 21:33:01:331] [34minfo[39m: [34mstart the submission[39m
+[18 Nov, 2025 - 21:33:01:331] [34minfo[39m: [34mitem getted[39m
+[18 Nov, 2025 - 21:33:02:332] [34minfo[39m: [34m52[39m
+[18 Nov, 2025 - 21:33:02:332] [34minfo[39m: [34mstarting to submit the code with the test case[39m
+[18 Nov, 2025 - 21:33:03:333] [34minfo[39m: [34mcode submit successfully[39m
+[18 Nov, 2025 - 21:33:03:333] [34minfo[39m: [34mstarting to submit the code with the test case[39m
+[18 Nov, 2025 - 21:33:03:333] [34minfo[39m: [34mcode submit successfully[39m
+[18 Nov, 2025 - 21:33:03:333] [34minfo[39m: [34mstarting to submit the code with the test case[39m
+[18 Nov, 2025 - 21:33:03:333] [34minfo[39m: [34mcode submit successfully[39m
+[18 Nov, 2025 - 21:35:44:3544] [34minfo[39m: [34mSetting up GitHub strategy[39m
+[18 Nov, 2025 - 21:35:44:3544] [34minfo[39m: [34mSetting up Google strategy[39m
+[18 Nov, 2025 - 21:35:46:3546] [34minfo[39m: [34m🚀 Server is running on http://localhost:3000[39m
+[18 Nov, 2025 - 21:35:47:3547] [34minfo[39m: [34m✅ Email service is ready to send emails[39m
+[18 Nov, 2025 - 21:35:49:3549] [34minfo[39m: [34mstart the submission[39m
+[18 Nov, 2025 - 21:35:49:3549] [34minfo[39m: [34mitem getted[39m
+[18 Nov, 2025 - 21:35:50:3550] [34minfo[39m: [34m52[39m
+[18 Nov, 2025 - 21:35:50:3550] [34minfo[39m: [34mstarting to submit the code with the test case[39m
+[18 Nov, 2025 - 21:35:50:3550] [34minfo[39m: [34mstarting to submit the code with the test case[39m
+[18 Nov, 2025 - 21:35:50:3550] [34minfo[39m: [34mstarting to submit the code with the test case[39m
+[18 Nov, 2025 - 21:36:54:3654] [34minfo[39m: [34mSetting up GitHub strategy[39m
+[18 Nov, 2025 - 21:36:54:3654] [34minfo[39m: [34mSetting up Google strategy[39m
+[18 Nov, 2025 - 21:36:54:3654] [34minfo[39m: [34m🚀 Server is running on http://localhost:3000[39m
+[18 Nov, 2025 - 21:36:55:3655] [34minfo[39m: [34m✅ Email service is ready to send emails[39m
+[18 Nov, 2025 - 21:37:00:370] [34minfo[39m: [34mstart the submission[39m
+[18 Nov, 2025 - 21:37:00:370] [34minfo[39m: [34mitem getted[39m
+[18 Nov, 2025 - 21:37:01:371] [34minfo[39m: [34m52[39m
+[18 Nov, 2025 - 21:37:01:371] [34minfo[39m: [34mstarting to submit the code with the test case[39m
+[18 Nov, 2025 - 21:37:03:373] [34minfo[39m: [34mcode submit successfully[39m
+[18 Nov, 2025 - 21:37:03:373] [34minfo[39m: [34mstarting to submit the code with the test case[39m
+[18 Nov, 2025 - 21:37:05:375] [34minfo[39m: [34mcode submit successfully[39m
+[18 Nov, 2025 - 21:37:05:375] [34minfo[39m: [34mstarting to submit the code with the test case[39m
+[18 Nov, 2025 - 21:37:07:377] [34minfo[39m: [34mcode submit successfully[39m
+[18 Nov, 2025 - 21:40:39:4039] [34minfo[39m: [34mstart the submission[39m
+[18 Nov, 2025 - 21:40:39:4039] [34minfo[39m: [34mitem getted[39m
+[18 Nov, 2025 - 21:40:40:4040] [34minfo[39m: [34m52[39m
+[18 Nov, 2025 - 21:40:40:4040] [34minfo[39m: [34mstarting to submit the code with the test case[39m
+[18 Nov, 2025 - 21:40:45:4045] [34minfo[39m: [34mSetting up GitHub strategy[39m
+[18 Nov, 2025 - 21:40:45:4045] [34minfo[39m: [34mSetting up Google strategy[39m
+[18 Nov, 2025 - 21:40:48:4048] [34minfo[39m: [34m🚀 Server is running on http://localhost:3000[39m
+[18 Nov, 2025 - 21:40:49:4049] [34minfo[39m: [34m✅ Email service is ready to send emails[39m
+[18 Nov, 2025 - 21:40:50:4050] [34minfo[39m: [34mstart the submission[39m
+[18 Nov, 2025 - 21:40:50:4050] [34minfo[39m: [34mitem getted[39m
+[18 Nov, 2025 - 21:40:50:4050] [34minfo[39m: [34mStarting code submission for question ID: 2[39m
+[18 Nov, 2025 - 21:40:51:4051] [34minfo[39m: [34mFound 3 test cases[39m
+[18 Nov, 2025 - 21:40:51:4051] [34minfo[39m: [34mUsing language ID: 52, Time limit: 3000s, Memory limit: 512KB[39m
+[18 Nov, 2025 - 21:40:51:4051] [34minfo[39m: [34mRunning test case 1/3...[39m
+[18 Nov, 2025 - 21:40:52:4052] [31merror[39m: [31mJudge0 API error (422): {"cpu_time_limit":["must be less than or equal to 20.0"],"memory_limit":["must be greater than or equal to 2048"]}[39m
+[18 Nov, 2025 - 21:40:52:4052] [31merror[39m: [31mError running test case 1: Judge0 API error: 422[39m
+[18 Nov, 2025 - 21:40:52:4052] [34minfo[39m: [34mRunning test case 2/3...[39m
+[18 Nov, 2025 - 21:40:52:4052] [31merror[39m: [31mJudge0 API error (422): {"cpu_time_limit":["must be less than or equal to 20.0"],"memory_limit":["must be greater than or equal to 2048"]}[39m
+[18 Nov, 2025 - 21:40:52:4052] [31merror[39m: [31mError running test case 2: Judge0 API error: 422[39m
+[18 Nov, 2025 - 21:40:52:4052] [34minfo[39m: [34mRunning test case 3/3...[39m
+[18 Nov, 2025 - 21:40:52:4052] [31merror[39m: [31mJudge0 API error (422): {"cpu_time_limit":["must be less than or equal to 20.0"],"memory_limit":["must be greater than or equal to 2048"]}[39m
+[18 Nov, 2025 - 21:40:52:4052] [31merror[39m: [31mError running test case 3: Judge0 API error: 422[39m
+[18 Nov, 2025 - 21:40:52:4052] [34minfo[39m: [34m==================================================[39m
+[18 Nov, 2025 - 21:40:52:4052] [34minfo[39m: [34mSUBMISSION SUMMARY[39m
+[18 Nov, 2025 - 21:40:52:4052] [34minfo[39m: [34m==================================================[39m
+[18 Nov, 2025 - 21:40:52:4052] [34minfo[39m: [34mPassed: 0/3[39m
+[18 Nov, 2025 - 21:40:52:4052] [34minfo[39m: [34mAccuracy: 0%[39m
+[18 Nov, 2025 - 21:40:52:4052] [34minfo[39m: [34mScore: 0/50 (0%)[39m
+[18 Nov, 2025 - 21:40:52:4052] [34minfo[39m: [34mAll Passed: false[39m
+[18 Nov, 2025 - 21:40:52:4052] [34minfo[39m: [34m==================================================[39m
+[18 Nov, 2025 - 21:44:34:4434] [34minfo[39m: [34mSetting up GitHub strategy[39m
+[18 Nov, 2025 - 21:44:34:4434] [34minfo[39m: [34mSetting up Google strategy[39m
+[18 Nov, 2025 - 21:44:35:4435] [34minfo[39m: [34m🚀 Server is running on http://localhost:3000[39m
+[18 Nov, 2025 - 21:44:36:4436] [34minfo[39m: [34m✅ Email service is ready to send emails[39m
+[18 Nov, 2025 - 21:44:45:4445] [34minfo[39m: [34mstart the submission[39m
+[18 Nov, 2025 - 21:44:45:4445] [34minfo[39m: [34mitem getted[39m
+[18 Nov, 2025 - 21:44:46:4446] [34minfo[39m: [34mStarting code submission for question ID: 2[39m
+[18 Nov, 2025 - 21:44:46:4446] [34minfo[39m: [34mJudge0 instance: 1.14.0[39m
+[18 Nov, 2025 - 21:44:46:4446] [34minfo[39m: [34mFound 3 test cases[39m
+[18 Nov, 2025 - 21:44:46:4446] [34minfo[39m: [34mUsing language ID: 52, Time limit: 3000s, Memory limit: 512KB[39m
+[18 Nov, 2025 - 21:44:46:4446] [34minfo[39m: [34mVerified language: C++ (GCC 7.4.0)[39m
+[18 Nov, 2025 - 21:44:46:4446] [34minfo[39m: [34mRunning test case 1/3...[39m
+[18 Nov, 2025 - 21:44:47:4447] [31merror[39m: [31mJudge0 API error (422): {"cpu_time_limit":["must be less than or equal to 20.0"],"memory_limit":["must be greater than or equal to 2048"]}[39m
+[18 Nov, 2025 - 21:44:47:4447] [31merror[39m: [31mError running test case 1: Judge0 API error: 422 - {[39m
+[31m  "cpu_time_limit": [[39m
+[31m    "must be less than or equal to 20.0"[39m
+[31m  ],[39m
+[31m  "memory_limit": [[39m
+[31m    "must be greater than or equal to 2048"[39m
+[31m  ][39m
+[31m}[39m
+[18 Nov, 2025 - 21:44:47:4447] [34minfo[39m: [34mRunning test case 2/3...[39m
+[18 Nov, 2025 - 21:44:47:4447] [31merror[39m: [31mJudge0 API error (422): {"cpu_time_limit":["must be less than or equal to 20.0"],"memory_limit":["must be greater than or equal to 2048"]}[39m
+[18 Nov, 2025 - 21:44:47:4447] [31merror[39m: [31mError running test case 2: Judge0 API error: 422 - {[39m
+[31m  "cpu_time_limit": [[39m
+[31m    "must be less than or equal to 20.0"[39m
+[31m  ],[39m
+[31m  "memory_limit": [[39m
+[31m    "must be greater than or equal to 2048"[39m
+[31m  ][39m
+[31m}[39m
+[18 Nov, 2025 - 21:44:47:4447] [34minfo[39m: [34mRunning test case 3/3...[39m
+[18 Nov, 2025 - 21:44:48:4448] [31merror[39m: [31mJudge0 API error (422): {"cpu_time_limit":["must be less than or equal to 20.0"],"memory_limit":["must be greater than or equal to 2048"]}[39m
+[18 Nov, 2025 - 21:44:48:4448] [31merror[39m: [31mError running test case 3: Judge0 API error: 422 - {[39m
+[31m  "cpu_time_limit": [[39m
+[31m    "must be less than or equal to 20.0"[39m
+[31m  ],[39m
+[31m  "memory_limit": [[39m
+[31m    "must be greater than or equal to 2048"[39m
+[31m  ][39m
+[31m}[39m
+[18 Nov, 2025 - 21:44:48:4448] [34minfo[39m: [34m==================================================[39m
+[18 Nov, 2025 - 21:44:48:4448] [34minfo[39m: [34mSUBMISSION SUMMARY[39m
+[18 Nov, 2025 - 21:44:48:4448] [34minfo[39m: [34m==================================================[39m
+[18 Nov, 2025 - 21:44:48:4448] [34minfo[39m: [34mPassed: 0/3[39m
+[18 Nov, 2025 - 21:44:48:4448] [34minfo[39m: [34mAccuracy: 0%[39m
+[18 Nov, 2025 - 21:44:48:4448] [34minfo[39m: [34mScore: 0/50 (0%)[39m
+[18 Nov, 2025 - 21:44:48:4448] [34minfo[39m: [34mAll Passed: false[39m
+[18 Nov, 2025 - 21:44:48:4448] [34minfo[39m: [34m==================================================[39m
+[18 Nov, 2025 - 21:45:30:4530] [34minfo[39m: [34mSetting up GitHub strategy[39m
+[18 Nov, 2025 - 21:45:30:4530] [34minfo[39m: [34mSetting up Google strategy[39m
+[18 Nov, 2025 - 21:45:33:4533] [34minfo[39m: [34m🚀 Server is running on http://localhost:3000[39m
+[18 Nov, 2025 - 21:45:33:4533] [34minfo[39m: [34m✅ Email service is ready to send emails[39m
+[18 Nov, 2025 - 21:45:35:4535] [34minfo[39m: [34mstart the submission[39m
+[18 Nov, 2025 - 21:45:35:4535] [34minfo[39m: [34mitem getted[39m
+[18 Nov, 2025 - 21:45:36:4536] [34minfo[39m: [34mStarting code submission for question ID: 2[39m
+[18 Nov, 2025 - 21:45:36:4536] [34minfo[39m: [34mJudge0 instance: 1.14.0[39m
+[18 Nov, 2025 - 21:45:37:4537] [34minfo[39m: [34mFound 3 test cases[39m
+[18 Nov, 2025 - 21:45:37:4537] [34minfo[39m: [34mUsing language ID: 52, Time limit: 3000s, Memory limit: 512KB[39m
+[18 Nov, 2025 - 21:45:37:4537] [34minfo[39m: [34mVerified language: C++ (GCC 7.4.0)[39m
+[18 Nov, 2025 - 21:45:37:4537] [34minfo[39m: [34mRunning test case 1/3...[39m
+[18 Nov, 2025 - 21:45:39:4539] [34minfo[39m: [34mTest case 1 completed with status: Accepted (ID: 3)[39m
+[18 Nov, 2025 - 21:45:39:4539] [34minfo[39m: [34m✅ Test case 1 PASSED - Time: 0.003s, Memory: 1604KB[39m
+[18 Nov, 2025 - 21:45:39:4539] [34minfo[39m: [34mRunning test case 2/3...[39m
+[18 Nov, 2025 - 21:45:40:4540] [34minfo[39m: [34mTest case 2 completed with status: Accepted (ID: 3)[39m
+[18 Nov, 2025 - 21:45:40:4540] [34minfo[39m: [34m✅ Test case 2 PASSED - Time: 0.003s, Memory: 1024KB[39m
+[18 Nov, 2025 - 21:45:40:4540] [34minfo[39m: [34mRunning test case 3/3...[39m
+[18 Nov, 2025 - 21:45:42:4542] [34minfo[39m: [34mTest case 3 completed with status: Accepted (ID: 3)[39m
+[18 Nov, 2025 - 21:45:42:4542] [34minfo[39m: [34m✅ Test case 3 PASSED - Time: 0.003s, Memory: 1256KB[39m
+[18 Nov, 2025 - 21:45:42:4542] [34minfo[39m: [34m==================================================[39m
+[18 Nov, 2025 - 21:45:42:4542] [34minfo[39m: [34mSUBMISSION SUMMARY[39m
+[18 Nov, 2025 - 21:45:42:4542] [34minfo[39m: [34m==================================================[39m
+[18 Nov, 2025 - 21:45:42:4542] [34minfo[39m: [34mPassed: 3/3[39m
+[18 Nov, 2025 - 21:45:42:4542] [34minfo[39m: [34mAccuracy: 100%[39m
+[18 Nov, 2025 - 21:45:42:4542] [34minfo[39m: [34mScore: 50/50 (100%)[39m
+[18 Nov, 2025 - 21:45:42:4542] [34minfo[39m: [34mAll Passed: true[39m
+[18 Nov, 2025 - 21:45:42:4542] [34minfo[39m: [34m==================================================[39m
+[18 Nov, 2025 - 21:59:33:5933] [34minfo[39m: [34mstart the submission[39m
+[18 Nov, 2025 - 21:59:33:5933] [34minfo[39m: [34mitem getted[39m
+[18 Nov, 2025 - 21:59:37:5937] [34minfo[39m: [34mStarting code submission for question ID: 3[39m
+[18 Nov, 2025 - 21:59:40:5940] [34minfo[39m: [34mJudge0 instance: 1.14.0[39m
+[18 Nov, 2025 - 21:59:41:5941] [34minfo[39m: [34mFound 3 test cases[39m
+[18 Nov, 2025 - 21:59:41:5941] [34minfo[39m: [34mUsing language ID: 52, Time limit: 2000s, Memory limit: 256KB[39m
+[18 Nov, 2025 - 21:59:41:5941] [34minfo[39m: [34mVerified language: C++ (GCC 7.4.0)[39m
+[18 Nov, 2025 - 21:59:41:5941] [34minfo[39m: [34mRunning test case 1/3...[39m
+[18 Nov, 2025 - 21:59:43:5943] [34minfo[39m: [34mTest case 1 completed with status: Wrong Answer (ID: 4)[39m
+[18 Nov, 2025 - 21:59:43:5943] [34minfo[39m: [34m❌ Test case 1 FAILED - Status: Wrong Answer[39m
+[18 Nov, 2025 - 21:59:43:5943] [34minfo[39m: [34mRunning test case 2/3...[39m
+[18 Nov, 2025 - 21:59:45:5945] [34minfo[39m: [34mTest case 2 completed with status: Wrong Answer (ID: 4)[39m
+[18 Nov, 2025 - 21:59:45:5945] [34minfo[39m: [34m❌ Test case 2 FAILED - Status: Wrong Answer[39m
+[18 Nov, 2025 - 21:59:45:5945] [34minfo[39m: [34mRunning test case 3/3...[39m
+[18 Nov, 2025 - 21:59:47:5947] [34minfo[39m: [34mTest case 3 completed with status: Wrong Answer (ID: 4)[39m
+[18 Nov, 2025 - 21:59:47:5947] [34minfo[39m: [34m❌ Test case 3 FAILED - Status: Wrong Answer[39m
+[18 Nov, 2025 - 21:59:47:5947] [34minfo[39m: [34m==================================================[39m
+[18 Nov, 2025 - 21:59:47:5947] [34minfo[39m: [34mSUBMISSION SUMMARY[39m
+[18 Nov, 2025 - 21:59:47:5947] [34minfo[39m: [34m==================================================[39m
+[18 Nov, 2025 - 21:59:47:5947] [34minfo[39m: [34mPassed: 0/3[39m
+[18 Nov, 2025 - 21:59:47:5947] [34minfo[39m: [34mAccuracy: 0%[39m
+[18 Nov, 2025 - 21:59:47:5947] [34minfo[39m: [34mScore: 0/40 (0%)[39m
+[18 Nov, 2025 - 21:59:47:5947] [34minfo[39m: [34mAll Passed: false[39m
+[18 Nov, 2025 - 21:59:47:5947] [34minfo[39m: [34m==================================================[39m
+[18 Nov, 2025 - 22:00:58:058] [34minfo[39m: [34mstart the submission[39m
+[18 Nov, 2025 - 22:00:58:058] [34minfo[39m: [34mitem getted[39m
+[18 Nov, 2025 - 22:00:59:059] [31merror[39m: [31mThe question not assign to the current user[39m
+[18 Nov, 2025 - 22:01:08:18] [34minfo[39m: [34mstart the submission[39m
+[18 Nov, 2025 - 22:01:08:18] [34minfo[39m: [34mitem getted[39m
+[18 Nov, 2025 - 22:01:09:19] [34minfo[39m: [34mStarting code submission for question ID: 3[39m
+[18 Nov, 2025 - 22:01:09:19] [34minfo[39m: [34mJudge0 instance: 1.14.0[39m
+[18 Nov, 2025 - 22:01:09:19] [34minfo[39m: [34mFound 3 test cases[39m
+[18 Nov, 2025 - 22:01:09:19] [34minfo[39m: [34mUsing language ID: 52, Time limit: 2000s, Memory limit: 256KB[39m
+[18 Nov, 2025 - 22:01:09:19] [34minfo[39m: [34mVerified language: C++ (GCC 7.4.0)[39m
+[18 Nov, 2025 - 22:01:09:19] [34minfo[39m: [34mRunning test case 1/3...[39m
+[18 Nov, 2025 - 22:01:11:111] [34minfo[39m: [34mTest case 1 completed with status: Wrong Answer (ID: 4)[39m
+[18 Nov, 2025 - 22:01:11:111] [34minfo[39m: [34m❌ Test case 1 FAILED - Status: Wrong Answer[39m
+[18 Nov, 2025 - 22:01:11:111] [34minfo[39m: [34mRunning test case 2/3...[39m
+[18 Nov, 2025 - 22:01:13:113] [34minfo[39m: [34mTest case 2 completed with status: Wrong Answer (ID: 4)[39m
+[18 Nov, 2025 - 22:01:13:113] [34minfo[39m: [34m❌ Test case 2 FAILED - Status: Wrong Answer[39m
+[18 Nov, 2025 - 22:01:13:113] [34minfo[39m: [34mRunning test case 3/3...[39m
+[18 Nov, 2025 - 22:01:15:115] [34minfo[39m: [34mTest case 3 completed with status: Wrong Answer (ID: 4)[39m
+[18 Nov, 2025 - 22:01:15:115] [34minfo[39m: [34m❌ Test case 3 FAILED - Status: Wrong Answer[39m
+[18 Nov, 2025 - 22:01:15:115] [34minfo[39m: [34m==================================================[39m
+[18 Nov, 2025 - 22:01:15:115] [34minfo[39m: [34mSUBMISSION SUMMARY[39m
+[18 Nov, 2025 - 22:01:15:115] [34minfo[39m: [34m==================================================[39m
+[18 Nov, 2025 - 22:01:15:115] [34minfo[39m: [34mPassed: 0/3[39m
+[18 Nov, 2025 - 22:01:15:115] [34minfo[39m: [34mAccuracy: 0%[39m
+[18 Nov, 2025 - 22:01:15:115] [34minfo[39m: [34mScore: 0/40 (0%)[39m
+[18 Nov, 2025 - 22:01:15:115] [34minfo[39m: [34mAll Passed: false[39m
+[18 Nov, 2025 - 22:01:15:115] [34minfo[39m: [34m==================================================[39m
+[18 Nov, 2025 - 22:01:46:146] [34minfo[39m: [34mstart the submission[39m
+[18 Nov, 2025 - 22:01:46:146] [34minfo[39m: [34mitem getted[39m
+[18 Nov, 2025 - 22:01:47:147] [34minfo[39m: [34mStarting code submission for question ID: 2[39m
+[18 Nov, 2025 - 22:01:47:147] [34minfo[39m: [34mJudge0 instance: 1.14.0[39m
+[18 Nov, 2025 - 22:01:47:147] [34minfo[39m: [34mFound 3 test cases[39m
+[18 Nov, 2025 - 22:01:47:147] [34minfo[39m: [34mUsing language ID: 52, Time limit: 3000s, Memory limit: 512KB[39m
+[18 Nov, 2025 - 22:01:48:148] [34minfo[39m: [34mVerified language: C++ (GCC 7.4.0)[39m
+[18 Nov, 2025 - 22:01:48:148] [34minfo[39m: [34mRunning test case 1/3...[39m
+[18 Nov, 2025 - 22:01:49:149] [34minfo[39m: [34mTest case 1 completed with status: Accepted (ID: 3)[39m
+[18 Nov, 2025 - 22:01:49:149] [34minfo[39m: [34m✅ Test case 1 PASSED - Time: 0.002s, Memory: 1240KB[39m
+[18 Nov, 2025 - 22:01:49:149] [34minfo[39m: [34mRunning test case 2/3...[39m
+[18 Nov, 2025 - 22:01:51:151] [34minfo[39m: [34mTest case 2 completed with status: Accepted (ID: 3)[39m
+[18 Nov, 2025 - 22:01:51:151] [34minfo[39m: [34m✅ Test case 2 PASSED - Time: 0.003s, Memory: 1352KB[39m
+[18 Nov, 2025 - 22:01:51:151] [34minfo[39m: [34mRunning test case 3/3...[39m
+[18 Nov, 2025 - 22:01:53:153] [34minfo[39m: [34mTest case 3 completed with status: Accepted (ID: 3)[39m
+[18 Nov, 2025 - 22:01:53:153] [34minfo[39m: [34m✅ Test case 3 PASSED - Time: 0.003s, Memory: 1364KB[39m
+[18 Nov, 2025 - 22:01:53:153] [34minfo[39m: [34m==================================================[39m
+[18 Nov, 2025 - 22:01:53:153] [34minfo[39m: [34mSUBMISSION SUMMARY[39m
+[18 Nov, 2025 - 22:01:53:153] [34minfo[39m: [34m==================================================[39m
+[18 Nov, 2025 - 22:01:53:153] [34minfo[39m: [34mPassed: 3/3[39m
+[18 Nov, 2025 - 22:01:53:153] [34minfo[39m: [34mAccuracy: 100%[39m
+[18 Nov, 2025 - 22:01:53:153] [34minfo[39m: [34mScore: 50/50 (100%)[39m
+[18 Nov, 2025 - 22:01:53:153] [34minfo[39m: [34mAll Passed: true[39m
+[18 Nov, 2025 - 22:01:53:153] [34minfo[39m: [34m==================================================[39m
+[18 Nov, 2025 - 22:02:16:216] [34minfo[39m: [34mstart the submission[39m
+[18 Nov, 2025 - 22:02:16:216] [34minfo[39m: [34mitem getted[39m
+[18 Nov, 2025 - 22:02:17:217] [34minfo[39m: [34mStarting code submission for question ID: 2[39m
+[18 Nov, 2025 - 22:02:17:217] [34minfo[39m: [34mJudge0 instance: 1.14.0[39m
+[18 Nov, 2025 - 22:02:17:217] [34minfo[39m: [34mFound 3 test cases[39m
+[18 Nov, 2025 - 22:02:17:217] [34minfo[39m: [34mUsing language ID: 52, Time limit: 3000s, Memory limit: 512KB[39m
+[18 Nov, 2025 - 22:02:17:217] [34minfo[39m: [34mVerified language: C++ (GCC 7.4.0)[39m
+[18 Nov, 2025 - 22:02:17:217] [34minfo[39m: [34mRunning test case 1/3...[39m
+[18 Nov, 2025 - 22:02:19:219] [34minfo[39m: [34mTest case 1 completed with status: Compilation Error (ID: 6)[39m
+[18 Nov, 2025 - 22:02:19:219] [34minfo[39m: [34m❌ Test case 1 FAILED - Status: Compilation Error[39m
+[18 Nov, 2025 - 22:02:19:219] [31merror[39m: [31mCompilation error detected. Stopping execution.[39m
+[18 Nov, 2025 - 22:02:19:219] [34minfo[39m: [34m==================================================[39m
+[18 Nov, 2025 - 22:02:19:219] [34minfo[39m: [34mSUBMISSION SUMMARY[39m
+[18 Nov, 2025 - 22:02:19:219] [34minfo[39m: [34m==================================================[39m
+[18 Nov, 2025 - 22:02:19:219] [34minfo[39m: [34mPassed: 0/3[39m
+[18 Nov, 2025 - 22:02:19:219] [34minfo[39m: [34mAccuracy: 0%[39m
+[18 Nov, 2025 - 22:02:19:219] [34minfo[39m: [34mScore: 0/15 (0%)[39m
+[18 Nov, 2025 - 22:02:19:219] [34minfo[39m: [34mAll Passed: false[39m
+[18 Nov, 2025 - 22:02:19:219] [34minfo[39m: [34m==================================================[39m
+[18 Nov, 2025 - 22:02:31:231] [34minfo[39m: [34mstart the submission[39m
+[18 Nov, 2025 - 22:02:31:231] [34minfo[39m: [34mitem getted[39m
+[18 Nov, 2025 - 22:02:32:232] [34minfo[39m: [34mStarting code submission for question ID: 2[39m
+[18 Nov, 2025 - 22:02:32:232] [34minfo[39m: [34mJudge0 instance: 1.14.0[39m
+[18 Nov, 2025 - 22:02:32:232] [34minfo[39m: [34mFound 3 test cases[39m
+[18 Nov, 2025 - 22:02:32:232] [34minfo[39m: [34mUsing language ID: 52, Time limit: 3000s, Memory limit: 512KB[39m
+[18 Nov, 2025 - 22:02:32:232] [34minfo[39m: [34mVerified language: C++ (GCC 7.4.0)[39m
+[18 Nov, 2025 - 22:02:32:232] [34minfo[39m: [34mRunning test case 1/3...[39m
+[18 Nov, 2025 - 22:02:34:234] [34minfo[39m: [34mTest case 1 completed with status: Accepted (ID: 3)[39m
+[18 Nov, 2025 - 22:02:34:234] [34minfo[39m: [34m✅ Test case 1 PASSED - Time: 0.003s, Memory: 1032KB[39m
+[18 Nov, 2025 - 22:02:34:234] [34minfo[39m: [34mRunning test case 2/3...[39m
+[18 Nov, 2025 - 22:02:36:236] [34minfo[39m: [34mTest case 2 completed with status: Accepted (ID: 3)[39m
+[18 Nov, 2025 - 22:02:36:236] [34minfo[39m: [34m✅ Test case 2 PASSED - Time: 0.003s, Memory: 1256KB[39m
+[18 Nov, 2025 - 22:02:36:236] [34minfo[39m: [34mRunning test case 3/3...[39m
+[18 Nov, 2025 - 22:02:38:238] [34minfo[39m: [34mTest case 3 completed with status: Accepted (ID: 3)[39m
+[18 Nov, 2025 - 22:02:38:238] [34minfo[39m: [34m✅ Test case 3 PASSED - Time: 0.003s, Memory: 1328KB[39m
+[18 Nov, 2025 - 22:02:38:238] [34minfo[39m: [34m==================================================[39m
+[18 Nov, 2025 - 22:02:38:238] [34minfo[39m: [34mSUBMISSION SUMMARY[39m
+[18 Nov, 2025 - 22:02:38:238] [34minfo[39m: [34m==================================================[39m
+[18 Nov, 2025 - 22:02:38:238] [34minfo[39m: [34mPassed: 3/3[39m
+[18 Nov, 2025 - 22:02:38:238] [34minfo[39m: [34mAccuracy: 100%[39m
+[18 Nov, 2025 - 22:02:38:238] [34minfo[39m: [34mScore: 50/50 (100%)[39m
+[18 Nov, 2025 - 22:02:38:238] [34minfo[39m: [34mAll Passed: true[39m
+[18 Nov, 2025 - 22:02:38:238] [34minfo[39m: [34m==================================================[39m
+[18 Nov, 2025 - 22:02:40:240] [34minfo[39m: [34mstart the submission[39m
+[18 Nov, 2025 - 22:02:40:240] [34minfo[39m: [34mitem getted[39m
+[18 Nov, 2025 - 22:02:41:241] [34minfo[39m: [34mStarting code submission for question ID: 2[39m
+[18 Nov, 2025 - 22:02:41:241] [34minfo[39m: [34mJudge0 instance: 1.14.0[39m
+[18 Nov, 2025 - 22:02:41:241] [34minfo[39m: [34mFound 3 test cases[39m
+[18 Nov, 2025 - 22:02:41:241] [34minfo[39m: [34mUsing language ID: 52, Time limit: 3000s, Memory limit: 512KB[39m
+[18 Nov, 2025 - 22:02:41:241] [34minfo[39m: [34mVerified language: C++ (GCC 7.4.0)[39m
+[18 Nov, 2025 - 22:02:41:241] [34minfo[39m: [34mRunning test case 1/3...[39m
+[18 Nov, 2025 - 22:02:42:242] [34minfo[39m: [34mTest case 1 completed with status: Compilation Error (ID: 6)[39m
+[18 Nov, 2025 - 22:02:42:242] [34minfo[39m: [34m❌ Test case 1 FAILED - Status: Compilation Error[39m
+[18 Nov, 2025 - 22:02:42:242] [31merror[39m: [31mCompilation error detected. Stopping execution.[39m
+[18 Nov, 2025 - 22:02:42:242] [34minfo[39m: [34m==================================================[39m
+[18 Nov, 2025 - 22:02:42:242] [34minfo[39m: [34mSUBMISSION SUMMARY[39m
+[18 Nov, 2025 - 22:02:42:242] [34minfo[39m: [34m==================================================[39m
+[18 Nov, 2025 - 22:02:42:242] [34minfo[39m: [34mPassed: 0/3[39m
+[18 Nov, 2025 - 22:02:42:242] [34minfo[39m: [34mAccuracy: 0%[39m
+[18 Nov, 2025 - 22:02:42:242] [34minfo[39m: [34mScore: 0/15 (0%)[39m
+[18 Nov, 2025 - 22:02:42:242] [34minfo[39m: [34mAll Passed: false[39m
+[18 Nov, 2025 - 22:02:42:242] [34minfo[39m: [34m==================================================[39m
+[18 Nov, 2025 - 23:30:05:305] [34minfo[39m: [34mstart the submission[39m
+[18 Nov, 2025 - 23:30:05:305] [34minfo[39m: [34mitem getted[39m
+[18 Nov, 2025 - 23:30:07:307] [34minfo[39m: [34mStarting code submission for question ID: 3[39m
+[18 Nov, 2025 - 23:30:07:307] [34minfo[39m: [34mJudge0 instance: 1.14.0[39m
+[18 Nov, 2025 - 23:30:08:308] [34minfo[39m: [34mFound 3 test cases[39m
+[18 Nov, 2025 - 23:30:08:308] [34minfo[39m: [34mUsing language ID: 52, Time limit: 2000s, Memory limit: 256KB[39m
+[18 Nov, 2025 - 23:30:08:308] [34minfo[39m: [34mVerified language: C++ (GCC 7.4.0)[39m
+[18 Nov, 2025 - 23:30:08:308] [34minfo[39m: [34mRunning test case 1/3...[39m
+[18 Nov, 2025 - 23:30:09:309] [34minfo[39m: [34mTest case 1 completed with status: Compilation Error (ID: 6)[39m
+[18 Nov, 2025 - 23:30:09:309] [34minfo[39m: [34m❌ Test case 1 FAILED - Status: Compilation Error[39m
+[18 Nov, 2025 - 23:30:09:309] [31merror[39m: [31mCompilation error detected. Stopping execution.[39m
+[18 Nov, 2025 - 23:30:09:309] [34minfo[39m: [34m==================================================[39m
+[18 Nov, 2025 - 23:30:09:309] [34minfo[39m: [34mSUBMISSION SUMMARY[39m
+[18 Nov, 2025 - 23:30:09:309] [34minfo[39m: [34m==================================================[39m
+[18 Nov, 2025 - 23:30:09:309] [34minfo[39m: [34mPassed: 0/3[39m
+[18 Nov, 2025 - 23:30:09:309] [34minfo[39m: [34mAccuracy: 0%[39m
+[18 Nov, 2025 - 23:30:09:309] [34minfo[39m: [34mScore: 0/10 (0%)[39m
+[18 Nov, 2025 - 23:30:09:309] [34minfo[39m: [34mAll Passed: false[39m
+[18 Nov, 2025 - 23:30:09:309] [34minfo[39m: [34m==================================================[39m
+[18 Nov, 2025 - 23:30:19:3019] [34minfo[39m: [34mstart the submission[39m
+[18 Nov, 2025 - 23:30:19:3019] [34minfo[39m: [34mitem getted[39m
+[18 Nov, 2025 - 23:30:20:3020] [34minfo[39m: [34mStarting code submission for question ID: 3[39m
+[18 Nov, 2025 - 23:30:20:3020] [34minfo[39m: [34mJudge0 instance: 1.14.0[39m
+[18 Nov, 2025 - 23:30:20:3020] [34minfo[39m: [34mFound 3 test cases[39m
+[18 Nov, 2025 - 23:30:20:3020] [34minfo[39m: [34mUsing language ID: 52, Time limit: 2000s, Memory limit: 256KB[39m
+[18 Nov, 2025 - 23:30:20:3020] [34minfo[39m: [34mVerified language: C++ (GCC 7.4.0)[39m
+[18 Nov, 2025 - 23:30:20:3020] [34minfo[39m: [34mRunning test case 1/3...[39m
+[18 Nov, 2025 - 23:30:23:3023] [34minfo[39m: [34mTest case 1 completed with status: Wrong Answer (ID: 4)[39m
+[18 Nov, 2025 - 23:30:23:3023] [34minfo[39m: [34m❌ Test case 1 FAILED - Status: Wrong Answer[39m
+[18 Nov, 2025 - 23:30:23:3023] [34minfo[39m: [34mRunning test case 2/3...[39m
+[18 Nov, 2025 - 23:30:24:3024] [34minfo[39m: [34mTest case 2 completed with status: Wrong Answer (ID: 4)[39m
+[18 Nov, 2025 - 23:30:24:3024] [34minfo[39m: [34m❌ Test case 2 FAILED - Status: Wrong Answer[39m
+[18 Nov, 2025 - 23:30:24:3024] [34minfo[39m: [34mRunning test case 3/3...[39m
+[18 Nov, 2025 - 23:30:26:3026] [34minfo[39m: [34mTest case 3 completed with status: Wrong Answer (ID: 4)[39m
+[18 Nov, 2025 - 23:30:26:3026] [34minfo[39m: [34m❌ Test case 3 FAILED - Status: Wrong Answer[39m
+[18 Nov, 2025 - 23:30:26:3026] [34minfo[39m: [34m==================================================[39m
+[18 Nov, 2025 - 23:30:26:3026] [34minfo[39m: [34mSUBMISSION SUMMARY[39m
+[18 Nov, 2025 - 23:30:26:3026] [34minfo[39m: [34m==================================================[39m
+[18 Nov, 2025 - 23:30:26:3026] [34minfo[39m: [34mPassed: 0/3[39m
+[18 Nov, 2025 - 23:30:26:3026] [34minfo[39m: [34mAccuracy: 0%[39m
+[18 Nov, 2025 - 23:30:26:3026] [34minfo[39m: [34mScore: 0/40 (0%)[39m
+[18 Nov, 2025 - 23:30:26:3026] [34minfo[39m: [34mAll Passed: false[39m
+[18 Nov, 2025 - 23:30:26:3026] [34minfo[39m: [34m==================================================[39m
+[18 Nov, 2025 - 23:31:43:3143] [34minfo[39m: [34mstart the submission[39m
+[18 Nov, 2025 - 23:31:43:3143] [34minfo[39m: [34mitem getted[39m
+[18 Nov, 2025 - 23:31:44:3144] [34minfo[39m: [34mStarting code submission for question ID: 3[39m
+[18 Nov, 2025 - 23:31:44:3144] [34minfo[39m: [34mJudge0 instance: 1.14.0[39m
+[18 Nov, 2025 - 23:31:44:3144] [34minfo[39m: [34mFound 3 test cases[39m
+[18 Nov, 2025 - 23:31:44:3144] [34minfo[39m: [34mUsing language ID: 52, Time limit: 2000s, Memory limit: 256KB[39m
+[18 Nov, 2025 - 23:31:45:3145] [34minfo[39m: [34mVerified language: C++ (GCC 7.4.0)[39m
+[18 Nov, 2025 - 23:31:45:3145] [34minfo[39m: [34mRunning test case 1/3...[39m
+[18 Nov, 2025 - 23:31:47:3147] [34minfo[39m: [34mTest case 1 completed with status: Wrong Answer (ID: 4)[39m
+[18 Nov, 2025 - 23:31:47:3147] [34minfo[39m: [34m❌ Test case 1 FAILED - Status: Wrong Answer[39m
+[18 Nov, 2025 - 23:31:47:3147] [34minfo[39m: [34mRunning test case 2/3...[39m
+[18 Nov, 2025 - 23:31:49:3149] [34minfo[39m: [34mTest case 2 completed with status: Wrong Answer (ID: 4)[39m
+[18 Nov, 2025 - 23:31:49:3149] [34minfo[39m: [34m❌ Test case 2 FAILED - Status: Wrong Answer[39m
+[18 Nov, 2025 - 23:31:49:3149] [34minfo[39m: [34mRunning test case 3/3...[39m
+[18 Nov, 2025 - 23:31:51:3151] [34minfo[39m: [34mTest case 3 completed with status: Wrong Answer (ID: 4)[39m
+[18 Nov, 2025 - 23:31:51:3151] [34minfo[39m: [34m❌ Test case 3 FAILED - Status: Wrong Answer[39m
+[18 Nov, 2025 - 23:31:51:3151] [34minfo[39m: [34m==================================================[39m
+[18 Nov, 2025 - 23:31:51:3151] [34minfo[39m: [34mSUBMISSION SUMMARY[39m
+[18 Nov, 2025 - 23:31:51:3151] [34minfo[39m: [34m==================================================[39m
+[18 Nov, 2025 - 23:31:51:3151] [34minfo[39m: [34mPassed: 0/3[39m
+[18 Nov, 2025 - 23:31:51:3151] [34minfo[39m: [34mAccuracy: 0%[39m
+[18 Nov, 2025 - 23:31:51:3151] [34minfo[39m: [34mScore: 0/40 (0%)[39m
+[18 Nov, 2025 - 23:31:51:3151] [34minfo[39m: [34mAll Passed: false[39m
+[18 Nov, 2025 - 23:31:51:3151] [34minfo[39m: [34m==================================================[39m
+[19 Nov, 2025 - 07:26:55:2655] [34minfo[39m: [34mSetting up GitHub strategy[39m
+[19 Nov, 2025 - 07:26:55:2655] [34minfo[39m: [34mSetting up Google strategy[39m
+[19 Nov, 2025 - 07:26:56:2656] [34minfo[39m: [34m🚀 Server is running on http://localhost:3000[39m
+[19 Nov, 2025 - 07:26:57:2657] [34minfo[39m: [34m✅ Email service is ready to send emails[39m
+[19 Nov, 2025 - 07:27:01:271] [34minfo[39m: [34mstart the submission[39m
+[19 Nov, 2025 - 07:27:01:271] [34minfo[39m: [34mitem getted[39m
+[19 Nov, 2025 - 07:27:02:272] [34minfo[39m: [34mStarting code submission for question ID: 3[39m
+[19 Nov, 2025 - 07:27:02:272] [34minfo[39m: [34mJudge0 instance: 1.14.0[39m
+[19 Nov, 2025 - 07:27:03:273] [34minfo[39m: [34mFound 3 test cases[39m
+[19 Nov, 2025 - 07:27:03:273] [34minfo[39m: [34mUsing language ID: 52, Time limit: 2000s, Memory limit: 256KB[39m
+[19 Nov, 2025 - 07:27:03:273] [34minfo[39m: [34mVerified language: C++ (GCC 7.4.0)[39m
+[19 Nov, 2025 - 07:27:03:273] [34minfo[39m: [34mRunning test case 1/3...[39m
+[19 Nov, 2025 - 07:27:05:275] [34minfo[39m: [34mTest case 1 completed with status: Compilation Error (ID: 6)[39m
+[19 Nov, 2025 - 07:27:05:275] [34minfo[39m: [34m❌ Test case 1 FAILED - Status: Compilation Error[39m
+[19 Nov, 2025 - 07:27:05:275] [31merror[39m: [31mCompilation error detected. Stopping execution.[39m
+[19 Nov, 2025 - 07:27:05:275] [34minfo[39m: [34m==================================================[39m
+[19 Nov, 2025 - 07:27:05:275] [34minfo[39m: [34mSUBMISSION SUMMARY[39m
+[19 Nov, 2025 - 07:27:05:275] [34minfo[39m: [34m==================================================[39m
+[19 Nov, 2025 - 07:27:05:275] [34minfo[39m: [34mPassed: 0/3[39m
+[19 Nov, 2025 - 07:27:05:275] [34minfo[39m: [34mAccuracy: 0%[39m
+[19 Nov, 2025 - 07:27:05:275] [34minfo[39m: [34mScore: 0/10 (0%)[39m
+[19 Nov, 2025 - 07:27:05:275] [34minfo[39m: [34mAll Passed: false[39m
+[19 Nov, 2025 - 07:27:05:275] [34minfo[39m: [34m==================================================[39m
+[19 Nov, 2025 - 07:27:35:2735] [34minfo[39m: [34mstart the submission[39m
+[19 Nov, 2025 - 07:27:35:2735] [34minfo[39m: [34mitem getted[39m
+[19 Nov, 2025 - 07:27:36:2736] [34minfo[39m: [34mStarting code submission for question ID: 3[39m
+[19 Nov, 2025 - 07:27:36:2736] [34minfo[39m: [34mJudge0 instance: 1.14.0[39m
+[19 Nov, 2025 - 07:27:37:2737] [34minfo[39m: [34mFound 3 test cases[39m
+[19 Nov, 2025 - 07:27:37:2737] [34minfo[39m: [34mUsing language ID: 52, Time limit: 2000s, Memory limit: 256KB[39m
+[19 Nov, 2025 - 07:27:37:2737] [34minfo[39m: [34mVerified language: C++ (GCC 7.4.0)[39m
+[19 Nov, 2025 - 07:27:37:2737] [34minfo[39m: [34mRunning test case 1/3...[39m
+[19 Nov, 2025 - 07:27:38:2738] [34minfo[39m: [34mTest case 1 completed with status: Compilation Error (ID: 6)[39m
+[19 Nov, 2025 - 07:27:38:2738] [34minfo[39m: [34m❌ Test case 1 FAILED - Status: Compilation Error[39m
+[19 Nov, 2025 - 07:27:38:2738] [31merror[39m: [31mCompilation error detected. Stopping execution.[39m
+[19 Nov, 2025 - 07:27:38:2738] [34minfo[39m: [34m==================================================[39m
+[19 Nov, 2025 - 07:27:38:2738] [34minfo[39m: [34mSUBMISSION SUMMARY[39m
+[19 Nov, 2025 - 07:27:38:2738] [34minfo[39m: [34m==================================================[39m
+[19 Nov, 2025 - 07:27:38:2738] [34minfo[39m: [34mPassed: 0/3[39m
+[19 Nov, 2025 - 07:27:38:2738] [34minfo[39m: [34mAccuracy: 0%[39m
+[19 Nov, 2025 - 07:27:38:2738] [34minfo[39m: [34mScore: 0/10 (0%)[39m
+[19 Nov, 2025 - 07:27:38:2738] [34minfo[39m: [34mAll Passed: false[39m
+[19 Nov, 2025 - 07:27:38:2738] [34minfo[39m: [34m==================================================[39m
+[19 Nov, 2025 - 07:28:07:287] [34minfo[39m: [34mstart the submission[39m
+[19 Nov, 2025 - 07:28:07:287] [34minfo[39m: [34mitem getted[39m
+[19 Nov, 2025 - 07:28:08:288] [34minfo[39m: [34mStarting code submission for question ID: 3[39m
+[19 Nov, 2025 - 07:28:08:288] [34minfo[39m: [34mJudge0 instance: 1.14.0[39m
+[19 Nov, 2025 - 07:28:08:288] [34minfo[39m: [34mFound 3 test cases[39m
+[19 Nov, 2025 - 07:28:08:288] [34minfo[39m: [34mUsing language ID: 52, Time limit: 2000s, Memory limit: 256KB[39m
+[19 Nov, 2025 - 07:28:08:288] [34minfo[39m: [34mVerified language: C++ (GCC 7.4.0)[39m
+[19 Nov, 2025 - 07:28:08:288] [34minfo[39m: [34mRunning test case 1/3...[39m
+[19 Nov, 2025 - 07:28:10:2810] [34minfo[39m: [34mTest case 1 completed with status: Compilation Error (ID: 6)[39m
+[19 Nov, 2025 - 07:28:10:2810] [34minfo[39m: [34m❌ Test case 1 FAILED - Status: Compilation Error[39m
+[19 Nov, 2025 - 07:28:10:2810] [31merror[39m: [31mCompilation error detected. Stopping execution.[39m
+[19 Nov, 2025 - 07:28:10:2810] [34minfo[39m: [34m==================================================[39m
+[19 Nov, 2025 - 07:28:10:2810] [34minfo[39m: [34mSUBMISSION SUMMARY[39m
+[19 Nov, 2025 - 07:28:10:2810] [34minfo[39m: [34m==================================================[39m
+[19 Nov, 2025 - 07:28:10:2810] [34minfo[39m: [34mPassed: 0/3[39m
+[19 Nov, 2025 - 07:28:10:2810] [34minfo[39m: [34mAccuracy: 0%[39m
+[19 Nov, 2025 - 07:28:10:2810] [34minfo[39m: [34mScore: 0/10 (0%)[39m
+[19 Nov, 2025 - 07:28:10:2810] [34minfo[39m: [34mAll Passed: false[39m
+[19 Nov, 2025 - 07:28:10:2810] [34minfo[39m: [34m==================================================[39m
+[19 Nov, 2025 - 07:28:23:2823] [34minfo[39m: [34mstart the submission[39m
+[19 Nov, 2025 - 07:28:23:2823] [34minfo[39m: [34mitem getted[39m
+[19 Nov, 2025 - 07:28:24:2824] [34minfo[39m: [34mStarting code submission for question ID: 3[39m
+[19 Nov, 2025 - 07:28:24:2824] [34minfo[39m: [34mJudge0 instance: 1.14.0[39m
+[19 Nov, 2025 - 07:28:24:2824] [34minfo[39m: [34mFound 3 test cases[39m
+[19 Nov, 2025 - 07:28:24:2824] [34minfo[39m: [34mUsing language ID: 52, Time limit: 2000s, Memory limit: 256KB[39m
+[19 Nov, 2025 - 07:28:24:2824] [34minfo[39m: [34mVerified language: C++ (GCC 7.4.0)[39m
+[19 Nov, 2025 - 07:28:24:2824] [34minfo[39m: [34mRunning test case 1/3...[39m
+[19 Nov, 2025 - 07:28:26:2826] [34minfo[39m: [34mTest case 1 completed with status: Compilation Error (ID: 6)[39m
+[19 Nov, 2025 - 07:28:26:2826] [34minfo[39m: [34m❌ Test case 1 FAILED - Status: Compilation Error[39m
+[19 Nov, 2025 - 07:28:26:2826] [31merror[39m: [31mCompilation error detected. Stopping execution.[39m
+[19 Nov, 2025 - 07:28:26:2826] [34minfo[39m: [34m==================================================[39m
+[19 Nov, 2025 - 07:28:26:2826] [34minfo[39m: [34mSUBMISSION SUMMARY[39m
+[19 Nov, 2025 - 07:28:26:2826] [34minfo[39m: [34m==================================================[39m
+[19 Nov, 2025 - 07:28:26:2826] [34minfo[39m: [34mPassed: 0/3[39m
+[19 Nov, 2025 - 07:28:26:2826] [34minfo[39m: [34mAccuracy: 0%[39m
+[19 Nov, 2025 - 07:28:26:2826] [34minfo[39m: [34mScore: 0/10 (0%)[39m
+[19 Nov, 2025 - 07:28:26:2826] [34minfo[39m: [34mAll Passed: false[39m
+[19 Nov, 2025 - 07:28:26:2826] [34minfo[39m: [34m==================================================[39m
+[19 Nov, 2025 - 07:28:46:2846] [34minfo[39m: [34mstart the submission[39m
+[19 Nov, 2025 - 07:28:46:2846] [34minfo[39m: [34mitem getted[39m
+[19 Nov, 2025 - 07:28:47:2847] [34minfo[39m: [34mStarting code submission for question ID: 3[39m
+[19 Nov, 2025 - 07:28:47:2847] [34minfo[39m: [34mJudge0 instance: 1.14.0[39m
+[19 Nov, 2025 - 07:28:47:2847] [34minfo[39m: [34mFound 3 test cases[39m
+[19 Nov, 2025 - 07:28:47:2847] [34minfo[39m: [34mUsing language ID: 52, Time limit: 2000s, Memory limit: 256KB[39m
+[19 Nov, 2025 - 07:28:47:2847] [34minfo[39m: [34mVerified language: C++ (GCC 7.4.0)[39m
+[19 Nov, 2025 - 07:28:47:2847] [34minfo[39m: [34mRunning test case 1/3...[39m
+[19 Nov, 2025 - 07:28:49:2849] [34minfo[39m: [34mTest case 1 completed with status: Runtime Error (NZEC) (ID: 11)[39m
+[19 Nov, 2025 - 07:28:49:2849] [34minfo[39m: [34m❌ Test case 1 FAILED - Status: Runtime Error (NZEC)[39m
+[19 Nov, 2025 - 07:28:49:2849] [33mwarn[39m: [33mRuntime error on test case 1: Runtime Error (NZEC)[39m
+[19 Nov, 2025 - 07:28:49:2849] [34minfo[39m: [34mRunning test case 2/3...[39m
+[19 Nov, 2025 - 07:28:51:2851] [34minfo[39m: [34mTest case 2 completed with status: Runtime Error (NZEC) (ID: 11)[39m
+[19 Nov, 2025 - 07:28:51:2851] [34minfo[39m: [34m❌ Test case 2 FAILED - Status: Runtime Error (NZEC)[39m
+[19 Nov, 2025 - 07:28:51:2851] [33mwarn[39m: [33mRuntime error on test case 2: Runtime Error (NZEC)[39m
+[19 Nov, 2025 - 07:28:51:2851] [34minfo[39m: [34mRunning test case 3/3...[39m
+[19 Nov, 2025 - 07:28:53:2853] [34minfo[39m: [34mTest case 3 completed with status: Runtime Error (NZEC) (ID: 11)[39m
+[19 Nov, 2025 - 07:28:53:2853] [34minfo[39m: [34m❌ Test case 3 FAILED - Status: Runtime Error (NZEC)[39m
+[19 Nov, 2025 - 07:28:53:2853] [33mwarn[39m: [33mRuntime error on test case 3: Runtime Error (NZEC)[39m
+[19 Nov, 2025 - 07:28:53:2853] [34minfo[39m: [34m==================================================[39m
+[19 Nov, 2025 - 07:28:53:2853] [34minfo[39m: [34mSUBMISSION SUMMARY[39m
+[19 Nov, 2025 - 07:28:53:2853] [34minfo[39m: [34m==================================================[39m
+[19 Nov, 2025 - 07:28:53:2853] [34minfo[39m: [34mPassed: 0/3[39m
+[19 Nov, 2025 - 07:28:53:2853] [34minfo[39m: [34mAccuracy: 0%[39m
+[19 Nov, 2025 - 07:28:53:2853] [34minfo[39m: [34mScore: 0/40 (0%)[39m
+[19 Nov, 2025 - 07:28:53:2853] [34minfo[39m: [34mAll Passed: false[39m
+[19 Nov, 2025 - 07:28:53:2853] [34minfo[39m: [34m==================================================[39m
+[19 Nov, 2025 - 07:29:28:2928] [34minfo[39m: [34mstart the submission[39m
+[19 Nov, 2025 - 07:29:28:2928] [34minfo[39m: [34mitem getted[39m
+[19 Nov, 2025 - 07:29:29:2929] [34minfo[39m: [34mStarting code submission for question ID: 3[39m
+[19 Nov, 2025 - 07:29:29:2929] [34minfo[39m: [34mJudge0 instance: 1.14.0[39m
+[19 Nov, 2025 - 07:29:30:2930] [34minfo[39m: [34mFound 3 test cases[39m
+[19 Nov, 2025 - 07:29:30:2930] [34minfo[39m: [34mUsing language ID: 52, Time limit: 2000s, Memory limit: 256KB[39m
+[19 Nov, 2025 - 07:29:30:2930] [34minfo[39m: [34mVerified language: C++ (GCC 7.4.0)[39m
+[19 Nov, 2025 - 07:29:30:2930] [34minfo[39m: [34mRunning test case 1/3...[39m
+[19 Nov, 2025 - 07:29:35:2935] [34minfo[39m: [34mTest case 1 completed with status: Time Limit Exceeded (ID: 5)[39m
+[19 Nov, 2025 - 07:29:35:2935] [34minfo[39m: [34m❌ Test case 1 FAILED - Status: Time Limit Exceeded[39m
+[19 Nov, 2025 - 07:29:35:2935] [34minfo[39m: [34mRunning test case 2/3...[39m
+[19 Nov, 2025 - 07:29:40:2940] [34minfo[39m: [34mTest case 2 completed with status: Time Limit Exceeded (ID: 5)[39m
+[19 Nov, 2025 - 07:29:40:2940] [34minfo[39m: [34m❌ Test case 2 FAILED - Status: Time Limit Exceeded[39m
+[19 Nov, 2025 - 07:29:40:2940] [34minfo[39m: [34mRunning test case 3/3...[39m
+[19 Nov, 2025 - 07:29:45:2945] [34minfo[39m: [34mTest case 3 completed with status: Time Limit Exceeded (ID: 5)[39m
+[19 Nov, 2025 - 07:29:45:2945] [34minfo[39m: [34m❌ Test case 3 FAILED - Status: Time Limit Exceeded[39m
+[19 Nov, 2025 - 07:29:45:2945] [34minfo[39m: [34m==================================================[39m
+[19 Nov, 2025 - 07:29:45:2945] [34minfo[39m: [34mSUBMISSION SUMMARY[39m
+[19 Nov, 2025 - 07:29:45:2945] [34minfo[39m: [34m==================================================[39m
+[19 Nov, 2025 - 07:29:45:2945] [34minfo[39m: [34mPassed: 0/3[39m
+[19 Nov, 2025 - 07:29:45:2945] [34minfo[39m: [34mAccuracy: 0%[39m
+[19 Nov, 2025 - 07:29:45:2945] [34minfo[39m: [34mScore: 0/40 (0%)[39m
+[19 Nov, 2025 - 07:29:45:2945] [34minfo[39m: [34mAll Passed: false[39m
+[19 Nov, 2025 - 07:29:45:2945] [34minfo[39m: [34m==================================================[39m
+[19 Nov, 2025 - 07:30:10:3010] [34minfo[39m: [34mstart the submission[39m
+[19 Nov, 2025 - 07:30:10:3010] [34minfo[39m: [34mitem getted[39m
+[19 Nov, 2025 - 07:30:11:3011] [34minfo[39m: [34mStarting code submission for question ID: 3[39m
+[19 Nov, 2025 - 07:30:11:3011] [34minfo[39m: [34mJudge0 instance: 1.14.0[39m
+[19 Nov, 2025 - 07:30:11:3011] [34minfo[39m: [34mFound 3 test cases[39m
+[19 Nov, 2025 - 07:30:11:3011] [34minfo[39m: [34mUsing language ID: 52, Time limit: 2000s, Memory limit: 256KB[39m
+[19 Nov, 2025 - 07:30:12:3012] [34minfo[39m: [34mVerified language: C++ (GCC 7.4.0)[39m
+[19 Nov, 2025 - 07:30:12:3012] [34minfo[39m: [34mRunning test case 1/3...[39m
+[19 Nov, 2025 - 07:30:13:3013] [34minfo[39m: [34mTest case 1 completed with status: Runtime Error (NZEC) (ID: 11)[39m
+[19 Nov, 2025 - 07:30:13:3013] [34minfo[39m: [34m❌ Test case 1 FAILED - Status: Runtime Error (NZEC)[39m
+[19 Nov, 2025 - 07:30:13:3013] [33mwarn[39m: [33mRuntime error on test case 1: Runtime Error (NZEC)[39m
+[19 Nov, 2025 - 07:30:13:3013] [34minfo[39m: [34mRunning test case 2/3...[39m
+[19 Nov, 2025 - 07:30:15:3015] [34minfo[39m: [34mTest case 2 completed with status: Runtime Error (NZEC) (ID: 11)[39m
+[19 Nov, 2025 - 07:30:15:3015] [34minfo[39m: [34m❌ Test case 2 FAILED - Status: Runtime Error (NZEC)[39m
+[19 Nov, 2025 - 07:30:15:3015] [33mwarn[39m: [33mRuntime error on test case 2: Runtime Error (NZEC)[39m
+[19 Nov, 2025 - 07:30:15:3015] [34minfo[39m: [34mRunning test case 3/3...[39m
+[19 Nov, 2025 - 07:30:17:3017] [34minfo[39m: [34mTest case 3 completed with status: Runtime Error (NZEC) (ID: 11)[39m
+[19 Nov, 2025 - 07:30:17:3017] [34minfo[39m: [34m❌ Test case 3 FAILED - Status: Runtime Error (NZEC)[39m
+[19 Nov, 2025 - 07:30:17:3017] [33mwarn[39m: [33mRuntime error on test case 3: Runtime Error (NZEC)[39m
+[19 Nov, 2025 - 07:30:17:3017] [34minfo[39m: [34m==================================================[39m
+[19 Nov, 2025 - 07:30:17:3017] [34minfo[39m: [34mSUBMISSION SUMMARY[39m
+[19 Nov, 2025 - 07:30:17:3017] [34minfo[39m: [34m==================================================[39m
+[19 Nov, 2025 - 07:30:17:3017] [34minfo[39m: [34mPassed: 0/3[39m
+[19 Nov, 2025 - 07:30:17:3017] [34minfo[39m: [34mAccuracy: 0%[39m
+[19 Nov, 2025 - 07:30:17:3017] [34minfo[39m: [34mScore: 0/40 (0%)[39m
+[19 Nov, 2025 - 07:30:17:3017] [34minfo[39m: [34mAll Passed: false[39m
+[19 Nov, 2025 - 07:30:17:3017] [34minfo[39m: [34m==================================================[39m
+[19 Nov, 2025 - 07:30:52:3052] [34minfo[39m: [34mstart the submission[39m
+[19 Nov, 2025 - 07:30:52:3052] [34minfo[39m: [34mitem getted[39m
+[19 Nov, 2025 - 07:30:53:3053] [34minfo[39m: [34mStarting code submission for question ID: 3[39m
+[19 Nov, 2025 - 07:30:53:3053] [34minfo[39m: [34mJudge0 instance: 1.14.0[39m
+[19 Nov, 2025 - 07:30:54:3054] [34minfo[39m: [34mFound 3 test cases[39m
+[19 Nov, 2025 - 07:30:54:3054] [34minfo[39m: [34mUsing language ID: 52, Time limit: 2000s, Memory limit: 256KB[39m
+[19 Nov, 2025 - 07:30:54:3054] [34minfo[39m: [34mVerified language: C++ (GCC 7.4.0)[39m
+[19 Nov, 2025 - 07:30:54:3054] [34minfo[39m: [34mRunning test case 1/3...[39m
+[19 Nov, 2025 - 07:30:55:3055] [34minfo[39m: [34mTest case 1 completed with status: Compilation Error (ID: 6)[39m
+[19 Nov, 2025 - 07:30:55:3055] [34minfo[39m: [34m❌ Test case 1 FAILED - Status: Compilation Error[39m
+[19 Nov, 2025 - 07:30:55:3055] [31merror[39m: [31mCompilation error detected. Stopping execution.[39m
+[19 Nov, 2025 - 07:30:55:3055] [34minfo[39m: [34m==================================================[39m
+[19 Nov, 2025 - 07:30:55:3055] [34minfo[39m: [34mSUBMISSION SUMMARY[39m
+[19 Nov, 2025 - 07:30:55:3055] [34minfo[39m: [34m==================================================[39m
+[19 Nov, 2025 - 07:30:55:3055] [34minfo[39m: [34mPassed: 0/3[39m
+[19 Nov, 2025 - 07:30:55:3055] [34minfo[39m: [34mAccuracy: 0%[39m
+[19 Nov, 2025 - 07:30:55:3055] [34minfo[39m: [34mScore: 0/10 (0%)[39m
+[19 Nov, 2025 - 07:30:55:3055] [34minfo[39m: [34mAll Passed: false[39m
+[19 Nov, 2025 - 07:30:55:3055] [34minfo[39m: [34m==================================================[39m
+[19 Nov, 2025 - 07:43:21:4321] [34minfo[39m: [34mstart the submission[39m
+[19 Nov, 2025 - 07:43:21:4321] [34minfo[39m: [34mitem getted[39m
+[19 Nov, 2025 - 07:43:23:4323] [34minfo[39m: [34mStarting code submission for question ID: 3[39m
+[19 Nov, 2025 - 07:43:23:4323] [34minfo[39m: [34mJudge0 instance: 1.14.0[39m
+[19 Nov, 2025 - 07:43:23:4323] [34minfo[39m: [34mFound 3 test cases[39m
+[19 Nov, 2025 - 07:43:23:4323] [34minfo[39m: [34mUsing language ID: 52, Time limit: 2000s, Memory limit: 256KB[39m
+[19 Nov, 2025 - 07:43:23:4323] [34minfo[39m: [34mVerified language: C++ (GCC 7.4.0)[39m
+[19 Nov, 2025 - 07:43:23:4323] [34minfo[39m: [34mRunning test case 1/3...[39m
+[19 Nov, 2025 - 07:43:25:4325] [34minfo[39m: [34mTest case 1 completed with status: Compilation Error (ID: 6)[39m
+[19 Nov, 2025 - 07:43:25:4325] [34minfo[39m: [34m❌ Test case 1 FAILED - Status: Compilation Error[39m
+[19 Nov, 2025 - 07:43:25:4325] [31merror[39m: [31mCompilation error detected. Stopping execution.[39m
+[19 Nov, 2025 - 07:43:25:4325] [34minfo[39m: [34m==================================================[39m
+[19 Nov, 2025 - 07:43:25:4325] [34minfo[39m: [34mSUBMISSION SUMMARY[39m
+[19 Nov, 2025 - 07:43:25:4325] [34minfo[39m: [34m==================================================[39m
+[19 Nov, 2025 - 07:43:25:4325] [34minfo[39m: [34mPassed: 0/3[39m
+[19 Nov, 2025 - 07:43:25:4325] [34minfo[39m: [34mAccuracy: 0%[39m
+[19 Nov, 2025 - 07:43:25:4325] [34minfo[39m: [34mScore: 0/10 (0%)[39m
+[19 Nov, 2025 - 07:43:25:4325] [34minfo[39m: [34mAll Passed: false[39m
+[19 Nov, 2025 - 07:43:25:4325] [34minfo[39m: [34m==================================================[39m

@@ -3,35 +3,60 @@ import { ApiError } from "../../../utils/ApiError.js";
 import { ApiResponse } from "../../../utils/ApiResponse.js";
 import { prisma } from "../../../db/index.js";
 import logger from "../../../logger/winston.logger.js";
-import { use } from "react";
+import { submissionCode } from "../../../services/judge0/submission.js";
 
+export const  SubmissionController = asyncHandler(async(req,res,next)=>{
+    logger.info("start the submission")
+     const{teamId,questionId,userId,code,language}= req.body;
+   
+     if(!teamId || !questionId || !userId || !code || !language) throw new ApiError(500,"request valid data");
+    logger.info("item getted")
+    
+     const team = await prisma.team.findUnique({where:{
+        id:teamId
+     }})
 
-export default SubmissionController = asyncHandler(async(req,res,next)=>{
-    const [ questionId,userId,code,language] = req.body;
+     if(!team)
+     {
+        logger.warn("team not found")
+        throw new ApiError(404,"team not found in the db")
+     }
 
-
-    const question = await prisma.findUnique({where:{
+     const question = await prisma.question.findUnique({where:{
         id:questionId
-    }})
+     }})
 
-    if(!question)
-    {
-        logger.info("question not found ")
-        throw new ApiError(404,"question not found")
-    }
+     if(!question)
+     {
+        logger.warn("question not found")
+        throw new ApiError(404,"question not found in the db")
+     }
 
-    const user = await prisma.findUnique({where:{
-           id:userId
-    }})
+     const user = await prisma.user.findUnique({where:{
+        id:userId
+     }})
 
-    if(!user)
-    {
-        logger.info("user not found")
-        throw new ApiError(404,"user not found")
-    }
+     if(!user)
+     {
+        throw new ApiError("user not found in the db")
+     }
 
-    const team = await prisma.findUnique({where:{
-        id:user.id
-    }})
+     const solveRequest = await prisma.solveRequest.findFirst({where:{
+        teamId:teamId,
+        questionId:questionId,
+        requestedById:userId,
+        status:"APPROVED"
+     }})
+
+     console.log(solveRequest)
+     if(!solveRequest)
+     {
+        throw new ApiError(403,"The question not assign to the current user")
+     }
+   
+
+     const sub = await submissionCode(code,language,question)
+    
+     return res.status(200).json(new ApiResponse(200,sub,"code submmited"))
     
 })

@@ -33,11 +33,15 @@ import userRouter from "./routes/apps/auth/user.route.js";
 import roomRouter from './routes/apps/room/romm.routes.js';
 import teamRouter from './routes/apps/team/team.route.js'
 import questionRouter from './routes/apps/question/question.route.js'
+import submitRouter from './routes/apps/submission/submission.route.js'
+import solveRequestRouter from './routes/apps/solveRequest/solveRequet.route.js'
 
 app.use("/api/v1/users", userRouter);
 app.use('/api/v1/rooms',roomRouter);
 app.use('/api/v1/teams',teamRouter);
 app.use('/api/v1/questions',questionRouter);
+app.use('/api/v1/submit',submitRouter);
+app.use('/api/v1/solve-requests',solveRequestRouter)
 
 app.use(errorHandler);
 export default app;

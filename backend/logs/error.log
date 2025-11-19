@@ -557,3 +557,234 @@
 [09 Nov, 2025 - 07:53:05:535] [31merror[39m: [31mInvalid token[39m
 [09 Nov, 2025 - 07:53:58:5358] [31merror[39m: [31mOnly room creator can add test cases[39m
 [17 Nov, 2025 - 18:55:37:5537] [31merror[39m: [31mNo token provided[39m
+[18 Nov, 2025 - 19:17:01:171] [31merror[39m: [31mInvalid token[39m
+[18 Nov, 2025 - 19:28:20:2820] [31merror[39m: [31mInvalid token[39m
+[18 Nov, 2025 - 19:28:30:2830] [31merror[39m: [31mYou are not a member of this team[39m
+[18 Nov, 2025 - 19:29:38:2938] [31merror[39m: [31mInvalid token[39m
+[18 Nov, 2025 - 19:31:05:315] [31merror[39m: [31mInvalid token[39m
+[18 Nov, 2025 - 19:31:12:3112] [31merror[39m: [31mInvalid token[39m
+[18 Nov, 2025 - 19:36:50:3650] [31merror[39m: [31mobject is not iterable (cannot read property Symbol(Symbol.iterator))[39m
+[18 Nov, 2025 - 19:38:04:384] [31merror[39m: [31mobject is not iterable (cannot read property Symbol(Symbol.iterator))[39m
+[18 Nov, 2025 - 19:41:11:4111] [31merror[39m: [31mobject is not iterable (cannot read property Symbol(Symbol.iterator))[39m
+[18 Nov, 2025 - 19:41:34:4134] [31merror[39m: [31mobject is not iterable (cannot read property Symbol(Symbol.iterator))[39m
+[18 Nov, 2025 - 19:42:24:4224] [31merror[39m: [31mquestionId is not defined[39m
+[18 Nov, 2025 - 19:43:19:4319] [31merror[39m: [31m[39m
+[31mInvalid `prisma.solveRequest.findUnique()` invocation:[39m
+
+[31m{[39m
+[31m  where: {[39m
+[31m    teamId: "cmi4n49n20001h8uwfdxwq24o",[39m
+[31m    requestedById: 53,[39m
+[31m    status: "APPROVED",[39m
+[31m?   id?: Int,[39m
+[31m?   teamId_questionId_requestedById?: SolveRequestTeamIdQuestionIdRequestedByIdCompoundUniqueInput,[39m
+[31m?   AND?: SolveRequestWhereInput | SolveRequestWhereInput[],[39m
+[31m?   OR?: SolveRequestWhereInput[],[39m
+[31m?   NOT?: SolveRequestWhereInput | SolveRequestWhereInput[],[39m
+[31m?   questionId?: IntFilter | Int,[39m
+[31m?   requestedAt?: DateTimeFilter | DateTime,[39m
+[31m?   respondedAt?: DateTimeNullableFilter | DateTime | Null,[39m
+[31m?   team?: TeamScalarRelationFilter | TeamWhereInput,[39m
+[31m?   question?: QuestionScalarRelationFilter | QuestionWhereInput[39m
+[31m  }[39m
+[31m}[39m
+
+[31mArgument `where` of type SolveRequestWhereUniqueInput needs at least one of `id` or `teamId_questionId_requestedById` arguments. Available options are marked with ?.[39m
+[18 Nov, 2025 - 19:47:52:4752] [31merror[39m: [31mquestion not found in the db[39m
+[18 Nov, 2025 - 19:48:58:4858] [31merror[39m: [31mInvalid token[39m
+[18 Nov, 2025 - 19:49:07:497] [31merror[39m: [31mInvalid token[39m
+[18 Nov, 2025 - 19:49:28:4928] [31merror[39m: [31mInvalid token[39m
+[18 Nov, 2025 - 19:52:52:5252] [31merror[39m: [31mThe question not assign to the current user[39m
+[18 Nov, 2025 - 19:53:18:5318] [31merror[39m: [31mInvalid token[39m
+[18 Nov, 2025 - 19:53:27:5327] [31merror[39m: [31mInvalid token[39m
+[18 Nov, 2025 - 19:53:53:5353] [31merror[39m: [31mInvalid token[39m
+[18 Nov, 2025 - 20:15:20:1520] [31merror[39m: [31m[39m
+[31mInvalid `prisma.question.findFirst()` invocation:[39m
+
+[31m{[39m
+[31m  where: {[39m
+[31m    question: 2,[39m
+[31m    ~~~~~~~~[39m
+[31m?   AND?: QuestionWhereInput | QuestionWhereInput[],[39m
+[31m?   OR?: QuestionWhereInput[],[39m
+[31m?   NOT?: QuestionWhereInput | QuestionWhereInput[],[39m
+[31m?   id?: IntFilter | Int,[39m
+[31m?   roomId?: StringFilter | String,[39m
+[31m?   title?: StringFilter | String,[39m
+[31m?   description?: StringFilter | String,[39m
+[31m?   topic?: StringFilter | String,[39m
+[31m?   difficulty?: EnumDifficultyFilter | Difficulty,[39m
+[31m?   constraints?: StringNullableFilter | String | Null,[39m
+[31m?   inputFormat?: StringNullableFilter | String | Null,[39m
+[31m?   outputFormat?: StringNullableFilter | String | Null,[39m
+[31m?   timeLimit?: IntFilter | Int,[39m
+[31m?   memoryLimit?: IntFilter | Int,[39m
+[31m?   points?: IntFilter | Int,[39m
+[31m?   createdAt?: DateTimeFilter | DateTime,[39m
+[31m?   updatedAt?: DateTimeFilter | DateTime,[39m
+[31m?   room?: RoomScalarRelationFilter | RoomWhereInput,[39m
+[31m?   testCases?: TestCaseListRelationFilter,[39m
+[31m?   examples?: ExampleListRelationFilter,[39m
+[31m?   submissions?: SubmissionListRelationFilter,[39m
+[31m?   solveRequests?: SolveRequestListRelationFilter[39m
+[31m  },[39m
+[31m  select: {[39m
+[31m    testCases: true[39m
+[31m  }[39m
+[31m}[39m
+
+[31mUnknown argument `question`. Available options are marked with ?.[39m
+[18 Nov, 2025 - 20:17:13:1713] [31merror[39m: [31m[39m
+[31mInvalid `prisma.question.findFirst()` invocation:[39m
+
+[31m{[39m
+[31m  where: {[39m
+[31m    question: 2,[39m
+[31m    ~~~~~~~~[39m
+[31m?   AND?: QuestionWhereInput | QuestionWhereInput[],[39m
+[31m?   OR?: QuestionWhereInput[],[39m
+[31m?   NOT?: QuestionWhereInput | QuestionWhereInput[],[39m
+[31m?   id?: IntFilter | Int,[39m
+[31m?   roomId?: StringFilter | String,[39m
+[31m?   title?: StringFilter | String,[39m
+[31m?   description?: StringFilter | String,[39m
+[31m?   topic?: StringFilter | String,[39m
+[31m?   difficulty?: EnumDifficultyFilter | Difficulty,[39m
+[31m?   constraints?: StringNullableFilter | String | Null,[39m
+[31m?   inputFormat?: StringNullableFilter | String | Null,[39m
+[31m?   outputFormat?: StringNullableFilter | String | Null,[39m
+[31m?   timeLimit?: IntFilter | Int,[39m
+[31m?   memoryLimit?: IntFilter | Int,[39m
+[31m?   points?: IntFilter | Int,[39m
+[31m?   createdAt?: DateTimeFilter | DateTime,[39m
+[31m?   updatedAt?: DateTimeFilter | DateTime,[39m
+[31m?   room?: RoomScalarRelationFilter | RoomWhereInput,[39m
+[31m?   testCases?: TestCaseListRelationFilter,[39m
+[31m?   examples?: ExampleListRelationFilter,[39m
+[31m?   submissions?: SubmissionListRelationFilter,[39m
+[31m?   solveRequests?: SolveRequestListRelationFilter[39m
+[31m  },[39m
+[31m  select: {[39m
+[31m    testCases: true[39m
+[31m  }[39m
+[31m}[39m
+
+[31mUnknown argument `question`. Available options are marked with ?.[39m
+[18 Nov, 2025 - 20:17:39:1739] [31merror[39m: [31m[39m
+[31mInvalid `prisma.question.findFirst()` invocation:[39m
+
+[31m{[39m
+[31m  where: {[39m
+[31m    question: 2,[39m
+[31m    ~~~~~~~~[39m
+[31m?   AND?: QuestionWhereInput | QuestionWhereInput[],[39m
+[31m?   OR?: QuestionWhereInput[],[39m
+[31m?   NOT?: QuestionWhereInput | QuestionWhereInput[],[39m
+[31m?   id?: IntFilter | Int,[39m
+[31m?   roomId?: StringFilter | String,[39m
+[31m?   title?: StringFilter | String,[39m
+[31m?   description?: StringFilter | String,[39m
+[31m?   topic?: StringFilter | String,[39m
+[31m?   difficulty?: EnumDifficultyFilter | Difficulty,[39m
+[31m?   constraints?: StringNullableFilter | String | Null,[39m
+[31m?   inputFormat?: StringNullableFilter | String | Null,[39m
+[31m?   outputFormat?: StringNullableFilter | String | Null,[39m
+[31m?   timeLimit?: IntFilter | Int,[39m
+[31m?   memoryLimit?: IntFilter | Int,[39m
+[31m?   points?: IntFilter | Int,[39m
+[31m?   createdAt?: DateTimeFilter | DateTime,[39m
+[31m?   updatedAt?: DateTimeFilter | DateTime,[39m
+[31m?   room?: RoomScalarRelationFilter | RoomWhereInput,[39m
+[31m?   testCases?: TestCaseListRelationFilter,[39m
+[31m?   examples?: ExampleListRelationFilter,[39m
+[31m?   submissions?: SubmissionListRelationFilter,[39m
+[31m?   solveRequests?: SolveRequestListRelationFilter[39m
+[31m  },[39m
+[31m  select: {[39m
+[31m    testCases: true[39m
+[31m  }[39m
+[31m}[39m
+
+[31mUnknown argument `question`. Available options are marked with ?.[39m
+[18 Nov, 2025 - 20:17:43:1743] [31merror[39m: [31m[39m
+[31mInvalid `prisma.question.findFirst()` invocation:[39m
+
+[31m{[39m
+[31m  where: {[39m
+[31m    question: 2,[39m
+[31m    ~~~~~~~~[39m
+[31m?   AND?: QuestionWhereInput | QuestionWhereInput[],[39m
+[31m?   OR?: QuestionWhereInput[],[39m
+[31m?   NOT?: QuestionWhereInput | QuestionWhereInput[],[39m
+[31m?   id?: IntFilter | Int,[39m
+[31m?   roomId?: StringFilter | String,[39m
+[31m?   title?: StringFilter | String,[39m
+[31m?   description?: StringFilter | String,[39m
+[31m?   topic?: StringFilter | String,[39m
+[31m?   difficulty?: EnumDifficultyFilter | Difficulty,[39m
+[31m?   constraints?: StringNullableFilter | String | Null,[39m
+[31m?   inputFormat?: StringNullableFilter | String | Null,[39m
+[31m?   outputFormat?: StringNullableFilter | String | Null,[39m
+[31m?   timeLimit?: IntFilter | Int,[39m
+[31m?   memoryLimit?: IntFilter | Int,[39m
+[31m?   points?: IntFilter | Int,[39m
+[31m?   createdAt?: DateTimeFilter | DateTime,[39m
+[31m?   updatedAt?: DateTimeFilter | DateTime,[39m
+[31m?   room?: RoomScalarRelationFilter | RoomWhereInput,[39m
+[31m?   testCases?: TestCaseListRelationFilter,[39m
+[31m?   examples?: ExampleListRelationFilter,[39m
+[31m?   submissions?: SubmissionListRelationFilter,[39m
+[31m?   solveRequests?: SolveRequestListRelationFilter[39m
+[31m  },[39m
+[31m  select: {[39m
+[31m    testCases: true[39m
+[31m  }[39m
+[31m}[39m
+
+[31mUnknown argument `question`. Available options are marked with ?.[39m
+[18 Nov, 2025 - 21:29:03:293] [31merror[39m: [31mlanguageCode is not defined[39m
+[18 Nov, 2025 - 21:31:35:3135] [31merror[39m: [31mlanguageCode is not defined[39m
+[18 Nov, 2025 - 21:32:26:3226] [31merror[39m: [31mlanguageCode is not defined[39m
+[18 Nov, 2025 - 21:40:52:4052] [31merror[39m: [31mJudge0 API error (422): {"cpu_time_limit":["must be less than or equal to 20.0"],"memory_limit":["must be greater than or equal to 2048"]}[39m
+[18 Nov, 2025 - 21:40:52:4052] [31merror[39m: [31mError running test case 1: Judge0 API error: 422[39m
+[18 Nov, 2025 - 21:40:52:4052] [31merror[39m: [31mJudge0 API error (422): {"cpu_time_limit":["must be less than or equal to 20.0"],"memory_limit":["must be greater than or equal to 2048"]}[39m
+[18 Nov, 2025 - 21:40:52:4052] [31merror[39m: [31mError running test case 2: Judge0 API error: 422[39m
+[18 Nov, 2025 - 21:40:52:4052] [31merror[39m: [31mJudge0 API error (422): {"cpu_time_limit":["must be less than or equal to 20.0"],"memory_limit":["must be greater than or equal to 2048"]}[39m
+[18 Nov, 2025 - 21:40:52:4052] [31merror[39m: [31mError running test case 3: Judge0 API error: 422[39m
+[18 Nov, 2025 - 21:44:47:4447] [31merror[39m: [31mJudge0 API error (422): {"cpu_time_limit":["must be less than or equal to 20.0"],"memory_limit":["must be greater than or equal to 2048"]}[39m
+[18 Nov, 2025 - 21:44:47:4447] [31merror[39m: [31mError running test case 1: Judge0 API error: 422 - {[39m
+[31m  "cpu_time_limit": [[39m
+[31m    "must be less than or equal to 20.0"[39m
+[31m  ],[39m
+[31m  "memory_limit": [[39m
+[31m    "must be greater than or equal to 2048"[39m
+[31m  ][39m
+[31m}[39m
+[18 Nov, 2025 - 21:44:47:4447] [31merror[39m: [31mJudge0 API error (422): {"cpu_time_limit":["must be less than or equal to 20.0"],"memory_limit":["must be greater than or equal to 2048"]}[39m
+[18 Nov, 2025 - 21:44:47:4447] [31merror[39m: [31mError running test case 2: Judge0 API error: 422 - {[39m
+[31m  "cpu_time_limit": [[39m
+[31m    "must be less than or equal to 20.0"[39m
+[31m  ],[39m
+[31m  "memory_limit": [[39m
+[31m    "must be greater than or equal to 2048"[39m
+[31m  ][39m
+[31m}[39m
+[18 Nov, 2025 - 21:44:48:4448] [31merror[39m: [31mJudge0 API error (422): {"cpu_time_limit":["must be less than or equal to 20.0"],"memory_limit":["must be greater than or equal to 2048"]}[39m
+[18 Nov, 2025 - 21:44:48:4448] [31merror[39m: [31mError running test case 3: Judge0 API error: 422 - {[39m
+[31m  "cpu_time_limit": [[39m
+[31m    "must be less than or equal to 20.0"[39m
+[31m  ],[39m
+[31m  "memory_limit": [[39m
+[31m    "must be greater than or equal to 2048"[39m
+[31m  ][39m
+[31m}[39m
+[18 Nov, 2025 - 22:00:59:059] [31merror[39m: [31mThe question not assign to the current user[39m
+[18 Nov, 2025 - 22:02:19:219] [31merror[39m: [31mCompilation error detected. Stopping execution.[39m
+[18 Nov, 2025 - 22:02:42:242] [31merror[39m: [31mCompilation error detected. Stopping execution.[39m
+[18 Nov, 2025 - 23:30:09:309] [31merror[39m: [31mCompilation error detected. Stopping execution.[39m
+[19 Nov, 2025 - 07:27:05:275] [31merror[39m: [31mCompilation error detected. Stopping execution.[39m
+[19 Nov, 2025 - 07:27:38:2738] [31merror[39m: [31mCompilation error detected. Stopping execution.[39m
+[19 Nov, 2025 - 07:28:10:2810] [31merror[39m: [31mCompilation error detected. Stopping execution.[39m
+[19 Nov, 2025 - 07:28:26:2826] [31merror[39m: [31mCompilation error detected. Stopping execution.[39m
+[19 Nov, 2025 - 07:30:55:3055] [31merror[39m: [31mCompilation error detected. Stopping execution.[39m
+[19 Nov, 2025 - 07:43:25:4325] [31merror[39m: [31mCompilation error detected. Stopping execution.[39m
