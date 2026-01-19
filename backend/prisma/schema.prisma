@@ -1,0 +1,467 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+datasource db {
+  provider = "mysql"
+  url      = env("DATABASE_URL")
+}
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+enum Role {
+  USER
+  TEAM_LEADER
+  ROOM_ADMIN
+}
+
+enum RoomStatus {
+  WAITING
+  ACTIVE
+  COMPLETED
+}
+
+enum RoomVisibility {
+  PUBLIC
+  PRIVATE
+}
+
+enum TeamVisibility {
+  PUBLIC
+  PRIVATE
+}
+
+enum ParticipantStatus {
+  ACTIVE
+  LEFT
+  KICKED
+}
+
+enum QuestionStatus {
+  UNASSIGNED
+  ASSIGNED
+  SOLVED
+}
+
+enum JoinRequestStatus {
+  PENDING
+  ACCEPTED
+  REJECTED
+}
+
+model User {
+  id                String              @id @default(uuid())
+  username          String?             @unique
+  email             String              @unique
+  password          String?
+  googleId          String?             @unique
+  isEmailVerified   Boolean             @default(false)
+  role              Role                @default(USER)
+  
+  // Security & Lockout
+  loginAttempts     Int                 @default(0)
+  lockedUntil       DateTime?
+  lastLoginAt       DateTime?
+  lastLoginIp       String?
+
+  createdAt         DateTime            @default(now())
+  updatedAt         DateTime            @updatedAt
+  
+  // Relations
+  teamMemberships   TeamMember[]
+  ownedRooms        Room[]              @relation("RoomAdmin")
+  leadingTeams      Team[]              @relation("TeamLeader")
+  verificationCodes VerificationCode[]
+  passwordResets    PasswordReset[]
+  assignedQuestions QuestionAssignment[]
+  submissions       Submission[]
+  joinRequests      JoinRequest[]
+  refreshTokens     RefreshToken[]
+  roomParticipations RoomParticipant[]
+  
+  @@index([email])
+  @@index([googleId])
+}
+
+model VerificationCode {
+  id        String   @id @default(uuid())
+  userId    String
+  code      String
+  expiresAt DateTime
+  createdAt DateTime @default(now())
+  
+  user User @relation(fields: [userId], references: [id], onDelete: Cascade)
+  
+  @@index([userId])
+  @@index([code])
+}
+
+model PasswordReset {
+  id        String   @id @default(uuid())
+  userId    String
+  code      String
+  expiresAt DateTime
+  createdAt DateTime @default(now())
+  used      Boolean  @default(false)
+  
+  user User @relation(fields: [userId], references: [id], onDelete: Cascade)
+  
+  @@index([userId])
+  @@index([code])
+}
+
+model Room {
+  id          String          @id @default(uuid())
+  name        String
+  code        String          @unique
+  password    String?
+  inviteLink  String          @unique
+  adminId     String
+  visibility  RoomVisibility  @default(PUBLIC)
+  listed      Boolean         @default(true)
+  status      RoomStatus      @default(WAITING)
+  startTime   DateTime?
+  endTime     DateTime?
+  duration    Int?            // in minutes
+  settings    Json?           // Store mode, maxTeamSize, scoringMode, difficulty, etc.
+  createdAt   DateTime        @default(now())
+  updatedAt   DateTime        @updatedAt
+  
+  admin         User              @relation("RoomAdmin", fields: [adminId], references: [id])
+  teams         Team[]
+  questions     Question[]
+  participants  RoomParticipant[]
+  events        RoomEvent[]
+  
+  @@index([code])
+  @@index([adminId])
+  @@index([visibility, status])
+  @@index([status, listed])
+}
+
+model RoomParticipant {
+  id        String            @id @default(uuid())
+  roomId    String
+  userId    String
+  teamId    String?
+  status    ParticipantStatus @default(ACTIVE)
+  joinedAt  DateTime          @default(now())
+  leftAt    DateTime?
+  
+  room Room @relation(fields: [roomId], references: [id], onDelete: Cascade)
+  user User @relation(fields: [userId], references: [id], onDelete: Cascade)
+  
+  @@unique([roomId, userId])
+  @@index([roomId, status])
+  @@index([userId, roomId])
+}
+
+model RoomEvent {
+  id        String   @id @default(uuid())
+  roomId    String
+  type      String   // USER_JOINED, USER_LEFT, TEAM_CREATED, BATTLE_STARTED, etc.
+  userId    String?
+  data      Json?    // Event-specific data
+  createdAt DateTime @default(now())
+  
+  room Room @relation(fields: [roomId], references: [id], onDelete: Cascade)
+  
+  @@index([roomId, createdAt])
+}
+
+model Team {
+  id          String          @id @default(uuid())
+  name        String
+  code        String?         // Optional team code for private teams
+  roomId      String
+  leaderId    String
+  visibility  TeamVisibility  @default(PUBLIC)
+  totalPoints Int             @default(0)
+  createdAt   DateTime        @default(now())
+  updatedAt   DateTime        @updatedAt
+  
+  room         Room           @relation(fields: [roomId], references: [id], onDelete: Cascade)
+  leader       User           @relation("TeamLeader", fields: [leaderId], references: [id])
+  members      TeamMember[]
+  assignments  QuestionAssignment[]
+  joinRequests JoinRequest[]
+  
+  @@index([roomId])
+  @@index([leaderId])
+  @@index([roomId, visibility])
+  @@index([code])
+}
+
+model TeamMember {
+  id        String   @id @default(uuid())
+  teamId    String
+  userId    String
+  joinedAt  DateTime @default(now())
+  
+  team Team @relation(fields: [teamId], references: [id], onDelete: Cascade)
+  user User @relation(fields: [userId], references: [id], onDelete: Cascade)
+  
+  @@unique([teamId, userId])
+  @@index([teamId])
+  @@index([userId])
+}
+
+model JoinRequest {
+  id        String            @id @default(uuid())
+  teamId    String
+  userId    String
+  status    JoinRequestStatus @default(PENDING)
+  createdAt DateTime          @default(now())
+  updatedAt DateTime          @updatedAt
+  
+  team Team @relation(fields: [teamId], references: [id], onDelete: Cascade)
+  user User @relation(fields: [userId], references: [id], onDelete: Cascade)
+  
+  @@unique([teamId, userId])
+  @@index([teamId])
+  @@index([userId])
+}
+
+model Question {
+  id                String               @id @default(uuid())
+  roomId            String
+  title             String
+  description       String               @db.Text
+  sampleInput       String               @db.Text
+  sampleOutput      String               @db.Text
+  points            Int                  @default(100)
+  difficulty        String               // EASY, MEDIUM, HARD
+  timeLimit         Int?                 @default(2000) // milliseconds
+  memoryLimit       Int?                 @default(256)  // MB
+  
+  // Problem metadata for code execution
+  inputType         String?              @db.Text // JSON string: 'tree', 'linked_list', ['array', 'int'], etc.
+  outputType        String?              @db.Text // JSON string: 'tree', 'array', 'int', etc.
+  functionName      String?              // e.g., 'levelOrder', 'twoSum'
+  functionSignature String?              @db.Text // JSON string with params and returnType
+  slug              String?              @unique // URL-friendly identifier
+  
+  createdAt         DateTime             @default(now())
+  
+  room        Room                   @relation(fields: [roomId], references: [id], onDelete: Cascade)
+  assignments QuestionAssignment[]
+  submissions Submission[]
+  hints       Hint[]
+  constraints Constraint[]
+  testCases   TestCase[]
+  requests    QuestionRequest[]
+  templates   QuestionTemplate[]
+  
+  @@index([roomId])
+  @@index([slug])
+}
+
+model Hint {
+  id         String   @id @default(uuid())
+  questionId String
+  content    String   @db.Text
+  order      Int      @default(0)
+  
+  question   Question @relation(fields: [questionId], references: [id], onDelete: Cascade)
+  
+  @@index([questionId])
+}
+
+model Constraint {
+  id         String   @id @default(uuid())
+  questionId String
+  content    String   @db.Text
+  order      Int      @default(0)
+  
+  question   Question @relation(fields: [questionId], references: [id], onDelete: Cascade)
+  
+  @@index([questionId])
+}
+
+model TestCase {
+  id          String            @id @default(uuid())
+  questionId  String
+  input       String            @db.Text
+  output      String            @db.Text
+  explanation String?           @db.Text // Explanation for the test case
+  isHidden    Boolean           @default(false)
+  isSample    Boolean           @default(false) // Added to distinguish sample cases
+  category    TestCaseCategory? @default(BASIC)
+  timeLimit   Int?              @default(2000) // milliseconds
+  memoryLimit Int?              @default(256)  // MB
+  points      Int               @default(5)
+  order       Int               @default(0)
+  
+  question    Question          @relation(fields: [questionId], references: [id], onDelete: Cascade)
+  testResults TestCaseResult[]
+  
+  @@index([questionId])
+  @@index([isSample])
+  @@index([isHidden])
+}
+
+model QuestionAssignment {
+  id          String         @id @default(uuid())
+  questionId  String
+  teamId      String
+  userId      String?
+  status      QuestionStatus @default(UNASSIGNED)
+  assignedAt  DateTime?
+  solvedAt    DateTime?
+  pointsEarned Int           @default(0)
+  createdAt   DateTime       @default(now())
+  
+  question Question @relation(fields: [questionId], references: [id], onDelete: Cascade)
+  team     Team     @relation(fields: [teamId], references: [id], onDelete: Cascade)
+  user     User?    @relation(fields: [userId], references: [id], onDelete: SetNull)
+  
+  @@unique([questionId, teamId])
+  @@index([questionId])
+  @@index([teamId])
+  @@index([userId])
+}
+
+
+enum SubmissionVerdict {
+  PENDING
+  ACCEPTED
+  WRONG_ANSWER
+  TIME_LIMIT_EXCEEDED
+  MEMORY_LIMIT_EXCEEDED
+  RUNTIME_ERROR
+  COMPILATION_ERROR
+  PRESENTATION_ERROR
+  INTERNAL_ERROR
+}
+
+enum SubmissionMode {
+  RUN      // Run against sample tests only
+  SUBMIT   // Submit against all tests
+}
+
+enum TestCaseCategory {
+  BASIC
+  EDGE
+  LARGE
+  SPECIAL
+  CORNER
+  INVALID
+  HIDDEN
+}
+
+model Submission {
+  id              String            @id @default(uuid())
+  questionId      String
+  userId          String
+  teamId          String
+  code            String            @db.Text
+  language        String
+  mode            SubmissionMode    @default(SUBMIT)
+  verdict         SubmissionVerdict @default(PENDING)
+  testsPassed     Int               @default(0)
+  totalTests      Int
+  points          Int               @default(0)
+  executionTime   Float?            // in milliseconds (average)
+  memory          Float?            // in MB (peak)
+  compileOutput   String?           @db.Text
+  error           String?           @db.Text
+  submittedAt     DateTime          @default(now())
+  completedAt     DateTime?
+  
+  question        Question          @relation(fields: [questionId], references: [id], onDelete: Cascade)
+  user            User              @relation(fields: [userId], references: [id], onDelete: Cascade)
+  testResults     TestCaseResult[]
+  
+  @@index([questionId])
+  @@index([userId])
+  @@index([teamId])
+  @@index([submittedAt])
+  @@index([verdict])
+  @@index([userId, questionId])
+}
+
+model TestCaseResult {
+  id              String   @id @default(uuid())
+  submissionId    String
+  testCaseId      String
+  status          String   // PASSED, FAILED, ERROR, TIMEOUT, MEMORY_EXCEEDED
+  executionTime   Float?   // in milliseconds
+  memory          Float?   // in MB
+  output          String?  @db.Text
+  error           String?  @db.Text
+  judge0Token     String?  // For polling Judge0 results
+  createdAt       DateTime @default(now())
+  
+  submission      Submission @relation(fields: [submissionId], references: [id], onDelete: Cascade)
+  testCase        TestCase   @relation(fields: [testCaseId], references: [id], onDelete: Cascade)
+  
+  @@index([submissionId])
+  @@index([testCaseId])
+  @@index([status])
+}
+
+
+model RefreshToken {
+  id         String   @id @default(uuid())
+  token      String   @db.Text
+  tokenHash  String   @unique // SHA-256 hash of token for uniqueness
+  userId     String
+  user       User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+  
+  // Session details
+  ipAddress  String?
+  deviceInfo String?  @db.Text
+  lastActive DateTime @default(now())
+  
+  expiresAt DateTime
+  createdAt DateTime @default(now())
+  revoked   Boolean  @default(false)
+  
+  @@index([userId])
+  @@index([tokenHash])
+}
+
+enum QuestionRequestStatus {
+  PENDING
+  APPROVED
+  REJECTED
+}
+
+model QuestionRequest {
+  id          String                @id @default(uuid())
+  questionId  String
+  teamId      String
+  requesterId String
+  status      QuestionRequestStatus @default(PENDING)
+  createdAt   DateTime              @default(now())
+  updatedAt   DateTime              @updatedAt
+  
+  question    Question              @relation(fields: [questionId], references: [id], onDelete: Cascade)
+  
+  @@unique([questionId, teamId, requesterId])
+  @@index([questionId])
+  @@index([teamId])
+  @@index([requesterId])
+  @@index([status])
+}
+
+model QuestionTemplate {
+  id           String   @id @default(uuid())
+  questionId   String
+  language     String   
+  headerCode  String?  @db.Text // Optional includes/imports
+  userFunction String   @db.Text 
+  definition   String?   @db.Text 
+  mainFunction String   @db.Text 
+  diagram      String?  @db.Text 
+  boilerplate  String?  @db.Text 
+  createdAt    DateTime @default(now())
+  updatedAt    DateTime @updatedAt
+
+  question     Question @relation(fields: [questionId], references: [id], onDelete: Cascade)
+
+
+  @@unique([questionId, language])
+  @@index([questionId])
+}

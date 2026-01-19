@@ -1,0 +1,184 @@
+{
+    "questions": [
+        {
+            "title": "Two Sum",
+            "description": "Given an array of integers `nums` and an integer `target`, return indices of the two numbers such that they add up to `target`.\n\nYou may assume that each input would have exactly one solution, and you may not use the same element twice.\n\nYou can return the answer in any order.",
+            "sampleInput": "[2,7,11,15]\n9",
+            "sampleOutput": "[0,1]",
+            "hint1": "Use a hash map to store the numbers you've seen so far",
+            "hint2": "For each number, check if (target - current number) exists in the hash map",
+            "points": 100,
+            "difficulty": "EASY",
+            "constraints": "- 2 <= nums.length <= 10^4\n- -10^9 <= nums[i] <= 10^9\n- -10^9 <= target <= 10^9\n- Only one valid answer exists",
+            "timeLimit": 2000,
+            "memoryLimit": 256,
+            "testCases": [
+                {
+                    "input": "[2,7,11,15]\n9",
+                    "output": "[0,1]",
+                    "isHidden": false
+                },
+                {
+                    "input": "[3,2,4]\n6",
+                    "output": "[1,2]",
+                    "isHidden": false
+                },
+                {
+                    "input": "[3,3]\n6",
+                    "output": "[0,1]",
+                    "isHidden": true
+                },
+                {
+                    "input": "[1,5,3,7,9]\n10",
+                    "output": "[2,3]",
+                    "isHidden": true
+                }
+            ]
+        },
+        {
+            "title": "Reverse String",
+            "description": "Write a function that reverses a string. The input string is given as an array of characters `s`.\n\nYou must do this by modifying the input array in-place with O(1) extra memory.",
+            "sampleInput": "[\"h\",\"e\",\"l\",\"l\",\"o\"]",
+            "sampleOutput": "[\"o\",\"l\",\"l\",\"e\",\"h\"]",
+            "hint1": "Use two pointers approach",
+            "hint2": "Swap characters from both ends moving towards the center",
+            "points": 80,
+            "difficulty": "EASY",
+            "constraints": "- 1 <= s.length <= 10^5\n- s[i] is a printable ascii character",
+            "timeLimit": 1500,
+            "memoryLimit": 128,
+            "testCases": [
+                {
+                    "input": "[\"h\",\"e\",\"l\",\"l\",\"o\"]",
+                    "output": "[\"o\",\"l\",\"l\",\"e\",\"h\"]",
+                    "isHidden": false
+                },
+                {
+                    "input": "[\"H\",\"a\",\"n\",\"n\",\"a\",\"h\"]",
+                    "output": "[\"h\",\"a\",\"n\",\"n\",\"a\",\"H\"]",
+                    "isHidden": false
+                },
+                {
+                    "input": "[\"a\"]",
+                    "output": "[\"a\"]",
+                    "isHidden": true
+                }
+            ]
+        },
+        {
+            "title": "Valid Parentheses",
+            "description": "Given a string `s` containing just the characters `'('`, `')'`, `'{'`, `'}'`, `'['` and `']'`, determine if the input string is valid.\n\nAn input string is valid if:\n1. Open brackets must be closed by the same type of brackets.\n2. Open brackets must be closed in the correct order.\n3. Every close bracket has a corresponding open bracket of the same type.",
+            "sampleInput": "()[]{}",
+            "sampleOutput": "true",
+            "hint1": "Use a stack data structure",
+            "hint2": "Push opening brackets, pop and match with closing brackets",
+            "points": 120,
+            "difficulty": "MEDIUM",
+            "constraints": "- 1 <= s.length <= 10^4\n- s consists of parentheses only '()[]{}",
+            "timeLimit": 2000,
+            "memoryLimit": 256,
+            "testCases": [
+                {
+                    "input": "()[]{}",
+                    "output": "true",
+                    "isHidden": false
+                },
+                {
+                    "input": "(]",
+                    "output": "false",
+                    "isHidden": false
+                },
+                {
+                    "input": "([)]",
+                    "output": "false",
+                    "isHidden": true
+                },
+                {
+                    "input": "{[]}",
+                    "output": "true",
+                    "isHidden": true
+                },
+                {
+                    "input": "(((",
+                    "output": "false",
+                    "isHidden": true
+                }
+            ]
+        },
+        {
+            "title": "Merge Two Sorted Lists",
+            "description": "You are given the heads of two sorted linked lists `list1` and `list2`.\n\nMerge the two lists into one sorted list. The list should be made by splicing together the nodes of the first two lists.\n\nReturn the head of the merged linked list.",
+            "sampleInput": "[1,2,4]\n[1,3,4]",
+            "sampleOutput": "[1,1,2,3,4,4]",
+            "hint1": "Use a dummy node to simplify edge cases",
+            "hint2": "Compare nodes from both lists and attach the smaller one",
+            "points": 150,
+            "difficulty": "MEDIUM",
+            "constraints": "- The number of nodes in both lists is in the range [0, 50]\n- -100 <= Node.val <= 100\n- Both list1 and list2 are sorted in non-decreasing order",
+            "timeLimit": 2500,
+            "memoryLimit": 256,
+            "testCases": [
+                {
+                    "input": "[1,2,4]\n[1,3,4]",
+                    "output": "[1,1,2,3,4,4]",
+                    "isHidden": false
+                },
+                {
+                    "input": "[]\n[]",
+                    "output": "[]",
+                    "isHidden": false
+                },
+                {
+                    "input": "[]\n[0]",
+                    "output": "[0]",
+                    "isHidden": true
+                },
+                {
+                    "input": "[1,2,3]\n[4,5,6]",
+                    "output": "[1,2,3,4,5,6]",
+                    "isHidden": true
+                }
+            ]
+        },
+        {
+            "title": "Maximum Subarray",
+            "description": "Given an integer array `nums`, find the subarray with the largest sum, and return its sum.",
+            "sampleInput": "[-2,1,-3,4,-1,2,1,-5,4]",
+            "sampleOutput": "6",
+            "hint1": "Use Kadane's algorithm",
+            "hint2": "Keep track of current sum and maximum sum seen so far",
+            "points": 180,
+            "difficulty": "HARD",
+            "constraints": "- 1 <= nums.length <= 10^5\n- -10^4 <= nums[i] <= 10^4",
+            "timeLimit": 3000,
+            "memoryLimit": 512,
+            "testCases": [
+                {
+                    "input": "[-2,1,-3,4,-1,2,1,-5,4]",
+                    "output": "6",
+                    "isHidden": false
+                },
+                {
+                    "input": "[1]",
+                    "output": "1",
+                    "isHidden": false
+                },
+                {
+                    "input": "[5,4,-1,7,8]",
+                    "output": "23",
+                    "isHidden": true
+                },
+                {
+                    "input": "[-1,-2,-3,-4]",
+                    "output": "-1",
+                    "isHidden": true
+                },
+                {
+                    "input": "[1,2,3,4,5]",
+                    "output": "15",
+                    "isHidden": true
+                }
+            ]
+        }
+    ]
+}
