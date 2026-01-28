@@ -5,7 +5,6 @@
  */
 
 const { prisma } = require('../config/database');
-const CodeTemplateGenerator = require('../services/codeTemplateGenerator');
 const logger = require('../utils/logger');
 
 /**

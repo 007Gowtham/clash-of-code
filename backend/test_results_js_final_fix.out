@@ -1,0 +1,1091 @@
+2026-01-26 11:08:21 [[32minfo[39m]: 🔧 Judge0 Service Configuration: {"service":"code-execution","baseUrl":"http://127.0.0.1:2358","maxRetries":3,"pollInterval":500,"pollMaxAttempts":20}
+🚀 Starting Test Script: Run & Submit All Questions
+🔄 Generative Templates for all questions...
+prisma:query SELECT `dsa_multiplayer`.`Question`.`id`, `dsa_multiplayer`.`Question`.`roomId`, `dsa_multiplayer`.`Question`.`title`, `dsa_multiplayer`.`Question`.`description`, `dsa_multiplayer`.`Question`.`sampleInput`, `dsa_multiplayer`.`Question`.`sampleOutput`, `dsa_multiplayer`.`Question`.`points`, `dsa_multiplayer`.`Question`.`difficulty`, `dsa_multiplayer`.`Question`.`timeLimit`, `dsa_multiplayer`.`Question`.`memoryLimit`, `dsa_multiplayer`.`Question`.`createdAt`, `dsa_multiplayer`.`Question`.`functionName`, `dsa_multiplayer`.`Question`.`functionSignature`, `dsa_multiplayer`.`Question`.`inputType`, `dsa_multiplayer`.`Question`.`outputType`, `dsa_multiplayer`.`Question`.`slug`, `dsa_multiplayer`.`Question`.`inputFormats`, `dsa_multiplayer`.`Question`.`outputFormat`, `dsa_multiplayer`.`Question`.`customTypes` FROM `dsa_multiplayer`.`Question` WHERE 1=1
+2026-01-26 11:08:21 [[32minfo[39m]: Generating templates for 5 total questions {"service":"code-execution"}
+prisma:query SELECT `dsa_multiplayer`.`Question`.`id`, `dsa_multiplayer`.`Question`.`roomId`, `dsa_multiplayer`.`Question`.`title`, `dsa_multiplayer`.`Question`.`description`, `dsa_multiplayer`.`Question`.`sampleInput`, `dsa_multiplayer`.`Question`.`sampleOutput`, `dsa_multiplayer`.`Question`.`points`, `dsa_multiplayer`.`Question`.`difficulty`, `dsa_multiplayer`.`Question`.`timeLimit`, `dsa_multiplayer`.`Question`.`memoryLimit`, `dsa_multiplayer`.`Question`.`createdAt`, `dsa_multiplayer`.`Question`.`functionName`, `dsa_multiplayer`.`Question`.`functionSignature`, `dsa_multiplayer`.`Question`.`inputType`, `dsa_multiplayer`.`Question`.`outputType`, `dsa_multiplayer`.`Question`.`slug`, `dsa_multiplayer`.`Question`.`inputFormats`, `dsa_multiplayer`.`Question`.`outputFormat`, `dsa_multiplayer`.`Question`.`customTypes` FROM `dsa_multiplayer`.`Question` WHERE (`dsa_multiplayer`.`Question`.`id` = ? AND 1=1) LIMIT ? OFFSET ?
+2026-01-26 11:08:21 [[32minfo[39m]: Generating templates for question: Two Sum {"service":"code-execution"}
+2026-01-26 11:08:21 [[32minfo[39m]: ✓ Generated cpp template {"service":"code-execution"}
+2026-01-26 11:08:21 [[32minfo[39m]: ✓ Generated python template {"service":"code-execution"}
+2026-01-26 11:08:21 [[32minfo[39m]: ✓ Generated javascript template {"service":"code-execution"}
+2026-01-26 11:08:21 [[32minfo[39m]: ✓ Generated java template {"service":"code-execution"}
+prisma:query DELETE FROM `dsa_multiplayer`.`QuestionTemplate` WHERE `dsa_multiplayer`.`QuestionTemplate`.`questionId` = ?
+prisma:query BEGIN
+prisma:query INSERT INTO `dsa_multiplayer`.`QuestionTemplate` (`id`,`questionId`,`language`,`headerCode`,`createdAt`,`updatedAt`,`boilerplate`,`diagram`,`mainFunction`,`userFunction`,`definition`) VALUES (?,?,?,?,?,?,?,?,?,?,?), (?,?,?,?,?,?,?,?,?,?,?), (?,?,?,?,?,?,?,?,?,?,?), (?,?,?,?,?,?,?,?,?,?,?)
+prisma:query COMMIT
+2026-01-26 11:08:21 [[32minfo[39m]: ✅ Successfully generated and saved [object Object],[object Object],[object Object],[object Object] templates for Two Sum {"service":"code-execution"}
+prisma:query SELECT `dsa_multiplayer`.`Question`.`id`, `dsa_multiplayer`.`Question`.`roomId`, `dsa_multiplayer`.`Question`.`title`, `dsa_multiplayer`.`Question`.`description`, `dsa_multiplayer`.`Question`.`sampleInput`, `dsa_multiplayer`.`Question`.`sampleOutput`, `dsa_multiplayer`.`Question`.`points`, `dsa_multiplayer`.`Question`.`difficulty`, `dsa_multiplayer`.`Question`.`timeLimit`, `dsa_multiplayer`.`Question`.`memoryLimit`, `dsa_multiplayer`.`Question`.`createdAt`, `dsa_multiplayer`.`Question`.`functionName`, `dsa_multiplayer`.`Question`.`functionSignature`, `dsa_multiplayer`.`Question`.`inputType`, `dsa_multiplayer`.`Question`.`outputType`, `dsa_multiplayer`.`Question`.`slug`, `dsa_multiplayer`.`Question`.`inputFormats`, `dsa_multiplayer`.`Question`.`outputFormat`, `dsa_multiplayer`.`Question`.`customTypes` FROM `dsa_multiplayer`.`Question` WHERE (`dsa_multiplayer`.`Question`.`id` = ? AND 1=1) LIMIT ? OFFSET ?
+2026-01-26 11:08:21 [[32minfo[39m]: Generating templates for question: Reverse Linked List {"service":"code-execution"}
+2026-01-26 11:08:21 [[32minfo[39m]: ✓ Generated cpp template {"service":"code-execution"}
+2026-01-26 11:08:21 [[32minfo[39m]: ✓ Generated python template {"service":"code-execution"}
+2026-01-26 11:08:21 [[32minfo[39m]: ✓ Generated javascript template {"service":"code-execution"}
+2026-01-26 11:08:21 [[32minfo[39m]: ✓ Generated java template {"service":"code-execution"}
+prisma:query DELETE FROM `dsa_multiplayer`.`QuestionTemplate` WHERE `dsa_multiplayer`.`QuestionTemplate`.`questionId` = ?
+prisma:query BEGIN
+prisma:query INSERT INTO `dsa_multiplayer`.`QuestionTemplate` (`id`,`questionId`,`language`,`headerCode`,`createdAt`,`updatedAt`,`boilerplate`,`diagram`,`mainFunction`,`userFunction`,`definition`) VALUES (?,?,?,?,?,?,?,?,?,?,?), (?,?,?,?,?,?,?,?,?,?,?), (?,?,?,?,?,?,?,?,?,?,?), (?,?,?,?,?,?,?,?,?,?,?)
+prisma:query COMMIT
+2026-01-26 11:08:21 [[32minfo[39m]: ✅ Successfully generated and saved [object Object],[object Object],[object Object],[object Object] templates for Reverse Linked List {"service":"code-execution"}
+prisma:query SELECT `dsa_multiplayer`.`Question`.`id`, `dsa_multiplayer`.`Question`.`roomId`, `dsa_multiplayer`.`Question`.`title`, `dsa_multiplayer`.`Question`.`description`, `dsa_multiplayer`.`Question`.`sampleInput`, `dsa_multiplayer`.`Question`.`sampleOutput`, `dsa_multiplayer`.`Question`.`points`, `dsa_multiplayer`.`Question`.`difficulty`, `dsa_multiplayer`.`Question`.`timeLimit`, `dsa_multiplayer`.`Question`.`memoryLimit`, `dsa_multiplayer`.`Question`.`createdAt`, `dsa_multiplayer`.`Question`.`functionName`, `dsa_multiplayer`.`Question`.`functionSignature`, `dsa_multiplayer`.`Question`.`inputType`, `dsa_multiplayer`.`Question`.`outputType`, `dsa_multiplayer`.`Question`.`slug`, `dsa_multiplayer`.`Question`.`inputFormats`, `dsa_multiplayer`.`Question`.`outputFormat`, `dsa_multiplayer`.`Question`.`customTypes` FROM `dsa_multiplayer`.`Question` WHERE (`dsa_multiplayer`.`Question`.`id` = ? AND 1=1) LIMIT ? OFFSET ?
+2026-01-26 11:08:21 [[32minfo[39m]: Generating templates for question: Search a 2D Matrix {"service":"code-execution"}
+2026-01-26 11:08:21 [[32minfo[39m]: ✓ Generated cpp template {"service":"code-execution"}
+2026-01-26 11:08:21 [[32minfo[39m]: ✓ Generated python template {"service":"code-execution"}
+2026-01-26 11:08:21 [[32minfo[39m]: ✓ Generated javascript template {"service":"code-execution"}
+2026-01-26 11:08:21 [[32minfo[39m]: ✓ Generated java template {"service":"code-execution"}
+prisma:query DELETE FROM `dsa_multiplayer`.`QuestionTemplate` WHERE `dsa_multiplayer`.`QuestionTemplate`.`questionId` = ?
+prisma:query BEGIN
+prisma:query INSERT INTO `dsa_multiplayer`.`QuestionTemplate` (`id`,`questionId`,`language`,`headerCode`,`createdAt`,`updatedAt`,`boilerplate`,`diagram`,`mainFunction`,`userFunction`,`definition`) VALUES (?,?,?,?,?,?,?,?,?,?,?), (?,?,?,?,?,?,?,?,?,?,?), (?,?,?,?,?,?,?,?,?,?,?), (?,?,?,?,?,?,?,?,?,?,?)
+prisma:query COMMIT
+2026-01-26 11:08:21 [[32minfo[39m]: ✅ Successfully generated and saved [object Object],[object Object],[object Object],[object Object] templates for Search a 2D Matrix {"service":"code-execution"}
+prisma:query SELECT `dsa_multiplayer`.`Question`.`id`, `dsa_multiplayer`.`Question`.`roomId`, `dsa_multiplayer`.`Question`.`title`, `dsa_multiplayer`.`Question`.`description`, `dsa_multiplayer`.`Question`.`sampleInput`, `dsa_multiplayer`.`Question`.`sampleOutput`, `dsa_multiplayer`.`Question`.`points`, `dsa_multiplayer`.`Question`.`difficulty`, `dsa_multiplayer`.`Question`.`timeLimit`, `dsa_multiplayer`.`Question`.`memoryLimit`, `dsa_multiplayer`.`Question`.`createdAt`, `dsa_multiplayer`.`Question`.`functionName`, `dsa_multiplayer`.`Question`.`functionSignature`, `dsa_multiplayer`.`Question`.`inputType`, `dsa_multiplayer`.`Question`.`outputType`, `dsa_multiplayer`.`Question`.`slug`, `dsa_multiplayer`.`Question`.`inputFormats`, `dsa_multiplayer`.`Question`.`outputFormat`, `dsa_multiplayer`.`Question`.`customTypes` FROM `dsa_multiplayer`.`Question` WHERE (`dsa_multiplayer`.`Question`.`id` = ? AND 1=1) LIMIT ? OFFSET ?
+2026-01-26 11:08:21 [[32minfo[39m]: Generating templates for question: Valid Parentheses {"service":"code-execution"}
+2026-01-26 11:08:21 [[32minfo[39m]: ✓ Generated cpp template {"service":"code-execution"}
+2026-01-26 11:08:21 [[32minfo[39m]: ✓ Generated python template {"service":"code-execution"}
+2026-01-26 11:08:21 [[32minfo[39m]: ✓ Generated javascript template {"service":"code-execution"}
+2026-01-26 11:08:21 [[32minfo[39m]: ✓ Generated java template {"service":"code-execution"}
+prisma:query DELETE FROM `dsa_multiplayer`.`QuestionTemplate` WHERE `dsa_multiplayer`.`QuestionTemplate`.`questionId` = ?
+prisma:query BEGIN
+prisma:query INSERT INTO `dsa_multiplayer`.`QuestionTemplate` (`id`,`questionId`,`language`,`headerCode`,`createdAt`,`updatedAt`,`boilerplate`,`diagram`,`mainFunction`,`userFunction`,`definition`) VALUES (?,?,?,?,?,?,?,?,?,?,?), (?,?,?,?,?,?,?,?,?,?,?), (?,?,?,?,?,?,?,?,?,?,?), (?,?,?,?,?,?,?,?,?,?,?)
+prisma:query COMMIT
+2026-01-26 11:08:21 [[32minfo[39m]: ✅ Successfully generated and saved [object Object],[object Object],[object Object],[object Object] templates for Valid Parentheses {"service":"code-execution"}
+prisma:query SELECT `dsa_multiplayer`.`Question`.`id`, `dsa_multiplayer`.`Question`.`roomId`, `dsa_multiplayer`.`Question`.`title`, `dsa_multiplayer`.`Question`.`description`, `dsa_multiplayer`.`Question`.`sampleInput`, `dsa_multiplayer`.`Question`.`sampleOutput`, `dsa_multiplayer`.`Question`.`points`, `dsa_multiplayer`.`Question`.`difficulty`, `dsa_multiplayer`.`Question`.`timeLimit`, `dsa_multiplayer`.`Question`.`memoryLimit`, `dsa_multiplayer`.`Question`.`createdAt`, `dsa_multiplayer`.`Question`.`functionName`, `dsa_multiplayer`.`Question`.`functionSignature`, `dsa_multiplayer`.`Question`.`inputType`, `dsa_multiplayer`.`Question`.`outputType`, `dsa_multiplayer`.`Question`.`slug`, `dsa_multiplayer`.`Question`.`inputFormats`, `dsa_multiplayer`.`Question`.`outputFormat`, `dsa_multiplayer`.`Question`.`customTypes` FROM `dsa_multiplayer`.`Question` WHERE (`dsa_multiplayer`.`Question`.`id` = ? AND 1=1) LIMIT ? OFFSET ?
+2026-01-26 11:08:21 [[32minfo[39m]: Generating templates for question: Maximum Depth of Binary Tree {"service":"code-execution"}
+2026-01-26 11:08:21 [[32minfo[39m]: ✓ Generated cpp template {"service":"code-execution"}
+2026-01-26 11:08:21 [[32minfo[39m]: ✓ Generated python template {"service":"code-execution"}
+2026-01-26 11:08:21 [[32minfo[39m]: ✓ Generated javascript template {"service":"code-execution"}
+2026-01-26 11:08:21 [[32minfo[39m]: ✓ Generated java template {"service":"code-execution"}
+prisma:query DELETE FROM `dsa_multiplayer`.`QuestionTemplate` WHERE `dsa_multiplayer`.`QuestionTemplate`.`questionId` = ?
+prisma:query BEGIN
+prisma:query INSERT INTO `dsa_multiplayer`.`QuestionTemplate` (`id`,`questionId`,`language`,`headerCode`,`createdAt`,`updatedAt`,`boilerplate`,`diagram`,`mainFunction`,`userFunction`,`definition`) VALUES (?,?,?,?,?,?,?,?,?,?,?), (?,?,?,?,?,?,?,?,?,?,?), (?,?,?,?,?,?,?,?,?,?,?), (?,?,?,?,?,?,?,?,?,?,?)
+prisma:query COMMIT
+2026-01-26 11:08:21 [[32minfo[39m]: ✅ Successfully generated and saved [object Object],[object Object],[object Object],[object Object] templates for Maximum Depth of Binary Tree {"service":"code-execution"}
+2026-01-26 11:08:21 [[32minfo[39m]: ✅ Template generation complete: 5/5 succeeded, 0 failed {"service":"code-execution"}
+✅ Templates generated successfully.
+👤 Upserting Test User with ID: TEST_USER_ID
+✅ Test User ready.
+📚 Fetching all questions...
+✅ Found 5 questions.
+
+--------------------------------------------------
+Testing Question: Two Sum (ID: 0f8905fc-6b4e-45ab-8445-118a7685d2ac)
+▶️ Running Code (Run Function)...
+0f8905fc-6b4e-45ab-8445-118a7685d2ac
+function twoSum(nums, target) {
+    // TODO: Implement your solution here
+    return [];
+}
+javascript
+prisma:query SELECT `dsa_multiplayer`.`Question`.`id`, `dsa_multiplayer`.`Question`.`roomId`, `dsa_multiplayer`.`Question`.`title`, `dsa_multiplayer`.`Question`.`description`, `dsa_multiplayer`.`Question`.`sampleInput`, `dsa_multiplayer`.`Question`.`sampleOutput`, `dsa_multiplayer`.`Question`.`points`, `dsa_multiplayer`.`Question`.`difficulty`, `dsa_multiplayer`.`Question`.`timeLimit`, `dsa_multiplayer`.`Question`.`memoryLimit`, `dsa_multiplayer`.`Question`.`createdAt`, `dsa_multiplayer`.`Question`.`functionName`, `dsa_multiplayer`.`Question`.`functionSignature`, `dsa_multiplayer`.`Question`.`inputType`, `dsa_multiplayer`.`Question`.`outputType`, `dsa_multiplayer`.`Question`.`slug`, `dsa_multiplayer`.`Question`.`inputFormats`, `dsa_multiplayer`.`Question`.`outputFormat`, `dsa_multiplayer`.`Question`.`customTypes` FROM `dsa_multiplayer`.`Question` WHERE (`dsa_multiplayer`.`Question`.`id` = ? AND 1=1) LIMIT ? OFFSET ?
+prisma:query SELECT `dsa_multiplayer`.`TestCase`.`id`, `dsa_multiplayer`.`TestCase`.`questionId`, `dsa_multiplayer`.`TestCase`.`input`, `dsa_multiplayer`.`TestCase`.`output`, `dsa_multiplayer`.`TestCase`.`explanation`, `dsa_multiplayer`.`TestCase`.`isHidden`, `dsa_multiplayer`.`TestCase`.`isSample`, `dsa_multiplayer`.`TestCase`.`category`, `dsa_multiplayer`.`TestCase`.`memoryLimit`, `dsa_multiplayer`.`TestCase`.`order`, `dsa_multiplayer`.`TestCase`.`points`, `dsa_multiplayer`.`TestCase`.`timeLimit` FROM `dsa_multiplayer`.`TestCase` WHERE (`dsa_multiplayer`.`TestCase`.`isSample` = ? AND `dsa_multiplayer`.`TestCase`.`questionId` IN (?)) ORDER BY `dsa_multiplayer`.`TestCase`.`order` ASC
+{
+  id: '0f8905fc-6b4e-45ab-8445-118a7685d2ac',
+  roomId: 'f3a1c123-554d-4fdc-a60d-83b862f274af',
+  title: 'Two Sum',
+  description: 'Given an array of integers nums and an integer target, return indices of the two numbers such that they add up to target.\n' +
+    '\n' +
+    'You may assume that each input would have exactly one solution, and you may not use the same element twice.\n' +
+    '\n' +
+    '**Example:**\n' +
+    'Input: nums = [2,7,11,15], target = 9\n' +
+    'Output: [0,1]\n' +
+    '\n' +
+    '**Constraints:**\n' +
+    '- 2 <= nums.length <= 10^4\n' +
+    '- -10^9 <= nums[i] <= 10^9',
+  sampleInput: '[2,7,11,15]\n9',
+  sampleOutput: '[0,1]',
+  points: 100,
+  difficulty: 'EASY',
+  timeLimit: 2000,
+  memoryLimit: 256,
+  createdAt: 2026-01-25T17:31:12.857Z,
+  functionName: 'twoSum',
+  functionSignature: '{"returnType":"vector<int>","params":[{"type":"vector<int>&","name":"nums"},{"type":"int","name":"target"}]}',
+  inputType: '["array<int>", "int"]',
+  outputType: '"array<int>"',
+  slug: null,
+  inputFormats: [
+    {
+      baseType: 'array',
+      paramName: 'nums',
+      paramIndex: 0,
+      elementType: 'int',
+      parseStrategy: 'json_array',
+      inputFormatExample: '[2,7,11,15]'
+    },
+    {
+      baseType: 'primitive',
+      paramName: 'target',
+      paramIndex: 1,
+      elementType: 'int',
+      parseStrategy: 'primitive',
+      inputFormatExample: '9'
+    }
+  ],
+  outputFormat: {
+    baseType: 'array',
+    elementType: 'int',
+    serializeStrategy: 'json_array',
+    outputFormatExample: '[0,1]'
+  },
+  customTypes: null,
+  testCases: [
+    {
+      id: '55514c82-8f3c-4d2e-9b42-e38239cce168',
+      questionId: '0f8905fc-6b4e-45ab-8445-118a7685d2ac',
+      input: '[2,7,11,15]\n9',
+      output: '[0,1]',
+      explanation: 'Because nums[0] + nums[1] == 9, we return [0, 1].',
+      isHidden: false,
+      isSample: true,
+      category: 'BASIC',
+      memoryLimit: 256,
+      order: 0,
+      points: 11,
+      timeLimit: 2000
+    },
+    {
+      id: '5a2ed394-9392-4010-bd3b-a1eab9b088f7',
+      questionId: '0f8905fc-6b4e-45ab-8445-118a7685d2ac',
+      input: '[3,2,4]\n6',
+      output: '[1,2]',
+      explanation: 'nums[1] + nums[2] == 6.',
+      isHidden: false,
+      isSample: true,
+      category: 'BASIC',
+      memoryLimit: 256,
+      order: 1,
+      points: 11,
+      timeLimit: 2000
+    },
+    {
+      id: 'dab821ac-e7d8-4615-afde-aecd78a0d9d2',
+      questionId: '0f8905fc-6b4e-45ab-8445-118a7685d2ac',
+      input: '[3,3]\n6',
+      output: '[0,1]',
+      explanation: null,
+      isHidden: false,
+      isSample: true,
+      category: 'BASIC',
+      memoryLimit: 256,
+      order: 2,
+      points: 11,
+      timeLimit: 2000
+    }
+  ]
+}
+prisma:query SELECT `dsa_multiplayer`.`QuestionTemplate`.`id`, `dsa_multiplayer`.`QuestionTemplate`.`questionId`, `dsa_multiplayer`.`QuestionTemplate`.`language`, `dsa_multiplayer`.`QuestionTemplate`.`headerCode`, `dsa_multiplayer`.`QuestionTemplate`.`createdAt`, `dsa_multiplayer`.`QuestionTemplate`.`updatedAt`, `dsa_multiplayer`.`QuestionTemplate`.`boilerplate`, `dsa_multiplayer`.`QuestionTemplate`.`diagram`, `dsa_multiplayer`.`QuestionTemplate`.`mainFunction`, `dsa_multiplayer`.`QuestionTemplate`.`userFunction`, `dsa_multiplayer`.`QuestionTemplate`.`definition` FROM `dsa_multiplayer`.`QuestionTemplate` WHERE ((`dsa_multiplayer`.`QuestionTemplate`.`questionId` = ? AND `dsa_multiplayer`.`QuestionTemplate`.`language` = ?) AND 1=1) LIMIT ? OFFSET ?
+2026-01-26 11:08:21 [[32minfo[39m]: Generated executable code for question 0f8905fc-6b4e-45ab-8445-118a7685d2ac, language javascript {"service":"code-execution"}
+=== GENERATED CODE (first 500 chars) ===
+const fs = require('fs');
+const input = fs.readFileSync(0, 'utf8').trim().split('\n');
+let lineIndex = 0;
+
+function readLine() {
+    return lineIndex < input.length ? input[lineIndex++] : "";
+}
+
+function readInt() {
+    return parseInt(readLine());
+}
+
+function readIntArray(n) {
+    return readLine().split(' ').map(Number);
+}
+
+function readMatrix(rows, cols) {
+    const matrix = [];
+    for (let i = 0; i < rows; i++) {
+        matrix.push(readLine().split(' ').map(Number));
+    }
+    return matri
+=== CODE LINES 148-156 ===
+148:     }
+149: }
+150: 
+151: class TreeNode {
+152:     constructor(val = 0, left = null, right = null) {
+153:         this.val = val;
+154:         this.left = left;
+155:         this.right = right;
+156:     }
+=== END DEBUG ===
+2026-01-26 11:08:21 [[32minfo[39m] [4655da5f-63b9-433b-8faf-84cc09cff59f]: Running test cases {"service":"code-execution","language":"javascript","totalTestCases":3}
+🔍 DEBUG: Executing test case with language: javascript
+2026-01-26 11:08:21 [[32minfo[39m]: Submitting code to Judge0 {"service":"code-execution","languageId":63}
+2026-01-26 11:08:21 [[32minfo[39m]: Polling submission 50d5f5b2-33f8-494e-8406-29a928f9c795 {"service":"code-execution"}
+2026-01-26 11:08:22 [[32minfo[39m]: Submission 50d5f5b2-33f8-494e-8406-29a928f9c795 completed {"service":"code-execution","verdict":"RUNTIME_ERROR"}
+🔍 DEBUG: Executing test case with language: javascript
+2026-01-26 11:08:22 [[32minfo[39m]: Submitting code to Judge0 {"service":"code-execution","languageId":63}
+2026-01-26 11:08:22 [[32minfo[39m]: Polling submission f1bc1563-18a4-494f-ac4b-d3cd9823a56a {"service":"code-execution"}
+2026-01-26 11:08:23 [[32minfo[39m]: Submission f1bc1563-18a4-494f-ac4b-d3cd9823a56a completed {"service":"code-execution","verdict":"RUNTIME_ERROR"}
+🔍 DEBUG: Executing test case with language: javascript
+2026-01-26 11:08:23 [[32minfo[39m]: Submitting code to Judge0 {"service":"code-execution","languageId":63}
+2026-01-26 11:08:23 [[32minfo[39m]: Polling submission 13493407-0ce7-4115-8fe5-46db3d21891f {"service":"code-execution"}
+2026-01-26 11:08:24 [[32minfo[39m]: Submission 13493407-0ce7-4115-8fe5-46db3d21891f completed {"service":"code-execution","verdict":"RUNTIME_ERROR"}
+2026-01-26 11:08:24 [[32minfo[39m] [4655da5f-63b9-433b-8faf-84cc09cff59f]: Test cases completed {"service":"code-execution","testsPassed":0,"totalTests":3,"allPassed":false}
+✅ Run Verified: OK
+▶️ Submitting Code (Submit Function)...
+prisma:query SELECT `dsa_multiplayer`.`Question`.`id`, `dsa_multiplayer`.`Question`.`roomId`, `dsa_multiplayer`.`Question`.`title`, `dsa_multiplayer`.`Question`.`description`, `dsa_multiplayer`.`Question`.`sampleInput`, `dsa_multiplayer`.`Question`.`sampleOutput`, `dsa_multiplayer`.`Question`.`points`, `dsa_multiplayer`.`Question`.`difficulty`, `dsa_multiplayer`.`Question`.`timeLimit`, `dsa_multiplayer`.`Question`.`memoryLimit`, `dsa_multiplayer`.`Question`.`createdAt`, `dsa_multiplayer`.`Question`.`functionName`, `dsa_multiplayer`.`Question`.`functionSignature`, `dsa_multiplayer`.`Question`.`inputType`, `dsa_multiplayer`.`Question`.`outputType`, `dsa_multiplayer`.`Question`.`slug`, `dsa_multiplayer`.`Question`.`inputFormats`, `dsa_multiplayer`.`Question`.`outputFormat`, `dsa_multiplayer`.`Question`.`customTypes` FROM `dsa_multiplayer`.`Question` WHERE (`dsa_multiplayer`.`Question`.`id` = ? AND 1=1) LIMIT ? OFFSET ?
+prisma:query SELECT `dsa_multiplayer`.`TestCase`.`id`, `dsa_multiplayer`.`TestCase`.`questionId`, `dsa_multiplayer`.`TestCase`.`input`, `dsa_multiplayer`.`TestCase`.`output`, `dsa_multiplayer`.`TestCase`.`explanation`, `dsa_multiplayer`.`TestCase`.`isHidden`, `dsa_multiplayer`.`TestCase`.`isSample`, `dsa_multiplayer`.`TestCase`.`category`, `dsa_multiplayer`.`TestCase`.`memoryLimit`, `dsa_multiplayer`.`TestCase`.`order`, `dsa_multiplayer`.`TestCase`.`points`, `dsa_multiplayer`.`TestCase`.`timeLimit` FROM `dsa_multiplayer`.`TestCase` WHERE `dsa_multiplayer`.`TestCase`.`questionId` IN (?) ORDER BY `dsa_multiplayer`.`TestCase`.`order` ASC
+prisma:query SELECT `dsa_multiplayer`.`QuestionTemplate`.`id`, `dsa_multiplayer`.`QuestionTemplate`.`questionId`, `dsa_multiplayer`.`QuestionTemplate`.`language`, `dsa_multiplayer`.`QuestionTemplate`.`headerCode`, `dsa_multiplayer`.`QuestionTemplate`.`createdAt`, `dsa_multiplayer`.`QuestionTemplate`.`updatedAt`, `dsa_multiplayer`.`QuestionTemplate`.`boilerplate`, `dsa_multiplayer`.`QuestionTemplate`.`diagram`, `dsa_multiplayer`.`QuestionTemplate`.`mainFunction`, `dsa_multiplayer`.`QuestionTemplate`.`userFunction`, `dsa_multiplayer`.`QuestionTemplate`.`definition` FROM `dsa_multiplayer`.`QuestionTemplate` WHERE ((`dsa_multiplayer`.`QuestionTemplate`.`questionId` = ? AND `dsa_multiplayer`.`QuestionTemplate`.`language` = ?) AND 1=1) LIMIT ? OFFSET ?
+2026-01-26 11:08:24 [[32minfo[39m]: Generated executable code for question 0f8905fc-6b4e-45ab-8445-118a7685d2ac, language javascript {"service":"code-execution"}
+2026-01-26 11:08:24 [[32minfo[39m] [e3944a12-9dd3-434d-b4f5-3a08fbf00875]: Running test cases {"service":"code-execution","language":"javascript","totalTestCases":9}
+🔍 DEBUG: Executing test case with language: javascript
+2026-01-26 11:08:24 [[32minfo[39m]: Submitting code to Judge0 {"service":"code-execution","languageId":63}
+2026-01-26 11:08:24 [[32minfo[39m]: Polling submission 794b0f41-73e4-4bce-bdb1-6d6eeb3e73ff {"service":"code-execution"}
+2026-01-26 11:08:25 [[32minfo[39m]: Submission 794b0f41-73e4-4bce-bdb1-6d6eeb3e73ff completed {"service":"code-execution","verdict":"RUNTIME_ERROR"}
+🔍 DEBUG: Executing test case with language: javascript
+2026-01-26 11:08:25 [[32minfo[39m]: Submitting code to Judge0 {"service":"code-execution","languageId":63}
+2026-01-26 11:08:25 [[32minfo[39m]: Polling submission 5bf717de-ea4e-4e7c-837a-9de7a5f22717 {"service":"code-execution"}
+2026-01-26 11:08:26 [[32minfo[39m]: Submission 5bf717de-ea4e-4e7c-837a-9de7a5f22717 completed {"service":"code-execution","verdict":"RUNTIME_ERROR"}
+🔍 DEBUG: Executing test case with language: javascript
+2026-01-26 11:08:26 [[32minfo[39m]: Submitting code to Judge0 {"service":"code-execution","languageId":63}
+2026-01-26 11:08:26 [[32minfo[39m]: Polling submission 25a2b7e7-080a-455c-9e47-5495e41fac0f {"service":"code-execution"}
+2026-01-26 11:08:27 [[32minfo[39m]: Submission 25a2b7e7-080a-455c-9e47-5495e41fac0f completed {"service":"code-execution","verdict":"RUNTIME_ERROR"}
+🔍 DEBUG: Executing test case with language: javascript
+2026-01-26 11:08:27 [[32minfo[39m]: Submitting code to Judge0 {"service":"code-execution","languageId":63}
+2026-01-26 11:08:27 [[32minfo[39m]: Polling submission be8f0d94-7b44-4ca6-85f5-ea6a0e14603c {"service":"code-execution"}
+2026-01-26 11:08:28 [[32minfo[39m]: Submission be8f0d94-7b44-4ca6-85f5-ea6a0e14603c completed {"service":"code-execution","verdict":"RUNTIME_ERROR"}
+🔍 DEBUG: Executing test case with language: javascript
+2026-01-26 11:08:28 [[32minfo[39m]: Submitting code to Judge0 {"service":"code-execution","languageId":63}
+2026-01-26 11:08:28 [[32minfo[39m]: Polling submission 89073ee6-bc97-40b2-916c-ef42314a9db4 {"service":"code-execution"}
+2026-01-26 11:08:29 [[32minfo[39m]: Submission 89073ee6-bc97-40b2-916c-ef42314a9db4 completed {"service":"code-execution","verdict":"RUNTIME_ERROR"}
+🔍 DEBUG: Executing test case with language: javascript
+2026-01-26 11:08:29 [[32minfo[39m]: Submitting code to Judge0 {"service":"code-execution","languageId":63}
+2026-01-26 11:08:29 [[32minfo[39m]: Polling submission 59695f04-de74-4ba4-a570-2957f995f179 {"service":"code-execution"}
+2026-01-26 11:08:30 [[32minfo[39m]: Submission 59695f04-de74-4ba4-a570-2957f995f179 completed {"service":"code-execution","verdict":"RUNTIME_ERROR"}
+🔍 DEBUG: Executing test case with language: javascript
+2026-01-26 11:08:30 [[32minfo[39m]: Submitting code to Judge0 {"service":"code-execution","languageId":63}
+2026-01-26 11:08:30 [[32minfo[39m]: Polling submission 043f4ad9-d963-454b-80c3-7b0711442d06 {"service":"code-execution"}
+2026-01-26 11:08:31 [[32minfo[39m]: Submission 043f4ad9-d963-454b-80c3-7b0711442d06 completed {"service":"code-execution","verdict":"RUNTIME_ERROR"}
+🔍 DEBUG: Executing test case with language: javascript
+2026-01-26 11:08:31 [[32minfo[39m]: Submitting code to Judge0 {"service":"code-execution","languageId":63}
+2026-01-26 11:08:31 [[32minfo[39m]: Polling submission 0e80e373-e3df-4162-8b6c-853fb8691120 {"service":"code-execution"}
+2026-01-26 11:08:33 [[32minfo[39m]: Submission 0e80e373-e3df-4162-8b6c-853fb8691120 completed {"service":"code-execution","verdict":"RUNTIME_ERROR"}
+🔍 DEBUG: Executing test case with language: javascript
+2026-01-26 11:08:33 [[32minfo[39m]: Submitting code to Judge0 {"service":"code-execution","languageId":63}
+2026-01-26 11:08:33 [[32minfo[39m]: Polling submission cf815e29-53ca-4ee3-aaf3-11d46ae21b4e {"service":"code-execution"}
+2026-01-26 11:08:34 [[32minfo[39m]: Submission cf815e29-53ca-4ee3-aaf3-11d46ae21b4e completed {"service":"code-execution","verdict":"RUNTIME_ERROR"}
+2026-01-26 11:08:34 [[32minfo[39m] [e3944a12-9dd3-434d-b4f5-3a08fbf00875]: Test cases completed {"service":"code-execution","testsPassed":0,"totalTests":9,"allPassed":false}
+prisma:query BEGIN
+prisma:query INSERT INTO `dsa_multiplayer`.`Submission` (`id`,`questionId`,`userId`,`teamId`,`code`,`language`,`testsPassed`,`totalTests`,`points`,`executionTime`,`memory`,`submittedAt`,`completedAt`,`mode`,`verdict`) VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)
+prisma:query SELECT `dsa_multiplayer`.`Submission`.`id`, `dsa_multiplayer`.`Submission`.`questionId`, `dsa_multiplayer`.`Submission`.`userId`, `dsa_multiplayer`.`Submission`.`teamId`, `dsa_multiplayer`.`Submission`.`code`, `dsa_multiplayer`.`Submission`.`language`, `dsa_multiplayer`.`Submission`.`testsPassed`, `dsa_multiplayer`.`Submission`.`totalTests`, `dsa_multiplayer`.`Submission`.`points`, `dsa_multiplayer`.`Submission`.`executionTime`, `dsa_multiplayer`.`Submission`.`memory`, `dsa_multiplayer`.`Submission`.`error`, `dsa_multiplayer`.`Submission`.`submittedAt`, `dsa_multiplayer`.`Submission`.`compileOutput`, `dsa_multiplayer`.`Submission`.`completedAt`, `dsa_multiplayer`.`Submission`.`mode`, `dsa_multiplayer`.`Submission`.`verdict` FROM `dsa_multiplayer`.`Submission` WHERE `dsa_multiplayer`.`Submission`.`id` = ? LIMIT ? OFFSET ?
+prisma:query COMMIT
+✅ Submit Verified: OK
+
+--------------------------------------------------
+Testing Question: Reverse Linked List (ID: 457b28fd-a545-4b3a-949b-b28b15cff5fb)
+▶️ Running Code (Run Function)...
+457b28fd-a545-4b3a-949b-b28b15cff5fb
+function reverseList(head) {
+    // TODO: Implement your solution here
+    return null;
+}
+javascript
+prisma:query SELECT `dsa_multiplayer`.`Question`.`id`, `dsa_multiplayer`.`Question`.`roomId`, `dsa_multiplayer`.`Question`.`title`, `dsa_multiplayer`.`Question`.`description`, `dsa_multiplayer`.`Question`.`sampleInput`, `dsa_multiplayer`.`Question`.`sampleOutput`, `dsa_multiplayer`.`Question`.`points`, `dsa_multiplayer`.`Question`.`difficulty`, `dsa_multiplayer`.`Question`.`timeLimit`, `dsa_multiplayer`.`Question`.`memoryLimit`, `dsa_multiplayer`.`Question`.`createdAt`, `dsa_multiplayer`.`Question`.`functionName`, `dsa_multiplayer`.`Question`.`functionSignature`, `dsa_multiplayer`.`Question`.`inputType`, `dsa_multiplayer`.`Question`.`outputType`, `dsa_multiplayer`.`Question`.`slug`, `dsa_multiplayer`.`Question`.`inputFormats`, `dsa_multiplayer`.`Question`.`outputFormat`, `dsa_multiplayer`.`Question`.`customTypes` FROM `dsa_multiplayer`.`Question` WHERE (`dsa_multiplayer`.`Question`.`id` = ? AND 1=1) LIMIT ? OFFSET ?
+prisma:query SELECT `dsa_multiplayer`.`TestCase`.`id`, `dsa_multiplayer`.`TestCase`.`questionId`, `dsa_multiplayer`.`TestCase`.`input`, `dsa_multiplayer`.`TestCase`.`output`, `dsa_multiplayer`.`TestCase`.`explanation`, `dsa_multiplayer`.`TestCase`.`isHidden`, `dsa_multiplayer`.`TestCase`.`isSample`, `dsa_multiplayer`.`TestCase`.`category`, `dsa_multiplayer`.`TestCase`.`memoryLimit`, `dsa_multiplayer`.`TestCase`.`order`, `dsa_multiplayer`.`TestCase`.`points`, `dsa_multiplayer`.`TestCase`.`timeLimit` FROM `dsa_multiplayer`.`TestCase` WHERE (`dsa_multiplayer`.`TestCase`.`isSample` = ? AND `dsa_multiplayer`.`TestCase`.`questionId` IN (?)) ORDER BY `dsa_multiplayer`.`TestCase`.`order` ASC
+{
+  id: '457b28fd-a545-4b3a-949b-b28b15cff5fb',
+  roomId: 'f3a1c123-554d-4fdc-a60d-83b862f274af',
+  title: 'Reverse Linked List',
+  description: 'Given the head of a singly linked list, reverse the list, and return the reversed list.\n' +
+    '\n' +
+    '**Example:**\n' +
+    'Input: head = [1,2,3,4,5]\n' +
+    'Output: [5,4,3,2,1]\n' +
+    '\n' +
+    '**Constraints:**\n' +
+    '- The number of nodes in the list is the range [0, 5000]\n' +
+    '- -5000 <= Node.val <= 5000',
+  sampleInput: '[1,2,3,4,5]',
+  sampleOutput: '[5,4,3,2,1]',
+  points: 100,
+  difficulty: 'EASY',
+  timeLimit: 2000,
+  memoryLimit: 256,
+  createdAt: 2026-01-25T17:31:12.879Z,
+  functionName: 'reverseList',
+  functionSignature: '{"returnType":"ListNode*","params":[{"type":"ListNode*","name":"head"}]}',
+  inputType: '["linked_list"]',
+  outputType: '"linked_list"',
+  slug: null,
+  inputFormats: [
+    {
+      baseType: 'linked_list',
+      paramName: 'head',
+      paramIndex: 0,
+      parseStrategy: 'linked_list_array',
+      inputFormatExample: '[1,2,3,4,5]'
+    }
+  ],
+  outputFormat: {
+    baseType: 'linked_list',
+    serializeStrategy: 'linked_list_array',
+    outputFormatExample: '[5,4,3,2,1]'
+  },
+  customTypes: null,
+  testCases: [
+    {
+      id: '85cf6315-fe4f-45f4-9a96-0fdb2361acaa',
+      questionId: '457b28fd-a545-4b3a-949b-b28b15cff5fb',
+      input: '[1,2,3,4,5]',
+      output: '[5,4,3,2,1]',
+      explanation: null,
+      isHidden: false,
+      isSample: true,
+      category: 'BASIC',
+      memoryLimit: 256,
+      order: 0,
+      points: 11,
+      timeLimit: 2000
+    },
+    {
+      id: '489386e0-54d0-48e9-8343-5ba89bf59fda',
+      questionId: '457b28fd-a545-4b3a-949b-b28b15cff5fb',
+      input: '[1,2]',
+      output: '[2,1]',
+      explanation: null,
+      isHidden: false,
+      isSample: true,
+      category: 'BASIC',
+      memoryLimit: 256,
+      order: 1,
+      points: 11,
+      timeLimit: 2000
+    },
+    {
+      id: '8bdf1ace-07e4-4981-81b5-693485c69b2c',
+      questionId: '457b28fd-a545-4b3a-949b-b28b15cff5fb',
+      input: '[]',
+      output: '[]',
+      explanation: null,
+      isHidden: false,
+      isSample: true,
+      category: 'BASIC',
+      memoryLimit: 256,
+      order: 2,
+      points: 11,
+      timeLimit: 2000
+    }
+  ]
+}
+prisma:query SELECT `dsa_multiplayer`.`QuestionTemplate`.`id`, `dsa_multiplayer`.`QuestionTemplate`.`questionId`, `dsa_multiplayer`.`QuestionTemplate`.`language`, `dsa_multiplayer`.`QuestionTemplate`.`headerCode`, `dsa_multiplayer`.`QuestionTemplate`.`createdAt`, `dsa_multiplayer`.`QuestionTemplate`.`updatedAt`, `dsa_multiplayer`.`QuestionTemplate`.`boilerplate`, `dsa_multiplayer`.`QuestionTemplate`.`diagram`, `dsa_multiplayer`.`QuestionTemplate`.`mainFunction`, `dsa_multiplayer`.`QuestionTemplate`.`userFunction`, `dsa_multiplayer`.`QuestionTemplate`.`definition` FROM `dsa_multiplayer`.`QuestionTemplate` WHERE ((`dsa_multiplayer`.`QuestionTemplate`.`questionId` = ? AND `dsa_multiplayer`.`QuestionTemplate`.`language` = ?) AND 1=1) LIMIT ? OFFSET ?
+2026-01-26 11:08:34 [[32minfo[39m]: Generated executable code for question 457b28fd-a545-4b3a-949b-b28b15cff5fb, language javascript {"service":"code-execution"}
+=== GENERATED CODE (first 500 chars) ===
+const fs = require('fs');
+const input = fs.readFileSync(0, 'utf8').trim().split('\n');
+let lineIndex = 0;
+
+function readLine() {
+    return lineIndex < input.length ? input[lineIndex++] : "";
+}
+
+function readInt() {
+    return parseInt(readLine());
+}
+
+function readIntArray(n) {
+    return readLine().split(' ').map(Number);
+}
+
+function readMatrix(rows, cols) {
+    const matrix = [];
+    for (let i = 0; i < rows; i++) {
+        matrix.push(readLine().split(' ').map(Number));
+    }
+    return matri
+=== CODE LINES 148-156 ===
+148:     }
+149: }
+150: 
+151: class TreeNode {
+152:     constructor(val = 0, left = null, right = null) {
+153:         this.val = val;
+154:         this.left = left;
+155:         this.right = right;
+156:     }
+=== END DEBUG ===
+2026-01-26 11:08:34 [[32minfo[39m] [83089805-875b-4b8f-a310-bff7e8717eca]: Running test cases {"service":"code-execution","language":"javascript","totalTestCases":3}
+🔍 DEBUG: Executing test case with language: javascript
+2026-01-26 11:08:34 [[32minfo[39m]: Submitting code to Judge0 {"service":"code-execution","languageId":63}
+2026-01-26 11:08:34 [[32minfo[39m]: Polling submission b7560c1c-25c4-4ecd-9584-6f6de79eb294 {"service":"code-execution"}
+2026-01-26 11:08:35 [[32minfo[39m]: Submission b7560c1c-25c4-4ecd-9584-6f6de79eb294 completed {"service":"code-execution","verdict":"RUNTIME_ERROR"}
+🔍 DEBUG: Executing test case with language: javascript
+2026-01-26 11:08:35 [[32minfo[39m]: Submitting code to Judge0 {"service":"code-execution","languageId":63}
+2026-01-26 11:08:35 [[32minfo[39m]: Polling submission cbbf587b-c72f-4dcd-a48f-84b45b448023 {"service":"code-execution"}
+2026-01-26 11:08:36 [[32minfo[39m]: Submission cbbf587b-c72f-4dcd-a48f-84b45b448023 completed {"service":"code-execution","verdict":"RUNTIME_ERROR"}
+🔍 DEBUG: Executing test case with language: javascript
+2026-01-26 11:08:36 [[32minfo[39m]: Submitting code to Judge0 {"service":"code-execution","languageId":63}
+2026-01-26 11:08:36 [[32minfo[39m]: Polling submission 8a893a6c-e752-4994-97d9-6bee64b86a81 {"service":"code-execution"}
+2026-01-26 11:08:37 [[32minfo[39m]: Submission 8a893a6c-e752-4994-97d9-6bee64b86a81 completed {"service":"code-execution","verdict":"RUNTIME_ERROR"}
+2026-01-26 11:08:37 [[32minfo[39m] [83089805-875b-4b8f-a310-bff7e8717eca]: Test cases completed {"service":"code-execution","testsPassed":0,"totalTests":3,"allPassed":false}
+✅ Run Verified: OK
+▶️ Submitting Code (Submit Function)...
+prisma:query SELECT 1
+prisma:query SELECT `dsa_multiplayer`.`Question`.`id`, `dsa_multiplayer`.`Question`.`roomId`, `dsa_multiplayer`.`Question`.`title`, `dsa_multiplayer`.`Question`.`description`, `dsa_multiplayer`.`Question`.`sampleInput`, `dsa_multiplayer`.`Question`.`sampleOutput`, `dsa_multiplayer`.`Question`.`points`, `dsa_multiplayer`.`Question`.`difficulty`, `dsa_multiplayer`.`Question`.`timeLimit`, `dsa_multiplayer`.`Question`.`memoryLimit`, `dsa_multiplayer`.`Question`.`createdAt`, `dsa_multiplayer`.`Question`.`functionName`, `dsa_multiplayer`.`Question`.`functionSignature`, `dsa_multiplayer`.`Question`.`inputType`, `dsa_multiplayer`.`Question`.`outputType`, `dsa_multiplayer`.`Question`.`slug`, `dsa_multiplayer`.`Question`.`inputFormats`, `dsa_multiplayer`.`Question`.`outputFormat`, `dsa_multiplayer`.`Question`.`customTypes` FROM `dsa_multiplayer`.`Question` WHERE (`dsa_multiplayer`.`Question`.`id` = ? AND 1=1) LIMIT ? OFFSET ?
+prisma:query SELECT `dsa_multiplayer`.`TestCase`.`id`, `dsa_multiplayer`.`TestCase`.`questionId`, `dsa_multiplayer`.`TestCase`.`input`, `dsa_multiplayer`.`TestCase`.`output`, `dsa_multiplayer`.`TestCase`.`explanation`, `dsa_multiplayer`.`TestCase`.`isHidden`, `dsa_multiplayer`.`TestCase`.`isSample`, `dsa_multiplayer`.`TestCase`.`category`, `dsa_multiplayer`.`TestCase`.`memoryLimit`, `dsa_multiplayer`.`TestCase`.`order`, `dsa_multiplayer`.`TestCase`.`points`, `dsa_multiplayer`.`TestCase`.`timeLimit` FROM `dsa_multiplayer`.`TestCase` WHERE `dsa_multiplayer`.`TestCase`.`questionId` IN (?) ORDER BY `dsa_multiplayer`.`TestCase`.`order` ASC
+prisma:query SELECT `dsa_multiplayer`.`QuestionTemplate`.`id`, `dsa_multiplayer`.`QuestionTemplate`.`questionId`, `dsa_multiplayer`.`QuestionTemplate`.`language`, `dsa_multiplayer`.`QuestionTemplate`.`headerCode`, `dsa_multiplayer`.`QuestionTemplate`.`createdAt`, `dsa_multiplayer`.`QuestionTemplate`.`updatedAt`, `dsa_multiplayer`.`QuestionTemplate`.`boilerplate`, `dsa_multiplayer`.`QuestionTemplate`.`diagram`, `dsa_multiplayer`.`QuestionTemplate`.`mainFunction`, `dsa_multiplayer`.`QuestionTemplate`.`userFunction`, `dsa_multiplayer`.`QuestionTemplate`.`definition` FROM `dsa_multiplayer`.`QuestionTemplate` WHERE ((`dsa_multiplayer`.`QuestionTemplate`.`questionId` = ? AND `dsa_multiplayer`.`QuestionTemplate`.`language` = ?) AND 1=1) LIMIT ? OFFSET ?
+2026-01-26 11:08:37 [[32minfo[39m]: Generated executable code for question 457b28fd-a545-4b3a-949b-b28b15cff5fb, language javascript {"service":"code-execution"}
+2026-01-26 11:08:37 [[32minfo[39m] [19d7e5c4-b173-4f7f-80c0-ae5b8817a862]: Running test cases {"service":"code-execution","language":"javascript","totalTestCases":9}
+🔍 DEBUG: Executing test case with language: javascript
+2026-01-26 11:08:37 [[32minfo[39m]: Submitting code to Judge0 {"service":"code-execution","languageId":63}
+2026-01-26 11:08:37 [[32minfo[39m]: Polling submission 5a399b16-98bf-4940-80b0-a0428c7c2310 {"service":"code-execution"}
+2026-01-26 11:08:38 [[32minfo[39m]: Submission 5a399b16-98bf-4940-80b0-a0428c7c2310 completed {"service":"code-execution","verdict":"RUNTIME_ERROR"}
+🔍 DEBUG: Executing test case with language: javascript
+2026-01-26 11:08:38 [[32minfo[39m]: Submitting code to Judge0 {"service":"code-execution","languageId":63}
+2026-01-26 11:08:38 [[32minfo[39m]: Polling submission 40598a86-488d-4102-8690-84e00356ab71 {"service":"code-execution"}
+2026-01-26 11:08:39 [[32minfo[39m]: Submission 40598a86-488d-4102-8690-84e00356ab71 completed {"service":"code-execution","verdict":"RUNTIME_ERROR"}
+🔍 DEBUG: Executing test case with language: javascript
+2026-01-26 11:08:39 [[32minfo[39m]: Submitting code to Judge0 {"service":"code-execution","languageId":63}
+2026-01-26 11:08:39 [[32minfo[39m]: Polling submission 2dae0245-a7bc-48d3-9338-dd1713f18189 {"service":"code-execution"}
+2026-01-26 11:08:40 [[32minfo[39m]: Submission 2dae0245-a7bc-48d3-9338-dd1713f18189 completed {"service":"code-execution","verdict":"RUNTIME_ERROR"}
+🔍 DEBUG: Executing test case with language: javascript
+2026-01-26 11:08:40 [[32minfo[39m]: Submitting code to Judge0 {"service":"code-execution","languageId":63}
+2026-01-26 11:08:40 [[32minfo[39m]: Polling submission 4c7c2eca-b0a8-4456-90ca-c35eafbfb4e9 {"service":"code-execution"}
+2026-01-26 11:08:41 [[32minfo[39m]: Submission 4c7c2eca-b0a8-4456-90ca-c35eafbfb4e9 completed {"service":"code-execution","verdict":"RUNTIME_ERROR"}
+🔍 DEBUG: Executing test case with language: javascript
+2026-01-26 11:08:41 [[32minfo[39m]: Submitting code to Judge0 {"service":"code-execution","languageId":63}
+2026-01-26 11:08:41 [[32minfo[39m]: Polling submission ccf56e7f-6595-484f-b401-8124527df5dd {"service":"code-execution"}
+2026-01-26 11:08:42 [[32minfo[39m]: Submission ccf56e7f-6595-484f-b401-8124527df5dd completed {"service":"code-execution","verdict":"RUNTIME_ERROR"}
+🔍 DEBUG: Executing test case with language: javascript
+2026-01-26 11:08:42 [[32minfo[39m]: Submitting code to Judge0 {"service":"code-execution","languageId":63}
+2026-01-26 11:08:42 [[32minfo[39m]: Polling submission 43c0a9ee-f0d3-4153-b9c2-d0b7754380a0 {"service":"code-execution"}
+2026-01-26 11:08:43 [[32minfo[39m]: Submission 43c0a9ee-f0d3-4153-b9c2-d0b7754380a0 completed {"service":"code-execution","verdict":"RUNTIME_ERROR"}
+🔍 DEBUG: Executing test case with language: javascript
+2026-01-26 11:08:43 [[32minfo[39m]: Submitting code to Judge0 {"service":"code-execution","languageId":63}
+2026-01-26 11:08:43 [[32minfo[39m]: Polling submission 5531c3e8-f01f-47fe-8a16-5b4c8fcb4419 {"service":"code-execution"}
+2026-01-26 11:08:44 [[32minfo[39m]: Submission 5531c3e8-f01f-47fe-8a16-5b4c8fcb4419 completed {"service":"code-execution","verdict":"RUNTIME_ERROR"}
+🔍 DEBUG: Executing test case with language: javascript
+2026-01-26 11:08:44 [[32minfo[39m]: Submitting code to Judge0 {"service":"code-execution","languageId":63}
+2026-01-26 11:08:44 [[32minfo[39m]: Polling submission 460a6aa9-3a3c-49cc-be8a-a0b981113dcb {"service":"code-execution"}
+2026-01-26 11:08:45 [[32minfo[39m]: Submission 460a6aa9-3a3c-49cc-be8a-a0b981113dcb completed {"service":"code-execution","verdict":"RUNTIME_ERROR"}
+🔍 DEBUG: Executing test case with language: javascript
+2026-01-26 11:08:45 [[32minfo[39m]: Submitting code to Judge0 {"service":"code-execution","languageId":63}
+2026-01-26 11:08:45 [[32minfo[39m]: Polling submission a68bc7e6-0394-4964-84be-63b19f15d082 {"service":"code-execution"}
+2026-01-26 11:08:46 [[32minfo[39m]: Submission a68bc7e6-0394-4964-84be-63b19f15d082 completed {"service":"code-execution","verdict":"RUNTIME_ERROR"}
+2026-01-26 11:08:46 [[32minfo[39m] [19d7e5c4-b173-4f7f-80c0-ae5b8817a862]: Test cases completed {"service":"code-execution","testsPassed":0,"totalTests":9,"allPassed":false}
+prisma:query BEGIN
+prisma:query INSERT INTO `dsa_multiplayer`.`Submission` (`id`,`questionId`,`userId`,`teamId`,`code`,`language`,`testsPassed`,`totalTests`,`points`,`executionTime`,`memory`,`submittedAt`,`completedAt`,`mode`,`verdict`) VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)
+prisma:query SELECT `dsa_multiplayer`.`Submission`.`id`, `dsa_multiplayer`.`Submission`.`questionId`, `dsa_multiplayer`.`Submission`.`userId`, `dsa_multiplayer`.`Submission`.`teamId`, `dsa_multiplayer`.`Submission`.`code`, `dsa_multiplayer`.`Submission`.`language`, `dsa_multiplayer`.`Submission`.`testsPassed`, `dsa_multiplayer`.`Submission`.`totalTests`, `dsa_multiplayer`.`Submission`.`points`, `dsa_multiplayer`.`Submission`.`executionTime`, `dsa_multiplayer`.`Submission`.`memory`, `dsa_multiplayer`.`Submission`.`error`, `dsa_multiplayer`.`Submission`.`submittedAt`, `dsa_multiplayer`.`Submission`.`compileOutput`, `dsa_multiplayer`.`Submission`.`completedAt`, `dsa_multiplayer`.`Submission`.`mode`, `dsa_multiplayer`.`Submission`.`verdict` FROM `dsa_multiplayer`.`Submission` WHERE `dsa_multiplayer`.`Submission`.`id` = ? LIMIT ? OFFSET ?
+prisma:query COMMIT
+✅ Submit Verified: OK
+
+--------------------------------------------------
+Testing Question: Search a 2D Matrix (ID: 7a2a8d44-f278-4c1d-8b5a-b919880dd60d)
+▶️ Running Code (Run Function)...
+7a2a8d44-f278-4c1d-8b5a-b919880dd60d
+function searchMatrix(matrix, target) {
+    // TODO: Implement your solution here
+    return false;
+}
+javascript
+prisma:query SELECT `dsa_multiplayer`.`Question`.`id`, `dsa_multiplayer`.`Question`.`roomId`, `dsa_multiplayer`.`Question`.`title`, `dsa_multiplayer`.`Question`.`description`, `dsa_multiplayer`.`Question`.`sampleInput`, `dsa_multiplayer`.`Question`.`sampleOutput`, `dsa_multiplayer`.`Question`.`points`, `dsa_multiplayer`.`Question`.`difficulty`, `dsa_multiplayer`.`Question`.`timeLimit`, `dsa_multiplayer`.`Question`.`memoryLimit`, `dsa_multiplayer`.`Question`.`createdAt`, `dsa_multiplayer`.`Question`.`functionName`, `dsa_multiplayer`.`Question`.`functionSignature`, `dsa_multiplayer`.`Question`.`inputType`, `dsa_multiplayer`.`Question`.`outputType`, `dsa_multiplayer`.`Question`.`slug`, `dsa_multiplayer`.`Question`.`inputFormats`, `dsa_multiplayer`.`Question`.`outputFormat`, `dsa_multiplayer`.`Question`.`customTypes` FROM `dsa_multiplayer`.`Question` WHERE (`dsa_multiplayer`.`Question`.`id` = ? AND 1=1) LIMIT ? OFFSET ?
+prisma:query SELECT `dsa_multiplayer`.`TestCase`.`id`, `dsa_multiplayer`.`TestCase`.`questionId`, `dsa_multiplayer`.`TestCase`.`input`, `dsa_multiplayer`.`TestCase`.`output`, `dsa_multiplayer`.`TestCase`.`explanation`, `dsa_multiplayer`.`TestCase`.`isHidden`, `dsa_multiplayer`.`TestCase`.`isSample`, `dsa_multiplayer`.`TestCase`.`category`, `dsa_multiplayer`.`TestCase`.`memoryLimit`, `dsa_multiplayer`.`TestCase`.`order`, `dsa_multiplayer`.`TestCase`.`points`, `dsa_multiplayer`.`TestCase`.`timeLimit` FROM `dsa_multiplayer`.`TestCase` WHERE (`dsa_multiplayer`.`TestCase`.`isSample` = ? AND `dsa_multiplayer`.`TestCase`.`questionId` IN (?)) ORDER BY `dsa_multiplayer`.`TestCase`.`order` ASC
+{
+  id: '7a2a8d44-f278-4c1d-8b5a-b919880dd60d',
+  roomId: 'f3a1c123-554d-4fdc-a60d-83b862f274af',
+  title: 'Search a 2D Matrix',
+  description: 'Write an efficient algorithm that searches for a value target in an m x n integer matrix.\n' +
+    '\n' +
+    '**Example:**\n' +
+    'Input: matrix = [[1,3,5,7],[10,11,16,20],[23,30,34,60]], target = 3\n' +
+    'Output: true\n' +
+    '\n' +
+    '**Constraints:**\n' +
+    '- m == matrix.length\n' +
+    '- n == matrix[i].length\n' +
+    '- 1 <= m, n <= 100',
+  sampleInput: '[[1,3,5,7],[10,11,16,20],[23,30,34,60]]\n3',
+  sampleOutput: 'true',
+  points: 100,
+  difficulty: 'MEDIUM',
+  timeLimit: 2000,
+  memoryLimit: 256,
+  createdAt: 2026-01-25T17:31:12.917Z,
+  functionName: 'searchMatrix',
+  functionSignature: '{"returnType":"bool","params":[{"type":"vector<vector<int>>&","name":"matrix"},{"type":"int","name":"target"}]}',
+  inputType: '["matrix<int>", "int"]',
+  outputType: '"boolean"',
+  slug: null,
+  inputFormats: [
+    {
+      baseType: 'matrix',
+      paramName: 'matrix',
+      paramIndex: 0,
+      elementType: 'int',
+      parseStrategy: 'nested_array',
+      inputFormatExample: '[[1,3,5,7],[10,11,16,20]]'
+    },
+    {
+      baseType: 'primitive',
+      paramName: 'target',
+      paramIndex: 1,
+      elementType: 'int',
+      parseStrategy: 'primitive',
+      inputFormatExample: '3'
+    }
+  ],
+  outputFormat: {
+    baseType: 'primitive',
+    elementType: 'boolean',
+    serializeStrategy: 'primitive',
+    outputFormatExample: 'true'
+  },
+  customTypes: null,
+  testCases: [
+    {
+      id: '7a8a41c8-d304-4f1e-a829-92b05763905f',
+      questionId: '7a2a8d44-f278-4c1d-8b5a-b919880dd60d',
+      input: '[[1,3,5,7],[10,11,16,20],[23,30,34,60]]\n3',
+      output: 'true',
+      explanation: null,
+      isHidden: false,
+      isSample: true,
+      category: 'BASIC',
+      memoryLimit: 256,
+      order: 0,
+      points: 10,
+      timeLimit: 2000
+    },
+    {
+      id: 'c4cc1a13-2f6d-4c75-83aa-9656fd60aa26',
+      questionId: '7a2a8d44-f278-4c1d-8b5a-b919880dd60d',
+      input: '[[1,3,5,7],[10,11,16,20],[23,30,34,60]]\n13',
+      output: 'false',
+      explanation: null,
+      isHidden: false,
+      isSample: true,
+      category: 'BASIC',
+      memoryLimit: 256,
+      order: 1,
+      points: 10,
+      timeLimit: 2000
+    },
+    {
+      id: 'aa64bab3-4c6a-4490-814c-5fd8d747430b',
+      questionId: '7a2a8d44-f278-4c1d-8b5a-b919880dd60d',
+      input: '[[1]]\n1',
+      output: 'true',
+      explanation: null,
+      isHidden: false,
+      isSample: true,
+      category: 'BASIC',
+      memoryLimit: 256,
+      order: 2,
+      points: 10,
+      timeLimit: 2000
+    }
+  ]
+}
+prisma:query SELECT `dsa_multiplayer`.`QuestionTemplate`.`id`, `dsa_multiplayer`.`QuestionTemplate`.`questionId`, `dsa_multiplayer`.`QuestionTemplate`.`language`, `dsa_multiplayer`.`QuestionTemplate`.`headerCode`, `dsa_multiplayer`.`QuestionTemplate`.`createdAt`, `dsa_multiplayer`.`QuestionTemplate`.`updatedAt`, `dsa_multiplayer`.`QuestionTemplate`.`boilerplate`, `dsa_multiplayer`.`QuestionTemplate`.`diagram`, `dsa_multiplayer`.`QuestionTemplate`.`mainFunction`, `dsa_multiplayer`.`QuestionTemplate`.`userFunction`, `dsa_multiplayer`.`QuestionTemplate`.`definition` FROM `dsa_multiplayer`.`QuestionTemplate` WHERE ((`dsa_multiplayer`.`QuestionTemplate`.`questionId` = ? AND `dsa_multiplayer`.`QuestionTemplate`.`language` = ?) AND 1=1) LIMIT ? OFFSET ?
+2026-01-26 11:08:46 [[32minfo[39m]: Generated executable code for question 7a2a8d44-f278-4c1d-8b5a-b919880dd60d, language javascript {"service":"code-execution"}
+=== GENERATED CODE (first 500 chars) ===
+const fs = require('fs');
+const input = fs.readFileSync(0, 'utf8').trim().split('\n');
+let lineIndex = 0;
+
+function readLine() {
+    return lineIndex < input.length ? input[lineIndex++] : "";
+}
+
+function readInt() {
+    return parseInt(readLine());
+}
+
+function readIntArray(n) {
+    return readLine().split(' ').map(Number);
+}
+
+function readMatrix(rows, cols) {
+    const matrix = [];
+    for (let i = 0; i < rows; i++) {
+        matrix.push(readLine().split(' ').map(Number));
+    }
+    return matri
+=== CODE LINES 148-156 ===
+148:     }
+149: }
+150: 
+151: class TreeNode {
+152:     constructor(val = 0, left = null, right = null) {
+153:         this.val = val;
+154:         this.left = left;
+155:         this.right = right;
+156:     }
+=== END DEBUG ===
+2026-01-26 11:08:46 [[32minfo[39m] [40fa8754-c26d-42e0-82dd-9712276d5358]: Running test cases {"service":"code-execution","language":"javascript","totalTestCases":3}
+🔍 DEBUG: Executing test case with language: javascript
+2026-01-26 11:08:46 [[32minfo[39m]: Submitting code to Judge0 {"service":"code-execution","languageId":63}
+2026-01-26 11:08:46 [[32minfo[39m]: Polling submission 7f7b630c-e421-4dfa-9725-0dbfcd5fb645 {"service":"code-execution"}
+2026-01-26 11:08:47 [[32minfo[39m]: Submission 7f7b630c-e421-4dfa-9725-0dbfcd5fb645 completed {"service":"code-execution","verdict":"RUNTIME_ERROR"}
+🔍 DEBUG: Executing test case with language: javascript
+2026-01-26 11:08:47 [[32minfo[39m]: Submitting code to Judge0 {"service":"code-execution","languageId":63}
+2026-01-26 11:08:47 [[32minfo[39m]: Polling submission f040a767-7647-4801-8ef6-ed65c6d39a58 {"service":"code-execution"}
+2026-01-26 11:08:48 [[32minfo[39m]: Submission f040a767-7647-4801-8ef6-ed65c6d39a58 completed {"service":"code-execution","verdict":"RUNTIME_ERROR"}
+🔍 DEBUG: Executing test case with language: javascript
+2026-01-26 11:08:48 [[32minfo[39m]: Submitting code to Judge0 {"service":"code-execution","languageId":63}
+2026-01-26 11:08:48 [[32minfo[39m]: Polling submission 6c948087-436f-46ec-b8ed-4fcd759f0ddf {"service":"code-execution"}
+2026-01-26 11:08:49 [[32minfo[39m]: Submission 6c948087-436f-46ec-b8ed-4fcd759f0ddf completed {"service":"code-execution","verdict":"RUNTIME_ERROR"}
+2026-01-26 11:08:49 [[32minfo[39m] [40fa8754-c26d-42e0-82dd-9712276d5358]: Test cases completed {"service":"code-execution","testsPassed":0,"totalTests":3,"allPassed":false}
+✅ Run Verified: OK
+▶️ Submitting Code (Submit Function)...
+prisma:query SELECT `dsa_multiplayer`.`Question`.`id`, `dsa_multiplayer`.`Question`.`roomId`, `dsa_multiplayer`.`Question`.`title`, `dsa_multiplayer`.`Question`.`description`, `dsa_multiplayer`.`Question`.`sampleInput`, `dsa_multiplayer`.`Question`.`sampleOutput`, `dsa_multiplayer`.`Question`.`points`, `dsa_multiplayer`.`Question`.`difficulty`, `dsa_multiplayer`.`Question`.`timeLimit`, `dsa_multiplayer`.`Question`.`memoryLimit`, `dsa_multiplayer`.`Question`.`createdAt`, `dsa_multiplayer`.`Question`.`functionName`, `dsa_multiplayer`.`Question`.`functionSignature`, `dsa_multiplayer`.`Question`.`inputType`, `dsa_multiplayer`.`Question`.`outputType`, `dsa_multiplayer`.`Question`.`slug`, `dsa_multiplayer`.`Question`.`inputFormats`, `dsa_multiplayer`.`Question`.`outputFormat`, `dsa_multiplayer`.`Question`.`customTypes` FROM `dsa_multiplayer`.`Question` WHERE (`dsa_multiplayer`.`Question`.`id` = ? AND 1=1) LIMIT ? OFFSET ?
+prisma:query SELECT `dsa_multiplayer`.`TestCase`.`id`, `dsa_multiplayer`.`TestCase`.`questionId`, `dsa_multiplayer`.`TestCase`.`input`, `dsa_multiplayer`.`TestCase`.`output`, `dsa_multiplayer`.`TestCase`.`explanation`, `dsa_multiplayer`.`TestCase`.`isHidden`, `dsa_multiplayer`.`TestCase`.`isSample`, `dsa_multiplayer`.`TestCase`.`category`, `dsa_multiplayer`.`TestCase`.`memoryLimit`, `dsa_multiplayer`.`TestCase`.`order`, `dsa_multiplayer`.`TestCase`.`points`, `dsa_multiplayer`.`TestCase`.`timeLimit` FROM `dsa_multiplayer`.`TestCase` WHERE `dsa_multiplayer`.`TestCase`.`questionId` IN (?) ORDER BY `dsa_multiplayer`.`TestCase`.`order` ASC
+prisma:query SELECT `dsa_multiplayer`.`QuestionTemplate`.`id`, `dsa_multiplayer`.`QuestionTemplate`.`questionId`, `dsa_multiplayer`.`QuestionTemplate`.`language`, `dsa_multiplayer`.`QuestionTemplate`.`headerCode`, `dsa_multiplayer`.`QuestionTemplate`.`createdAt`, `dsa_multiplayer`.`QuestionTemplate`.`updatedAt`, `dsa_multiplayer`.`QuestionTemplate`.`boilerplate`, `dsa_multiplayer`.`QuestionTemplate`.`diagram`, `dsa_multiplayer`.`QuestionTemplate`.`mainFunction`, `dsa_multiplayer`.`QuestionTemplate`.`userFunction`, `dsa_multiplayer`.`QuestionTemplate`.`definition` FROM `dsa_multiplayer`.`QuestionTemplate` WHERE ((`dsa_multiplayer`.`QuestionTemplate`.`questionId` = ? AND `dsa_multiplayer`.`QuestionTemplate`.`language` = ?) AND 1=1) LIMIT ? OFFSET ?
+2026-01-26 11:08:49 [[32minfo[39m]: Generated executable code for question 7a2a8d44-f278-4c1d-8b5a-b919880dd60d, language javascript {"service":"code-execution"}
+2026-01-26 11:08:49 [[32minfo[39m] [67e1819c-a308-4661-a314-d77ed81b2a60]: Running test cases {"service":"code-execution","language":"javascript","totalTestCases":10}
+🔍 DEBUG: Executing test case with language: javascript
+2026-01-26 11:08:49 [[32minfo[39m]: Submitting code to Judge0 {"service":"code-execution","languageId":63}
+2026-01-26 11:08:49 [[32minfo[39m]: Polling submission 5f2b12c8-40f6-411a-b9a4-cdeece82fcfa {"service":"code-execution"}
+2026-01-26 11:08:50 [[32minfo[39m]: Submission 5f2b12c8-40f6-411a-b9a4-cdeece82fcfa completed {"service":"code-execution","verdict":"RUNTIME_ERROR"}
+🔍 DEBUG: Executing test case with language: javascript
+2026-01-26 11:08:50 [[32minfo[39m]: Submitting code to Judge0 {"service":"code-execution","languageId":63}
+2026-01-26 11:08:50 [[32minfo[39m]: Polling submission 4c419199-1edb-4dd5-92c7-cfdfb0654007 {"service":"code-execution"}
+2026-01-26 11:08:51 [[32minfo[39m]: Submission 4c419199-1edb-4dd5-92c7-cfdfb0654007 completed {"service":"code-execution","verdict":"RUNTIME_ERROR"}
+🔍 DEBUG: Executing test case with language: javascript
+2026-01-26 11:08:51 [[32minfo[39m]: Submitting code to Judge0 {"service":"code-execution","languageId":63}
+2026-01-26 11:08:51 [[32minfo[39m]: Polling submission cedfc13b-8350-4068-8865-7b0f7ca40c77 {"service":"code-execution"}
+2026-01-26 11:08:52 [[32minfo[39m]: Submission cedfc13b-8350-4068-8865-7b0f7ca40c77 completed {"service":"code-execution","verdict":"RUNTIME_ERROR"}
+🔍 DEBUG: Executing test case with language: javascript
+2026-01-26 11:08:52 [[32minfo[39m]: Submitting code to Judge0 {"service":"code-execution","languageId":63}
+2026-01-26 11:08:52 [[32minfo[39m]: Polling submission 6167f517-4eb9-4487-99cf-0dbd571532c2 {"service":"code-execution"}
+2026-01-26 11:08:53 [[32minfo[39m]: Submission 6167f517-4eb9-4487-99cf-0dbd571532c2 completed {"service":"code-execution","verdict":"RUNTIME_ERROR"}
+🔍 DEBUG: Executing test case with language: javascript
+2026-01-26 11:08:53 [[32minfo[39m]: Submitting code to Judge0 {"service":"code-execution","languageId":63}
+2026-01-26 11:08:53 [[32minfo[39m]: Polling submission 87378128-e54f-428d-abcd-66f6b6b53052 {"service":"code-execution"}
+2026-01-26 11:08:54 [[32minfo[39m]: Submission 87378128-e54f-428d-abcd-66f6b6b53052 completed {"service":"code-execution","verdict":"RUNTIME_ERROR"}
+🔍 DEBUG: Executing test case with language: javascript
+2026-01-26 11:08:54 [[32minfo[39m]: Submitting code to Judge0 {"service":"code-execution","languageId":63}
+2026-01-26 11:08:54 [[32minfo[39m]: Polling submission efc5c126-8d1d-4db6-ac3e-a1dbd0bcf4ad {"service":"code-execution"}
+2026-01-26 11:08:55 [[32minfo[39m]: Submission efc5c126-8d1d-4db6-ac3e-a1dbd0bcf4ad completed {"service":"code-execution","verdict":"RUNTIME_ERROR"}
+🔍 DEBUG: Executing test case with language: javascript
+2026-01-26 11:08:55 [[32minfo[39m]: Submitting code to Judge0 {"service":"code-execution","languageId":63}
+2026-01-26 11:08:55 [[32minfo[39m]: Polling submission d15f8a4f-229a-4eee-868e-8adf88b5730c {"service":"code-execution"}
+2026-01-26 11:08:56 [[32minfo[39m]: Submission d15f8a4f-229a-4eee-868e-8adf88b5730c completed {"service":"code-execution","verdict":"RUNTIME_ERROR"}
+🔍 DEBUG: Executing test case with language: javascript
+2026-01-26 11:08:56 [[32minfo[39m]: Submitting code to Judge0 {"service":"code-execution","languageId":63}
+2026-01-26 11:08:56 [[32minfo[39m]: Polling submission 1e9c0022-1031-4bbb-8ac2-f85bcc66e0c9 {"service":"code-execution"}
+2026-01-26 11:08:57 [[32minfo[39m]: Submission 1e9c0022-1031-4bbb-8ac2-f85bcc66e0c9 completed {"service":"code-execution","verdict":"RUNTIME_ERROR"}
+🔍 DEBUG: Executing test case with language: javascript
+2026-01-26 11:08:57 [[32minfo[39m]: Submitting code to Judge0 {"service":"code-execution","languageId":63}
+2026-01-26 11:08:57 [[32minfo[39m]: Polling submission 8caae238-c688-46de-b29b-0e3142528c1c {"service":"code-execution"}
+2026-01-26 11:08:58 [[32minfo[39m]: Submission 8caae238-c688-46de-b29b-0e3142528c1c completed {"service":"code-execution","verdict":"RUNTIME_ERROR"}
+🔍 DEBUG: Executing test case with language: javascript
+2026-01-26 11:08:58 [[32minfo[39m]: Submitting code to Judge0 {"service":"code-execution","languageId":63}
+2026-01-26 11:08:58 [[32minfo[39m]: Polling submission 98ffc074-ed4c-4134-a3cd-c725e40ea82e {"service":"code-execution"}
+2026-01-26 11:08:59 [[32minfo[39m]: Submission 98ffc074-ed4c-4134-a3cd-c725e40ea82e completed {"service":"code-execution","verdict":"RUNTIME_ERROR"}
+2026-01-26 11:08:59 [[32minfo[39m] [67e1819c-a308-4661-a314-d77ed81b2a60]: Test cases completed {"service":"code-execution","testsPassed":0,"totalTests":10,"allPassed":false}
+prisma:query SELECT 1
+prisma:query BEGIN
+prisma:query INSERT INTO `dsa_multiplayer`.`Submission` (`id`,`questionId`,`userId`,`teamId`,`code`,`language`,`testsPassed`,`totalTests`,`points`,`executionTime`,`memory`,`submittedAt`,`completedAt`,`mode`,`verdict`) VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)
+prisma:query SELECT `dsa_multiplayer`.`Submission`.`id`, `dsa_multiplayer`.`Submission`.`questionId`, `dsa_multiplayer`.`Submission`.`userId`, `dsa_multiplayer`.`Submission`.`teamId`, `dsa_multiplayer`.`Submission`.`code`, `dsa_multiplayer`.`Submission`.`language`, `dsa_multiplayer`.`Submission`.`testsPassed`, `dsa_multiplayer`.`Submission`.`totalTests`, `dsa_multiplayer`.`Submission`.`points`, `dsa_multiplayer`.`Submission`.`executionTime`, `dsa_multiplayer`.`Submission`.`memory`, `dsa_multiplayer`.`Submission`.`error`, `dsa_multiplayer`.`Submission`.`submittedAt`, `dsa_multiplayer`.`Submission`.`compileOutput`, `dsa_multiplayer`.`Submission`.`completedAt`, `dsa_multiplayer`.`Submission`.`mode`, `dsa_multiplayer`.`Submission`.`verdict` FROM `dsa_multiplayer`.`Submission` WHERE `dsa_multiplayer`.`Submission`.`id` = ? LIMIT ? OFFSET ?
+prisma:query COMMIT
+✅ Submit Verified: OK
+
+--------------------------------------------------
+Testing Question: Valid Parentheses (ID: a64b4696-b5a1-4361-8777-e3b4e37ec116)
+▶️ Running Code (Run Function)...
+a64b4696-b5a1-4361-8777-e3b4e37ec116
+function isValid(s) {
+    // TODO: Implement your solution here
+    return false;
+}
+javascript
+prisma:query SELECT `dsa_multiplayer`.`Question`.`id`, `dsa_multiplayer`.`Question`.`roomId`, `dsa_multiplayer`.`Question`.`title`, `dsa_multiplayer`.`Question`.`description`, `dsa_multiplayer`.`Question`.`sampleInput`, `dsa_multiplayer`.`Question`.`sampleOutput`, `dsa_multiplayer`.`Question`.`points`, `dsa_multiplayer`.`Question`.`difficulty`, `dsa_multiplayer`.`Question`.`timeLimit`, `dsa_multiplayer`.`Question`.`memoryLimit`, `dsa_multiplayer`.`Question`.`createdAt`, `dsa_multiplayer`.`Question`.`functionName`, `dsa_multiplayer`.`Question`.`functionSignature`, `dsa_multiplayer`.`Question`.`inputType`, `dsa_multiplayer`.`Question`.`outputType`, `dsa_multiplayer`.`Question`.`slug`, `dsa_multiplayer`.`Question`.`inputFormats`, `dsa_multiplayer`.`Question`.`outputFormat`, `dsa_multiplayer`.`Question`.`customTypes` FROM `dsa_multiplayer`.`Question` WHERE (`dsa_multiplayer`.`Question`.`id` = ? AND 1=1) LIMIT ? OFFSET ?
+prisma:query SELECT `dsa_multiplayer`.`TestCase`.`id`, `dsa_multiplayer`.`TestCase`.`questionId`, `dsa_multiplayer`.`TestCase`.`input`, `dsa_multiplayer`.`TestCase`.`output`, `dsa_multiplayer`.`TestCase`.`explanation`, `dsa_multiplayer`.`TestCase`.`isHidden`, `dsa_multiplayer`.`TestCase`.`isSample`, `dsa_multiplayer`.`TestCase`.`category`, `dsa_multiplayer`.`TestCase`.`memoryLimit`, `dsa_multiplayer`.`TestCase`.`order`, `dsa_multiplayer`.`TestCase`.`points`, `dsa_multiplayer`.`TestCase`.`timeLimit` FROM `dsa_multiplayer`.`TestCase` WHERE (`dsa_multiplayer`.`TestCase`.`isSample` = ? AND `dsa_multiplayer`.`TestCase`.`questionId` IN (?)) ORDER BY `dsa_multiplayer`.`TestCase`.`order` ASC
+{
+  id: 'a64b4696-b5a1-4361-8777-e3b4e37ec116',
+  roomId: 'f3a1c123-554d-4fdc-a60d-83b862f274af',
+  title: 'Valid Parentheses',
+  description: "Given a string s containing just the characters '(', ')', '{', '}', '[' and ']', determine if the input string is valid.\n" +
+    '\n' +
+    '**Example:**\n' +
+    'Input: s = "()[]{}"\n' +
+    'Output: true\n' +
+    '\n' +
+    '**Constraints:**\n' +
+    '- 1 <= s.length <= 10^4\n' +
+    "- s consists of parentheses only '()[]{}'",
+  sampleInput: '()[]{}',
+  sampleOutput: 'true',
+  points: 100,
+  difficulty: 'EASY',
+  timeLimit: 2000,
+  memoryLimit: 256,
+  createdAt: 2026-01-25T17:31:12.935Z,
+  functionName: 'isValid',
+  functionSignature: '{"returnType":"bool","params":[{"type":"string","name":"s"}]}',
+  inputType: '["string"]',
+  outputType: '"boolean"',
+  slug: null,
+  inputFormats: [
+    {
+      baseType: 'primitive',
+      paramName: 's',
+      paramIndex: 0,
+      elementType: 'string',
+      parseStrategy: 'primitive',
+      inputFormatExample: '()[]{}'
+    }
+  ],
+  outputFormat: {
+    baseType: 'primitive',
+    elementType: 'boolean',
+    serializeStrategy: 'primitive',
+    outputFormatExample: 'true'
+  },
+  customTypes: null,
+  testCases: [
+    {
+      id: 'fe7a677a-e810-40bc-afcb-a7ad43568762',
+      questionId: 'a64b4696-b5a1-4361-8777-e3b4e37ec116',
+      input: '"()"',
+      output: 'true',
+      explanation: null,
+      isHidden: false,
+      isSample: true,
+      category: 'BASIC',
+      memoryLimit: 256,
+      order: 0,
+      points: 9,
+      timeLimit: 2000
+    },
+    {
+      id: 'b2c9d6d2-9367-4844-bfa2-d65aabadccd1',
+      questionId: 'a64b4696-b5a1-4361-8777-e3b4e37ec116',
+      input: '"()[]{}"',
+      output: 'true',
+      explanation: null,
+      isHidden: false,
+      isSample: true,
+      category: 'BASIC',
+      memoryLimit: 256,
+      order: 1,
+      points: 9,
+      timeLimit: 2000
+    },
+    {
+      id: '2b682ef5-91f0-45bc-bfcf-4bc9cb1d0dca',
+      questionId: 'a64b4696-b5a1-4361-8777-e3b4e37ec116',
+      input: '"(]"',
+      output: 'false',
+      explanation: null,
+      isHidden: false,
+      isSample: true,
+      category: 'BASIC',
+      memoryLimit: 256,
+      order: 2,
+      points: 9,
+      timeLimit: 2000
+    }
+  ]
+}
+prisma:query SELECT `dsa_multiplayer`.`QuestionTemplate`.`id`, `dsa_multiplayer`.`QuestionTemplate`.`questionId`, `dsa_multiplayer`.`QuestionTemplate`.`language`, `dsa_multiplayer`.`QuestionTemplate`.`headerCode`, `dsa_multiplayer`.`QuestionTemplate`.`createdAt`, `dsa_multiplayer`.`QuestionTemplate`.`updatedAt`, `dsa_multiplayer`.`QuestionTemplate`.`boilerplate`, `dsa_multiplayer`.`QuestionTemplate`.`diagram`, `dsa_multiplayer`.`QuestionTemplate`.`mainFunction`, `dsa_multiplayer`.`QuestionTemplate`.`userFunction`, `dsa_multiplayer`.`QuestionTemplate`.`definition` FROM `dsa_multiplayer`.`QuestionTemplate` WHERE ((`dsa_multiplayer`.`QuestionTemplate`.`questionId` = ? AND `dsa_multiplayer`.`QuestionTemplate`.`language` = ?) AND 1=1) LIMIT ? OFFSET ?
+2026-01-26 11:08:59 [[32minfo[39m]: Generated executable code for question a64b4696-b5a1-4361-8777-e3b4e37ec116, language javascript {"service":"code-execution"}
+=== GENERATED CODE (first 500 chars) ===
+const fs = require('fs');
+const input = fs.readFileSync(0, 'utf8').trim().split('\n');
+let lineIndex = 0;
+
+function readLine() {
+    return lineIndex < input.length ? input[lineIndex++] : "";
+}
+
+function readInt() {
+    return parseInt(readLine());
+}
+
+function readIntArray(n) {
+    return readLine().split(' ').map(Number);
+}
+
+function readMatrix(rows, cols) {
+    const matrix = [];
+    for (let i = 0; i < rows; i++) {
+        matrix.push(readLine().split(' ').map(Number));
+    }
+    return matri
+=== CODE LINES 148-156 ===
+148:     }
+149: }
+150: 
+151: class TreeNode {
+152:     constructor(val = 0, left = null, right = null) {
+153:         this.val = val;
+154:         this.left = left;
+155:         this.right = right;
+156:     }
+=== END DEBUG ===
+2026-01-26 11:08:59 [[32minfo[39m] [367a57ee-dfda-49b5-ba48-1926f6894949]: Running test cases {"service":"code-execution","language":"javascript","totalTestCases":3}
+🔍 DEBUG: Executing test case with language: javascript
+2026-01-26 11:08:59 [[32minfo[39m]: Submitting code to Judge0 {"service":"code-execution","languageId":63}
+2026-01-26 11:08:59 [[32minfo[39m]: Polling submission d551761b-c65b-433e-a164-67499860b1d5 {"service":"code-execution"}
+2026-01-26 11:09:00 [[32minfo[39m]: Submission d551761b-c65b-433e-a164-67499860b1d5 completed {"service":"code-execution","verdict":"RUNTIME_ERROR"}
+🔍 DEBUG: Executing test case with language: javascript
+2026-01-26 11:09:00 [[32minfo[39m]: Submitting code to Judge0 {"service":"code-execution","languageId":63}
+2026-01-26 11:09:00 [[32minfo[39m]: Polling submission c1c4ce53-64de-44c4-be83-1cfe7ee299f0 {"service":"code-execution"}
+2026-01-26 11:09:01 [[32minfo[39m]: Submission c1c4ce53-64de-44c4-be83-1cfe7ee299f0 completed {"service":"code-execution","verdict":"RUNTIME_ERROR"}
+🔍 DEBUG: Executing test case with language: javascript
+2026-01-26 11:09:01 [[32minfo[39m]: Submitting code to Judge0 {"service":"code-execution","languageId":63}
+2026-01-26 11:09:01 [[32minfo[39m]: Polling submission 00afa21f-b5cd-41af-b414-45c4a5b17e72 {"service":"code-execution"}
+2026-01-26 11:09:02 [[32minfo[39m]: Submission 00afa21f-b5cd-41af-b414-45c4a5b17e72 completed {"service":"code-execution","verdict":"RUNTIME_ERROR"}
+2026-01-26 11:09:02 [[32minfo[39m] [367a57ee-dfda-49b5-ba48-1926f6894949]: Test cases completed {"service":"code-execution","testsPassed":0,"totalTests":3,"allPassed":false}
+✅ Run Verified: OK
+▶️ Submitting Code (Submit Function)...
+prisma:query SELECT `dsa_multiplayer`.`Question`.`id`, `dsa_multiplayer`.`Question`.`roomId`, `dsa_multiplayer`.`Question`.`title`, `dsa_multiplayer`.`Question`.`description`, `dsa_multiplayer`.`Question`.`sampleInput`, `dsa_multiplayer`.`Question`.`sampleOutput`, `dsa_multiplayer`.`Question`.`points`, `dsa_multiplayer`.`Question`.`difficulty`, `dsa_multiplayer`.`Question`.`timeLimit`, `dsa_multiplayer`.`Question`.`memoryLimit`, `dsa_multiplayer`.`Question`.`createdAt`, `dsa_multiplayer`.`Question`.`functionName`, `dsa_multiplayer`.`Question`.`functionSignature`, `dsa_multiplayer`.`Question`.`inputType`, `dsa_multiplayer`.`Question`.`outputType`, `dsa_multiplayer`.`Question`.`slug`, `dsa_multiplayer`.`Question`.`inputFormats`, `dsa_multiplayer`.`Question`.`outputFormat`, `dsa_multiplayer`.`Question`.`customTypes` FROM `dsa_multiplayer`.`Question` WHERE (`dsa_multiplayer`.`Question`.`id` = ? AND 1=1) LIMIT ? OFFSET ?
+prisma:query SELECT `dsa_multiplayer`.`TestCase`.`id`, `dsa_multiplayer`.`TestCase`.`questionId`, `dsa_multiplayer`.`TestCase`.`input`, `dsa_multiplayer`.`TestCase`.`output`, `dsa_multiplayer`.`TestCase`.`explanation`, `dsa_multiplayer`.`TestCase`.`isHidden`, `dsa_multiplayer`.`TestCase`.`isSample`, `dsa_multiplayer`.`TestCase`.`category`, `dsa_multiplayer`.`TestCase`.`memoryLimit`, `dsa_multiplayer`.`TestCase`.`order`, `dsa_multiplayer`.`TestCase`.`points`, `dsa_multiplayer`.`TestCase`.`timeLimit` FROM `dsa_multiplayer`.`TestCase` WHERE `dsa_multiplayer`.`TestCase`.`questionId` IN (?) ORDER BY `dsa_multiplayer`.`TestCase`.`order` ASC
+prisma:query SELECT `dsa_multiplayer`.`QuestionTemplate`.`id`, `dsa_multiplayer`.`QuestionTemplate`.`questionId`, `dsa_multiplayer`.`QuestionTemplate`.`language`, `dsa_multiplayer`.`QuestionTemplate`.`headerCode`, `dsa_multiplayer`.`QuestionTemplate`.`createdAt`, `dsa_multiplayer`.`QuestionTemplate`.`updatedAt`, `dsa_multiplayer`.`QuestionTemplate`.`boilerplate`, `dsa_multiplayer`.`QuestionTemplate`.`diagram`, `dsa_multiplayer`.`QuestionTemplate`.`mainFunction`, `dsa_multiplayer`.`QuestionTemplate`.`userFunction`, `dsa_multiplayer`.`QuestionTemplate`.`definition` FROM `dsa_multiplayer`.`QuestionTemplate` WHERE ((`dsa_multiplayer`.`QuestionTemplate`.`questionId` = ? AND `dsa_multiplayer`.`QuestionTemplate`.`language` = ?) AND 1=1) LIMIT ? OFFSET ?
+2026-01-26 11:09:02 [[32minfo[39m]: Generated executable code for question a64b4696-b5a1-4361-8777-e3b4e37ec116, language javascript {"service":"code-execution"}
+2026-01-26 11:09:02 [[32minfo[39m] [5e8aa6d7-8a8b-417c-99c6-fcf1e8c7bee7]: Running test cases {"service":"code-execution","language":"javascript","totalTestCases":11}
+🔍 DEBUG: Executing test case with language: javascript
+2026-01-26 11:09:02 [[32minfo[39m]: Submitting code to Judge0 {"service":"code-execution","languageId":63}
+2026-01-26 11:09:02 [[32minfo[39m]: Polling submission 3c4cdeb7-ab40-4c30-b6c5-f55747e29ace {"service":"code-execution"}
+2026-01-26 11:09:03 [[32minfo[39m]: Submission 3c4cdeb7-ab40-4c30-b6c5-f55747e29ace completed {"service":"code-execution","verdict":"RUNTIME_ERROR"}
+🔍 DEBUG: Executing test case with language: javascript
+2026-01-26 11:09:03 [[32minfo[39m]: Submitting code to Judge0 {"service":"code-execution","languageId":63}
+2026-01-26 11:09:04 [[32minfo[39m]: Polling submission d774b583-687f-4c2d-bb35-4b35a3a1e7e3 {"service":"code-execution"}
+2026-01-26 11:09:05 [[32minfo[39m]: Submission d774b583-687f-4c2d-bb35-4b35a3a1e7e3 completed {"service":"code-execution","verdict":"RUNTIME_ERROR"}
+🔍 DEBUG: Executing test case with language: javascript
+2026-01-26 11:09:05 [[32minfo[39m]: Submitting code to Judge0 {"service":"code-execution","languageId":63}
+2026-01-26 11:09:05 [[32minfo[39m]: Polling submission 9f334366-8ae3-40c5-abf3-18da18aca80b {"service":"code-execution"}
+2026-01-26 11:09:06 [[32minfo[39m]: Submission 9f334366-8ae3-40c5-abf3-18da18aca80b completed {"service":"code-execution","verdict":"RUNTIME_ERROR"}
+🔍 DEBUG: Executing test case with language: javascript
+2026-01-26 11:09:06 [[32minfo[39m]: Submitting code to Judge0 {"service":"code-execution","languageId":63}
+2026-01-26 11:09:06 [[32minfo[39m]: Polling submission a2ff0d5a-e233-4dbe-9e04-c396996b61f2 {"service":"code-execution"}
+2026-01-26 11:09:07 [[32minfo[39m]: Submission a2ff0d5a-e233-4dbe-9e04-c396996b61f2 completed {"service":"code-execution","verdict":"RUNTIME_ERROR"}
+🔍 DEBUG: Executing test case with language: javascript
+2026-01-26 11:09:07 [[32minfo[39m]: Submitting code to Judge0 {"service":"code-execution","languageId":63}
+2026-01-26 11:09:07 [[32minfo[39m]: Polling submission 7fa964d2-9c52-437a-9cea-47d58b0d7527 {"service":"code-execution"}
+2026-01-26 11:09:08 [[32minfo[39m]: Submission 7fa964d2-9c52-437a-9cea-47d58b0d7527 completed {"service":"code-execution","verdict":"RUNTIME_ERROR"}
+🔍 DEBUG: Executing test case with language: javascript
+2026-01-26 11:09:08 [[32minfo[39m]: Submitting code to Judge0 {"service":"code-execution","languageId":63}
+2026-01-26 11:09:08 [[32minfo[39m]: Polling submission 92d63c2f-9808-4720-a911-18205a496745 {"service":"code-execution"}
+2026-01-26 11:09:09 [[32minfo[39m]: Submission 92d63c2f-9808-4720-a911-18205a496745 completed {"service":"code-execution","verdict":"RUNTIME_ERROR"}
+🔍 DEBUG: Executing test case with language: javascript
+2026-01-26 11:09:09 [[32minfo[39m]: Submitting code to Judge0 {"service":"code-execution","languageId":63}
+2026-01-26 11:09:09 [[32minfo[39m]: Polling submission 36c857aa-1eb7-4f93-95a7-d09c817e8a92 {"service":"code-execution"}
+2026-01-26 11:09:10 [[32minfo[39m]: Submission 36c857aa-1eb7-4f93-95a7-d09c817e8a92 completed {"service":"code-execution","verdict":"RUNTIME_ERROR"}
+🔍 DEBUG: Executing test case with language: javascript
+2026-01-26 11:09:10 [[32minfo[39m]: Submitting code to Judge0 {"service":"code-execution","languageId":63}
+2026-01-26 11:09:10 [[32minfo[39m]: Polling submission 6a6edb09-5747-4201-92b3-2e2c8fe58710 {"service":"code-execution"}
+2026-01-26 11:09:11 [[32minfo[39m]: Submission 6a6edb09-5747-4201-92b3-2e2c8fe58710 completed {"service":"code-execution","verdict":"RUNTIME_ERROR"}
+🔍 DEBUG: Executing test case with language: javascript
+2026-01-26 11:09:11 [[32minfo[39m]: Submitting code to Judge0 {"service":"code-execution","languageId":63}
+2026-01-26 11:09:11 [[32minfo[39m]: Polling submission b1f77855-3660-4b54-8d19-09eef46b3592 {"service":"code-execution"}
+2026-01-26 11:09:12 [[32minfo[39m]: Submission b1f77855-3660-4b54-8d19-09eef46b3592 completed {"service":"code-execution","verdict":"RUNTIME_ERROR"}
+🔍 DEBUG: Executing test case with language: javascript
+2026-01-26 11:09:12 [[32minfo[39m]: Submitting code to Judge0 {"service":"code-execution","languageId":63}
+2026-01-26 11:09:12 [[32minfo[39m]: Polling submission f915a091-2d28-4220-860a-6e476ef4e169 {"service":"code-execution"}
+2026-01-26 11:09:13 [[32minfo[39m]: Submission f915a091-2d28-4220-860a-6e476ef4e169 completed {"service":"code-execution","verdict":"RUNTIME_ERROR"}
+🔍 DEBUG: Executing test case with language: javascript
+2026-01-26 11:09:13 [[32minfo[39m]: Submitting code to Judge0 {"service":"code-execution","languageId":63}
+2026-01-26 11:09:13 [[32minfo[39m]: Polling submission f698eb00-66a5-42ce-9a36-cac22649d10a {"service":"code-execution"}
+2026-01-26 11:09:14 [[32minfo[39m]: Submission f698eb00-66a5-42ce-9a36-cac22649d10a completed {"service":"code-execution","verdict":"RUNTIME_ERROR"}
+2026-01-26 11:09:14 [[32minfo[39m] [5e8aa6d7-8a8b-417c-99c6-fcf1e8c7bee7]: Test cases completed {"service":"code-execution","testsPassed":0,"totalTests":11,"allPassed":false}
+prisma:query BEGIN
+prisma:query INSERT INTO `dsa_multiplayer`.`Submission` (`id`,`questionId`,`userId`,`teamId`,`code`,`language`,`testsPassed`,`totalTests`,`points`,`executionTime`,`memory`,`submittedAt`,`completedAt`,`mode`,`verdict`) VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)
+prisma:query SELECT `dsa_multiplayer`.`Submission`.`id`, `dsa_multiplayer`.`Submission`.`questionId`, `dsa_multiplayer`.`Submission`.`userId`, `dsa_multiplayer`.`Submission`.`teamId`, `dsa_multiplayer`.`Submission`.`code`, `dsa_multiplayer`.`Submission`.`language`, `dsa_multiplayer`.`Submission`.`testsPassed`, `dsa_multiplayer`.`Submission`.`totalTests`, `dsa_multiplayer`.`Submission`.`points`, `dsa_multiplayer`.`Submission`.`executionTime`, `dsa_multiplayer`.`Submission`.`memory`, `dsa_multiplayer`.`Submission`.`error`, `dsa_multiplayer`.`Submission`.`submittedAt`, `dsa_multiplayer`.`Submission`.`compileOutput`, `dsa_multiplayer`.`Submission`.`completedAt`, `dsa_multiplayer`.`Submission`.`mode`, `dsa_multiplayer`.`Submission`.`verdict` FROM `dsa_multiplayer`.`Submission` WHERE `dsa_multiplayer`.`Submission`.`id` = ? LIMIT ? OFFSET ?
+prisma:query COMMIT
+✅ Submit Verified: OK
+
+--------------------------------------------------
+Testing Question: Maximum Depth of Binary Tree (ID: aa770d22-ed8e-4fbd-8352-8783ef36f78e)
+▶️ Running Code (Run Function)...
+aa770d22-ed8e-4fbd-8352-8783ef36f78e
+function maxDepth(root) {
+    // TODO: Implement your solution here
+    return 0;
+}
+javascript
+prisma:query SELECT `dsa_multiplayer`.`Question`.`id`, `dsa_multiplayer`.`Question`.`roomId`, `dsa_multiplayer`.`Question`.`title`, `dsa_multiplayer`.`Question`.`description`, `dsa_multiplayer`.`Question`.`sampleInput`, `dsa_multiplayer`.`Question`.`sampleOutput`, `dsa_multiplayer`.`Question`.`points`, `dsa_multiplayer`.`Question`.`difficulty`, `dsa_multiplayer`.`Question`.`timeLimit`, `dsa_multiplayer`.`Question`.`memoryLimit`, `dsa_multiplayer`.`Question`.`createdAt`, `dsa_multiplayer`.`Question`.`functionName`, `dsa_multiplayer`.`Question`.`functionSignature`, `dsa_multiplayer`.`Question`.`inputType`, `dsa_multiplayer`.`Question`.`outputType`, `dsa_multiplayer`.`Question`.`slug`, `dsa_multiplayer`.`Question`.`inputFormats`, `dsa_multiplayer`.`Question`.`outputFormat`, `dsa_multiplayer`.`Question`.`customTypes` FROM `dsa_multiplayer`.`Question` WHERE (`dsa_multiplayer`.`Question`.`id` = ? AND 1=1) LIMIT ? OFFSET ?
+prisma:query SELECT `dsa_multiplayer`.`TestCase`.`id`, `dsa_multiplayer`.`TestCase`.`questionId`, `dsa_multiplayer`.`TestCase`.`input`, `dsa_multiplayer`.`TestCase`.`output`, `dsa_multiplayer`.`TestCase`.`explanation`, `dsa_multiplayer`.`TestCase`.`isHidden`, `dsa_multiplayer`.`TestCase`.`isSample`, `dsa_multiplayer`.`TestCase`.`category`, `dsa_multiplayer`.`TestCase`.`memoryLimit`, `dsa_multiplayer`.`TestCase`.`order`, `dsa_multiplayer`.`TestCase`.`points`, `dsa_multiplayer`.`TestCase`.`timeLimit` FROM `dsa_multiplayer`.`TestCase` WHERE (`dsa_multiplayer`.`TestCase`.`isSample` = ? AND `dsa_multiplayer`.`TestCase`.`questionId` IN (?)) ORDER BY `dsa_multiplayer`.`TestCase`.`order` ASC
+{
+  id: 'aa770d22-ed8e-4fbd-8352-8783ef36f78e',
+  roomId: 'f3a1c123-554d-4fdc-a60d-83b862f274af',
+  title: 'Maximum Depth of Binary Tree',
+  description: 'Given the root of a binary tree, return its maximum depth.\n' +
+    '\n' +
+    "A binary tree's maximum depth is the number of nodes along the longest path from the root node down to the farthest leaf node.\n" +
+    '\n' +
+    '**Example:**\n' +
+    'Input: root = [3,9,20,null,null,15,7]\n' +
+    'Output: 3\n' +
+    '\n' +
+    '**Constraints:**\n' +
+    '- The number of nodes in the tree is in the range [0, 10^4]\n' +
+    '- -100 <= Node.val <= 100',
+  sampleInput: '[3,9,20,null,null,15,7]',
+  sampleOutput: '3',
+  points: 100,
+  difficulty: 'EASY',
+  timeLimit: 2000,
+  memoryLimit: 256,
+  createdAt: 2026-01-25T17:31:12.897Z,
+  functionName: 'maxDepth',
+  functionSignature: '{"returnType":"int","params":[{"type":"TreeNode*","name":"root"}]}',
+  inputType: '["tree"]',
+  outputType: '"int"',
+  slug: null,
+  inputFormats: [
+    {
+      baseType: 'tree',
+      paramName: 'root',
+      paramIndex: 0,
+      parseStrategy: 'tree_array',
+      inputFormatExample: '[3,9,20,null,null,15,7]'
+    }
+  ],
+  outputFormat: {
+    baseType: 'primitive',
+    elementType: 'int',
+    serializeStrategy: 'primitive',
+    outputFormatExample: '3'
+  },
+  customTypes: null,
+  testCases: [
+    {
+      id: '98647736-c8ea-4fae-b07b-0b5c0e7354bc',
+      questionId: 'aa770d22-ed8e-4fbd-8352-8783ef36f78e',
+      input: '[3,9,20,null,null,15,7]',
+      output: '3',
+      explanation: null,
+      isHidden: false,
+      isSample: true,
+      category: 'BASIC',
+      memoryLimit: 256,
+      order: 0,
+      points: 12,
+      timeLimit: 2000
+    },
+    {
+      id: '986ce581-0de9-4a74-8f8a-7a0fe6799121',
+      questionId: 'aa770d22-ed8e-4fbd-8352-8783ef36f78e',
+      input: '[1,null,2]',
+      output: '2',
+      explanation: null,
+      isHidden: false,
+      isSample: true,
+      category: 'BASIC',
+      memoryLimit: 256,
+      order: 1,
+      points: 12,
+      timeLimit: 2000
+    },
+    {
+      id: 'f9f93add-87c9-4057-ac06-17ba6385a112',
+      questionId: 'aa770d22-ed8e-4fbd-8352-8783ef36f78e',
+      input: '[]',
+      output: '0',
+      explanation: null,
+      isHidden: false,
+      isSample: true,
+      category: 'BASIC',
+      memoryLimit: 256,
+      order: 2,
+      points: 12,
+      timeLimit: 2000
+    }
+  ]
+}
+prisma:query SELECT `dsa_multiplayer`.`QuestionTemplate`.`id`, `dsa_multiplayer`.`QuestionTemplate`.`questionId`, `dsa_multiplayer`.`QuestionTemplate`.`language`, `dsa_multiplayer`.`QuestionTemplate`.`headerCode`, `dsa_multiplayer`.`QuestionTemplate`.`createdAt`, `dsa_multiplayer`.`QuestionTemplate`.`updatedAt`, `dsa_multiplayer`.`QuestionTemplate`.`boilerplate`, `dsa_multiplayer`.`QuestionTemplate`.`diagram`, `dsa_multiplayer`.`QuestionTemplate`.`mainFunction`, `dsa_multiplayer`.`QuestionTemplate`.`userFunction`, `dsa_multiplayer`.`QuestionTemplate`.`definition` FROM `dsa_multiplayer`.`QuestionTemplate` WHERE ((`dsa_multiplayer`.`QuestionTemplate`.`questionId` = ? AND `dsa_multiplayer`.`QuestionTemplate`.`language` = ?) AND 1=1) LIMIT ? OFFSET ?
+2026-01-26 11:09:14 [[32minfo[39m]: Generated executable code for question aa770d22-ed8e-4fbd-8352-8783ef36f78e, language javascript {"service":"code-execution"}
+=== GENERATED CODE (first 500 chars) ===
+const fs = require('fs');
+const input = fs.readFileSync(0, 'utf8').trim().split('\n');
+let lineIndex = 0;
+
+function readLine() {
+    return lineIndex < input.length ? input[lineIndex++] : "";
+}
+
+function readInt() {
+    return parseInt(readLine());
+}
+
+function readIntArray(n) {
+    return readLine().split(' ').map(Number);
+}
+
+function readMatrix(rows, cols) {
+    const matrix = [];
+    for (let i = 0; i < rows; i++) {
+        matrix.push(readLine().split(' ').map(Number));
+    }
+    return matri
+=== CODE LINES 148-156 ===
+148:     }
+149: }
+150: 
+151: class TreeNode {
+152:     constructor(val = 0, left = null, right = null) {
+153:         this.val = val;
+154:         this.left = left;
+155:         this.right = right;
+156:     }
+=== END DEBUG ===
+2026-01-26 11:09:14 [[32minfo[39m] [64e8e88a-cb36-407f-b447-084853138ef3]: Running test cases {"service":"code-execution","language":"javascript","totalTestCases":3}
+🔍 DEBUG: Executing test case with language: javascript
+2026-01-26 11:09:14 [[32minfo[39m]: Submitting code to Judge0 {"service":"code-execution","languageId":63}
+2026-01-26 11:09:14 [[32minfo[39m]: Polling submission 370918ac-ee3e-4b35-87a0-8cf61484bc06 {"service":"code-execution"}
+2026-01-26 11:09:15 [[32minfo[39m]: Submission 370918ac-ee3e-4b35-87a0-8cf61484bc06 completed {"service":"code-execution","verdict":"RUNTIME_ERROR"}
+🔍 DEBUG: Executing test case with language: javascript
+2026-01-26 11:09:15 [[32minfo[39m]: Submitting code to Judge0 {"service":"code-execution","languageId":63}
+2026-01-26 11:09:15 [[32minfo[39m]: Polling submission b7c4a071-1e80-40cd-a9e2-9460295fec75 {"service":"code-execution"}
+2026-01-26 11:09:16 [[32minfo[39m]: Submission b7c4a071-1e80-40cd-a9e2-9460295fec75 completed {"service":"code-execution","verdict":"RUNTIME_ERROR"}
+🔍 DEBUG: Executing test case with language: javascript
+2026-01-26 11:09:16 [[32minfo[39m]: Submitting code to Judge0 {"service":"code-execution","languageId":63}
+2026-01-26 11:09:16 [[32minfo[39m]: Polling submission e8340719-7b9b-4bc4-856b-c2156920a7bc {"service":"code-execution"}
+2026-01-26 11:09:17 [[32minfo[39m]: Submission e8340719-7b9b-4bc4-856b-c2156920a7bc completed {"service":"code-execution","verdict":"RUNTIME_ERROR"}
+2026-01-26 11:09:17 [[32minfo[39m] [64e8e88a-cb36-407f-b447-084853138ef3]: Test cases completed {"service":"code-execution","testsPassed":0,"totalTests":3,"allPassed":false}
+✅ Run Verified: OK
+▶️ Submitting Code (Submit Function)...
+prisma:query SELECT 1
+prisma:query SELECT `dsa_multiplayer`.`Question`.`id`, `dsa_multiplayer`.`Question`.`roomId`, `dsa_multiplayer`.`Question`.`title`, `dsa_multiplayer`.`Question`.`description`, `dsa_multiplayer`.`Question`.`sampleInput`, `dsa_multiplayer`.`Question`.`sampleOutput`, `dsa_multiplayer`.`Question`.`points`, `dsa_multiplayer`.`Question`.`difficulty`, `dsa_multiplayer`.`Question`.`timeLimit`, `dsa_multiplayer`.`Question`.`memoryLimit`, `dsa_multiplayer`.`Question`.`createdAt`, `dsa_multiplayer`.`Question`.`functionName`, `dsa_multiplayer`.`Question`.`functionSignature`, `dsa_multiplayer`.`Question`.`inputType`, `dsa_multiplayer`.`Question`.`outputType`, `dsa_multiplayer`.`Question`.`slug`, `dsa_multiplayer`.`Question`.`inputFormats`, `dsa_multiplayer`.`Question`.`outputFormat`, `dsa_multiplayer`.`Question`.`customTypes` FROM `dsa_multiplayer`.`Question` WHERE (`dsa_multiplayer`.`Question`.`id` = ? AND 1=1) LIMIT ? OFFSET ?
+prisma:query SELECT `dsa_multiplayer`.`TestCase`.`id`, `dsa_multiplayer`.`TestCase`.`questionId`, `dsa_multiplayer`.`TestCase`.`input`, `dsa_multiplayer`.`TestCase`.`output`, `dsa_multiplayer`.`TestCase`.`explanation`, `dsa_multiplayer`.`TestCase`.`isHidden`, `dsa_multiplayer`.`TestCase`.`isSample`, `dsa_multiplayer`.`TestCase`.`category`, `dsa_multiplayer`.`TestCase`.`memoryLimit`, `dsa_multiplayer`.`TestCase`.`order`, `dsa_multiplayer`.`TestCase`.`points`, `dsa_multiplayer`.`TestCase`.`timeLimit` FROM `dsa_multiplayer`.`TestCase` WHERE `dsa_multiplayer`.`TestCase`.`questionId` IN (?) ORDER BY `dsa_multiplayer`.`TestCase`.`order` ASC
+prisma:query SELECT `dsa_multiplayer`.`QuestionTemplate`.`id`, `dsa_multiplayer`.`QuestionTemplate`.`questionId`, `dsa_multiplayer`.`QuestionTemplate`.`language`, `dsa_multiplayer`.`QuestionTemplate`.`headerCode`, `dsa_multiplayer`.`QuestionTemplate`.`createdAt`, `dsa_multiplayer`.`QuestionTemplate`.`updatedAt`, `dsa_multiplayer`.`QuestionTemplate`.`boilerplate`, `dsa_multiplayer`.`QuestionTemplate`.`diagram`, `dsa_multiplayer`.`QuestionTemplate`.`mainFunction`, `dsa_multiplayer`.`QuestionTemplate`.`userFunction`, `dsa_multiplayer`.`QuestionTemplate`.`definition` FROM `dsa_multiplayer`.`QuestionTemplate` WHERE ((`dsa_multiplayer`.`QuestionTemplate`.`questionId` = ? AND `dsa_multiplayer`.`QuestionTemplate`.`language` = ?) AND 1=1) LIMIT ? OFFSET ?
+2026-01-26 11:09:17 [[32minfo[39m]: Generated executable code for question aa770d22-ed8e-4fbd-8352-8783ef36f78e, language javascript {"service":"code-execution"}
+2026-01-26 11:09:17 [[32minfo[39m] [1a724e72-dffd-4a39-ac1d-9e3bc05d54ab]: Running test cases {"service":"code-execution","language":"javascript","totalTestCases":8}
+🔍 DEBUG: Executing test case with language: javascript
+2026-01-26 11:09:17 [[32minfo[39m]: Submitting code to Judge0 {"service":"code-execution","languageId":63}
+2026-01-26 11:09:17 [[32minfo[39m]: Polling submission 0a879634-b789-42ba-9649-ba276fac0a39 {"service":"code-execution"}
+2026-01-26 11:09:18 [[32minfo[39m]: Submission 0a879634-b789-42ba-9649-ba276fac0a39 completed {"service":"code-execution","verdict":"RUNTIME_ERROR"}
+🔍 DEBUG: Executing test case with language: javascript
+2026-01-26 11:09:18 [[32minfo[39m]: Submitting code to Judge0 {"service":"code-execution","languageId":63}
+2026-01-26 11:09:18 [[32minfo[39m]: Polling submission a4523f00-3d91-44b2-a780-fc57893990d0 {"service":"code-execution"}
+2026-01-26 11:09:19 [[32minfo[39m]: Submission a4523f00-3d91-44b2-a780-fc57893990d0 completed {"service":"code-execution","verdict":"RUNTIME_ERROR"}
+🔍 DEBUG: Executing test case with language: javascript
+2026-01-26 11:09:19 [[32minfo[39m]: Submitting code to Judge0 {"service":"code-execution","languageId":63}
+2026-01-26 11:09:19 [[32minfo[39m]: Polling submission 3204dc93-6761-474d-ae0f-eef38522d8b5 {"service":"code-execution"}
+2026-01-26 11:09:20 [[32minfo[39m]: Submission 3204dc93-6761-474d-ae0f-eef38522d8b5 completed {"service":"code-execution","verdict":"RUNTIME_ERROR"}
+🔍 DEBUG: Executing test case with language: javascript
+2026-01-26 11:09:20 [[32minfo[39m]: Submitting code to Judge0 {"service":"code-execution","languageId":63}
+2026-01-26 11:09:20 [[32minfo[39m]: Polling submission 6da05325-f491-4113-8de2-9b0cab4c008e {"service":"code-execution"}
+2026-01-26 11:09:21 [[32minfo[39m]: Submission 6da05325-f491-4113-8de2-9b0cab4c008e completed {"service":"code-execution","verdict":"RUNTIME_ERROR"}
+🔍 DEBUG: Executing test case with language: javascript
+2026-01-26 11:09:21 [[32minfo[39m]: Submitting code to Judge0 {"service":"code-execution","languageId":63}
+2026-01-26 11:09:21 [[32minfo[39m]: Polling submission 9d3e56a1-bcb5-495b-9df2-fbb7c2273f44 {"service":"code-execution"}
+2026-01-26 11:09:22 [[32minfo[39m]: Submission 9d3e56a1-bcb5-495b-9df2-fbb7c2273f44 completed {"service":"code-execution","verdict":"RUNTIME_ERROR"}
+🔍 DEBUG: Executing test case with language: javascript
+2026-01-26 11:09:22 [[32minfo[39m]: Submitting code to Judge0 {"service":"code-execution","languageId":63}
+2026-01-26 11:09:22 [[32minfo[39m]: Polling submission db6eb69d-3393-4bd8-b48f-c1842ebdd36d {"service":"code-execution"}
+2026-01-26 11:09:23 [[32minfo[39m]: Submission db6eb69d-3393-4bd8-b48f-c1842ebdd36d completed {"service":"code-execution","verdict":"RUNTIME_ERROR"}
+🔍 DEBUG: Executing test case with language: javascript
+2026-01-26 11:09:23 [[32minfo[39m]: Submitting code to Judge0 {"service":"code-execution","languageId":63}
+2026-01-26 11:09:23 [[32minfo[39m]: Polling submission d2faec75-5fae-4544-b218-8b76c59f145b {"service":"code-execution"}
+2026-01-26 11:09:24 [[32minfo[39m]: Submission d2faec75-5fae-4544-b218-8b76c59f145b completed {"service":"code-execution","verdict":"RUNTIME_ERROR"}
+🔍 DEBUG: Executing test case with language: javascript
+2026-01-26 11:09:24 [[32minfo[39m]: Submitting code to Judge0 {"service":"code-execution","languageId":63}
+2026-01-26 11:09:24 [[32minfo[39m]: Polling submission 8da02e2d-0cf4-4504-a63a-a3367eddaab5 {"service":"code-execution"}
+2026-01-26 11:09:25 [[32minfo[39m]: Submission 8da02e2d-0cf4-4504-a63a-a3367eddaab5 completed {"service":"code-execution","verdict":"RUNTIME_ERROR"}
+2026-01-26 11:09:25 [[32minfo[39m] [1a724e72-dffd-4a39-ac1d-9e3bc05d54ab]: Test cases completed {"service":"code-execution","testsPassed":0,"totalTests":8,"allPassed":false}
+prisma:query BEGIN
+prisma:query INSERT INTO `dsa_multiplayer`.`Submission` (`id`,`questionId`,`userId`,`teamId`,`code`,`language`,`testsPassed`,`totalTests`,`points`,`executionTime`,`memory`,`submittedAt`,`completedAt`,`mode`,`verdict`) VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)
+prisma:query SELECT `dsa_multiplayer`.`Submission`.`id`, `dsa_multiplayer`.`Submission`.`questionId`, `dsa_multiplayer`.`Submission`.`userId`, `dsa_multiplayer`.`Submission`.`teamId`, `dsa_multiplayer`.`Submission`.`code`, `dsa_multiplayer`.`Submission`.`language`, `dsa_multiplayer`.`Submission`.`testsPassed`, `dsa_multiplayer`.`Submission`.`totalTests`, `dsa_multiplayer`.`Submission`.`points`, `dsa_multiplayer`.`Submission`.`executionTime`, `dsa_multiplayer`.`Submission`.`memory`, `dsa_multiplayer`.`Submission`.`error`, `dsa_multiplayer`.`Submission`.`submittedAt`, `dsa_multiplayer`.`Submission`.`compileOutput`, `dsa_multiplayer`.`Submission`.`completedAt`, `dsa_multiplayer`.`Submission`.`mode`, `dsa_multiplayer`.`Submission`.`verdict` FROM `dsa_multiplayer`.`Submission` WHERE `dsa_multiplayer`.`Submission`.`id` = ? LIMIT ? OFFSET ?
+prisma:query COMMIT
+✅ Submit Verified: OK
+
+==================================================
+SUMMARY:
+Runs: 5 Passed / 0 Failed
+Submits: 5 Passed / 0 Failed
+==================================================

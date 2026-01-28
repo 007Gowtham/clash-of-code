@@ -66,252 +66,103 @@ exports.createRoom = async (req, res, next) => {
         });
 
         // Seed 5 Template Questions (For Testing) - LeetCode Style
-        const TEMPLATE_QUESTIONS = [
-            {
-                title: 'Two Sum',
-                description: `Given an array of integers nums and an integer target, return indices of the two numbers such that they add up to target.
+        // Centralized Question Bank Selection Logic
+        console.log('User:', req.user); // Debug user
 
-You may assume that each input would have exactly one solution, and you may not use the same element twice.
+        let config = req.body.problemConfig;
+        if (!config && req.body.settings && req.body.settings.difficulty) {
+            config = req.body.settings.difficulty;
+        }
+        if (!config) {
+            config = { easy: 1, medium: 2, hard: 1 }; // Default config
+        }
 
-You can return the answer in any order.`,
-                difficulty: 'EASY',
-                points: 100,
-                sampleInput: 'nums = [2,7,11,15], target = 9',
-                sampleOutput: '[0,1]',
-                constraints: [
-                    '2 <= nums.length <= 10^4',
-                    '-10^9 <= nums[i] <= 10^9',
-                    '-10^9 <= target <= 10^9',
-                    'Only one valid answer exists.'
-                ],
-                testCases: [
-                    {
-                        input: '[2,7,11,15]\n9',
-                        output: '[0,1]',
-                        explanation: 'Because nums[0] + nums[1] == 9, we return [0, 1].',
-                        isHidden: false,
-                        isSample: true
-                    },
-                    {
-                        input: '[3,2,4]\n6',
-                        output: '[1,2]',
-                        explanation: 'Because nums[1] + nums[2] == 6, we return [1, 2].',
-                        isHidden: false,
-                        isSample: true
-                    },
-                    {
-                        input: '[3,3]\n6',
-                        output: '[0,1]',
-                        explanation: 'Because nums[0] + nums[1] == 6, we return [0, 1].',
-                        isHidden: false,
-                        isSample: true
-                    }
-                ],
-                hints: [
-                    'A brute force approach would be to check every pair of numbers. What is the time complexity?',
-                    'Think about how you can reduce the time complexity using a hash map.',
-                    'For each number, check if its complement (target - num) exists in the hash map.'
-                ]
-            },
-            {
-                title: 'Reverse Linked List',
-                description: `Given the head of a singly linked list, reverse the list, and return the reversed list.`,
-                difficulty: 'EASY',
-                points: 150,
-                sampleInput: 'head = [1,2,3,4,5]',
-                sampleOutput: '[5,4,3,2,1]',
-                constraints: [
-                    'The number of nodes in the list is the range [0, 5000].',
-                    '-5000 <= Node.val <= 5000'
-                ],
-                testCases: [
-                    {
-                        input: '[1,2,3,4,5]',
-                        output: '[5,4,3,2,1]',
-                        explanation: 'The linked list is reversed from 1->2->3->4->5 to 5->4->3->2->1.',
-                        isHidden: false,
-                        isSample: true
-                    },
-                    {
-                        input: '[1,2]',
-                        output: '[2,1]',
-                        explanation: 'The linked list is reversed from 1->2 to 2->1.',
-                        isHidden: false,
-                        isSample: true
-                    },
-                    {
-                        input: '[]',
-                        output: '[]',
-                        explanation: 'Empty list remains empty.',
-                        isHidden: false,
-                        isSample: true
-                    }
-                ],
-                hints: [
-                    'Think about using three pointers: previous, current, and next.',
-                    'You need to reverse the direction of the pointers one by one.',
-                    'Don\'t forget to handle the edge case of an empty list.'
-                ]
-            },
-            {
-                title: 'Binary Tree Level Order Traversal',
-                description: `Given the root of a binary tree, return the level order traversal of its nodes' values. (i.e., from left to right, level by level).`,
-                difficulty: 'MEDIUM',
-                points: 200,
-                sampleInput: 'root = [3,9,20,null,null,15,7]',
-                sampleOutput: '[[3],[9,20],[15,7]]',
-                constraints: [
-                    'The number of nodes in the tree is in the range [0, 2000].',
-                    '-1000 <= Node.val <= 1000'
-                ],
-                testCases: [
-                    {
-                        input: '[3,9,20,null,null,15,7]',
-                        output: '[[3],[9,20],[15,7]]',
-                        explanation: 'Level 0: [3], Level 1: [9,20], Level 2: [15,7]',
-                        isHidden: false,
-                        isSample: true
-                    },
-                    {
-                        input: '[1]',
-                        output: '[[1]]',
-                        explanation: 'Single node tree has only one level.',
-                        isHidden: false,
-                        isSample: true
-                    },
-                    {
-                        input: '[]',
-                        output: '[]',
-                        explanation: 'Empty tree returns empty array.',
-                        isHidden: false,
-                        isSample: true
-                    }
-                ],
-                hints: [
-                    'Use a queue data structure for Breadth-First Search (BFS).',
-                    'Process nodes level by level, keeping track of the current level size.',
-                    'Add all nodes at the current level to the result before moving to the next level.'
-                ]
-            },
-            {
-                title: 'Longest Palindromic Substring',
-                description: `Given a string s, return the longest palindromic substring in s.
+        console.log('Problem Config:', config);
 
-A palindrome is a string that reads the same backward as forward.`,
-                difficulty: 'MEDIUM',
-                points: 250,
-                sampleInput: 's = "babad"',
-                sampleOutput: '"bab"',
-                constraints: [
-                    '1 <= s.length <= 1000',
-                    's consist of only digits and English letters.'
-                ],
-                testCases: [
-                    {
-                        input: 'babad',
-                        output: 'bab',
-                        explanation: '"aba" is also a valid answer. Both "bab" and "aba" are palindromes.',
-                        isHidden: false,
-                        isSample: true
-                    },
-                    {
-                        input: 'cbbd',
-                        output: 'bb',
-                        explanation: 'The longest palindromic substring is "bb".',
-                        isHidden: false,
-                        isSample: true
-                    },
-                    {
-                        input: 'a',
-                        output: 'a',
-                        explanation: 'Single character is always a palindrome.',
-                        isHidden: false,
-                        isSample: true
-                    }
-                ],
-                hints: [
-                    'Think about expanding around the center of potential palindromes.',
-                    'Remember that palindromes can have odd length (single center) or even length (two centers).',
-                    'For each position, try expanding outward while characters match.',
-                    'Keep track of the longest palindrome found so far.'
-                ]
-            },
-            {
-                title: 'Merge K Sorted Lists',
-                description: `You are given an array of k linked-lists lists, each linked-list is sorted in ascending order.
+        // Helper to pick random questions
+        const pickQuestions = async (diff, count) => {
+            if (!count || count <= 0) return [];
 
-Merge all the linked-lists into one sorted linked-list and return it.`,
-                difficulty: 'HARD',
-                points: 400,
-                sampleInput: 'lists = [[1,4,5],[1,3,4],[2,6]]',
-                sampleOutput: '[1,1,2,3,4,4,5,6]',
-                constraints: [
-                    'k == lists.length',
-                    '0 <= k <= 10^4',
-                    '0 <= lists[i].length <= 500',
-                    '-10^4 <= lists[i][j] <= 10^4',
-                    'lists[i] is sorted in ascending order.',
-                    'The sum of lists[i].length will not exceed 10^4.'
-                ],
-                testCases: [
-                    {
-                        input: '[[1,4,5],[1,3,4],[2,6]]',
-                        output: '[1,1,2,3,4,4,5,6]',
-                        explanation: 'Merging all three sorted lists: [1,4,5], [1,3,4], and [2,6] results in [1,1,2,3,4,4,5,6].',
-                        isHidden: false,
-                        isSample: true
-                    },
-                    {
-                        input: '[]',
-                        output: '[]',
-                        explanation: 'No lists to merge.',
-                        isHidden: false,
-                        isSample: true
-                    },
-                    {
-                        input: '[[]]',
-                        output: '[]',
-                        explanation: 'Single empty list results in empty output.',
-                        isHidden: false,
-                        isSample: true
-                    }
-                ],
-                hints: [
-                    'The brute force approach is to merge lists one by one. What is the time complexity?',
-                    'Think about using a Min-Heap (Priority Queue) to efficiently find the smallest element.',
-                    'Add the head of each list to the heap, then repeatedly extract the minimum and add the next node.',
-                    'Consider the divide and conquer approach: merge pairs of lists, then merge the results.'
-                ]
+            // Get all available global questions of this difficulty
+            // Global questions have roomId: null
+            const questions = await prisma.question.findMany({
+                where: {
+                    difficulty: diff.toUpperCase(),
+                    roomId: null
+                },
+                select: { id: true }
+            });
+
+            if (questions.length < count) {
+                // Determine missing counts for better error messaging 
+                // but for now, we throw error as per requirements 'Fail early'
+                throw new Error(`Not enough ${diff} questions available. Requested: ${count}, Available: ${questions.length}`);
             }
-        ];
 
-        await Promise.all(TEMPLATE_QUESTIONS.map(q => {
-            const { constraints, testCases, hints, ...rest } = q;
-            return prisma.question.create({
+            // Fisher-Yates shuffle
+            for (let i = questions.length - 1; i > 0; i--) {
+                const j = Math.floor(Math.random() * (i + 1));
+                [questions[i], questions[j]] = [questions[j], questions[i]];
+            }
+
+            // Take the first 'count' items
+            return questions.slice(0, count).map(q => q.id);
+        };
+
+        const easyIds = await pickQuestions('EASY', config.easy);
+        const mediumIds = await pickQuestions('MEDIUM', config.medium);
+        const hardIds = await pickQuestions('HARD', config.hard);
+
+        const selectedQuestionIds = [...easyIds, ...mediumIds, ...hardIds];
+
+        if (selectedQuestionIds.length === 0) {
+            // Rollback room creation if no questions selected (though pickQuestions throws if not enough)
+            // But if config was all zeros?
+            // The prompt says "Not enough hard problems -> Reject".
+            // If user asks for 0, allowed.
+            // If total is 0?
+            // "Must select at least one question" is reasonable.
+            // We can delete the room and return error
+            await prisma.room.delete({ where: { id: room.id } });
+            return errorResponse(res, 'Must select at least one question', 400);
+        }
+
+        // Shuffle the final set of questions (User requirement: "Shuffle after combining difficulties")
+        for (let i = selectedQuestionIds.length - 1; i > 0; i--) {
+            const j = Math.floor(Math.random() * (i + 1));
+            [selectedQuestionIds[i], selectedQuestionIds[j]] = [selectedQuestionIds[j], selectedQuestionIds[i]];
+        }
+
+        // Link questions to room via RoomQuestion (Many-to-Many)
+        await Promise.all(selectedQuestionIds.map((qId, index) => {
+            return prisma.roomQuestion.create({
                 data: {
-                    ...rest,
                     roomId: room.id,
-                    constraints: {
-                        create: constraints.map((c, i) => ({ content: c, order: i }))
-                    },
-                    testCases: {
-                        create: testCases.map((tc, i) => ({
-                            input: tc.input,
-                            output: tc.output,
-                            explanation: tc.explanation || null,
-                            isHidden: tc.isHidden,
-                            isSample: tc.isSample || false,
-                            order: i,  // Add order field
-                            category: 'BASIC',  // Add category
-                            points: 10  // Add points per test case
-                        }))
-                    },
-                    hints: {
-                        create: hints.map((h, i) => ({ content: h, order: i }))
-                    }
+                    questionId: qId,
+                    order: index
                 }
             });
         }));
+
+        // Fetch full question details for the response
+        // Note: findMany does not guarantee order, so we need to map back to selectedQuestionIds
+        const selectedQuestions = await prisma.question.findMany({
+            where: {
+                id: { in: selectedQuestionIds }
+            },
+            select: {
+                id: true,
+                title: true,
+                difficulty: true,
+                points: true,
+                slug: true
+            }
+        });
+
+        // Map back to the shuffled order
+        const OrderedQuestionsResponse = selectedQuestionIds.map(id => {
+            return selectedQuestions.find(q => q.id === id);
+        }).filter(q => q); // filter out undefined just in case
 
         return successResponse(
             res,
@@ -330,6 +181,7 @@ Merge all the linked-lists into one sorted linked-list and return it.`,
                 status: room.status,
                 adminId: room.adminId,
                 createdAt: room.createdAt,
+                questions: OrderedQuestionsResponse // Include the shuffled questions here
             },
             'Room created successfully',
             201

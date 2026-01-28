@@ -14,10 +14,10 @@ const { apiLimiter } = require('./middleware/rateLimiter');
 // Import routes
 const authRoutes = require('./routes/auth');
 const roomRoutes = require('./routes/room');
-const teamRoutes = require('./routes/team');
+// const teamRoutes = require('./routes/team');
 const questionRoutes = require('./routes/question');
 const submissionRoutes = require('./routes/submission');
-const testingRoutes = require('./routes/testing');
+// const testingRoutes = require('./routes/testing');
 const problemRoutes = require('./routes/problemRoutes');
 
 // Initialize app
@@ -70,10 +70,10 @@ app.get('/health', (req, res) => {
 // API Routes
 app.use('/api/auth', authRoutes);
 app.use('/api/rooms', roomRoutes);
-app.use('/api/teams', teamRoutes);
+// app.use('/api/teams', teamRoutes);
 app.use('/api/questions', questionRoutes);
 app.use('/api/submissions', submissionRoutes);
-app.use('/api/testing', testingRoutes);
+// app.use('/api/testing', testingRoutes);
 app.use('/api/problems', problemRoutes); // NEW: LeetCode-style problem endpoints
 
 // Socket.io setup
@@ -125,6 +125,8 @@ async function startServer() {
             console.log('║  • POST   /api/rooms/join                              ║');
             console.log('║  • POST   /api/teams                                   ║');
             console.log('║  • GET    /api/teams/room/:roomId                      ║');
+            console.log('║  • POST   /api/submissions/run-function/:questionId    ║');
+            console.log('║  • POST   /api/submissions/submit-function/:questionId ║');
             console.log('║                                                        ║');
             console.log('╚════════════════════════════════════════════════════════╝');
             console.log('');

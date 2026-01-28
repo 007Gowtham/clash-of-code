@@ -4,24 +4,27 @@ const logger = require('../utils/logger');
 
 class Judge0Service {
     constructor() {
-        this.baseUrl = process.env.JUDGE0_URL || 'https://judge0-ce.p.rapidapi.com';
-        this.apiKey = process.env.JUDGE0_API_KEY;
-        this.host = process.env.JUDGE0_HOST;
+        // Self-hosted Judge0 URL (no API key needed)
+        this.baseUrl = process.env.JUDGE0_API_URL || 'http://127.0.0.1:2358';
 
         // Configuration
         this.maxRetries = parseInt(process.env.JUDGE0_MAX_RETRIES || '3', 10);
         this.pollInterval = parseInt(process.env.JUDGE0_POLL_INTERVAL || '500', 10);
         this.pollMaxAttempts = parseInt(process.env.JUDGE0_POLL_MAX_ATTEMPTS || '20', 10);
 
-        // Initialize axios client
+        logger.info('🔧 Judge0 Service Configuration:', {
+            baseUrl: this.baseUrl,
+            maxRetries: this.maxRetries,
+            pollInterval: this.pollInterval,
+            pollMaxAttempts: this.pollMaxAttempts
+        });
+
+        // Initialize axios client for self-hosted Judge0
+        // NO API KEY, NO RAPIDAPI HEADERS
         this.client = axios.create({
             baseURL: this.baseUrl,
             headers: {
-                'Content-Type': 'application/json',
-                ...(this.apiKey && { 'X-RapidAPI-Key': this.apiKey }),
-                ...(this.host && { 'X-RapidAPI-Host': this.host }),
-                // If using self-hosted without RapidAPI auth, these might be different or unnecessary
-                // but for RapidAPI they are required.
+                'Content-Type': 'application/json'
             },
             timeout: 10000 // 10s timeout
         });
@@ -212,27 +215,25 @@ class Judge0Service {
 
     /**
      * Execute code and wait for result (convenience method)
+     * @param {string} sourceCode - Source code to execute
+     * @param {string} language - Language name or ID
+     * @param {string} input - Standard input
+     * @param {string} expectedOutput - Expected output for verification
+     * @param {Object} options - Additional options (timeLimit, memoryLimit)
+     * @returns {Promise<Object>} Execution result
      */
     async execute(sourceCode, language, input, expectedOutput, options = {}) {
         const { timeLimit, memoryLimit } = options;
-
-        // Check if we should use local execution (if language is JS and we want to fallback or forced)
-        // For now, if submit fails with 403 (Subscription error), we fallback?
-        // Better: try standard submit, catch error, if error is auth/subscription, try local for JS.
 
         try {
             const token = await this.submitCode(sourceCode, language, input, expectedOutput, timeLimit, memoryLimit);
             return await this.pollUntilComplete(token);
         } catch (error) {
-            // Check if error is related to subscription/auth or if it's just a general failure
-            // 403 Forbidden is common for "You are not subscribed"
-            const isSubscriptionError = error.response && (error.response.status === 403 || error.response.status === 401);
-            const isJs = language === 63 || language === 'javascript' || language === 'js';
-
-            if (isSubscriptionError && isJs) {
-                logger.warn('Judge0 subscription/auth failed, falling back to local JS execution');
-                return this.executeLocally(sourceCode, input);
-            }
+            logger.error('Judge0 execution failed', {
+                error: error.message,
+                language,
+                response: error.response?.data
+            });
             throw error;
         }
     }

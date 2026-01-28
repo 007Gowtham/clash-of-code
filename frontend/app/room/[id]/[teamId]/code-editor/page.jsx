@@ -212,25 +212,52 @@ export default function CodeEditorPage() {
     };
   }, [socket, teamData, currentUserId]);
 
-  // Use ONLY real questions from API (no mock fallback)
-  const finalQuestions = questionsData?.questions?.length > 0
-    ? questionsData.questions.map(q => ({
-      ...q,
-      constraints: q.constraints || [],
-      examples: (q.testCases && q.testCases.length > 0)
-        ? q.testCases.map(tc => ({
-          input: tc.input,
-          output: tc.output,
-          explanation: tc.explanation
-        }))
-        : ((q.sampleInput && q.sampleOutput) ? [{
-          input: q.sampleInput,
-          output: q.sampleOutput,
-          explanation: null
-        }] : []),
-      hints: q.hints || []
-    }))
-    : []; // Return empty array if no questions loaded
+  // Fetch all questions for "Testing Mode" support
+  const [allQuestions, setAllQuestions] = useState([]);
+
+  useEffect(() => {
+    const fetchAllQuestions = async () => {
+      try {
+        const response = await apiClient.get('/api/testing/questions');
+        if (response.data?.data?.questions) {
+          setAllQuestions(response.data.data.questions);
+        }
+      } catch (err) {
+        console.error('Failed to fetch all questions:', err);
+      }
+    };
+    fetchAllQuestions();
+  }, []);
+
+  // Use questions from API (room specific) OR fallback/append all questions
+  // We prioritize room questions but ensure ALL questions are available as requested
+  const rawQuestions = questionsData?.questions?.length > 0
+    ? questionsData.questions
+    : allQuestions;
+
+  // If we have both, we might want to merge them, but for now let's just use what we have.
+  // Actually, let's merge them to ensure "all the question" are loaded.
+  const mergedQuestions = [
+    ...(questionsData?.questions || []),
+    ...allQuestions.filter(aq => !questionsData?.questions?.find(rq => rq.id === aq.id))
+  ];
+
+  const finalQuestions = mergedQuestions.map(q => ({
+    ...q,
+    constraints: q.constraints || [],
+    examples: (q.testCases && q.testCases.length > 0)
+      ? q.testCases.map(tc => ({
+        input: tc.input,
+        output: tc.output,
+        explanation: tc.explanation
+      }))
+      : ((q.sampleInput && q.sampleOutput) ? [{
+        input: q.sampleInput,
+        output: q.sampleOutput,
+        explanation: null
+      }] : []),
+    hints: q.hints || []
+  }));
 
   // Set initial selected question when data loads
   useEffect(() => {
@@ -490,8 +517,9 @@ export default function CodeEditorPage() {
     };
   }, [isResizing]);
 
-  // Loading State - Render Loading View if needed
-  if (!questionsData && roomId) {
+  // Loading State - Render Loading View ONLY if we have absolutely no questions yet
+  // We relaxed this check to allow rendering even if room data fails, as long as we have 'allQuestions' or if we just want to show empty state.
+  if (!questionsData && !allQuestions.length && roomId) {
     return (
       <div className="h-screen flex items-center justify-center bg-gray-50">
         <div className="text-center">

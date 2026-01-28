@@ -2,13 +2,25 @@ const express = require('express');
 const router = express.Router();
 const questionController = require('../controllers/questionController');
 const { authenticateToken } = require('../middleware/auth');
-const { checkRoomAdmin } = require('../middleware/roleCheck');
+const { checkRoomAdmin, checkRole } = require('../middleware/roleCheck');
 
-// All routes require authentication
+// ==================== PUBLIC ROUTES (No Authentication) ====================
 
+// Get all questions (public access)
+
+// ==================== AUTHENTICATED ROUTES ====================
+
+// All routes below require authentication
+router.use(authenticateToken);
+
+// Create global question (Admin only)
+router.get('/', questionController.getAllQuestions);
+router.post('/', questionController.createQuestion);
+router.delete('/:questionId', questionController.deleteQuestion);
 
 // Add questions to room (Admin only)
 router.post('/rooms/:roomId/questions', checkRoomAdmin, questionController.addQuestions);
+
 
 // Get room questions
 router.get('/rooms/:roomId/questions', questionController.getRoomQuestions);
@@ -23,6 +35,5 @@ router.post('/:questionId/assign', questionController.assignQuestion);
 router.put('/:questionId', questionController.updateQuestion);
 
 // Delete question (Admin only)
-router.delete('/:questionId', questionController.deleteQuestion);
 
 module.exports = router;

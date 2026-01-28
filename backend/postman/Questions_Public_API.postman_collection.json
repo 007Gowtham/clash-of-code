@@ -1,0 +1,128 @@
+{
+    "info": {
+        "_postman_id": "questions-api-collection",
+        "name": "Questions API - Public Access",
+        "description": "API endpoints for accessing questions without authentication",
+        "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+    },
+    "item": [
+        {
+            "name": "Get All Questions",
+            "request": {
+                "method": "GET",
+                "header": [
+                    {
+                        "key": "Content-Type",
+                        "value": "application/json"
+                    }
+                ],
+                "url": {
+                    "raw": "{{base_url}}/api/questions",
+                    "host": [
+                        "{{base_url}}"
+                    ],
+                    "path": [
+                        "api",
+                        "questions"
+                    ]
+                },
+                "description": "Get all questions from the database without authentication. Returns questions with:\n- Basic info (title, description, difficulty, points)\n- Sample test cases only\n- Hints and constraints\n- Templates for all languages (boilerplate, userFunction)\n- Does NOT require authentication\n- Does NOT filter by room or team"
+            },
+            "response": [
+                {
+                    "name": "Success Response Example",
+                    "originalRequest": {
+                        "method": "GET",
+                        "header": [],
+                        "url": {
+                            "raw": "{{base_url}}/api/questions",
+                            "host": [
+                                "{{base_url}}"
+                            ],
+                            "path": [
+                                "api",
+                                "questions"
+                            ]
+                        }
+                    },
+                    "status": "OK",
+                    "code": 200,
+                    "_postman_previewlanguage": "json",
+                    "header": [
+                        {
+                            "key": "Content-Type",
+                            "value": "application/json"
+                        }
+                    ],
+                    "cookie": [],
+                    "body": "{\n  \"success\": true,\n  \"data\": {\n    \"questions\": [\n      {\n        \"id\": \"uuid-here\",\n        \"title\": \"Two Sum\",\n        \"slug\": \"two-sum\",\n        \"description\": \"Given an array of integers...\",\n        \"difficulty\": \"EASY\",\n        \"points\": 100,\n        \"sampleInput\": \"[2,7,11,15]\\n9\",\n        \"sampleOutput\": \"[0,1]\",\n        \"functionName\": \"twoSum\",\n        \"functionSignature\": {...},\n        \"inputType\": \"[\\\"array<int>\\\", \\\"int\\\"]\",\n        \"outputType\": \"array<int>\",\n        \"timeLimit\": 2000,\n        \"memoryLimit\": 256,\n        \"hints\": [\n          {\n            \"id\": \"hint-id\",\n            \"content\": \"Try using a hash map\",\n            \"order\": 1\n          }\n        ],\n        \"constraints\": [\n          {\n            \"id\": \"constraint-id\",\n            \"content\": \"2 <= nums.length <= 10^4\",\n            \"order\": 1\n          }\n        ],\n        \"sampleTestCases\": [\n          {\n            \"id\": \"test-id\",\n            \"input\": \"[2,7,11,15]\\n9\",\n            \"output\": \"[0,1]\",\n            \"explanation\": \"nums[0] + nums[1] = 2 + 7 = 9\"\n          }\n        ],\n        \"templates\": {\n          \"python\": {\n            \"userFunction\": \"def twoSum(nums: List[int], target: int) -> List[int]:\\n    # TODO: Implement\\n    return []\",\n            \"boilerplate\": \"import sys\\nfrom typing import List\\n\\nclass ListNode:...\",\n            \"headerCode\": \"import sys\\nfrom typing import List\",\n            \"definition\": \"class ListNode:...\"\n          },\n          \"javascript\": {...},\n          \"cpp\": {...},\n          \"java\": {...}\n        },\n        \"createdAt\": \"2026-01-25T07:30:00.000Z\"\n      }\n    ],\n    \"total\": 15\n  }\n}"
+                }
+            ]
+        },
+        {
+            "name": "Get All Questions - Filter by Difficulty (Optional)",
+            "request": {
+                "method": "GET",
+                "header": [
+                    {
+                        "key": "Content-Type",
+                        "value": "application/json"
+                    }
+                ],
+                "url": {
+                    "raw": "{{base_url}}/api/questions?difficulty=EASY",
+                    "host": [
+                        "{{base_url}}"
+                    ],
+                    "path": [
+                        "api",
+                        "questions"
+                    ],
+                    "query": [
+                        {
+                            "key": "difficulty",
+                            "value": "EASY",
+                            "description": "Filter by difficulty: EASY, MEDIUM, HARD (optional)"
+                        }
+                    ]
+                },
+                "description": "Get all questions filtered by difficulty level (optional query parameter)"
+            },
+            "response": []
+        }
+    ],
+    "event": [
+        {
+            "listen": "prerequest",
+            "script": {
+                "type": "text/javascript",
+                "exec": [
+                    ""
+                ]
+            }
+        },
+        {
+            "listen": "test",
+            "script": {
+                "type": "text/javascript",
+                "exec": [
+                    "// Automatically log response",
+                    "if (pm.response.code === 200) {",
+                    "    var jsonData = pm.response.json();",
+                    "    console.log('Total questions:', jsonData.data.total);",
+                    "    if (jsonData.data.questions.length > 0) {",
+                    "        console.log('First question:', jsonData.data.questions[0].title);",
+                    "    }",
+                    "}"
+                ]
+            }
+        }
+    ],
+    "variable": [
+        {
+            "key": "base_url",
+            "value": "http://localhost:3004",
+            "type": "string"
+        }
+    ]
+}

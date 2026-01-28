@@ -1,14 +1,36 @@
 const express = require('express');
 const router = express.Router();
-const testingController = require('../controllers/testingController');
 const { authenticateToken } = require('../middleware/auth');
 const { codeLimiter } = require('../middleware/rateLimiter');
 const { validateCodeSubmission } = require('../middleware/codeValidation');
+const submissionController = require('../controllers/submissionController');
 
-// Route matches frontend: /api/submissions/questions/:questionId/run
-router.post('/questions/:questionId/run', authenticateToken, validateCodeSubmission, codeLimiter, testingController.runTestingCode);
+// ==================== USER FUNCTION SUBMISSION ROUTES ====================
 
-// Route matches frontend: /api/submissions/questions/:questionId/submit
-router.post('/questions/:questionId/submit', authenticateToken, validateCodeSubmission, codeLimiter, testingController.submitTestingCode);
+/**
+ * Run user function code against sample test cases
+ * POST /api/submission/run-function/:questionId
+ * Body: { userFunctionCode, language }
+ */
+router.post(
+    '/run-function/:questionId',
+   
+    codeLimiter,
+    submissionController.runUserFunction
+);
+
+/**
+ * Submit user function code against all test cases
+ * POST /api/submission/submit-function/:questionId
+ * Body: { userFunctionCode, language }
+ */
+router.post(
+    '/submit-function/:questionId',
+   
+    codeLimiter,
+    validateCodeSubmission,
+    submissionController.submitUserFunction
+);
 
 module.exports = router;
+

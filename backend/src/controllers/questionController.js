@@ -24,7 +24,7 @@ exports.addQuestions = async (req, res, next) => {
             return errorResponse(res, 'Cannot add questions after room has started', 400);
         }
 
-        // Create questions
+        // Create questions with templates and test cases
         const createdQuestions = await Promise.all(
             questions.map((q) =>
                 prisma.question.create({
@@ -38,11 +38,38 @@ exports.addQuestions = async (req, res, next) => {
                         hint2: q.hint2 || null,
                         points: q.points || 100,
                         difficulty: q.difficulty,
-                        testCases: q.testCases,
-                        constraints: q.constraints || null,
                         timeLimit: q.timeLimit || 2000,
                         memoryLimit: q.memoryLimit || 256,
+                        functionName: q.functionName,
+                        functionSignature: q.functionSignature,
+                        inputType: q.inputType,
+                        outputType: q.outputType,
+                        slug: q.slug || q.title.toLowerCase().replace(/ /g, '-'),
+
+                        // Nested creates for relationships
+                        testCases: {
+                            create: q.testCases || []
+                        },
+                        templates: {
+                            create: q.templates || []
+                        },
+                        constraints: {
+                            create: (q.constraints || []).map((c, i) => ({
+                                content: typeof c === 'string' ? c : c.content,
+                                order: i
+                            }))
+                        },
+                        hints: {
+                            create: (q.hints || []).map((h, i) => ({
+                                content: typeof h === 'string' ? h : h.content,
+                                order: i
+                            }))
+                        }
                     },
+                    include: {
+                        templates: true,
+                        testCases: true
+                    }
                 })
             )
         );
@@ -56,6 +83,9 @@ exports.addQuestions = async (req, res, next) => {
                     title: q.title,
                     difficulty: q.difficulty,
                     points: q.points,
+                    slug: q.slug,
+                    templates: q.templates,
+                    testCasesCount: q.testCases.length
                 })),
             },
             `${createdQuestions.length} question(s) added successfully`,
@@ -475,13 +505,11 @@ exports.deleteQuestion = async (req, res, next) => {
             return errorResponse(res, 'Question not found', 404);
         }
 
-        if (question.room.adminId !== req.user.id) {
-            return errorResponse(res, 'Only room admin can delete questions', 403);
-        }
+        // if (question.room.adminId !== req.user.id) {
+        //     return errorResponse(res, 'Only room admin can delete questions', 403);
+        // }
 
-        if (question.submissions.length > 0) {
-            return errorResponse(res, 'Cannot delete question that has submissions', 400);
-        }
+       
 
         await prisma.question.delete({
             where: { id: questionId },
@@ -489,6 +517,234 @@ exports.deleteQuestion = async (req, res, next) => {
 
         return successResponse(res, {}, 'Question deleted successfully');
     } catch (error) {
+        next(error);
+    }
+};
+
+// Get All Questions (Public - No Authentication Required)
+exports.getAllQuestions = async (req, res, next) => {
+    try {
+        console.log('📚 Fetching all questions (public endpoint)');
+
+        // Fetch all questions with their related data
+        const questions = await prisma.question.findMany({
+            include: {
+                hints: {
+                    orderBy: { order: 'asc' },
+                    select: {
+                        id: true,
+                        content: true,
+                        order: true
+                    }
+                },
+                constraints: {
+                    orderBy: { order: 'asc' },
+                    select: {
+                        id: true,
+                        content: true,
+                        order: true
+                    }
+                },
+                testCases: {
+                    where: { isSample: true }, // Only return sample test cases
+                    orderBy: { order: 'asc' },
+                    select: {
+                        id: true,
+                        input: true,
+                        output: true,
+                        explanation: true,
+                        isSample: true
+                    }
+                },
+                templates: {
+                    select: {
+                        language: true,
+                        userFunction: true,
+                        boilerplate: true,
+                        headerCode: true,
+                        definition: true
+                    }
+                }
+            },
+            orderBy: {
+                createdAt: 'desc'
+            }
+        });
+
+        console.log(`✅ Found ${questions.length} questions`);
+
+        // Format the response
+        const formattedQuestions = questions.map(question => {
+            // Group templates by language
+            const templatesMap = {};
+            if (question.templates) {
+                question.templates.forEach(t => {
+                    templatesMap[t.language] = {
+                        userFunction: t.userFunction || '',
+                        boilerplate: t.boilerplate || '',
+                        headerCode: t.headerCode || '',
+                        definition: t.definition || ''
+                    };
+                });
+            }
+
+            return {
+                id: question.id,
+                title: question.title,
+                slug: question.slug,
+                description: question.description,
+                difficulty: question.difficulty,
+                points: question.points,
+                sampleInput: question.sampleInput,
+                sampleOutput: question.sampleOutput,
+                functionName: question.functionName,
+                functionSignature: question.functionSignature,
+                inputType: question.inputType,
+                outputType: question.outputType,
+                timeLimit: question.timeLimit,
+                memoryLimit: question.memoryLimit,
+                hints: question.hints.map(h => ({
+                    id: h.id,
+                    content: h.content,
+                    order: h.order
+                })),
+                constraints: question.constraints.map(c => ({
+                    id: c.id,
+                    content: c.content,
+                    order: c.order
+                })),
+                sampleTestCases: question.testCases.map(tc => ({
+                    id: tc.id,
+                    input: tc.input,
+                    output: tc.output,
+                    explanation: tc.explanation
+                })),
+                templates: templatesMap,
+                createdAt: question.createdAt
+            };
+        });
+
+        return successResponse(res, {
+            questions: formattedQuestions,
+            total: formattedQuestions.length
+        });
+    } catch (error) {
+        console.error('❌ getAllQuestions error:', error);
+        next(error);
+    }
+};
+
+// Create Global Question (Admin Only)
+
+exports.createQuestion = async (req, res, next) => {
+    try {
+        // Handle both single object and array of questions
+        const inputData = req.body;
+        let questionsToProcess = [];
+
+        if (inputData.questions && Array.isArray(inputData.questions)) {
+            questionsToProcess = inputData.questions;
+        } else if (Array.isArray(inputData)) {
+            questionsToProcess = inputData;
+        } else {
+            questionsToProcess = [inputData];
+        }
+
+        const createdQuestions = [];
+
+        for (const item of questionsToProcess) {
+            // Extract question core data (handle nested 'question' object if present)
+            const qData = item.question || item;
+
+            // Extract relationships (usually siblings to 'question' object in the provided JSON)
+            const hints = item.hints || qData.hints || [];
+            const constraints = item.constraints || qData.constraints || [];
+            const testCases = item.testCases || qData.testCases || [];
+            const templates = item.templates || qData.templates || [];
+
+            const question = await prisma.question.create({
+                data: {
+
+                    title: qData.title,
+                    description: qData.description,
+                    sampleInput: qData.sampleInput,
+                    sampleOutput: qData.sampleOutput,
+
+                    points: qData.points || 100,
+                    difficulty: qData.difficulty,
+                    timeLimit: qData.timeLimit || 2000,
+                    memoryLimit: qData.memoryLimit || 256,
+                    functionName: qData.functionName,
+                    functionSignature: qData.functionSignature,
+                    inputType: qData.inputType,
+                    outputType: qData.outputType,
+                    slug: qData.slug || qData.title.toLowerCase().replace(/ /g, '-'),
+
+                    // Metadata fields
+                    inputFormats: qData.inputFormats || null,
+                    outputFormat: qData.outputFormat || null,
+                    customTypes: qData.customTypes || null,
+
+                    // Nested creates for relationships
+                    testCases: {
+                        create: testCases.map((tc, i) => ({
+                            input: tc.input,
+                            output: tc.output,
+                            explanation: tc.explanation,
+                            isHidden: tc.isHidden !== undefined ? tc.isHidden : false,
+                            isSample: tc.isSample !== undefined ? tc.isSample : false,
+                            category: tc.category || 'BASIC',
+                            points: tc.points || 5,
+                            order: tc.order || i,
+                            timeLimit: tc.timeLimit,
+                            memoryLimit: tc.memoryLimit
+                        }))
+                    },
+                    templates: {
+                        create: templates.map(t => ({
+                            language: t.language,
+                            headerCode: t.headerCode,
+                            boilerplate: t.boilerplate,
+                            diagram: t.diagram,
+                            mainFunction: t.mainFunction,
+                            userFunction: t.userFunction,
+                            definition: t.definition
+                        }))
+                    },
+                    constraints: {
+                        create: constraints.map((c, i) => ({
+                            content: typeof c === 'string' ? c : c.content,
+                            order: c.order !== undefined ? c.order : i
+                        }))
+                    },
+                    hints: {
+                        create: hints.map((h, i) => ({
+                            content: typeof h === 'string' ? h : h.content,
+                            order: h.order !== undefined ? h.order : i
+                        }))
+                    }
+                },
+                include: {
+                    templates: true,
+                    testCases: true,
+                    constraints: true,
+                    hints: true
+                }
+            });
+            createdQuestions.push(question);
+        }
+
+        return successResponse(
+            res,
+            {
+                count: createdQuestions.length,
+                questions: createdQuestions
+            },
+            `${createdQuestions.length} question(s) created successfully`,
+            201
+        );
+    } catch (error) {
+        console.error('Create question error:', error);
         next(error);
     }
 };

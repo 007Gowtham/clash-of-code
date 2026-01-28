@@ -42,6 +42,7 @@ exports.runTestCases = async (code, language, testCases) => {
             const input = testCase.input;
             const expectedOutput = testCase.output;
 
+            console.log('🔍 DEBUG: Executing test case with language:', language);
             const result = await judge0.execute(code, language, input, expectedOutput);
 
             // Check correctness
@@ -52,7 +53,28 @@ exports.runTestCases = async (code, language, testCases) => {
             // If Judge0 returns ACCEPTED, it means it matched.
             // If it returns WRONG_ANSWER, it failed.
 
-            const isSuccess = result.verdict === 'ACCEPTED';
+            let isSuccess = result.verdict === 'ACCEPTED';
+
+            // Custom Verification for Boolean (1/0 vs true/false)
+            if (!isSuccess && result.output && expectedOutput) {
+                const actual = result.output.trim().toLowerCase();
+                const expected = expectedOutput.trim().toLowerCase();
+
+                const isBooleanMatch =
+                    (actual === '1' && expected === 'true') ||
+                    (actual === '0' && expected === 'false') ||
+                    (actual === 'true' && expected === 'TRUE') ||
+                    (actual === 'false' && expected === 'FALSE');
+
+                if (actual === expected || isBooleanMatch) {
+                    isSuccess = true;
+                    // Fix verdict if it was wrong answer but strictly matches our rules
+                    if (result.verdict === 'WRONG_ANSWER') {
+                        result.verdict = 'ACCEPTED';
+                        result.status.description = 'Accepted';
+                    }
+                }
+            }
 
             if (isSuccess) testsPassed++;
             if (result.time) totalExecutionTime += parseFloat(result.time);
@@ -64,7 +86,7 @@ exports.runTestCases = async (code, language, testCases) => {
                 expectedOutput: expectedOutput,
                 actualOutput: result.output,
                 passed: isSuccess,
-                status: result.status.description || result.verdict, // e.g. Accepted
+                status: isSuccess ? 'Accepted' : (result.status.description || result.verdict),
                 error: result.error,
                 executionTime: parseFloat(result.time || 0),
                 memory: result.memory,

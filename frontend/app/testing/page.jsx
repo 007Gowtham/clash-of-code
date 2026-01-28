@@ -63,7 +63,10 @@ export default function TestingPage() {
             const data = response.data;
             setQuestion(data.data);
             setSelectedQuestionId(questionId);
-            setCode(getDefaultCode(language));
+
+            // Load template code for current language
+            loadTemplateCode(data.data, language);
+
             setRunResult(null);
             setSubmitResult(null);
         } catch (error) {
@@ -72,7 +75,21 @@ export default function TestingPage() {
         }
     };
 
-    // Get default code template
+    // Load template code from question templates
+    const loadTemplateCode = (questionData, lang) => {
+        if (!questionData) return;
+
+        const template = questionData.templates?.[lang];
+        if (template && template.userFunction) {
+            // Use the userFunction from templates
+            setCode(template.userFunction);
+        } else {
+            // Fallback to empty template if no userFunction found
+            setCode(getDefaultCode(lang));
+        }
+    };
+
+    // Fallback default code templates (used only if templates not available)
     const getDefaultCode = (lang) => {
         const templates = {
             python: '# Write your solution here\ndef solution():\n    pass\n\n',
@@ -178,8 +195,14 @@ export default function TestingPage() {
                         <select
                             value={language}
                             onChange={(e) => {
-                                setLanguage(e.target.value);
-                                setCode(getDefaultCode(e.target.value));
+                                const newLang = e.target.value;
+                                setLanguage(newLang);
+                                // Load template for new language
+                                if (question) {
+                                    loadTemplateCode(question, newLang);
+                                } else {
+                                    setCode(getDefaultCode(newLang));
+                                }
                             }}
                             className="px-3 py-1.5 border border-gray-300 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-blue-500"
                         >

@@ -5,7 +5,9 @@ const LANGUAGE_MAP = require('../config/languageMap');
  * Validate code submission payload
  */
 exports.validateCodeSubmission = (req, res, next) => {
-    const { code, language } = req.body;
+    // Support both 'code' (legacy/testing) and 'userFunctionCode' (new user function flow)
+    const code = req.body.code || req.body.userFunctionCode;
+    const { language } = req.body;
 
     // 1. Check for empty inputs
     if (!code || typeof code !== 'string') {
