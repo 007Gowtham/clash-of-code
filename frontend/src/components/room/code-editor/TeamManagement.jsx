@@ -116,53 +116,7 @@ export default function TeamManagement({
         })}
       </div>
 
-      {/* Pending Requests (Leader Only) */}
-      {isLeader && pendingRequests.length > 0 && (
-        <div className="border-t border-amber-200 bg-amber-50 p-4">
-          <h4 className="text-xs font-bold text-amber-900 mb-3 uppercase tracking-wide flex items-center gap-2">
-            <span className="w-2 h-2 rounded-full bg-amber-500 animate-pulse"></span>
-            Pending Requests ({pendingRequests.length})
-          </h4>
-          <div className="space-y-2">
-            {pendingRequests.map((request) => (
-              <div
-                key={request.id}
-                className="bg-white border border-amber-200 rounded-xl p-3 shadow-sm"
-              >
-                <div className="flex items-center gap-2 mb-2">
-                  <div className="w-6 h-6 rounded-full bg-gray-100 flex items-center justify-center">
-                    <User className="w-3 h-3 text-gray-500" />
-                  </div>
-                  <span className="text-sm font-bold text-gray-900">{request.requesterName || 'Teammate'}</span>
-                </div>
-                <div className="text-xs text-gray-600 mb-3 bg-gray-50 p-2 rounded-lg border border-gray-100">
-                  <span className="font-semibold text-gray-500">Requested:</span> {request.questionTitle || `Question ${request.questionId}`}
-                </div>
-                <div className="flex gap-2">
-                  <Button
-                    size="sm"
-                    variant="primary"
-                    onClick={() => onAssignQuestion(request.questionId, request.requesterId, request.id)}
-                    className="flex-1 text-[10px] bg-black text-white h-7 !p-0"
-                  >
-                    <Check className="w-3 h-3 mr-1" />
-                    Approve
-                  </Button>
-                  <Button
-                    size="sm"
-                    variant="ghost"
-                    onClick={() => onRejectQuestion(request.questionId, request.requesterId, request.id)}
-                    className="flex-1 text-[10px] h-7 text-gray-500 hover:text-red-500 hover:bg-red-50 !p-0"
-                  >
-                    <X className="w-3 h-3 mr-1" />
-                    Deny
-                  </Button>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      )}
+
     </div>
   );
 }

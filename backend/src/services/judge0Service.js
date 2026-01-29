@@ -115,28 +115,25 @@ class Judge0Service {
                 ? this.mapLanguageToId(languageId)
                 : languageId;
 
+            // Always use base64 encoding to prevent encoding issues (UTF-8, etc.)
+            const toBase64 = (str) => Buffer.from(str || '').toString('base64');
+
             const payload = {
-                source_code: sourceCode,
+                source_code: toBase64(sourceCode),
                 language_id: id,
-                stdin: stdin || '',
-                expected_output: expectedOutput || null,
-                // Judge0 expects seconds (float) usually, unless configured otherwise
-                // Assuming input is milliseconds if large, or seconds. 
-                // Standard Judge0 is seconds. If system provides ms, convert.
-                // Assuming standard Judge0 API.
-                // Let's assume input is in seconds or we trust the caller. 
-                // If needed, we can normalize.
+                stdin: toBase64(stdin),
+                expected_output: expectedOutput ? toBase64(expectedOutput) : null,
                 // CPU Time Limit
                 ...(timeLimit && { cpu_time_limit: timeLimit }),
                 // Memory Limit (KB)
                 ...(memoryLimit && { memory_limit: memoryLimit })
             };
 
-            logger.info('Submitting code to Judge0', { languageId: id });
+            logger.info('Submitting code to Judge0', { languageId: id, base64: true });
 
             const response = await this.client.post('/submissions', payload, {
                 params: {
-                    base64_encoded: 'false', // Using plain text for now, change to true if dealing with binary
+                    base64_encoded: 'true', // Enable Base64
                     wait: 'false' // Async submission
                 }
             });
@@ -162,17 +159,18 @@ class Judge0Service {
         try {
             const response = await this.client.get(`/submissions/${token}`, {
                 params: {
-                    base64_encoded: 'false',
+                    base64_encoded: 'true',
                     fields: 'stdout,stderr,status,message,compile_output,time,memory,token'
                 }
             });
 
             const data = response.data;
+            const fromBase64 = (str) => str ? Buffer.from(str, 'base64').toString('utf-8') : '';
 
             return {
                 status: data.status, // Object { id, description }
-                output: data.stdout || '',
-                error: data.stderr || data.compile_output || data.message || '',
+                output: fromBase64(data.stdout),
+                error: fromBase64(data.stderr) || fromBase64(data.compile_output) || data.message || '',
                 time: data.time,
                 memory: data.memory,
                 verdict: this.parseVerdict(data.status),
@@ -229,6 +227,26 @@ class Judge0Service {
             const token = await this.submitCode(sourceCode, language, input, expectedOutput, timeLimit, memoryLimit);
             return await this.pollUntilComplete(token);
         } catch (error) {
+            // Enhanced Error Handling & Fallback
+            const isConnectionError = error.code === 'ECONNREFUSED' ||
+                error.message.includes('Network Error') ||
+                error.message.includes('Judge0');
+
+            const langStr = typeof language === 'string' ? language.toLowerCase() : '';
+            const isJS = langStr.includes('javascript') || langStr.includes('js') || langStr.includes('node') || language === 63;
+            const isPython = langStr.includes('python') || langStr.includes('py') || language === 71;
+
+            if (isConnectionError) {
+                if (isJS) {
+                    logger.warn('Judge0 unavailable, falling back to local JS execution');
+                    return this.executeLocally(sourceCode, input, 'node');
+                }
+                if (isPython) {
+                    logger.warn('Judge0 unavailable, falling back to local Python execution');
+                    return this.executeLocally(sourceCode, input, 'python');
+                }
+            }
+
             logger.error('Judge0 execution failed', {
                 error: error.message,
                 language,
@@ -239,24 +257,21 @@ class Judge0Service {
     }
 
     /**
-     * Fallback for local execution of JS code (Sandbox-like)
+     * Fallback for local execution (Sandbox-like)
      */
-    async executeLocally(sourceCode, input) {
+    async executeLocally(sourceCode, input, type = 'node') {
         return new Promise((resolve) => {
             const { spawn } = require('child_process');
 
-            // Create a wrapper to inject input as stdin
-            // We run "node -e '...code...'"
-            // But sourceCode is complex. Better to write to a temp file or pipe stdin.
+            let cmd = 'node';
+            let args = ['-e', sourceCode];
 
-            // We'll spawn a node process.
-            // We need to ensure the code reads from stdin if the harness expects it.
-            // But usually the harness provided by TemplateBuilder does `require('fs').readFileSync(0, 'utf-8')`
-            // Wait, TemplateBuilder relies on `require('fs')`.
-            // Let's verify if the harness uses fs. 
-            // If it does, we can pipe input.
+            if (type === 'python') {
+                cmd = 'python3';
+                args = ['-c', sourceCode];
+            }
 
-            const p = spawn('node', ['-e', sourceCode]);
+            const p = spawn(cmd, args);
 
             let stdout = '';
             let stderr = '';

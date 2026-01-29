@@ -102,60 +102,89 @@ exports.getRoomQuestions = async (req, res, next) => {
         const { roomId } = req.params;
         const { difficulty, status, teamId } = req.query;
 
-        const where = { roomId };
-        if (difficulty) {
-            where.difficulty = difficulty;
-        }
-
-        const questions = await prisma.question.findMany({
-            where,
-            include: {
-                hints: {
-                    orderBy: { order: 'asc' }
-                },
-                constraints: {
-                    orderBy: { order: 'asc' }
-                },
-                testCases: {
-                    where: { isSample: true },
-                    orderBy: { order: 'asc' }
-                },
-                assignments: {
-                    where: teamId ? { teamId } : {},
-                    include: {
-                        user: {
-                            select: {
-                                id: true,
-                                username: true,
-                            },
+        // Common include object for consistent data fetching
+        const questionInclude = {
+            hints: {
+                orderBy: { order: 'asc' }
+            },
+            constraints: {
+                orderBy: { order: 'asc' }
+            },
+            testCases: {
+                where: { isSample: true },
+                orderBy: { order: 'asc' }
+            },
+            assignments: {
+                where: teamId ? { teamId } : {},
+                include: {
+                    user: {
+                        select: {
+                            id: true,
+                            username: true,
                         },
                     },
                 },
-                submissions: {
-                    select: {
-                        id: true,
-                        verdict: true,
-                        userId: true,
-                    },
+            },
+            submissions: {
+                select: {
+                    id: true,
+                    verdict: true,
+                    userId: true,
                 },
-                templates: {
-                    select: {
-                        language: true,
-                        headerCode: true,
-                        boilerplate: true,
-                        definition: true,
-                        userFunction: true,
-                        mainFunction: true,
-                        diagram: true
-                    }
+            },
+            templates: {
+                select: {
+                    language: true,
+                    headerCode: true,
+                    boilerplate: true,
+                    definition: true,
+                    userFunction: true,
+                    mainFunction: true,
+                    diagram: true
                 }
-            },
-            orderBy: {
-                createdAt: 'asc',
-            },
+            }
+        };
+
+        // 1. Fetch Legacy Questions (roomId set directly)
+        const legacyWhere = { roomId };
+        if (difficulty) legacyWhere.difficulty = difficulty;
+
+        const legacyQuestionsPromise = prisma.question.findMany({
+            where: legacyWhere,
+            include: questionInclude,
+            orderBy: { createdAt: 'asc' },
         });
 
-        const formattedQuestions = questions.map((q) => {
+        // 2. Fetch Centralized Questions (via RoomQuestion)
+        // We filter difficulty on the related Question
+        const centralizedQuery = {
+            where: { roomId },
+            include: {
+                question: {
+                    include: questionInclude
+                }
+            },
+            orderBy: { order: 'asc' }
+        };
+
+        const roomQuestionsPromise = prisma.roomQuestion.findMany(centralizedQuery);
+
+        const [legacyQuestions, roomQuestions] = await Promise.all([
+            legacyQuestionsPromise,
+            roomQuestionsPromise
+        ]);
+
+        // Filter centralized questions by difficulty if needed (Prisma doesn't support deep filtering in include easily in one go for M:N inverse)
+        // Actually we can but it's complex. Easier to filter in memory for now given small sets.
+        let centralizedQuestions = roomQuestions.map(rq => rq.question);
+        if (difficulty) {
+            centralizedQuestions = centralizedQuestions.filter(q => q.difficulty === difficulty);
+        }
+
+        // Merge Questions
+        const allQuestions = [...legacyQuestions, ...centralizedQuestions];
+
+        const formattedQuestions = allQuestions.map((q) => {
             const totalAttempts = q.submissions.length;
             const totalSolved = q.submissions.filter((s) => s.verdict === 'ACCEPTED').length;
             const myTeamAssignment = q.assignments.find((a) => a.teamId === teamId);
@@ -319,7 +348,8 @@ exports.getQuestionDetails = async (req, res, next) => {
             hint2: question.hint2,
             points: question.points,
             difficulty: question.difficulty,
-            constraints: question.constraints,
+            constraints: (question.constraints || []).map(c => c.content),
+            hints: (question.hints || []).map(h => h.content),
             timeLimit: question.timeLimit,
             memoryLimit: question.memoryLimit,
             testCasesCount: question.testCases.length,
@@ -328,9 +358,11 @@ exports.getQuestionDetails = async (req, res, next) => {
                 .map((tc) => ({
                     input: tc.input,
                     output: tc.output,
+                    explanation: tc.explanation
                 })),
-            roomId: question.room.id,
-            roomName: question.room.name,
+            isGlobal: !question.room,
+            roomId: question.room ? question.room.id : null,
+            roomName: question.room ? question.room.name : 'Global Question Bank',
             myTeamAssignment: myTeamAssignment
                 ? {
                     status: myTeamAssignment.status,
@@ -453,6 +485,7 @@ exports.assignQuestion = async (req, res, next) => {
 };
 
 // Update Question (Admin Only)
+// Update Question (Admin Only)
 exports.updateQuestion = async (req, res, next) => {
     try {
         const { questionId } = req.params;
@@ -469,21 +502,124 @@ exports.updateQuestion = async (req, res, next) => {
             return errorResponse(res, 'Question not found', 404);
         }
 
-        if (question.room.adminId !== req.user.id) {
-            return errorResponse(res, 'Only room admin can update questions', 403);
-        }
 
-        const updatedQuestion = await prisma.question.update({
-            where: { id: questionId },
-            data: updates,
+        // Prepare data object for Prisma
+        const updateData = {};
+
+        // 1. Handle Scalar Fields
+        const scalarFields = [
+            'title', 'description', 'sampleInput', 'sampleOutput', 'points',
+            'difficulty', 'timeLimit', 'memoryLimit', 'functionName',
+            'functionSignature', 'inputType', 'outputType', 'slug'
+        ];
+
+        scalarFields.forEach(field => {
+            if (updates[field] !== undefined) {
+                updateData[field] = updates[field];
+            }
         });
 
+        // 2. Handle Nested Relationships (Delete & Recreate Strategy)
+        // This effectively replaces the lists with new ones provided in the request
+        const transactionSteps = [];
+
+        // Constraints
+        if (updates.constraints && Array.isArray(updates.constraints)) {
+            transactionSteps.push(prisma.constraint.deleteMany({ where: { questionId } }));
+            updates.constraints.forEach((c, i) => {
+                transactionSteps.push(prisma.constraint.create({
+                    data: {
+                        questionId,
+                        content: typeof c === 'string' ? c : c.content,
+                        order: c.order !== undefined ? c.order : i
+                    }
+                }));
+            });
+        }
+
+        // Hints
+        if (updates.hints && Array.isArray(updates.hints)) {
+            transactionSteps.push(prisma.hint.deleteMany({ where: { questionId } }));
+            updates.hints.forEach((h, i) => {
+                transactionSteps.push(prisma.hint.create({
+                    data: {
+                        questionId,
+                        content: typeof h === 'string' ? h : h.content,
+                        order: h.order !== undefined ? h.order : i
+                    }
+                }));
+            });
+        }
+
+        // Test Cases (using sampleTestCases alias)
+        const rawTestCases = updates.testCases || updates.sampleTestCases;
+        if (rawTestCases && Array.isArray(rawTestCases)) {
+            transactionSteps.push(prisma.testCase.deleteMany({ where: { questionId } }));
+            rawTestCases.forEach((tc, i) => {
+                transactionSteps.push(prisma.testCase.create({
+                    data: {
+                        questionId,
+                        input: tc.input || '',
+                        output: tc.output || '',
+                        explanation: tc.explanation,
+                        isHidden: tc.isHidden !== undefined ? tc.isHidden : false,
+                        isSample: tc.isSample !== undefined ? tc.isSample : true,
+                        order: i
+                    }
+                }));
+            });
+        }
+
+        // Templates
+        let rawTemplates = [];
+        if (Array.isArray(updates.templates)) {
+            rawTemplates = updates.templates;
+        } else if (typeof updates.templates === 'object' && updates.templates !== null) {
+            // Convert Map to Array: { cpp: {...}, java: {...} }
+            rawTemplates = Object.entries(updates.templates).map(([lang, tmpl]) => ({
+                language: lang,
+                ...tmpl
+            }));
+        }
+
+        if (rawTemplates.length > 0) {
+            transactionSteps.push(prisma.questionTemplate.deleteMany({ where: { questionId } }));
+            rawTemplates.forEach(t => {
+                transactionSteps.push(prisma.questionTemplate.create({
+                    data: {
+                        questionId,
+                        language: t.language,
+                        headerCode: t.headerCode || '',
+                        boilerplate: t.boilerplate || '',
+                        userFunction: t.userFunction || '',
+                        mainFunction: t.mainFunction || '',
+                        definition: t.definition || ''
+                    }
+                }));
+            });
+        }
+
+        // Execute Transaction
+        // Update the main question first, then run nested updates
+        await prisma.question.update({
+            where: { id: questionId },
+            data: updateData
+        });
+
+        if (transactionSteps.length > 0) {
+            await prisma.$transaction(transactionSteps);
+        }
+
+        // Fetch updated question to return
+        // const finalQuestion = await prisma.question.findUnique({ where: { id: questionId } });
+
         return successResponse(res, {
-            id: updatedQuestion.id,
-            title: updatedQuestion.title,
-            points: updatedQuestion.points,
+            id: questionId,
+            message: "Question updated successfully with nested data"
         }, 'Question updated successfully');
+
     } catch (error) {
+        console.error("Update Question Error:", error);
         next(error);
     }
 };
@@ -509,7 +645,7 @@ exports.deleteQuestion = async (req, res, next) => {
         //     return errorResponse(res, 'Only room admin can delete questions', 403);
         // }
 
-       
+
 
         await prisma.question.delete({
             where: { id: questionId },
@@ -636,99 +772,116 @@ exports.getAllQuestions = async (req, res, next) => {
 
 // Create Global Question (Admin Only)
 
+// Create Global Question (Admin Only) - Supports Bulk Creation
 exports.createQuestion = async (req, res, next) => {
     try {
-        // Handle both single object and array of questions
         const inputData = req.body;
         let questionsToProcess = [];
 
-        if (inputData.questions && Array.isArray(inputData.questions)) {
+        // 1. Normalize Input: Handle various wrapper formats
+        if (inputData.data && inputData.data.questions && Array.isArray(inputData.data.questions)) {
+            // Format: { data: { questions: [...] } } (User's provided JSON)
+            questionsToProcess = inputData.data.questions;
+        } else if (inputData.questions && Array.isArray(inputData.questions)) {
+            // Format: { questions: [...] }
             questionsToProcess = inputData.questions;
         } else if (Array.isArray(inputData)) {
+            // Format: [...]
             questionsToProcess = inputData;
         } else {
+            // Format: { ...single question... }
             questionsToProcess = [inputData];
         }
 
         const createdQuestions = [];
 
-        for (const item of questionsToProcess) {
-            // Extract question core data (handle nested 'question' object if present)
-            const qData = item.question || item;
+        for (const qData of questionsToProcess) {
+            // 2. Normalize Fields
+            const title = qData.title || 'Untitled Question';
+            const slug = qData.slug || title.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, '');
 
-            // Extract relationships (usually siblings to 'question' object in the provided JSON)
-            const hints = item.hints || qData.hints || [];
-            const constraints = item.constraints || qData.constraints || [];
-            const testCases = item.testCases || qData.testCases || [];
-            const templates = item.templates || qData.templates || [];
+            // Handle sampleTestCases alias
+            const rawTestCases = qData.testCases || qData.sampleTestCases || [];
 
+            // Handle templates: convert object to array if needed
+            let rawTemplates = [];
+            if (Array.isArray(qData.templates)) {
+                rawTemplates = qData.templates;
+            } else if (typeof qData.templates === 'object' && qData.templates !== null) {
+                // User format: { python: {...}, java: {...} }
+                rawTemplates = Object.entries(qData.templates).map(([lang, tmpl]) => ({
+                    language: lang,
+                    ...tmpl
+                }));
+            }
+
+            // check if question already exists by slug or title
+            const existing = await prisma.question.findFirst({
+                where: {
+                    OR: [
+                        { slug: slug },
+                        { title: title }
+                    ]
+                }
+            });
+
+            if (existing) {
+                console.log(`Skipping duplicate question: ${title}`);
+                continue;
+            }
+
+            // 3. Create Question
             const question = await prisma.question.create({
                 data: {
-
-                    title: qData.title,
-                    description: qData.description,
-                    sampleInput: qData.sampleInput,
-                    sampleOutput: qData.sampleOutput,
+                    title: title,
+                    description: qData.description || 'No description provided.',
+                    sampleInput: qData.sampleInput || '',
+                    sampleOutput: qData.sampleOutput || '',
 
                     points: qData.points || 100,
-                    difficulty: qData.difficulty,
+                    difficulty: qData.difficulty || 'MEDIUM',
                     timeLimit: qData.timeLimit || 2000,
                     memoryLimit: qData.memoryLimit || 256,
+
                     functionName: qData.functionName,
                     functionSignature: qData.functionSignature,
                     inputType: qData.inputType,
                     outputType: qData.outputType,
-                    slug: qData.slug || qData.title.toLowerCase().replace(/ /g, '-'),
-
-                    // Metadata fields
-                    inputFormats: qData.inputFormats || null,
-                    outputFormat: qData.outputFormat || null,
-                    customTypes: qData.customTypes || null,
+                    slug: slug,
 
                     // Nested creates for relationships
                     testCases: {
-                        create: testCases.map((tc, i) => ({
-                            input: tc.input,
-                            output: tc.output,
+                        create: rawTestCases.map((tc, i) => ({
+                            input: tc.input || '',
+                            output: tc.output || '',
                             explanation: tc.explanation,
                             isHidden: tc.isHidden !== undefined ? tc.isHidden : false,
-                            isSample: tc.isSample !== undefined ? tc.isSample : false,
-                            category: tc.category || 'BASIC',
-                            points: tc.points || 5,
-                            order: tc.order || i,
-                            timeLimit: tc.timeLimit,
-                            memoryLimit: tc.memoryLimit
+                            isSample: tc.isSample !== undefined ? tc.isSample : true, // Default to sample if coming from sampleTestCases
+                            order: i
                         }))
                     },
                     templates: {
-                        create: templates.map(t => ({
+                        create: rawTemplates.map(t => ({
                             language: t.language,
-                            headerCode: t.headerCode,
-                            boilerplate: t.boilerplate,
-                            diagram: t.diagram,
-                            mainFunction: t.mainFunction,
-                            userFunction: t.userFunction,
-                            definition: t.definition
+                            headerCode: t.headerCode || '',
+                            boilerplate: t.boilerplate || '',
+                            userFunction: t.userFunction || '',
+                            mainFunction: t.mainFunction || '', // Required by schema
+                            definition: t.definition || ''
                         }))
                     },
                     constraints: {
-                        create: constraints.map((c, i) => ({
+                        create: (qData.constraints || []).map((c, i) => ({
                             content: typeof c === 'string' ? c : c.content,
                             order: c.order !== undefined ? c.order : i
                         }))
                     },
                     hints: {
-                        create: hints.map((h, i) => ({
+                        create: (qData.hints || []).map((h, i) => ({
                             content: typeof h === 'string' ? h : h.content,
                             order: h.order !== undefined ? h.order : i
                         }))
                     }
-                },
-                include: {
-                    templates: true,
-                    testCases: true,
-                    constraints: true,
-                    hints: true
                 }
             });
             createdQuestions.push(question);
@@ -738,9 +891,10 @@ exports.createQuestion = async (req, res, next) => {
             res,
             {
                 count: createdQuestions.length,
-                questions: createdQuestions
+                totalProcessed: questionsToProcess.length,
+                questions: createdQuestions.map(q => ({ id: q.id, title: q.title }))
             },
-            `${createdQuestions.length} question(s) created successfully`,
+            `Successfully created ${createdQuestions.length} questions`,
             201
         );
     } catch (error) {

@@ -221,7 +221,7 @@ class ErrorParser {
             case 503:
             case 504:
                 return new APIError(
-                    'Server error. Our team has been notified. Please try again later.',
+                    data?.error || data?.message || 'Server error. Our team has been notified. Please try again later.',
                     ErrorTypes.SERVER_ERROR,
                     status
                 );

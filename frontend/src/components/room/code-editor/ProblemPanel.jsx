@@ -43,6 +43,13 @@ export default function ProblemPanel({
     }
   }, [selectedQuestion, questions]);
 
+  // Timer to update cooldowns every second
+  const [now, setNow] = useState(Date.now());
+  useEffect(() => {
+    const timer = setInterval(() => setNow(Date.now()), 1000);
+    return () => clearInterval(timer);
+  }, []);
+
   const currentQuestion = questions.find(q => q.id === selectedQuestion) || questions[currentQuestionIndex];
   const assignedTo = questionAssignments[currentQuestion?.id];
   const hasPendingRequest = pendingRequests?.some(req => req.questionId === currentQuestion?.id);
@@ -122,6 +129,7 @@ export default function ProblemPanel({
                           (() => {
                             const isPending = pendingRequests?.some(req => req.questionId === currentQuestion.id && req.requesterId === currentUserId);
                             const cooldown = cooldowns?.[currentQuestion.id];
+                            const remaining = cooldown ? Math.max(0, Math.ceil((cooldown - now) / 1000)) : 0;
 
                             if (isPending) {
                               return (
@@ -135,14 +143,14 @@ export default function ProblemPanel({
                               );
                             }
 
-                            if (cooldown) {
+                            if (cooldown && remaining > 0) {
                               return (
                                 <button
                                   disabled
                                   className="text-xs font-bold bg-red-50 text-red-400 px-3 py-1.5 rounded-md cursor-not-allowed flex items-center gap-1.5 border border-red-100"
                                 >
                                   <Clock className="w-3 h-3" />
-                                  Wait {Math.ceil(cooldown / 1000)}s
+                                  Wait {remaining}s
                                 </button>
                               );
                             }

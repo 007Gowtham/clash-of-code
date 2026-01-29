@@ -17,9 +17,9 @@ const RoomForm = ({ onSubmit, isLoading = false }) => {
     duration: '60',
     scoringMode: 'points',
     difficulty: {
-      easy: 2,
-      medium: 2,
-      hard: 1,
+      easy: 1,
+      medium: 1,
+      hard: 0,
     },
     privacy: 'private',
     roomCode: '',
@@ -49,7 +49,13 @@ const RoomForm = ({ onSubmit, isLoading = false }) => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    onSubmit(formData);
+    // Map difficulty to problemConfig for backend
+    const submissionData = {
+      ...formData,
+      problemConfig: formData.difficulty
+    };
+    onSubmit(submissionData);
+    // onSubmit(formData);
   };
 
   const durationOptions = [
@@ -188,8 +194,8 @@ const RoomForm = ({ onSubmit, isLoading = false }) => {
           <div className="flex items-center justify-between mb-3">
             <label className="block text-sm font-medium text-gray-700">Problem Difficulty Mix</label>
             <span className={`text-xs font-medium px-2 py-0.5 rounded border ${formData.difficulty.easy + formData.difficulty.medium + formData.difficulty.hard >= 5
-                ? 'text-amber-600 bg-amber-50 border-amber-100'
-                : 'text-blue-600 bg-blue-50 border-blue-100'
+              ? 'text-amber-600 bg-amber-50 border-amber-100'
+              : 'text-blue-600 bg-blue-50 border-blue-100'
               }`}>
               {formData.difficulty.easy + formData.difficulty.medium + formData.difficulty.hard} / 5 Problems
             </span>

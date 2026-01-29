@@ -1,9 +1,10 @@
 'use client';
 
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useRef, useMemo } from 'react';
 import { io } from 'socket.io-client';
-import { useParams } from 'next/navigation';
+import { useParams, useRouter } from 'next/navigation';
 import { toast } from 'react-hot-toast';
+import { ChevronLeft, Clock, StopCircle, LogOut, Users } from 'lucide-react';
 import ProblemPanel from '@/components/room/code-editor/ProblemPanel';
 import CodeEditorPanel from '@/components/room/code-editor/CodeEditorPanel';
 import RightSidebar from '@/components/room/code-editor/RightSidebar';
@@ -21,6 +22,17 @@ export default function CodeEditorPage() {
   const [boilerplate, setBoilerplate] = useState('');
   const [definition, setDefinition] = useState('');
   const [language, setLanguage] = useState('python');
+
+  // Cache for user code to support instant switching { "questionId_language": code }
+  // Using ref to persist without re-renders, assuming we treat it as a "save state"
+  const codeCache = useRef({});
+
+  // Helper to update specific cache entry (e.g. when loading a template)
+  const updateCache = (qId, lang, content) => {
+    if (qId && lang) {
+      codeCache.current[`${qId}_${lang}`] = content;
+    }
+  };
 
   // Right Sidebar State (Lifted)
   const [rightPanelExpanded, setRightPanelExpanded] = useState(null); // 'chat', 'team', or null
@@ -82,6 +94,7 @@ export default function CodeEditorPage() {
           newQuestionAssignments[assignment.questionId] = {
             userId: assignment.assignedTo.userId,
             username: assignment.assignedTo.username,
+            questionTitle: assignment.questionTitle,
             status: assignment.status
           };
           newUserAssignments[assignment.assignedTo.userId] = assignment.questionId;
@@ -149,6 +162,7 @@ export default function CodeEditorPage() {
         [data.questionId]: {
           userId: data.assignedUserId,
           username: name,
+          questionTitle: data.questionTitle,
           status: data.status
         }
       }));
@@ -163,7 +177,7 @@ export default function CodeEditorPage() {
       setPendingRequests(prev => prev.filter(req => req.questionId !== data.questionId));
 
       if (data.assignedUserId === currentUserId) {
-        toast.success(`You have been assigned!`, { icon: '🚀', duration: 3000 });
+        toast.success(`You have been assigned!`, { icon: '🚀', duration: 2000 });
         // Switch to the assigned question
         setSelectedQuestion(data.questionId);
       } else {
@@ -175,7 +189,7 @@ export default function CodeEditorPage() {
       setPendingRequests(prev => prev.filter(req => !(req.questionId === data.questionId && req.requesterId === data.requesterId)));
 
       if (data.requesterId === currentUserId) {
-        toast.error('Request rejected. Cooldown started.', { icon: '❌', duration: 3000 });
+        toast.error('Request rejected. Cooldown started.', { icon: '❌', duration: 2000 });
         setCooldowns(prev => ({ ...prev, [data.questionId]: Date.now() + 10000 }));
         setTimeout(() => {
           setCooldowns(prev => {
@@ -231,33 +245,32 @@ export default function CodeEditorPage() {
 
   // Use questions from API (room specific) OR fallback/append all questions
   // We prioritize room questions but ensure ALL questions are available as requested
-  const rawQuestions = questionsData?.questions?.length > 0
-    ? questionsData.questions
-    : allQuestions;
+  const finalQuestions = useMemo(() => {
+    const roomQs = questionsData?.questions || [];
+    const roomQIds = new Set(roomQs.map(q => q.id));
 
-  // If we have both, we might want to merge them, but for now let's just use what we have.
-  // Actually, let's merge them to ensure "all the question" are loaded.
-  const mergedQuestions = [
-    ...(questionsData?.questions || []),
-    ...allQuestions.filter(aq => !questionsData?.questions?.find(rq => rq.id === aq.id))
-  ];
+    // Filter out duplicates from allQuestions
+    const additionalQs = allQuestions.filter(aq => !roomQIds.has(aq.id));
 
-  const finalQuestions = mergedQuestions.map(q => ({
-    ...q,
-    constraints: q.constraints || [],
-    examples: (q.testCases && q.testCases.length > 0)
-      ? q.testCases.map(tc => ({
-        input: tc.input,
-        output: tc.output,
-        explanation: tc.explanation
-      }))
-      : ((q.sampleInput && q.sampleOutput) ? [{
-        input: q.sampleInput,
-        output: q.sampleOutput,
-        explanation: null
-      }] : []),
-    hints: q.hints || []
-  }));
+    const merged = [...roomQs, ...additionalQs];
+
+    return merged.map(q => ({
+      ...q,
+      constraints: q.constraints || [],
+      examples: (q.testCases && q.testCases.length > 0)
+        ? q.testCases.map(tc => ({
+          input: tc.input,
+          output: tc.output,
+          explanation: tc.explanation
+        }))
+        : ((q.sampleInput && q.sampleOutput) ? [{
+          input: q.sampleInput,
+          output: q.sampleOutput,
+          explanation: null
+        }] : []),
+      hints: q.hints || []
+    }));
+  }, [questionsData, allQuestions]);
 
   // Set initial selected question when data loads
   useEffect(() => {
@@ -267,42 +280,90 @@ export default function CodeEditorPage() {
     }
   }, [finalQuestions, selectedQuestion]);
 
+  // Handle user code changes (updates state + cache)
+  const handleCodeChange = (newCode) => {
+    setCode(newCode);
+    if (selectedQuestion && language) {
+      codeCache.current[`${selectedQuestion}_${language}`] = newCode;
+    }
+  };
+
   // Update code when language changes or question changes
   useEffect(() => {
-    // Only fetch starter code if looking at my own editor
+    // Only Fetch/Update if dealing with my own editor
     if ((activeEditor !== 'me' && activeEditor !== currentUserId) || !selectedQuestion || !finalQuestions?.length) return;
 
     const q = finalQuestions.find(q => q.id === selectedQuestion);
-    if (!q) return;
-
-    // Use local templates if available
-    if (q.templates && q.templates[language]) {
-      const tmpl = q.templates[language];
-      setCode(tmpl.userFunction || '');
-      setHeaderCode(tmpl.headerCode || '');
-      setBoilerplate(tmpl.boilerplate || '');
-      setDefinition(tmpl.definition || '');
+    if (!q) {
+      console.warn('Selected question not found in finalQuestions', selectedQuestion);
       return;
     }
 
-    // Fallback: Fetch starter code from backend (should rarely be needed now)
+    console.log('🔄 Switching to Question:', q.title, 'Language:', language);
+
+    // 1. Check Cache first
+    const cacheKey = `${selectedQuestion}_${language}`;
+    if (cacheKey in codeCache.current) {
+      console.log('📦 Using Cached Code');
+      const cachedCode = codeCache.current[cacheKey];
+      setCode(cachedCode);
+
+      // Restore context if available
+      if (q.templates && q.templates[language]) {
+        const tmpl = q.templates[language];
+        setHeaderCode(tmpl.headerCode || '');
+        setBoilerplate(tmpl.boilerplate || '');
+        setDefinition(tmpl.definition || '');
+      }
+      return;
+    }
+
+    // 2. Load from Template (if not in cache)
+    // Check if q.templates is an object (map) or array (if legacy)
+    let template = null;
+    if (q.templates) {
+      if (Array.isArray(q.templates)) {
+        // Legacy array support
+        template = q.templates.find(t => t.language === language);
+      } else if (q.templates[language]) {
+        // Map support
+        template = q.templates[language];
+      }
+    }
+
+    if (template) {
+      console.log('📄 Using Template from Data');
+      const newCode = (template.definition ? template.definition + '\n\n' : '') + (template.userFunction || '');
+      setCode(newCode);
+      setHeaderCode(template.headerCode || '');
+      setBoilerplate(template.boilerplate || '');
+      setDefinition(template.definition || '');
+
+      // Seed the cache
+      updateCache(selectedQuestion, language, newCode);
+      return;
+    }
+
+    // 3. Fallback: Fetch starter code
+    console.log('☁️ Fetching from API...');
+    setCode('// Loading starter code...');
+
     const fetchStarterCode = async () => {
       try {
         const identifier = q.slug;
-        if (!identifier) {
-          console.warn('Question slug missing');
-          return;
-        }
+        if (!identifier) return;
 
         const response = await apiClient.get(`/api/problems/${identifier}?language=${language}`);
         if (response.data?.data?.codeTemplate) {
-          // Backward compatibility if API returns old format
-          setCode(response.data.data.codeTemplate);
-
+          const fetchedCode = response.data.data.codeTemplate;
+          setCode(fetchedCode);
+          updateCache(selectedQuestion, language, fetchedCode);
+        } else {
+          setCode('// Code template not found.');
         }
-
       } catch (error) {
         console.error('Failed to fetch starter code:', error);
+        setCode('// Failed to load code.');
       }
     };
 
@@ -475,9 +536,8 @@ export default function CodeEditorPage() {
       const toastId = toast.loading('Reseting code...');
       const response = await apiClient.get(`/api/problems/${identifier}?language=${language}`);
       if (response.data?.data?.codeTemplate) {
-
         setCode(response.data.data.codeTemplate);
-        setSampleCode(response.data.data.codeTemplate);
+        // Removed setSampleCode which was undefined
         toast.success('Code reset to default', { id: toastId });
       } else {
         toast.error('Could not fetch starter code', { id: toastId });
@@ -517,6 +577,53 @@ export default function CodeEditorPage() {
     };
   }, [isResizing]);
 
+  // Room Timer logic
+  const [timeLeft, setTimeLeft] = useState({ minutes: 0, seconds: 0 });
+  const router = useRouter(); // Ensure useRouter is imported
+
+  useEffect(() => {
+    if (roomData?.createdAt) {
+      const created = new Date(roomData.createdAt).getTime();
+      // Duration from room settings or default 10m. 
+      // roomData.duration is in minutes.
+      const durationMins = roomData.duration || 10;
+      const expires = created + durationMins * 60 * 1000;
+
+      const interval = setInterval(() => {
+        const now = Date.now();
+        const diff = expires - now;
+
+        if (diff <= 0) {
+          setTimeLeft({ minutes: 0, seconds: 0 });
+          clearInterval(interval);
+        } else {
+          const m = Math.floor(diff / 60000);
+          const s = Math.floor((diff % 60000) / 1000);
+          setTimeLeft({ minutes: m, seconds: s });
+        }
+      }, 1000);
+      return () => clearInterval(interval);
+    }
+  }, [roomData]);
+
+  const handleLeaveRoom = () => {
+    // Just redirect to home or rooms list
+    router.push('/room');
+  };
+
+  const handleStopRoom = async () => {
+    if (!confirm("Are you sure you want to stop the room? This will delete the room for everyone.")) return;
+    try {
+      await apiClient.delete(`/api/rooms/${roomId}`);
+      toast.success("Room stopped successfully");
+      // Redirect handled by socket event or manual push
+      router.push('/room');
+    } catch (err) {
+      console.error("Failed to stop room:", err);
+      toast.error("Failed to stop room");
+    }
+  };
+
   // Loading State - Render Loading View ONLY if we have absolutely no questions yet
   // We relaxed this check to allow rendering even if room data fails, as long as we have 'allQuestions' or if we just want to show empty state.
   if (!questionsData && !allQuestions.length && roomId) {
@@ -531,122 +638,159 @@ export default function CodeEditorPage() {
   }
 
   return (
-    <div className="h-screen flex overflow-hidden bg-gray-50">
-      {/* Main Content Area */}
-      <div className="flex-1 flex flex-col min-w-0">
-
-        {/* Editor Layout - Responsive Stacking */}
-        <div className="flex-1 flex overflow-hidden relative">
-          {/* Problem Panel */}
-          <ProblemPanel
-            activeTab={activeTab}
-            onTabChange={setActiveTab}
-            selectedQuestion={selectedQuestion}
-            onQuestionSelect={setSelectedQuestion}
-            questions={finalQuestions}
-            style={{ width: `${leftPanelWidth}%` }}
-            isLeader={teamData?.isLeader || false}
-            questionAssignments={questionAssignments}
-            pendingRequests={pendingRequests}
-            currentUserId={currentUserId}
-            cooldowns={cooldowns}
-            onRequestQuestion={handleRequestAssignment}
-            onAssignQuestion={handleApproveAssignment}
-          />
-
-          {/* Resize Handle */}
-          <div
-            onMouseDown={handleMouseDown}
-            className="absolute top-0 bottom-0 w-1 cursor-col-resize hover:bg-blue-500 z-20 transition-colors"
-            style={{ left: `${leftPanelWidth}%` }}
-          >
-            <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-2 h-12 bg-white rounded-full shadow border border-gray-200 flex items-center justify-center">
-              <div className="w-0.5 h-4 bg-gray-300 rounded-full mx-0.5"></div>
+    <div className="h-screen flex flex-col overflow-hidden bg-gray-50">
+      {/* Top Header Bar */}
+      <header className="h-14 bg-white border-b border-gray-200 flex items-center justify-between px-4 flex-shrink-0 z-10">
+        <div className="flex items-center gap-4">
+          <button onClick={handleLeaveRoom} className="p-2 hover:bg-gray-100 rounded-lg text-gray-500 transition-colors">
+            <ChevronLeft className="w-5 h-5" />
+          </button>
+          <div>
+            <h1 className="text-sm font-bold text-gray-900">{roomData?.name || 'Coding Room'}</h1>
+            <div className="flex items-center gap-2 text-xs text-gray-500">
+              <span className="flex items-center gap-1">
+                <Users className="w-3 h-3" />
+                {teamData?.name || 'My Team'}
+              </span>
             </div>
           </div>
-
-          {/* Code Editor Panel */}
-          {(() => {
-            const assignment = selectedQuestion ? questionAssignments[selectedQuestion] : null;
-            const assignedUser = assignment?.userId;
-            const assignedUserName = assignment?.username || 'a teammate';
-
-            const isAssignedToMe = currentUserId && assignedUser === currentUserId;
-            const isAssignedToSomeoneElse = assignedUser && !isAssignedToMe;
-            const isViewingTeammate = activeEditor !== currentUserId && activeEditor !== 'me';
-
-            // Lock Logic
-            let isLocked = true; // Default to locked
-            let lockMessage = '';
-
-            if (isViewingTeammate) {
-              // Case 1: Viewing teammate's code (Read Only)
-              isLocked = true;
-              lockMessage = `Viewing ${teamData?.members?.find(m => m.userId === activeEditor)?.username || 'teammate'}'s code (Read Only)`;
-            } else if (isAssignedToSomeoneElse) {
-              // Case 2: Assigned to someone else
-              isLocked = true;
-              lockMessage = `This question is assigned to ${assignedUserName}`;
-            } else if (isAssignedToMe) {
-              // Case 3: Assigned to me (Unlocked)
-              isLocked = false;
-            } else {
-              // Case 4: Unassigned
-              isLocked = true;
-              lockMessage = 'Request assignment to start solving';
-            }
-
-            return (
-              <CodeEditorPanel
-                code={code}
-
-                headerCode={headerCode}
-                boilerplate={boilerplate}
-                definition={definition}
-                setCode={setCode}
-                activeEditor={activeEditor}
-                onEditorChange={setActiveEditor}
-                language={language}
-                onLanguageChange={setLanguage}
-                onRun={handleRun}
-                onSubmit={handleSubmit}
-                onResetCode={handleResetCode}
-                isRunning={isRunning}
-                isSubmitting={isSubmitting}
-                output={runResult}
-                submissionResult={submitResult}
-                teamMembers={teamData?.members || []}
-                currentUserId={currentUserId}
-                leaderId={teamData?.leaderId}
-                isLocked={isLocked}
-                lockMessage={lockMessage}
-                selectedQuestion={selectedQuestion}
-                style={{ width: `${100 - leftPanelWidth}%` }}
-              />
-            );
-          })()}
         </div>
+
+      
+      
+
+        {/* Right Actions */}
+        <div className="flex items-center gap-3">
+          {roomData?.isAdmin && (
+            <button
+              onClick={handleStopRoom}
+              className="flex items-center gap-2 px-3 py-1.5 bg-red-50 text-red-600 border border-red-200 rounded-lg text-xs font-bold hover:bg-red-100 transition-colors"
+            >
+              <StopCircle className="w-3.5 h-3.5" />
+              Stop Room
+            </button>
+          )}
+        </div>
+      </header>
+
+      <div className="flex-1 flex overflow-hidden">
+        {/* Main Content Area */}
+        <div className="flex-1 flex flex-col min-w-0">
+
+          {/* Editor Layout - Responsive Stacking */}
+          <div className="flex-1 flex overflow-hidden relative">
+            {/* Problem Panel */}
+            <ProblemPanel
+              activeTab={activeTab}
+              onTabChange={setActiveTab}
+              selectedQuestion={selectedQuestion}
+              onQuestionSelect={setSelectedQuestion}
+              questions={finalQuestions}
+              style={{ width: `${leftPanelWidth}%` }}
+              isLeader={teamData?.isLeader || false}
+              questionAssignments={questionAssignments}
+              pendingRequests={pendingRequests}
+              currentUserId={currentUserId}
+              cooldowns={cooldowns}
+              onRequestQuestion={handleRequestAssignment}
+              onAssignQuestion={handleApproveAssignment}
+            />
+
+            {/* Resize Handle */}
+            <div
+              onMouseDown={handleMouseDown}
+              className="absolute top-0 bottom-0 w-1 cursor-col-resize hover:bg-blue-500 z-20 transition-colors"
+              style={{ left: `${leftPanelWidth}%` }}
+            >
+              <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-2 h-12 bg-white rounded-full shadow border border-gray-200 flex items-center justify-center">
+                <div className="w-0.5 h-4 bg-gray-300 rounded-full mx-0.5"></div>
+              </div>
+            </div>
+
+            {/* Code Editor Panel */}
+            {(() => {
+              const assignment = selectedQuestion ? questionAssignments[selectedQuestion] : null;
+              const assignedUser = assignment?.userId;
+              const assignedUserName = assignment?.username || 'a teammate';
+
+              const isAssignedToMe = currentUserId && assignedUser === currentUserId;
+              const isAssignedToSomeoneElse = assignedUser && !isAssignedToMe;
+              const isViewingTeammate = activeEditor !== currentUserId && activeEditor !== 'me';
+
+              // Lock Logic
+              let isLocked = true; // Default to locked
+              let lockMessage = '';
+
+              if (isViewingTeammate) {
+                // Case 1: Viewing teammate's code (Read Only)
+                isLocked = true;
+                lockMessage = `Viewing ${teamData?.members?.find(m => m.userId === activeEditor)?.username || 'teammate'}'s code (Read Only)`;
+              } else if (isAssignedToSomeoneElse) {
+                // Case 2: Assigned to someone else
+                isLocked = true;
+                lockMessage = `This question is assigned to ${assignedUserName}`;
+              } else if (isAssignedToMe) {
+                // Case 3: Assigned to me (Unlocked)
+                isLocked = false;
+              } else {
+                // Case 4: Unassigned
+                isLocked = true;
+                lockMessage = 'Request assignment to start solving';
+              }
+
+              return (
+                <CodeEditorPanel
+                  code={code}
+
+                  headerCode={headerCode}
+                  boilerplate={boilerplate}
+                  definition={definition}
+                  setCode={handleCodeChange}
+                  activeEditor={activeEditor}
+                  onEditorChange={setActiveEditor}
+                  language={language}
+                  onLanguageChange={setLanguage}
+                  onRun={handleRun}
+                  onSubmit={handleSubmit}
+                  onResetCode={handleResetCode}
+                  isRunning={isRunning}
+                  isSubmitting={isSubmitting}
+                  output={runResult}
+                  submissionResult={submitResult}
+                  teamMembers={teamData?.members || []}
+                  currentUserId={currentUserId}
+                  leaderId={teamData?.leaderId}
+                  timeLeft={timeLeft}
+                  isLocked={isLocked}
+                  lockMessage={lockMessage}
+                  selectedQuestion={selectedQuestion}
+                  style={{ width: `${100 - leftPanelWidth}%` }}
+                />
+              );
+            })()}
+          </div>
+        </div>
+
+        <RightSidebar
+          isLeader={teamData?.isLeader || false}
+          params={params}
+          teamMembers={teamData?.members || []}
+          leaderId={teamData?.leaderId}
+          currentUserId={currentUserId}
+          todaySolved={0}
+          totalSolved={0}
+          questionAssignments={questionAssignments}
+          pendingRequests={pendingRequests}
+          onAssignQuestion={handleApproveAssignment}
+          onRejectQuestion={handleRejectAssignment}
+
+          // Lifted State Props
+          expandedPanel={rightPanelExpanded}
+          setExpandedPanel={setRightPanelExpanded}
+          activeTab={rightPanelTab}
+          setActiveTab={setRightPanelTab}
+        />
       </div>
-
-      <RightSidebar
-        isLeader={teamData?.isLeader || false}
-        params={params}
-        teamMembers={teamData?.members || []}
-        leaderId={teamData?.leaderId}
-        currentUserId={currentUserId}
-        todaySolved={0}
-        totalSolved={0}
-        questionAssignments={questionAssignments}
-        pendingRequests={pendingRequests}
-        onAssignQuestion={handleApproveAssignment}
-        onRejectQuestion={handleRejectAssignment}
-
-        // Lifted State Props
-        expandedPanel={rightPanelExpanded}
-        setExpandedPanel={setRightPanelExpanded}
-        activeTab={rightPanelTab}
-        setActiveTab={setRightPanelTab}
-      />
     </div>
   );
 }

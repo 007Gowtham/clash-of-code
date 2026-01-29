@@ -53,23 +53,10 @@ export default function WaitingRoomPage() {
       isFetchingRef.current = true;
       const response = await API.teams.getTeamsInRoom(roomId);
       setTeamsData(response);
+      setTeamsData(response);
     } catch (error) {
-      // If room not found (404)
-      if (error.message && error.message.includes('not found')) {
-        if (!roomDeleted) {
-          setRoomDeleted(true);
-          toast.error('Room has been deleted by the admin');
-          setTimeout(() => {
-            router.push('/room');
-          }, 2000);
-        }
-        return;
-      }
-
-      // Don't show error toast for rate limit or timeouts
-      if (error.message && !error.message.includes('Too many requests') && !error.message.includes('timed out')) {
-        console.error('Fetch teams error:', error);
-      }
+      console.error('Fetch teams error:', error);
+      // Only let Room Details polling decide if room is truly deleted
     } finally {
       setTeamsLoading(false);
       setRefreshing(false);

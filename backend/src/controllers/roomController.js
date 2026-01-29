@@ -19,18 +19,7 @@ exports.createRoom = async (req, res, next) => {
             allowSolosInTeamMode,
         } = req.body;
 
-        const existingRoom = await prisma.room.findFirst({
-            where: {
-                name: roomName,
-                status: {
-                    in: ['WAITING', 'ACTIVE']
-                }
-            }
-        });
 
-        if (existingRoom) {
-            return errorResponse(res, 'Room name already exists', 400);
-        }
 
         // Generate unique room code
         let code;
@@ -66,103 +55,287 @@ exports.createRoom = async (req, res, next) => {
         });
 
         // Seed 5 Template Questions (For Testing) - LeetCode Style
-        // Centralized Question Bank Selection Logic
-        console.log('User:', req.user); // Debug user
+        const TEMPLATE_QUESTIONS = [
+            {
+                title: 'Two Sum',
+                description: `Given an array of integers nums and an integer target, return indices of the two numbers such that they add up to target.
 
-        let config = req.body.problemConfig;
-        if (!config && req.body.settings && req.body.settings.difficulty) {
-            config = req.body.settings.difficulty;
-        }
-        if (!config) {
-            config = { easy: 1, medium: 2, hard: 1 }; // Default config
-        }
+You may assume that each input would have exactly one solution, and you may not use the same element twice.
 
-        console.log('Problem Config:', config);
+You can return the answer in any order.`,
+                difficulty: 'EASY',
+                points: 100,
+                sampleInput: 'nums = [2,7,11,15], target = 9',
+                sampleOutput: '[0,1]',
+                constraints: [
+                    '2 <= nums.length <= 10^4',
+                    '-10^9 <= nums[i] <= 10^9',
+                    '-10^9 <= target <= 10^9',
+                    'Only one valid answer exists.'
+                ],
+                testCases: [
+                    {
+                        input: '[2,7,11,15]\n9',
+                        output: '[0,1]',
+                        explanation: 'Because nums[0] + nums[1] == 9, we return [0, 1].',
+                        isHidden: false,
+                        isSample: true
+                    },
+                    {
+                        input: '[3,2,4]\n6',
+                        output: '[1,2]',
+                        explanation: 'Because nums[1] + nums[2] == 6, we return [1, 2].',
+                        isHidden: false,
+                        isSample: true
+                    },
+                    {
+                        input: '[3,3]\n6',
+                        output: '[0,1]',
+                        explanation: 'Because nums[0] + nums[1] == 6, we return [0, 1].',
+                        isHidden: false,
+                        isSample: true
+                    }
+                ],
+                hints: [
+                    'A brute force approach would be to check every pair of numbers. What is the time complexity?',
+                    'Think about how you can reduce the time complexity using a hash map.',
+                    'For each number, check if its complement (target - num) exists in the hash map.'
+                ],
+                templates: [
+                    {
+                        language: 'python',
+                        userFunction: `def twoSum(nums, target):
+    """
+    Given an array of integers nums and an integer target, return indices of the two numbers such that they add up to target.
 
-        // Helper to pick random questions
-        const pickQuestions = async (diff, count) => {
-            if (!count || count <= 0) return [];
+    Args:
+        nums: List of integers
+        target: Integer target sum
 
-            // Get all available global questions of this difficulty
-            // Global questions have roomId: null
-            const questions = await prisma.question.findMany({
-                where: {
-                    difficulty: diff.toUpperCase(),
-                    roomId: null
-                },
-                select: { id: true }
-            });
+    Returns:
+        List[int]: Indices of the two numbers
+    """
+    # TODO: Implement your solution here
+    # You may assume that each input would have exactly one solution,
+    # and you may not use the same element twice.
+    pass`,
+                        mainFunction: ''
+                    },
+                    {
+                        language: 'javascript',
+                        userFunction: `/**
+ * Given an array of integers nums and an integer target, return indices of the two numbers such that they add up to target.
+ *
+ * @param {number[]} nums
+ * @param {number} target
+ * @return {number[]}
+ */
+var twoSum = function(nums, target) {
+    // TODO: Implement your solution here
+    // You may assume that each input would have exactly one solution,
+    // and you may not use the same element twice.
+    
+};`,
+                        mainFunction: ''
+                    },
+                    {
+                        language: 'java',
+                        definition: `class Solution {`,
+                        userFunction: `    /**
+     * Given an array of integers nums and an integer target, return indices of the two numbers such that they add up to target.
+     *
+     * @param nums Array of integers
+     * @param target Integer target sum
+     * @return Array of integers (indices)
+     */
+    public int[] twoSum(int[] nums, int target) {
+        // TODO: Implement your solution here
+        // You may assume that each input would have exactly one solution,
+        // and you may not use the same element twice.
+        return new int[]{};
+    }
+}`,
+                        mainFunction: ''
+                    },
+                    {
+                        language: 'cpp',
+                        definition: `class Solution {
+public:`,
+                        userFunction: `    /**
+     * Given an array of integers nums and an integer target, return indices of the two numbers such that they add up to target.
+     *
+     * @param nums Vector of integers
+     * @param target Integer target sum
+     * @return Vector of integers (indices)
+     */
+    vector<int> twoSum(vector<int>& nums, int target) {
+        // TODO: Implement your solution here
+        // You may assume that each input would have exactly one solution,
+        // and you may not use the same element twice.
+        return {};
+    }
+};`,
+                        mainFunction: ''
+                    }
+                ]
+            },
+            {
+                title: 'Binary Tree Level Order Traversal',
+                description: `Given the root of a binary tree, return the level order traversal of its nodes' values. (i.e., from left to right, level by level).`,
+                difficulty: 'MEDIUM',
+                points: 200,
+                sampleInput: 'root = [3,9,20,null,null,15,7]',
+                sampleOutput: '[[3],[9,20],[15,7]]',
+                constraints: [
+                    'The number of nodes in the tree is in the range [0, 2000].',
+                    '-1000 <= Node.val <= 1000'
+                ],
+                testCases: [
+                    {
+                        input: '[3,9,20,null,null,15,7]',
+                        output: '[[3],[9,20],[15,7]]',
+                        explanation: 'Level 0: [3], Level 1: [9,20], Level 2: [15,7]',
+                        isHidden: false,
+                        isSample: true
+                    },
+                    {
+                        input: '[1]',
+                        output: '[[1]]',
+                        explanation: 'Single node tree has only one level.',
+                        isHidden: false,
+                        isSample: true
+                    },
+                    {
+                        input: '[]',
+                        output: '[]',
+                        explanation: 'Empty tree returns empty array.',
+                        isHidden: false,
+                        isSample: true
+                    }
+                ],
+                hints: [
+                    'Use a queue data structure for Breadth-First Search (BFS).',
+                    'Process nodes level by level, keeping track of the current level size.',
+                    'Add all nodes at the current level to the result before moving to the next level.'
+                ]
+            },
+            {
+                title: 'Longest Palindromic Substring',
+                description: `Given a string s, return the longest palindromic substring in s.
 
-            if (questions.length < count) {
-                // Determine missing counts for better error messaging 
-                // but for now, we throw error as per requirements 'Fail early'
-                throw new Error(`Not enough ${diff} questions available. Requested: ${count}, Available: ${questions.length}`);
+A palindrome is a string that reads the same backward as forward.`,
+                difficulty: 'MEDIUM',
+                points: 250,
+                sampleInput: 's = "babad"',
+                sampleOutput: '"bab"',
+                constraints: [
+                    '1 <= s.length <= 1000',
+                    's consist of only digits and English letters.'
+                ],
+                testCases: [
+                    {
+                        input: 'babad',
+                        output: 'bab',
+                        explanation: '"aba" is also a valid answer. Both "bab" and "aba" are palindromes.',
+                        isHidden: false,
+                        isSample: true
+                    },
+                    {
+                        input: 'cbbd',
+                        output: 'bb',
+                        explanation: 'The longest palindromic substring is "bb".',
+                        isHidden: false,
+                        isSample: true
+                    },
+                    {
+                        input: 'a',
+                        output: 'a',
+                        explanation: 'Single character is always a palindrome.',
+                        isHidden: false,
+                        isSample: true
+                    }
+                ],
+                hints: [
+                    'Think about expanding around the center of potential palindromes.',
+                    'Remember that palindromes can have odd length (single center) or even length (two centers).',
+                    'For each position, try expanding outward while characters match.',
+                    'Keep track of the longest palindrome found so far.'
+                ]
+            },
+            {
+                title: 'Merge K Sorted Lists',
+                description: `You are given an array of k linked-lists lists, each linked-list is sorted in ascending order.
+
+Merge all the linked-lists into one sorted linked-list and return it.`,
+                difficulty: 'HARD',
+                points: 400,
+                sampleInput: 'lists = [[1,4,5],[1,3,4],[2,6]]',
+                sampleOutput: '[1,1,2,3,4,4,5,6]',
+                constraints: [
+                    'k == lists.length',
+                    '0 <= k <= 10^4',
+                    '0 <= lists[i].length <= 500',
+                    '-10^4 <= lists[i][j] <= 10^4',
+                    'lists[i] is sorted in ascending order.',
+                    'The sum of lists[i].length will not exceed 10^4.'
+                ],
+                testCases: [
+                    {
+                        input: '[[1,4,5],[1,3,4],[2,6]]',
+                        output: '[1,1,2,3,4,4,5,6]',
+                        explanation: 'Merging all three sorted lists: [1,4,5], [1,3,4], and [2,6] results in [1,1,2,3,4,4,5,6].',
+                        isHidden: false,
+                        isSample: true
+                    },
+                    {
+                        input: '[]',
+                        output: '[]',
+                        explanation: 'No lists to merge.',
+                        isHidden: false,
+                        isSample: true
+                    },
+                    {
+                        input: '[[]]',
+                        output: '[]',
+                        explanation: 'Single empty list results in empty output.',
+                        isHidden: false,
+                        isSample: true
+                    }
+                ],
+                hints: [
+                    'The brute force approach is to merge lists one by one. What is the time complexity?',
+                    'Think about using a Min-Heap (Priority Queue) to efficiently find the smallest element.',
+                    'Add the head of each list to the heap, then repeatedly extract the minimum and add the next node.',
+                    'Consider the divide and conquer approach: merge pairs of lists, then merge the results.'
+                ]
             }
+        ];
 
-            // Fisher-Yates shuffle
-            for (let i = questions.length - 1; i > 0; i--) {
-                const j = Math.floor(Math.random() * (i + 1));
-                [questions[i], questions[j]] = [questions[j], questions[i]];
-            }
-
-            // Take the first 'count' items
-            return questions.slice(0, count).map(q => q.id);
-        };
-
-        const easyIds = await pickQuestions('EASY', config.easy);
-        const mediumIds = await pickQuestions('MEDIUM', config.medium);
-        const hardIds = await pickQuestions('HARD', config.hard);
-
-        const selectedQuestionIds = [...easyIds, ...mediumIds, ...hardIds];
-
-        if (selectedQuestionIds.length === 0) {
-            // Rollback room creation if no questions selected (though pickQuestions throws if not enough)
-            // But if config was all zeros?
-            // The prompt says "Not enough hard problems -> Reject".
-            // If user asks for 0, allowed.
-            // If total is 0?
-            // "Must select at least one question" is reasonable.
-            // We can delete the room and return error
-            await prisma.room.delete({ where: { id: room.id } });
-            return errorResponse(res, 'Must select at least one question', 400);
-        }
-
-        // Shuffle the final set of questions (User requirement: "Shuffle after combining difficulties")
-        for (let i = selectedQuestionIds.length - 1; i > 0; i--) {
-            const j = Math.floor(Math.random() * (i + 1));
-            [selectedQuestionIds[i], selectedQuestionIds[j]] = [selectedQuestionIds[j], selectedQuestionIds[i]];
-        }
-
-        // Link questions to room via RoomQuestion (Many-to-Many)
-        await Promise.all(selectedQuestionIds.map((qId, index) => {
-            return prisma.roomQuestion.create({
+        await Promise.all(TEMPLATE_QUESTIONS.map(q => {
+            const { constraints, testCases, hints, templates, ...rest } = q;
+            return prisma.question.create({
                 data: {
+                    ...rest,
                     roomId: room.id,
-                    questionId: qId,
-                    order: index
+                    constraints: {
+                        create: constraints.map((c, i) => ({ content: c, order: i }))
+                    },
+                    testCases: {
+                        create: testCases.map((tc, i) => ({
+                            ...tc,
+                            order: i
+                        }))
+                    },
+                    hints: {
+                        create: hints.map((h, i) => ({ content: h, order: i }))
+                    },
+                    templates: templates ? {
+                        create: templates
+                    } : undefined
                 }
             });
         }));
 
-        // Fetch full question details for the response
-        // Note: findMany does not guarantee order, so we need to map back to selectedQuestionIds
-        const selectedQuestions = await prisma.question.findMany({
-            where: {
-                id: { in: selectedQuestionIds }
-            },
-            select: {
-                id: true,
-                title: true,
-                difficulty: true,
-                points: true,
-                slug: true
-            }
-        });
-
-        // Map back to the shuffled order
-        const OrderedQuestionsResponse = selectedQuestionIds.map(id => {
-            return selectedQuestions.find(q => q.id === id);
-        }).filter(q => q); // filter out undefined just in case
 
         return successResponse(
             res,
@@ -181,7 +354,6 @@ exports.createRoom = async (req, res, next) => {
                 status: room.status,
                 adminId: room.adminId,
                 createdAt: room.createdAt,
-                questions: OrderedQuestionsResponse // Include the shuffled questions here
             },
             'Room created successfully',
             201
@@ -610,13 +782,27 @@ exports.deleteRoom = async (req, res, next) => {
             return errorResponse(res, 'Only room admin can delete the room', 403);
         }
 
-        if (room.status === 'ACTIVE') {
-            return errorResponse(res, 'Cannot delete an active room', 400);
-        }
+        // Allow deleting active rooms (Admin force stop)
+        // if (room.status === 'ACTIVE') {
+        //     return errorResponse(res, 'Cannot delete an active room', 400);
+        // }
 
         await prisma.room.delete({
             where: { id: roomId },
         });
+
+        // Notify all clients in the room that it has been deleted
+        // Ideally this should be handled via the socket service instance, 
+        // but since we don't have direct access to io instance here easily without passing it,
+        // we might rely on the frontend handling the disconnection or we need to ensure 
+        // socket service can broadcast this.
+        // Assuming the socket architecture handles room:deleted event if emitted, 
+        // or we need to use the req.app.get('io') if available.
+        if (req.app.get('io')) {
+            req.app.get('io').to(`room:${roomId}`).emit('room:deleted', {
+                message: 'Room has been deleted by the host.'
+            });
+        }
 
         return successResponse(res, {}, 'Room deleted successfully');
     } catch (error) {

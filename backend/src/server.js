@@ -14,10 +14,10 @@ const { apiLimiter } = require('./middleware/rateLimiter');
 // Import routes
 const authRoutes = require('./routes/auth');
 const roomRoutes = require('./routes/room');
-// const teamRoutes = require('./routes/team');
+const teamRoutes = require('./routes/team');
 const questionRoutes = require('./routes/question');
 const submissionRoutes = require('./routes/submission');
-// const testingRoutes = require('./routes/testing');
+const testingRoutes = require('./routes/testing');
 const problemRoutes = require('./routes/problemRoutes');
 
 // Initialize app
@@ -70,10 +70,10 @@ app.get('/health', (req, res) => {
 // API Routes
 app.use('/api/auth', authRoutes);
 app.use('/api/rooms', roomRoutes);
-// app.use('/api/teams', teamRoutes);
+app.use('/api/teams', teamRoutes);
 app.use('/api/questions', questionRoutes);
 app.use('/api/submissions', submissionRoutes);
-// app.use('/api/testing', testingRoutes);
+app.use('/api/testing', testingRoutes);
 app.use('/api/problems', problemRoutes); // NEW: LeetCode-style problem endpoints
 
 // Socket.io setup
@@ -101,6 +101,10 @@ const PORT = process.env.PORT || 3004;
 async function startServer() {
     try {
         await connectDB();
+
+        // Initialize background services
+        const { initRoomCleanup } = require('./services/roomCleanupService');
+        initRoomCleanup();
 
         httpServer.listen(PORT, () => {
             console.log('');

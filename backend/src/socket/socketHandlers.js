@@ -295,6 +295,47 @@ module.exports = (io) => {
                         where: { id: requestId },
                         data: { status: 'APPROVED' }
                     });
+
+                    // AUTO-DECLINE: Find all other pending requests for this team (from any user? or just this user? 
+                    // Prompt says: "if admin approve one question remian question must decline automicatllu"
+                    // Usually this implies for the *User* if they requested multiple.
+                    // But if it's "one question per team at a time", then maybe all?
+                    // "if the user request many question to solve if admin approve one question..."
+                    // This implies USER Scope. If User A requests Q1 and Q2. Q1 approved -> Q2 rejected.
+                    // Let's implement User Scope Auto-Decline AND Block other users if the rule is "One active question per team".
+                    // But usually multiple ppl can work on different qs? The system supports 1 assignment per user.
+                    // So we reject other requests FROM THIS USER.
+
+                    const otherRequests = await prisma.questionRequest.findMany({
+                        where: {
+                            teamId,
+                            requesterId, // Same user
+                            status: 'PENDING',
+                            id: { not: requestId } // Excluding current one
+                        }
+                    });
+
+                    if (otherRequests.length > 0) {
+                        // Batch reject
+                        await prisma.questionRequest.updateMany({
+                            where: {
+                                teamId,
+                                requesterId,
+                                status: 'PENDING',
+                                id: { not: requestId }
+                            },
+                            data: { status: 'REJECTED' }
+                        });
+
+                        // Notify about these rejections
+                        for (const req of otherRequests) {
+                            io.to(`team:${teamId}`).emit('assignment:rejected', {
+                                questionId: req.questionId,
+                                requesterId: req.requesterId,
+                                timestamp: new Date()
+                            });
+                        }
+                    }
                 }
 
                 // Update or create assignment
@@ -323,6 +364,11 @@ module.exports = (io) => {
                                 id: true,
                                 username: true
                             }
+                        },
+                        question: {
+                            select: {
+                                title: true
+                            }
                         }
                     }
                 });
@@ -330,6 +376,7 @@ module.exports = (io) => {
                 // Notify team
                 io.to(`team:${teamId}`).emit('assignment:updated', {
                     questionId,
+                    questionTitle: assignment.question.title,
                     assignedUserId: requesterId,
                     assignedUserName: assignment.user.username,
                     status: 'ASSIGNED',

@@ -23,8 +23,8 @@ export function useCodeExecution() {
 
         try {
             const response = await apiClient.post(
-                `/api/submissions/questions/${questionId}/run`,
-                { code, language, teamId }
+                `/api/submissions/run-function/${questionId}`,
+                { userFunctionCode: code, language, teamId }
             );
 
             setRunResult(response.data);
@@ -61,8 +61,8 @@ export function useCodeExecution() {
 
         try {
             const response = await apiClient.post(
-                `/api/submissions/questions/${questionId}/submit`,
-                { code, language, teamId }
+                `/api/submissions/submit-function/${questionId}`,
+                { userFunctionCode: code, language, teamId }
             );
 
             setSubmitResult(response.data);

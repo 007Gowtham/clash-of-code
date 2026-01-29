@@ -40,7 +40,7 @@ export default function StatsStrip({ room }) {
       </div>
 
       <div className="p-3 bg-gray-50 rounded-lg border border-gray-100 transition-all hover:bg-white hover:shadow-sm">
-        <span className="block text-xs text-gray-400 font-medium uppercase tracking-wider mb-1">Difficulty</span>
+        {/* <span className="block text-xs text-gray-400 font-medium uppercase tracking-wider mb-1">Difficulty</span>
         <div className="flex gap-1 mt-2 flex-wrap">
           {problems.length > 0 ? (
             problems.slice(0, 8).map((p, i) => (
@@ -56,7 +56,9 @@ export default function StatsStrip({ room }) {
           {problems.length > 8 && (
             <div className="h-1.5 w-1.5 rounded-full bg-gray-300"></div>
           )}
-        </div>
+        </div> */}
+        <span className="block text-xs text-gray-400 font-medium uppercase tracking-wider mb-1">Status</span>
+        <span className="text-lg font-semibold text-gray-900">Active</span>
       </div>
 
       <div className={`p-3 rounded-lg border flex items-center justify-between transition-all ${isReady ? 'bg-emerald-50/50 border-emerald-100' : 'bg-gray-50 border-gray-100'

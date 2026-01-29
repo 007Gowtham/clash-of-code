@@ -1,9 +1,8 @@
-'use client';
-
 import { useState } from 'react';
-import { ChevronsRight, Mic, Volume2, Settings, MessageSquare, Users, X, ChevronLeft, ChevronsLeft, MicOff, VolumeX, Crown } from 'lucide-react';
+import { ChevronsRight, Mic, Volume2, Settings, MessageSquare, Users, X, ChevronLeft, ChevronsLeft, MicOff, VolumeX, Crown, ClipboardList } from 'lucide-react';
 import TeamManagement from './TeamManagement';
 import ChatInterface from './ChatInterface';
+import RequestManagement from './RequestManagement';
 
 export default function RightSidebar({
   isLeader,
@@ -170,6 +169,26 @@ export default function RightSidebar({
 
         {/* Bottom Actions */}
         <div className="mt-auto w-full flex flex-col items-center gap-3 px-2 py-4 border-t border-gray-100">
+          {/* Requests Tab (Leader Only) */}
+          {isLeader && (
+            <button
+              onClick={() => handleExpandPanel('requests')}
+              className={`w-10 h-10 rounded-xl flex items-center justify-center transition-all duration-200 relative ${actualExpandedPanel === 'requests'
+                ? 'bg-black text-white shadow-lg shadow-black/20'
+                : 'text-gray-400 hover:text-gray-900 hover:bg-gray-100'
+                }`}
+              title="Requests"
+            >
+              <ClipboardList className="w-5 h-5" />
+              {/* Pending Request Badge */}
+              {pendingRequests.length > 0 && (
+                <span className="absolute -top-1 -right-1 w-4 h-4 bg-rose-500 text-white text-[9px] font-bold flex items-center justify-center rounded-full border-2 border-white animate-pulse">
+                  {pendingRequests.length}
+                </span>
+              )}
+            </button>
+          )}
+
           <button
             onClick={() => handleExpandPanel('chat')}
             className={`w-10 h-10 rounded-xl flex items-center justify-center transition-all duration-200 group relative ${actualExpandedPanel === 'chat'
@@ -179,9 +198,6 @@ export default function RightSidebar({
             title="Chat"
           >
             <MessageSquare className="w-5 h-5" />
-            {/* Unread badge example
-            <span className="absolute top-2 right-2 w-2 h-2 bg-red-500 rounded-full border-2 border-white"></span>
-            */}
           </button>
 
           <button
@@ -193,13 +209,6 @@ export default function RightSidebar({
             title="Team"
           >
             <Users className="w-5 h-5" />
-
-            {/* Pending Request Badge */}
-            {pendingRequests.length > 0 && isLeader && (
-              <span className="absolute -top-1 -right-1 w-4 h-4 bg-rose-500 text-white text-[9px] font-bold flex items-center justify-center rounded-full border-2 border-white animate-pulse">
-                {pendingRequests.length}
-              </span>
-            )}
           </button>
 
           <button className="w-10 h-10 rounded-xl flex items-center justify-center text-gray-400 hover:text-gray-900 hover:bg-gray-100 transition-colors">
@@ -241,6 +250,21 @@ export default function RightSidebar({
             >
               Team
             </button>
+            {isLeader && (
+              <button
+                onClick={() => {
+                  actualSetActiveTab('requests');
+                  actualSetExpandedPanel('requests');
+                }}
+                className={`px-4 h-full rounded-md text-xs font-semibold transition-all flex items-center gap-1.5 ${actualActiveTab === 'requests' ? 'bg-white text-gray-900 shadow-sm' : 'text-gray-500 hover:text-gray-700'
+                  }`}
+              >
+                Requests
+                {pendingRequests.length > 0 && (
+                  <span className="w-1.5 h-1.5 rounded-full bg-rose-500"></span>
+                )}
+              </button>
+            )}
           </div>
 
           <button
@@ -274,6 +298,18 @@ export default function RightSidebar({
               onRejectQuestion={onRejectQuestion}
             />
           </div>
+          {isLeader && (
+            <div
+              className={`absolute inset-0 transition-opacity duration-300 ${actualActiveTab === 'requests' ? 'opacity-100 z-10 pointer-events-auto' : 'opacity-0 z-0 pointer-events-none'
+                }`}
+            >
+              <RequestManagement
+                pendingRequests={pendingRequests}
+                onAssignQuestion={onAssignQuestion}
+                onRejectQuestion={onRejectQuestion}
+              />
+            </div>
+          )}
         </div>
       </div>
     </>

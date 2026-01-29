@@ -78,6 +78,7 @@ export default function ContestHeader({ isAdmin = false, onStartRoom, onRefresh,
               >
                 Start Battle
               </Button>
+
             ) : (
               <div className="flex items-center gap-2 px-4 py-2.5 bg-amber-50 border border-amber-100 rounded-xl text-amber-700 text-sm font-bold shadow-sm animate-pulse-subtle">
                 <Clock className="w-4 h-4" />

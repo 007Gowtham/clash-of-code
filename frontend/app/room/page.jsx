@@ -49,9 +49,11 @@ export default function RoomsPage() {
   };
 
   // Create Room
+  // Create Room
   const handleCreateRoom = async (formData) => {
+    if (creatingRoom) return;
+
     try {
-      setCreatingRoom(true);
       const response = await API.rooms.createRoom({
         roomName: formData.roomName,
         mode: formData.mode,
@@ -64,14 +66,16 @@ export default function RoomsPage() {
         leaderApprovalRequired: formData.leaderApprovalRequired || false,
         allowSolosInTeamMode: formData.allowSolosInTeamMode || false
       });
+      
+      setCreatingRoom(true);
       setShowCreateModal(false);
-      setCreatedRoom(response);
-      setShowRoomCreatedModal(true);
       toast.success('Room created successfully!');
+
+      // Immediate redirect to prevent confusion
+      router.push(`/room/${response.id}/waiting`);
     } catch (error) {
       console.error('Create room error:', error);
       toast.error(error.message || 'Failed to create room');
-    } finally {
       setCreatingRoom(false);
     }
   };

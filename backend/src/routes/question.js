@@ -11,10 +11,19 @@ const { checkRoomAdmin, checkRole } = require('../middleware/roleCheck');
 // ==================== AUTHENTICATED ROUTES ====================
 
 // All routes below require authentication
+// Public routes
+// Public routes
+router.put('/:questionId', questionController.updateQuestion);
+router.get('/', questionController.getAllQuestions);
+
+// All routes below require authentication
 router.use(authenticateToken);
 
+
+
 // Create global question (Admin only)
-router.get('/', questionController.getAllQuestions);
+// Create global question (Admin only)
+router.post('/many', questionController.createQuestion); // Bulk creation
 router.post('/', questionController.createQuestion);
 router.delete('/:questionId', questionController.deleteQuestion);
 
@@ -32,7 +41,6 @@ router.get('/:questionId', questionController.getQuestionDetails);
 router.post('/:questionId/assign', questionController.assignQuestion);
 
 // Update question (Admin only)
-router.put('/:questionId', questionController.updateQuestion);
 
 // Delete question (Admin only)
 
