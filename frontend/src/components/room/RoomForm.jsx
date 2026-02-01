@@ -1,12 +1,12 @@
 'use client';
 
-import React, { useState, useEffect } from 'react';
-import Input from '@/components/common/Input';
-import Select from '@/components/common/Select';
 import Button from '@/components/common/Button';
+import Input from '@/components/common/Input';
 import NumberInput from '@/components/common/NumberInput';
+import Select from '@/components/common/Select';
 import Toggle from '@/components/common/Toggle';
-import { Copy, Check, Globe } from 'lucide-react';
+import { Check, Copy, Globe } from 'lucide-react';
+import { useEffect, useState } from 'react';
 import RadioButtonCard from '../common/RadioCard';
 
 const RoomForm = ({ onSubmit, isLoading = false }) => {
@@ -194,8 +194,8 @@ const RoomForm = ({ onSubmit, isLoading = false }) => {
           <div className="flex items-center justify-between mb-3">
             <label className="block text-sm font-medium text-gray-700">Problem Difficulty Mix</label>
             <span className={`text-xs font-medium px-2 py-0.5 rounded border ${formData.difficulty.easy + formData.difficulty.medium + formData.difficulty.hard >= 5
-              ? 'text-amber-600 bg-amber-50 border-amber-100'
-              : 'text-blue-600 bg-blue-50 border-blue-100'
+              ? 'text-emerald-600 bg-emerald-50 border-emerald-100'
+              : 'text-slate-600 bg-slate-50 border-slate-100'
               }`}>
               {formData.difficulty.easy + formData.difficulty.medium + formData.difficulty.hard} / 5 Problems
             </span>
@@ -205,7 +205,7 @@ const RoomForm = ({ onSubmit, isLoading = false }) => {
             {/* Easy */}
             <div className="flex-1 flex flex-col gap-2">
               <span className="text-xs font-semibold text-emerald-600 uppercase tracking-wide">Easy</span>
-              <div className="flex items-center justify-between bg-white border border-gray-200 rounded-lg p-1.5 shadow-sm">
+              <div className="flex items-center justify-between bg-white border border-gray-200 rounded-lg p-1.5 shadow-sm group hover:border-emerald-500/50 transition-colors">
                 <button
                   type="button"
                   onClick={() =>
@@ -250,8 +250,8 @@ const RoomForm = ({ onSubmit, isLoading = false }) => {
 
             {/* Medium */}
             <div className="flex-1 flex flex-col gap-2">
-              <span className="text-xs font-semibold text-orange-600 uppercase tracking-wide">Medium</span>
-              <div className="flex items-center justify-between bg-white border border-gray-200 rounded-lg p-1.5 shadow-sm">
+              <span className="text-xs font-semibold text-amber-500 uppercase tracking-wide">Medium</span>
+              <div className="flex items-center justify-between bg-white border border-gray-200 rounded-lg p-1.5 shadow-sm group hover:border-amber-500/50 transition-colors">
                 <button
                   type="button"
                   onClick={() =>
@@ -296,8 +296,8 @@ const RoomForm = ({ onSubmit, isLoading = false }) => {
 
             {/* Hard */}
             <div className="flex-1 flex flex-col gap-2">
-              <span className="text-xs font-semibold text-rose-600 uppercase tracking-wide">Hard</span>
-              <div className="flex items-center justify-between bg-white border border-gray-200 rounded-lg p-1.5 shadow-sm">
+              <span className="text-xs font-semibold text-rose-500 uppercase tracking-wide">Hard</span>
+              <div className="flex items-center justify-between bg-white border border-gray-200 rounded-lg p-1.5 shadow-sm group hover:border-rose-500/50 transition-colors">
                 <button
                   type="button"
                   onClick={() =>
@@ -377,24 +377,24 @@ const RoomForm = ({ onSubmit, isLoading = false }) => {
 
         {/* Room Code Display (for Private rooms) */}
         {formData.privacy === 'private' && (
-          <div className="bg-gray-50/50 rounded-xl p-4 border border-blue-100">
+          <div className="bg-slate-50/50 rounded-xl p-4 border border-slate-200">
             <div className="flex items-center justify-between mb-3">
-              <label className="text-sm font-medium text-gray-700">Room Code</label>
-              <span className="text-xs font-medium text-blue-600">Share with team members</span>
+              <label className="text-sm font-medium text-slate-700">Room Code</label>
+              <span className="text-xs font-medium text-slate-500">Share with team members</span>
             </div>
             <div className="flex items-center gap-3">
-              <div className="flex-1 px-4 py-2.5 bg-white border border-blue-200 rounded-xl font-mono font-bold text-lg text-gray-900 tracking-wider">
+              <div className="flex-1 px-4 py-2.5 bg-white border border-slate-200 rounded-xl font-mono font-bold text-lg text-slate-900 tracking-wider">
                 {formData.roomCode}
               </div>
               <button
                 type="button"
                 onClick={handleCopyCode}
-                className="px-4 py-2.5 bg-white border border-blue-200 rounded-xl hover:bg-blue-50 transition-colors flex items-center gap-2 text-sm font-medium text-gray-700"
+                className="px-4 py-2.5 bg-slate-900 border border-slate-900 rounded-xl hover:bg-slate-800 transition-colors flex items-center gap-2 text-sm font-medium text-white shadow-lg shadow-slate-900/10"
               >
                 {copiedCode ? (
                   <>
-                    <Check size={16} className="text-emerald-500" />
-                    <span className="text-emerald-600">Copied!</span>
+                    <Check size={16} className="text-emerald-400" />
+                    <span className="text-emerald-100">Copied!</span>
                   </>
                 ) : (
                   <>

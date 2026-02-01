@@ -1,6 +1,5 @@
 'use client';
 
-import React from 'react';
 import { X } from 'lucide-react';
 
 const Modal = ({
@@ -19,7 +18,7 @@ const Modal = ({
       {/* Background blur effect */}
       <div className="absolute inset-0 z-0 flex blur-[4px] scale-[1.01] pointer-events-none opacity-40 grayscale-[20%]">
         <div className="w-16 border-r border-gray-200 bg-white flex flex-col items-center py-5">
-          <div className="w-9 h-9 bg-blue-600 rounded-xl mb-8"></div>
+          <div className="w-9 h-9 bg-emerald-500 rounded-xl mb-8"></div>
           <div className="flex flex-col gap-6 w-full px-3">
             <div className="w-10 h-10 bg-gray-100 rounded-xl"></div>
             <div className="w-10 h-10 rounded-xl border border-gray-100"></div>
