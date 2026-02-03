@@ -1,9 +1,9 @@
-import React, { useState } from "react"
+import { useState } from "react";
 
-import { cn } from "@/lib/utils"
+import { cn } from "@/lib/utils";
 
 /**
- * The InteractiveGridPattern component.
+ * The InteractiveGridPattern component with chess board pattern support.
  *
  * @see InteractiveGridPatternProps for the props interface.
  * @returns A React component.
@@ -14,6 +14,7 @@ export function InteractiveGridPattern({
   squares = [24, 24],
   className,
   squaresClassName,
+  chessBoard = false,
   ...props
 }) {
   const [horizontal, vertical] = squares
@@ -28,6 +29,10 @@ export function InteractiveGridPattern({
       {Array.from({ length: horizontal * vertical }).map((_, index) => {
         const x = (index % horizontal) * width
         const y = Math.floor(index / horizontal) * height
+        const row = Math.floor(index / horizontal)
+        const col = index % horizontal
+        const isChessDark = chessBoard && (row + col) % 2 === 1
+
         return (
           <rect
             key={index}
@@ -37,7 +42,11 @@ export function InteractiveGridPattern({
             height={height}
             className={cn(
               "stroke-gray-300/30 transition-all duration-100 ease-in-out [&:not(:hover)]:duration-1000",
-              hoveredSquare === index ? "fill-gray-300/30" : "fill-transparent",
+              hoveredSquare === index
+                ? "fill-gray-300/30"
+                : isChessDark
+                  ? "fill-slate-300/20"
+                  : "fill-transparent",
               squaresClassName
             )}
             onMouseEnter={() => setHoveredSquare(index)}

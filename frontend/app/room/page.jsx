@@ -228,7 +228,10 @@ export default function RoomsPage() {
         <main className="relative z-10 w-full max-w-5xl mx-auto px-6 pt-32 pb-24 flex flex-col items-center">
 
           {/* Header */}
-          <RoomHeader />
+          <RoomHeader
+            title="Clash Of Code"
+            description="Join active competitions or start your own."
+          />
 
           {/* Filter Pills (OS Selector Style) */}
           <nav className="flex flex-wrap justify-center gap-4 mb-20">
@@ -252,22 +255,22 @@ export default function RoomsPage() {
             />
           </nav>
           <div className="w-full max-w-6xl mx-auto px-4 mb-8">
-            <h2 className="text-xl font-semibold text-slate-900 flex items-center gap-3">
+            <h2 className="text-xl font-bold text-slate-900 flex items-center gap-3 font-[family-name:var(--font-space)] tracking-tight">
               <span className="relative flex h-3 w-3">
                 <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
                 <span className="relative inline-flex rounded-full h-3 w-3 bg-emerald-500"></span>
               </span>
               Arena Pulse
             </h2>
-            <p className="text-slate-500 text-sm mt-1 ml-6">Real-time statistics from active battlegrounds.</p>
+            <p className="text-slate-500 text-sm mt-1 ml-6 font-[family-name:var(--font-inter)]">Real-time statistics from active battlegrounds.</p>
           </div>
           {/* Stats Dashboard */}
           <StatsOverview stats={stats} />
           <div className="w-full max-w-6xl mx-auto px-4 mb-8">
-            <h2 className="text-xl font-semibold text-slate-900 flex items-center gap-3">
+            <h2 className="text-xl font-bold text-slate-900 flex items-center gap-3 font-[family-name:var(--font-space)] tracking-tight">
               Find Your Battle
             </h2>
-            <p className="text-slate-500 text-sm mt-1">Join an existing room or create your own.</p>
+            <p className="text-slate-500 text-sm mt-1 font-[family-name:var(--font-inter)]">Join an existing room or create your own.</p>
           </div>
 
           {/* Actions & Room Grid */}
@@ -342,7 +345,7 @@ function FilterPill({ active, onClick, icon: Icon, label }) {
         onClick={onClick}
         className="group flex items-center gap-3 bg-slate-900 text-white px-6 py-3 rounded-full shadow-xl shadow-slate-900/10 hover:shadow-slate-900/20 transition-all duration-200"
       >
-        <Icon className="w-5 h-5 fill-current" />
+        <Icon className="w-5 h-5 text-white" />
         <span className="text-base font-medium">{label}</span>
       </button>
     );

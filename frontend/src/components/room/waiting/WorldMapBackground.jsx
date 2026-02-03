@@ -1,13 +1,14 @@
 import WorldMap from '@/components/ui/world-map';
-import { Globe2 } from 'lucide-react';
+import { memo } from 'react';
 
-export default function WorldMapBackground() {
+function WorldMapBackground() {
     return (
         <>
             {/* Background World Map Container */}
             <div className="absolute top-20 left-1/2 -translate-x-1/2 w-full max-w-7xl h-[600px] z-0 opacity-40 pointer-events-none">
                 <WorldMap
                     lineColor="#10b981"
+                    
                     dots={[
                         {
                             start: { lat: 64.2008, lng: -149.4937 }, // Alaska
@@ -39,18 +40,24 @@ export default function WorldMapBackground() {
             </div>
 
             {/* Catchy Connect Text - Outside Map Container */}
-            <div className="absolute top-[470px] left-0 right-0 text-center flex flex-col items-center justify-center animate-in fade-in slide-in-from-bottom-4 duration-700 delay-300 pointer-events-none z-0">
-                <div className="flex items-center gap-2 text-emerald-600 font-semibold tracking-wide uppercase text-xs mb-2">
-                    <Globe2 className="w-4 h-4" />
-                    <span>Global Network</span>
+            <div className="absolute top-[450px] left-0 right-0 text-center flex flex-col items-center justify-center pointer-events-none z-0 px-4">
+                <div className="inline-flex items-center gap-2 py-1.5 px-3 rounded-full bg-slate-50 border border-slate-200/60 mb-4 shadow-sm backdrop-blur-sm">
+                    <span className="relative flex h-2 w-2">
+                        <span className="absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
+                        <span className="relative inline-flex rounded-full h-2 w-2 bg-emerald-500"></span>
+                    </span>
+                    <span className="text-xs font-bold tracking-[0.15em] text-slate-500 uppercase font-mono">Global Battleground</span>
                 </div>
-                <h3 className="text-xl md:text-2xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-slate-900 via-slate-700 to-slate-900">
-                    Connect with Players Worldwide
-                </h3>
-                <p className="text-slate-400 text-sm mt-1">Battle for glory across borders</p>
-            </div>
 
-            {/* Radial Gradient Glow */}
+                <h3 className="text-4xl md:text-5xl font-black tracking-tight text-slate-900 mb-2 font-[family-name:var(--font-space)]">
+                    The <span className="text-transparent bg-clip-text bg-gradient-to-r from-emerald-600 to-teal-600">Arena Awaits.</span>
+                </h3>
+                <p className="text-lg text-slate-500 font-medium max-w-lg leading-relaxed">
+                    Assemble your squad, optimize your logic, and dominate the world map.
+                </p>
+            </div>
         </>
     );
 }
+
+export default memo(WorldMapBackground);

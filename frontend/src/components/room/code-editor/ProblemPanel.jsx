@@ -1,7 +1,7 @@
 'use client';
 
-import { useState, useEffect } from 'react';
-import { ThumbsUp, Star, Share2, Flag, ChevronLeft, ChevronRight, ChevronDown, Trophy, Clock } from 'lucide-react';
+import { ChevronDown, ChevronLeft, ChevronRight, Clock, Trophy } from 'lucide-react';
+import { useEffect, useState } from 'react';
 
 export default function ProblemPanel({
   activeTab,
@@ -38,10 +38,10 @@ export default function ProblemPanel({
   useEffect(() => {
     if (!questions || questions.length === 0) return;
     const index = questions.findIndex(q => q.id === selectedQuestion);
-    if (index !== -1) {
+    if (index !== -1 && index !== currentQuestionIndex) {
       setCurrentQuestionIndex(index);
     }
-  }, [selectedQuestion, questions]);
+  }, [selectedQuestion, questions, currentQuestionIndex]);
 
   // Timer to update cooldowns every second
   const [now, setNow] = useState(Date.now());

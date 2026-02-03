@@ -12,18 +12,10 @@ export default function CreateTeamModal({
     isLoading
 }) {
     const [teamName, setTeamName] = useState('');
-    const [selectedRole, setSelectedRole] = useState('');
+
     const [error, setError] = useState('');
 
-    // 5-6 DSA-themed roles
-    const roles = [
-        { value: 'Algorithm Master', label: 'Algorithm Master', color: 'text-blue-700' },
-        { value: 'Data Wizard', label: 'Data Wizard', color: 'text-purple-700' },
-        { value: 'Code Ninja', label: 'Code Ninja', color: 'text-emerald-700' },
-        { value: 'Debug Specialist', label: 'Debug Specialist', color: 'text-orange-700' },
-        { value: 'Performance Optimizer', label: 'Performance Optimizer', color: 'text-pink-700' },
-        { value: 'System Architect', label: 'System Architect', color: 'text-indigo-700' },
-    ];
+
 
     if (!isOpen) return null;
 
@@ -36,16 +28,12 @@ export default function CreateTeamModal({
             return;
         }
 
-        if (!selectedRole) {
-            setError('Please select a role');
-            return;
-        }
+
 
         try {
-            await onCreate({ teamName: teamName.trim(), role: selectedRole });
+            await onCreate({ teamName: teamName.trim() });
             // Reset form
             setTeamName('');
-            setSelectedRole('');
             setError('');
         } catch (err) {
             console.error('Create team error:', err);
@@ -54,14 +42,13 @@ export default function CreateTeamModal({
 
     const handleClose = () => {
         setTeamName('');
-        setSelectedRole('');
         setError('');
         onClose();
     };
 
     return (
-        <div className="fixed inset-0 z-50 flex items-center justify-center bg-gray-900/50 backdrop-blur-sm p-4 animate-in fade-in duration-100">
-            <div className="bg-white rounded-2xl shadow-2xl w-full max-w-md animate-in zoom-in-95 duration-100">
+        <div className="fixed inset-0 z-50 flex items-center justify-center bg-gray-900/50 backdrop-blur-sm p-4">
+            <div className="bg-white rounded-2xl shadow-2xl w-full max-w-md">
                 {/* Header */}
                 <div className="px-6 py-4 border-b border-gray-100 flex items-center justify-between">
                     <h2 className="text-xl font-bold text-gray-900">Create Team</h2>
@@ -103,38 +90,11 @@ export default function CreateTeamModal({
                         />
                     </div>
 
-                    {/* Role Selection */}
-                    <div className="mb-6">
-                        <label className="block text-sm font-medium text-gray-700 mb-2">
-                            Your Role <span className="text-red-500">*</span>
-                        </label>
-                        <div className="grid grid-cols-2 gap-2">
-                            {roles.map((role) => (
-                                <button
-                                    key={role.value}
-                                    type="button"
-                                    onClick={() => setSelectedRole(role.value)}
-                                    disabled={isLoading}
-                                    className={`p-3 rounded-lg border-2 text-left transition-all ${selectedRole === role.value
-                                        ? 'border-emerald-500 bg-emerald-50'
-                                        : 'border-gray-200 hover:border-gray-300 bg-white'
-                                        } disabled:opacity-50`}
-                                >
-                                    <span className={`text-sm font-semibold ${selectedRole === role.value ? 'text-emerald-700' : role.color
-                                        }`}>
-                                        {role.label}
-                                    </span>
-                                </button>
-                            ))}
-                        </div>
-                        <p className="mt-2 text-xs text-gray-500">
-                            Select your preferred role for this challenge
-                        </p>
-                    </div>
+
 
                     {/* Error Message */}
                     {error && (
-                        <div className="mb-4 p-3 bg-red-50 border border-red-200 rounded-lg animate-in slide-in-from-top-2 duration-200">
+                        <div className="mb-4 p-3 bg-red-50 border border-red-200 rounded-lg">
                             <p className="text-sm text-red-600 font-medium">{error}</p>
                         </div>
                     )}

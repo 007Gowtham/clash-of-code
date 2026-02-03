@@ -32,7 +32,7 @@ export default function RoomCard({ room, onJoin }) {
                 <div className="w-12 h-12 rounded-lg flex items-center justify-center border border-gray-200/60 bg-gradient-to-b from-white to-gray-50 shadow-[0_2px_4px_rgba(0,0,0,0.02),0_1px_0_inset_rgba(255,255,255,1)] shrink-0">
                     <StatusIcon width={20} height={20} strokeWidth={1.5} className={statusColor} />
                 </div>
-                <h3 className="text-xl font-semibold text-slate-900 tracking-tight truncate w-full">
+                <h3 className="text-xl font-bold text-slate-900 tracking-tight truncate w-full font-[family-name:var(--font-space)]">
                     {room.name}
                 </h3>
             </div>
@@ -40,22 +40,22 @@ export default function RoomCard({ room, onJoin }) {
             {/* Details */}
             <div className="w-full mb-6">
                 <div className="mb-3 px-1">
-                    <span className="text-[10px] font-bold text-slate-400 uppercase tracking-widest">Battle Intel</span>
+                    <span className="text-[10px] font-bold text-slate-400 uppercase tracking-widest font-[family-name:var(--font-inter)]">Battle Intel</span>
                 </div>
                 <div className="flex flex-wrap items-center justify-between gap-4 w-full border-t border-b border-gray-100 py-4">
                     <div className="flex flex-col gap-0.5">
-                        <span className="text-xs text-slate-500 font-medium uppercase tracking-wider">Participats</span>
-                        <span className="text-lg font-semibold text-slate-900">{room.totalParticipants}</span>
+                        <span className="text-xs text-slate-500 font-medium uppercase tracking-wider font-[family-name:var(--font-inter)]">Participants</span>
+                        <span className="text-lg font-semibold text-slate-900 font-[family-name:var(--font-mono)]">{room.totalParticipants}</span>
                     </div>
 
                     <div className="flex flex-col gap-0.5 pl-4 border-l border-gray-200">
-                        <span className="text-xs text-slate-500 font-medium uppercase tracking-wider">Max  Size</span>
-                        <span className="text-lg font-semibold text-slate-900">{room.settings?.maxTeamSize}</span>
+                        <span className="text-xs text-slate-500 font-medium uppercase tracking-wider font-[family-name:var(--font-inter)]">Max Size</span>
+                        <span className="text-lg font-semibold text-slate-900 font-[family-name:var(--font-mono)]">{room.settings?.maxTeamSize}</span>
                     </div>
 
                     <div className="flex flex-col gap-0.5 pl-4 border-l border-gray-200">
-                        <span className="text-xs text-slate-500 font-medium uppercase tracking-wider">Status</span>
-                        <span className={cn("text-lg font-semibold truncate max-w-[120px]", statusColor)}>{statusText}</span>
+                        <span className="text-xs text-slate-500 font-medium uppercase tracking-wider font-[family-name:var(--font-inter)]">Status</span>
+                        <span className={cn("text-lg font-semibold truncate max-w-[120px] font-[family-name:var(--font-space)] tracking-tight", statusColor)}>{statusText}</span>
                     </div>
                 </div>
             </div>

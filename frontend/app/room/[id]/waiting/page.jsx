@@ -113,14 +113,14 @@ export default function WaitingRoomPage() {
 
         {/* Section Header */}
         <div className="w-full max-w-6xl mx-auto mb-8">
-          <h2 className="text-xl font-semibold text-slate-900 flex items-center gap-3 mb-2">
+          <h2 className="text-xl font-bold text-slate-900 flex items-center gap-3 mb-2 font-[family-name:var(--font-space)] tracking-tight">
             <span className="relative flex h-3 w-3">
-              <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
+              <span className="absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
               <span className="relative inline-flex rounded-full h-3 w-3 bg-emerald-500"></span>
             </span>
             Battle Lobby Status
           </h2>
-          <p className="text-slate-500 text-sm ml-6">Real-time statistics from the waiting room</p>
+          <p className="text-slate-500 text-sm ml-6 font-[family-name:var(--font-inter)]">Real-time statistics from the waiting room</p>
         </div>
 
         {/* Stats Overview */}
@@ -130,10 +130,10 @@ export default function WaitingRoomPage() {
         <div className="w-full max-w-6xl mx-auto mb-12">
           {/* Catchy Header */}
           <div className="mb-6">
-            <h2 className="text-2xl font-bold text-slate-900 mb-2">
+            <h2 className="text-2xl font-bold text-slate-900 mb-2 font-[family-name:var(--font-space)] tracking-tight">
               Assemble Your Squad
             </h2>
-            <p className="text-slate-500">
+            <p className="text-slate-500 font-[family-name:var(--font-inter)]">
               Create your own team or join forces with existing warriors
             </p>
           </div>
@@ -148,15 +148,16 @@ export default function WaitingRoomPage() {
                 placeholder="Search teams..."
                 value={searchTerm}
                 onChange={(e) => setSearchTerm(e.target.value)}
-                className="w-full pl-12 pr-4 py-3 bg-slate-50 border border-slate-200 rounded-xl text-slate-700 placeholder:text-slate-400 focus:outline-none focus:border-slate-300 focus:ring-1 focus:ring-slate-300 transition-all shadow-sm"
+                className="w-full pl-12 pr-4 py-3 bg-slate-50 border border-slate-200 rounded-xl text-slate-700 placeholder:text-slate-400 focus:outline-none focus:border-slate-300 focus:ring-1 focus:ring-slate-300 transition-all shadow-sm font-[family-name:var(--font-inter)]"
               />
             </div>
 
             {/* Action Buttons */}
             <div className="flex gap-3 w-full sm:w-auto">
+
               <button
                 onClick={() => setIsJoinViaCodeModalOpen(true)}
-                className="flex-1 sm:flex-none flex items-center justify-center gap-2 px-6 py-3 rounded-xl border border-slate-200 bg-white hover:bg-slate-50 text-slate-700 font-medium transition-all"
+                className="flex-1 sm:flex-none flex items-center justify-center gap-2 px-6 py-3 rounded-xl border border-slate-200 bg-white hover:bg-slate-50 text-slate-700 font-semibold transition-all font-[family-name:var(--font-inter)]"
               >
                 <Terminal className="w-5 h-5 text-slate-400" />
                 <span>Join via Code</span>
@@ -166,7 +167,7 @@ export default function WaitingRoomPage() {
                   console.log('Create Team clicked, opening modal...');
                   setIsCreateTeamModalOpen(true);
                 }}
-                className="flex-1 sm:flex-none flex items-center justify-center gap-2 px-6 py-3 rounded-xl bg-slate-900 hover:bg-slate-800 text-white font-medium transition-all shadow-lg shadow-slate-900/10"
+                className="flex-1 sm:flex-none flex items-center justify-center gap-2 px-6 py-3 rounded-xl bg-slate-900 hover:bg-slate-800 text-white font-semibold transition-all shadow-lg shadow-slate-900/10 font-[family-name:var(--font-inter)]"
               >
                 <Plus className="w-5 h-5" />
                 <span>Create Team</span>
