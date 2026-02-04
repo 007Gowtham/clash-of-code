@@ -79,7 +79,7 @@ export default function Toolbar() {
         <button
           key={tool.id}
           onClick={() => handleToolClick(tool.id)}
-          className={`p-2 rounded-lg transition-all ${
+          className={`p-2  disabled:opacity-50 rounded-lg transition-all ${
             activeTool === tool.id
               ? 'bg-blue-50 text-blue-600 shadow-sm'
               : 'text-gray-500 hover:bg-gray-100'

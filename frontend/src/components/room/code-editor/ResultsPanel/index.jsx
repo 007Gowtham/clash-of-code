@@ -19,7 +19,7 @@ const ResultsPanel = () => {
 
     return (
         <div
-            className="flex flex-col overflow-hidden bg-white h-full transition-all duration-300 ease-in-out"
+            className="flex flex-col overflow-hidden  bg-white h-full transition-all duration-300 ease-in-out"
         >
             <div ref={headerRef}>
                 <ResultsHeader

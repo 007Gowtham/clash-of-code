@@ -2,15 +2,22 @@
 
 import { Plus, Users } from 'lucide-react';
 
+const ROLE_MAP = {
+  architect: { label: 'Architect', icon: '📐' },
+  builder: { label: 'Builder', icon: '🛠️' },
+  debugger: { label: 'Debugger', icon: '🐛' },
+  optimiser: { label: 'Optimiser', icon: '⚡' },
+};
+
 export default function TeamCard({ team, onJoinTeam }) {
-  const isPublic = team.id === 't1' || team.id === 't2'; // Mock logic for design
+  const isPublic = team.visibility !== 'PRIVATE';
   const filledSlots = team.members ? team.members.length : 0;
-  const emptySlots = team.maxSize - filledSlots;
+  const emptySlots = (team.maxSize || 4) - filledSlots;
 
   return (
     <div className="flex flex-col items-start bg-white rounded-xl border border-slate-200/60 p-6 shadow-[0_1px_3px_rgba(0,0,0,0.04)] hover:shadow-[0_4px_12px_rgba(0,0,0,0.08)] transition-all duration-300">
       {/* Header with Icon, Name, and Badge */}
-      <div className="flex items-center justify-between w-full mb-4">
+      <div className="flex items-center justify-between w-full mb-6">
         <div className="flex items-center gap-3">
           <div className="w-12 h-12 rounded-lg flex items-center justify-center border border-slate-200/60 bg-gradient-to-br from-white via-slate-50 to-slate-100 shadow-[0_4px_8px_-2px_rgba(0,0,0,0.05),0_1px_0_inset_rgba(255,255,255,1)] shrink-0">
             {isPublic ? (
@@ -30,23 +37,27 @@ export default function TeamCard({ team, onJoinTeam }) {
         </span>
       </div>
 
-      {/* Player Slots */}
+      {/* Player Slots - Restored Clean Design */}
       <div className="mb-5 w-full">
         <p className="text-xs text-slate-500 mb-2.5 font-bold uppercase tracking-wider font-[family-name:var(--font-inter)]">
-          <span className="font-[family-name:var(--font-mono)] text-slate-700 text-sm">{filledSlots}/{team.maxSize}</span> Players
+          <span className="font-[family-name:var(--font-mono)] text-slate-700 text-sm">{filledSlots}/{(team.maxSize || 4)}</span> Players
         </p>
         <div className="flex flex-col gap-2">
-          {/* Filled Slots - Show actual members with roles */}
+          {/* Filled Slots */}
           {team.members && team.members.map((member, i) => {
+            const roleInfo = ROLE_MAP[member.role] || { label: 'Engineer', icon: 'W' };
             return (
               <div
                 key={member.id || i}
                 className="flex items-center gap-3 px-3 py-2.5 rounded-lg bg-slate-50 border border-slate-100"
               >
                 <div className="w-7 h-7 rounded-full bg-slate-200 flex items-center justify-center text-slate-600 font-bold font-[family-name:var(--font-mono)] text-xs shadow-sm flex-shrink-0">
-                  {member.name ? member.name.charAt(0).toUpperCase() : '?'}
+                  {roleInfo.icon}
                 </div>
-                <span className="text-sm font-semibold text-slate-800 min-w-[80px] font-[family-name:var(--font-inter)]">{member.name}</span>
+                <div className="flex flex-col">
+                  <span className="text-sm font-semibold text-slate-800 font-[family-name:var(--font-inter)] leading-none">{member.name}</span>
+                  <span className="text-[9px] font-bold text-slate-400 uppercase tracking-tight mt-0.5">{roleInfo.label}</span>
+                </div>
 
                 <div className="ml-auto flex items-center gap-2">
                   {member.name === 'You' && (
@@ -70,7 +81,7 @@ export default function TeamCard({ team, onJoinTeam }) {
               className="flex items-center gap-2.5 px-3 py-2 rounded-lg bg-slate-50/50 border border-slate-200/60 border-dashed"
             >
               <div className="w-7 h-7 rounded-full bg-slate-100 flex items-center justify-center">
-                <Users className="w-3.5 h-3.5 text-slate-400" strokeWidth={2} />
+                <Plus className="w-3.5 h-3.5 text-slate-400" strokeWidth={2} />
               </div>
               <span className="text-sm text-slate-400 font-medium font-[family-name:var(--font-inter)]">Empty slot</span>
             </div>
@@ -82,6 +93,7 @@ export default function TeamCard({ team, onJoinTeam }) {
       <div className="mt-auto w-full flex items-center justify-between gap-3">
         <button
           onClick={() => onJoinTeam(team)}
+          disabled={emptySlots === 0}
           className="inline-flex items-center justify-center gap-2 rounded-lg border border-slate-200 bg-white px-5 py-2.5 text-sm font-semibold text-slate-700 shadow-sm hover:bg-slate-50 hover:border-slate-300 hover:text-slate-900 transition-all duration-200 font-[family-name:var(--font-inter)]"
         >
           <Plus className="w-4 h-4" strokeWidth={2} />
@@ -90,21 +102,10 @@ export default function TeamCard({ team, onJoinTeam }) {
 
         {/* Team Info */}
         <div className="flex items-center gap-2.5">
-          {/* Capacity Badge */}
-          <div className="flex items-center gap-1.5 px-2.5 py-1 rounded-md bg-slate-50 border border-slate-200">
+          <div className="flex items-center gap-1.5 px-2.5 py-1 rounded-md bg-slate-50 border border-slate-200 font-[family-name:var(--font-inter)]">
             <Users className="w-3.5 h-3.5 text-slate-500" strokeWidth={2} />
-            <span className="text-xs font-semibold text-slate-700 font-[family-name:var(--font-mono)]">
+            <span className="text-xs font-semibold text-slate-700">
               {emptySlots} {emptySlots === 1 ? 'Slot' : 'Slots'} Left
-            </span>
-          </div>
-
-          {/* Team Power Badge */}
-          <div className="flex items-center gap-1.5 px-2.5 py-1 rounded-md bg-gradient-to-r from-indigo-50 via-purple-50 to-indigo-50 border border-indigo-200">
-            <svg className="w-3.5 h-3.5 text-indigo-600" fill="currentColor" viewBox="0 0 20 20">
-              <path fillRule="evenodd" d="M11.3 1.046A1 1 0 0112 2v5h4a1 1 0 01.82 1.573l-7 10A1 1 0 018 18v-5H4a1 1 0 01-.82-1.573l7-10a1 1 0 011.12-.38z" clipRule="evenodd" />
-            </svg>
-            <span className="text-xs font-bold bg-gradient-to-r from-indigo-600 to-purple-600 bg-clip-text text-transparent">
-              {filledSlots * 25}% Power
             </span>
           </div>
         </div>

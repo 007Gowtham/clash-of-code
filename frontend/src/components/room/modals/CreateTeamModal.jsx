@@ -5,6 +5,13 @@ import Input from '@/components/common/Input';
 import { Users, X } from 'lucide-react';
 import { useState } from 'react';
 
+const ROLES = [
+    { id: 'architect', label: 'Architect', icon: '📐' },
+    { id: 'builder', label: 'Builder', icon: '🛠️' },
+    { id: 'debugger', label: 'Debugger', icon: '🐛' },
+    { id: 'optimiser', label: 'Optimiser', icon: '⚡' },
+];
+
 export default function CreateTeamModal({
     isOpen,
     onClose,
@@ -12,10 +19,8 @@ export default function CreateTeamModal({
     isLoading
 }) {
     const [teamName, setTeamName] = useState('');
-
+    const [selectedRole, setSelectedRole] = useState('architect');
     const [error, setError] = useState('');
-
-
 
     if (!isOpen) return null;
 
@@ -28,12 +33,14 @@ export default function CreateTeamModal({
             return;
         }
 
-
-
         try {
-            await onCreate({ teamName: teamName.trim() });
+            await onCreate({
+                teamName: teamName.trim(),
+                role: selectedRole
+            });
             // Reset form
             setTeamName('');
+            setSelectedRole('architect');
             setError('');
         } catch (err) {
             console.error('Create team error:', err);
@@ -42,6 +49,7 @@ export default function CreateTeamModal({
 
     const handleClose = () => {
         setTeamName('');
+        setSelectedRole('architect');
         setError('');
         onClose();
     };
@@ -63,7 +71,7 @@ export default function CreateTeamModal({
 
                 {/* Content */}
                 <form onSubmit={handleSubmit} className="p-6">
-                    {/* Info Card */}
+                    {/* Info Card - Original Emerald Style */}
                     <div className="mb-6 p-4 bg-gradient-to-br from-emerald-50 to-teal-50 rounded-xl border border-emerald-100">
                         <div className="flex items-center gap-2 mb-2">
                             <Users className="w-4 h-4 text-emerald-600" />
@@ -72,7 +80,7 @@ export default function CreateTeamModal({
                             </p>
                         </div>
                         <p className="text-sm text-gray-700">
-                            Create your team and choose your role. You'll be the team leader!
+                            Create your team and choose your role. Each role in the team must be unique!
                         </p>
                     </div>
 
@@ -90,7 +98,28 @@ export default function CreateTeamModal({
                         />
                     </div>
 
-
+                    {/* Role Selection - Simplified UI to match existing design */}
+                    <div className="mb-6">
+                        <label className="block text-sm font-medium text-gray-700 mb-2">
+                            Your Role in Team
+                        </label>
+                        <div className="flex flex-wrap gap-2">
+                            {ROLES.map((role) => (
+                                <button
+                                    key={role.id}
+                                    type="button"
+                                    onClick={() => setSelectedRole(role.id)}
+                                    className={`flex items-center gap-2 px-3 py-2 rounded-lg border transition-all ${selectedRole === role.id
+                                            ? 'border-emerald-500 bg-emerald-50 text-emerald-700 shadow-sm'
+                                            : 'border-gray-200 bg-white text-gray-600 hover:border-gray-300'
+                                        }`}
+                                >
+                                    <span>{role.icon}</span>
+                                    <span className="text-xs font-bold">{role.label}</span>
+                                </button>
+                            ))}
+                        </div>
+                    </div>
 
                     {/* Error Message */}
                     {error && (
@@ -99,8 +128,8 @@ export default function CreateTeamModal({
                         </div>
                     )}
 
-                    {/* Actions */}
-                    <div className="flex gap-3">
+                    {/* Actions - Restoring original button classes */}
+                    <div className="flex gap-3 mt-4">
                         <Button
                             type="button"
                             variant="primary"

@@ -7,7 +7,7 @@ import { EditorToolbar } from './EditorToolbar';
 const EditorPanel = () => {
     return (
         <div className="h-full flex flex-col overflow-hidden bg-white">
-            <EditorHeader />
+         
             <EditorToolbar />
 
             {/* Code Editor Area */}

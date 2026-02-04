@@ -4,7 +4,7 @@ import { useEffect, useRef } from 'react';
 import Toolbar from './Toolbar';
 import { useWhiteboard } from './useWhiteboard';
 
-export default function CanvasBoard() {
+export default function CanvasBoard({ isArchitect = false }) {
   const containerRef = useRef(null);
   const canvasRef = useRef(null);
   
@@ -32,7 +32,7 @@ export default function CanvasBoard() {
 
   return (
     <div ref={containerRef} className="w-full h-full relative bg-gray-50 overflow-hidden">
-      <Toolbar />
+      {isArchitect===true ? <Toolbar />:null}
       <canvas ref={canvasRef} className="w-full h-full block" />
     </div>
   );

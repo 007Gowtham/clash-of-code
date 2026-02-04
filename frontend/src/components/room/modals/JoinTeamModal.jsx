@@ -5,6 +5,13 @@ import Input from '@/components/common/Input';
 import { Globe, Lock, X } from 'lucide-react';
 import { useState } from 'react';
 
+const ROLES = [
+    { id: 'architect', label: 'Architect', icon: '📐' },
+    { id: 'builder', label: 'Builder', icon: '🛠️' },
+    { id: 'debugger', label: 'Debugger', icon: '🐛' },
+    { id: 'optimiser', label: 'Optimiser', icon: '⚡' },
+];
+
 export default function JoinTeamModal({
     isOpen,
     onClose,
@@ -13,34 +20,41 @@ export default function JoinTeamModal({
     isLoading
 }) {
     const [code, setCode] = useState('');
-
+    const [selectedRole, setSelectedRole] = useState('');
     const [error, setError] = useState('');
 
     if (!isOpen || !selectedTeam) return null;
+
+    // Calculate which roles are already occupied
+    const takenRoles = selectedTeam.members?.map(m => m.role) || [];
 
     const handleSubmit = async (e) => {
         e.preventDefault();
         setError('');
 
-        // Validate code for private teams
         if (selectedTeam.visibility === 'PRIVATE' && !code.trim()) {
             setError('Team code is required for private teams');
             return;
         }
 
+        if (!selectedRole) {
+            setError('Please selection an available role');
+            return;
+        }
+
         try {
-            await onJoin(selectedTeam.id, code || undefined);
-            // Reset form
+            await onJoin(selectedTeam.id, code || undefined, selectedRole);
             setCode('');
+            setSelectedRole('');
             setError('');
         } catch (err) {
-            // Error already shown by API client toast
             console.error('Join team error:', err);
         }
     };
 
     const handleClose = () => {
         setCode('');
+        setSelectedRole('');
         setError('');
         onClose();
     };
@@ -62,7 +76,7 @@ export default function JoinTeamModal({
 
                 {/* Content */}
                 <form onSubmit={handleSubmit} className="p-6">
-                    {/* Team Info Card */}
+                    {/* Team Info Card - Restored Original Style */}
                     <div className="mb-6 p-4 bg-gradient-to-br from-blue-50 to-indigo-50 rounded-xl border border-blue-100">
                         <p className="text-xs text-gray-600 mb-2 font-medium uppercase tracking-wide">
                             You're joining:
@@ -84,7 +98,7 @@ export default function JoinTeamModal({
                                 )}
                             </div>
                             <div className="text-gray-500">
-                                {selectedTeam.currentMembers || 0} / {selectedTeam.maxMembers || 4} members
+                                {selectedTeam.members?.length || 0} / {selectedTeam.maxSize || 4} members
                             </div>
                         </div>
 
@@ -98,33 +112,48 @@ export default function JoinTeamModal({
                         )}
                     </div>
 
-                    {/* Code Input - Only meaningful for Private teams, though technically could be used for public if needed, but per logic modal is only for private */}
+                    {/* Role Selection - Minimalist Tag Design */}
+                    <div className="mb-6">
+                        <label className="block text-sm font-medium text-gray-700 mb-2">
+                            Select Available Role
+                        </label>
+                        <div className="flex flex-wrap gap-2">
+                            {ROLES.map((role) => {
+                                const isTaken = takenRoles.includes(role.id);
+                                return (
+                                    <button
+                                        key={role.id}
+                                        type="button"
+                                        disabled={isTaken || isLoading}
+                                        onClick={() => setSelectedRole(role.id)}
+                                        className={`flex items-center gap-2 px-3 py-2 rounded-lg border transition-all ${isTaken
+                                                ? 'opacity-40 bg-gray-50 border-gray-100 cursor-not-allowed'
+                                                : selectedRole === role.id
+                                                    ? 'border-blue-500 bg-blue-50 text-blue-700 shadow-sm'
+                                                    : 'border-gray-200 bg-white text-gray-600 hover:border-gray-300'
+                                            }`}
+                                    >
+                                        <span>{role.icon}</span>
+                                        <span className="text-xs font-bold">{role.label}</span>
+                                        {isTaken && <span className="text-[10px] opacity-50 ml-1">(Occupied)</span>}
+                                    </button>
+                                );
+                            })}
+                        </div>
+                    </div>
+
+                    {/* Code Input */}
                     <div className="mb-5">
                         <Input
-                            label={
-                                selectedTeam.visibility === 'PRIVATE'
-                                    ? 'Team Code (Required)'
-                                    : 'Team Code (Optional)'
-                            }
-                            placeholder={
-                                selectedTeam.visibility === 'PRIVATE'
-                                    ? 'Enter the team code'
-                                    : 'Enter code if provided'
-                            }
+                            label={selectedTeam.visibility === 'PRIVATE' ? 'Team Code (Required)' : 'Team Code (Optional)'}
+                            placeholder={selectedTeam.visibility === 'PRIVATE' ? 'Enter the team code' : 'Enter code if provided'}
                             value={code}
                             onChange={(e) => setCode(e.target.value.toUpperCase())}
                             required={selectedTeam.visibility === 'PRIVATE'}
                             disabled={isLoading}
-                            helperText={
-                                selectedTeam.visibility === 'PRIVATE'
-                                    ? 'Get this code from the team leader'
-                                    : 'Leave blank if team is public'
-                            }
                             className="font-mono"
                         />
                     </div>
-
-
 
                     {/* Error Message */}
                     {error && (
