@@ -9,12 +9,15 @@ import {
   ResizablePanel,
   ResizablePanelGroup,
 } from "@/components/ui/resizable";
+import CanvasBoard from '@/components/Whiteboard/CanvasBoard';
+import { WhiteboardProvider } from '@/components/Whiteboard/WhiteboardContext';
 import { ChatPanelProvider, useChatPanel } from '@/contexts/ChatPanelContext';
 import { ProblemPanelProvider, useProblemPanel } from '@/contexts/ProblemPanelContext';
 import { ResultsPanelProvider, useResultsPanel } from '@/contexts/ResultsPanelContext';
 import { Code2, Zap } from 'lucide-react';
-import { useParams } from 'next/navigation';
-import { useRef } from 'react';
+import { useParams, useSearchParams } from 'next/navigation';
+import { useEffect, useRef, useState } from 'react';
+import { io } from 'socket.io-client';
 
 function CodeEditorContent() {
   const params = useParams();
@@ -22,6 +25,20 @@ function CodeEditorContent() {
   const resizeStartedRef = useRef(0);
 
   const { id: roomId, teamId } = params;
+  const searchParams = useSearchParams();
+  const role = searchParams.get('role');
+  const isArchitect = role === 'architect';
+
+  const [socket, setSocket] = useState(null);
+
+  useEffect(() => {
+    if (isArchitect && !socket) {
+      const newSocket = io(process.env.NEXT_PUBLIC_API_URL || 'http://localhost:4000');
+      setSocket(newSocket);
+      return () => newSocket.disconnect();
+    }
+  }, [isArchitect, socket]);
+
   const { panelSize: resultsPanelSize } = useResultsPanel();
   const { panelSize: problemPanelSize, expand, isCollapsed } = useProblemPanel();
   const { panelSize: chatPanelSize } = useChatPanel();
@@ -69,23 +86,50 @@ function CodeEditorContent() {
 
           {/* 2. Middle Panel: Code & Results Container */}
           <ResizablePanel defaultSize={50} minSize={30}>
-            <ResizablePanelGroup orientation="vertical" className="gap-1 h-full">
+            {isArchitect ? (
+              <div className="h-full w-full bg-white rounded-xl shadow-sm border border-gray-200 flex flex-col overflow-hidden relative">
+                <WhiteboardProvider roomId={roomId} socket={socket} isArchitect={true}>
+                  <CanvasBoard />
+                </WhiteboardProvider>
+              </div>
+            ) : (
+              <ResizablePanelGroup orientation="vertical" className="gap-1 h-full">
+                {/* Top: Code Editor Container */}
+                <ResizablePanel
+                  defaultSize={100 - resultsPanelSize}
+                  minSize={30}
+                  className="bg-white rounded-xl shadow-sm border border-gray-200 flex flex-col overflow-hidden"
+                >
+                  <EditorPanel />
+                </ResizablePanel>
 
-              {/* Top: Code Editor Container */}
+                <ResizableHandle withHandle horizontal className="bg-transparent h-1 hover:bg-indigo-500/10 transition-colors" />
+
+                {/* Bottom: Test Result Container */}
+                <ResizablePanel
+                  key={`results-${resultsPanelSize}`}
+                  defaultSize={resultsPanelSize}
+                  minSize={5}
+                  collapsible={true}
+                  onResize={(size) => {
+
+                  }}
+                  className="bg-white rounded-xl shadow-sm border border-gray-200 flex flex-col overflow-hidden"
+                >
+                  <ResultsPanel />
+                </ResizablePanel>
+              </ResizablePanelGroup>
+            )}
+          </ResizablePanel>
+
+          {!isArchitect && (
+            <>
+              <ResizableHandle withHandle className="bg-transparent w-1 hover:bg-indigo-500/10 transition-colors" />
+
+              {/* 3. Right Panel: Team Chat Container */}
               <ResizablePanel
-                defaultSize={100 - resultsPanelSize}
-                minSize={30}
-                className="bg-white rounded-xl shadow-sm border border-gray-200 flex flex-col overflow-hidden"
-              >
-                <EditorPanel />
-              </ResizablePanel>
-
-              <ResizableHandle withHandle horizontal className="bg-transparent h-1 hover:bg-indigo-500/10 transition-colors" />
-
-              {/* Bottom: Test Result Container */}
-              <ResizablePanel
-                key={`results-${resultsPanelSize}`}
-                defaultSize={resultsPanelSize}
+                key={`chat-${chatPanelSize}`}
+                defaultSize={chatPanelSize}
                 minSize={5}
                 collapsible={true}
                 onResize={(size) => {
@@ -93,26 +137,10 @@ function CodeEditorContent() {
                 }}
                 className="bg-white rounded-xl shadow-sm border border-gray-200 flex flex-col overflow-hidden"
               >
-                <ResultsPanel />
+                <ChatPanel />
               </ResizablePanel>
-            </ResizablePanelGroup>
-          </ResizablePanel>
-
-          <ResizableHandle withHandle className="bg-transparent w-1 hover:bg-indigo-500/10 transition-colors" />
-
-          {/* 3. Right Panel: Team Chat Container */}
-          <ResizablePanel
-            key={`chat-${chatPanelSize}`}
-            defaultSize={chatPanelSize}
-            minSize={5}
-            collapsible={true}
-            onResize={(size) => {
-
-            }}
-            className="bg-white rounded-xl shadow-sm border border-gray-200 flex flex-col overflow-hidden"
-          >
-            <ChatPanel />
-          </ResizablePanel>
+            </>
+          )}
 
         </ResizablePanelGroup>
       </main>
