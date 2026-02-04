@@ -90,17 +90,17 @@ export const ProblemContent = () => {
                     <ul className="list-disc list-outside ml-5 space-y-2">
                         <li>
                             <TypographyP className="mt-0 text-[14px]">
-                                <TypographyInlineCode className="bg-gray-100 text-gray-600 font-normal">2 &lt;= nums.length &lt;= 10⁴</TypographyInlineCode>
+                                <TypographyP className="bg-gray-100 text-gray-600 font-normal">2 &lt;= nums.length &lt;= 10⁴</TypographyP>
                             </TypographyP>
                         </li>
                         <li>
                             <TypographyP className="mt-0 text-[14px]">
-                                <TypographyInlineCode className="bg-gray-100 text-gray-600 font-normal">-10⁹ &lt;= nums[i] &lt;= 10⁹</TypographyInlineCode>
+                                <TypographyP className="bg-gray-100 text-gray-600 font-normal">-10⁹ &lt;= nums[i] &lt;= 10⁹</TypographyP>
                             </TypographyP>
                         </li>
                         <li>
                             <TypographyP className="mt-0 text-[14px]">
-                                <TypographyInlineCode className="bg-gray-100 text-gray-600 font-normal">-10⁹ &lt;= target &lt;= 10⁹</TypographyInlineCode>
+                                <TypographyP className="bg-gray-100 text-gray-600 font-normal">-10⁹ &lt;= target &lt;= 10⁹</TypographyP>
                             </TypographyP>
                         </li>
                         <li className="text-gray-700 text-[14px]">

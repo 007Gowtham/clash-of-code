@@ -29,7 +29,7 @@ export default function RoomCard({ room, onJoin }) {
 
             {/* Icon & Title Row */}
             <div className="flex items-center gap-4 mb-6 w-full">
-                <div className="w-12 h-12 rounded-lg flex items-center justify-center border border-gray-200/60 bg-gradient-to-b from-white to-gray-50 shadow-[0_2px_4px_rgba(0,0,0,0.02),0_1px_0_inset_rgba(255,255,255,1)] shrink-0">
+                <div className="w-12 h-12 rounded-lg flex items-center justify-center border border-slate-200/60 bg-gradient-to-br from-white via-slate-50 to-slate-100 shadow-[0_4px_8px_-2px_rgba(0,0,0,0.05),0_1px_0_inset_rgba(255,255,255,1)] shrink-0">
                     <StatusIcon width={20} height={20} strokeWidth={1.5} className={statusColor} />
                 </div>
                 <h3 className="text-xl font-bold text-slate-900 tracking-tight truncate w-full font-[family-name:var(--font-space)]">
