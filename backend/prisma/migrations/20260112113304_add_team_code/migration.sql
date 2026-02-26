@@ -1,2 +1,0 @@
--- AlterTable
-ALTER TABLE `Team` ADD COLUMN `code` VARCHAR(191) NULL;

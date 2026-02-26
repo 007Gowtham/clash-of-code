@@ -1,13 +1,11 @@
 'use client';
 
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import { useRouter } from 'next/navigation';
 import AuthTabs from '@/components/auth/AuthTabs';
 import Input from '@/components/common/Input';
 import Button from '@/components/common/Button';
 import SocialButton from '@/components/common/SocialButton';
-import { useRegister, useAuth } from '@/lib/api/hooks';
-import API from '@/lib/api/index';
 import { PageTransition } from '@/components/common/PageTransition';
 
 const SignupPage = () => {
@@ -17,16 +15,9 @@ const SignupPage = () => {
     password: '',
   });
   const [errors, setErrors] = useState({});
+  const [loading, setLoading] = useState(false);
 
   const router = useRouter();
-  const { isAuthenticated } = useAuth();
-  const { execute: register, loading } = useRegister();
-
-  useEffect(() => {
-    if (isAuthenticated) {
-      router.push('/room');
-    }
-  }, [isAuthenticated, router]);
 
   const validateForm = () => {
     const newErrors = {};
@@ -55,19 +46,18 @@ const SignupPage = () => {
     return Object.keys(newErrors).length === 0;
   };
 
-  const handleSignup = async (e) => {
+  const handleSignup = (e) => {
     e.preventDefault();
     if (!validateForm()) return;
-
-    try {
-      await register(formData);
-    } catch (error) {
-      console.error('Signup error:', error);
-    }
+    setLoading(true);
+    setTimeout(() => {
+      setLoading(false);
+      router.push('/room');
+    }, 800);
   };
 
   const handleGoogleSignup = () => {
-    API.auth.loginWithGoogle();
+    // Google signup - no backend interaction
   };
 
   return (

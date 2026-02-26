@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 import { useRouter } from 'next/navigation';
@@ -8,24 +8,15 @@ import AuthTabs from '@/components/auth/AuthTabs';
 import Input from '@/components/common/Input';
 import Button from '@/components/common/Button';
 import SocialButton from '@/components/common/SocialButton';
-import { useLogin, useAuth } from '@/lib/api/hooks';
-import API from '@/lib/api/index';
 import { PageTransition } from '@/components/common/PageTransition';
 
 const LoginPage = () => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [errors, setErrors] = useState({});
+  const [loading, setLoading] = useState(false);
 
   const router = useRouter();
-  const { isAuthenticated } = useAuth();
-  const { execute: login, loading } = useLogin();
-
-  useEffect(() => {
-    if (isAuthenticated) {
-      router.push('/room');
-    }
-  }, [isAuthenticated, router]);
 
   const validateForm = () => {
     const newErrors = {};
@@ -44,19 +35,18 @@ const LoginPage = () => {
     return Object.keys(newErrors).length === 0;
   };
 
-  const handleLogin = async (e) => {
+  const handleLogin = (e) => {
     e.preventDefault();
     if (!validateForm()) return;
-
-    try {
-      await login({ email, password });
-    } catch (error) {
-      console.error('Login error:', error);
-    }
+    setLoading(true);
+    setTimeout(() => {
+      setLoading(false);
+      router.push('/room');
+    }, 800);
   };
 
   const handleGoogleLogin = () => {
-    API.auth.loginWithGoogle();
+    // Google login - no backend interaction
   };
 
   return (

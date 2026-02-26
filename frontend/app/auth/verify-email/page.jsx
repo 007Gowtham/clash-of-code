@@ -3,24 +3,20 @@
 import React, { useState, useEffect, Suspense } from 'react';
 import { useRouter, useSearchParams } from 'next/navigation';
 import Button from '@/components/common/Button';
-import { useVerifyEmail, useResendVerification } from '@/lib/api/hooks';
 import { PageTransition } from '@/components/common/PageTransition';
 
 const VerifyEmailContent = () => {
   const [code, setCode] = useState(Array(6).fill(''));
   const [email, setEmail] = useState('');
+  const [loading, setLoading] = useState(false);
+  const [resending, setResending] = useState(false);
   const router = useRouter();
   const searchParams = useSearchParams();
 
-  const { execute: verifyEmail, loading } = useVerifyEmail();
-  const { execute: resendCode, loading: resending } = useResendVerification();
-
   useEffect(() => {
-    // Check URL first
     const emailFromUrl = searchParams.get('email');
     const codeFromUrl = searchParams.get('code');
-
-    const pendingEmail = localStorage.getItem('pendingEmail');
+    const pendingEmail = typeof window !== 'undefined' ? localStorage.getItem('pendingEmail') : null;
     const targetEmail = emailFromUrl || pendingEmail;
 
     if (targetEmail) {
@@ -31,12 +27,8 @@ const VerifyEmailContent = () => {
 
     if (codeFromUrl && codeFromUrl.length === 6) {
       setCode(codeFromUrl.split(''));
-      if (targetEmail) {
-        verifyEmail({ email: targetEmail, code: codeFromUrl });
-      }
     }
-
-  }, [router, searchParams, verifyEmail]);
+  }, [router, searchParams]);
 
   const handleOtpChange = (index, value) => {
     if (!/^\d*$/.test(value)) return;
@@ -57,25 +49,21 @@ const VerifyEmailContent = () => {
     }
   };
 
-  const handleVerify = async (e) => {
+  const handleVerify = (e) => {
     e.preventDefault();
     const otpString = code.join('');
     if (otpString.length !== 6) return;
-
-    try {
-      await verifyEmail({ email, code: otpString });
-    } catch (error) {
-      console.error('Verification error:', error);
-    }
+    setLoading(true);
+    setTimeout(() => {
+      setLoading(false);
+      router.push('/auth/login');
+    }, 800);
   };
 
-  const handleResend = async () => {
+  const handleResend = () => {
     if (!email) return;
-    try {
-      await resendCode(email);
-    } catch (error) {
-      console.error(error);
-    }
+    setResending(true);
+    setTimeout(() => setResending(false), 1500);
   };
 
   return (

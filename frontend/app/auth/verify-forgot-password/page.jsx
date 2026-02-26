@@ -3,25 +3,22 @@
 import React, { useState, Suspense } from 'react';
 import Link from 'next/link';
 import { useSearchParams } from 'next/navigation';
+import { useRouter } from 'next/navigation';
 import Input from '@/components/common/Input';
 import Button from '@/components/common/Button';
-import { useResetPassword } from '@/lib/api/hooks';
-import API from '@/lib/api/index'; // Import API for direct calls
 import { PageTransition } from '@/components/common/PageTransition';
 
 const ResetPasswordContent = () => {
   const searchParams = useSearchParams();
   const tokenFromUrl = searchParams.get('token');
   const emailFromUrl = searchParams.get('email');
+  const router = useRouter();
 
   const [otp, setOtp] = useState(Array(6).fill(''));
   const [newPassword, setNewPassword] = useState('');
   const [confirmPassword, setConfirmPassword] = useState('');
   const [errors, setErrors] = useState({});
-  const [verifying, setVerifying] = useState(false);
-
-  const { execute: resetPassword, loading: resetting } = useResetPassword();
-  const loading = resetting || verifying;
+  const [loading, setLoading] = useState(false);
 
   const handleOtpChange = (index, value) => {
     if (!/^\d*$/.test(value)) return;
@@ -63,47 +60,14 @@ const ResetPasswordContent = () => {
     return Object.keys(newErrors).length === 0;
   };
 
-  const handleReset = async (e) => {
+  const handleReset = (e) => {
     e.preventDefault();
     if (!validateForm()) return;
-
-    try {
-      let finalResetToken = tokenFromUrl;
-
-      // If we don't have a token from URL, we must verify the OTP Code to get one
-      if (!finalResetToken) {
-        if (!emailFromUrl) {
-          setErrors({ submit: 'Email not found. Please restart the password reset process.' });
-          return;
-        }
-
-        setVerifying(true);
-        const otpStr = otp.join('');
-
-        try {
-          const response = await API.auth.verifyResetCode(emailFromUrl, otpStr);
-          if (response.success && response.data.resetToken) {
-            finalResetToken = response.data.resetToken;
-          } else {
-            throw new Error(response.message || 'Invalid verification code');
-          }
-        } catch (err) {
-          setVerifying(false);
-          setErrors({ otp: 'Invalid verification code' });
-          console.error(err);
-          return;
-        }
-        setVerifying(false); // Token retrieved
-      }
-
-      // Now reset the password with the JWT Token
-      await resetPassword({ resetToken: finalResetToken, newPassword });
-
-    } catch (error) {
-      setVerifying(false);
-      console.error(error);
-      setErrors({ ...errors, submit: 'Failed to reset password. Please try again.' });
-    }
+    setLoading(true);
+    setTimeout(() => {
+      setLoading(false);
+      router.push('/auth/login');
+    }, 800);
   };
 
   return (

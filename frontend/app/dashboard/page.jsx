@@ -3,64 +3,65 @@
 import { useState, useEffect } from 'react';
 import { useRouter } from 'next/navigation';
 import Image from 'next/image';
-import { useAuth, useLogout, useCurrentUser } from '@/lib/api/hooks';
-import { useCreateRoom, useJoinRoom, useRooms } from '@/lib/api/hooks';
 import Button from '@/components/common/Button';
 import { Star, Lock } from 'lucide-react';
 import Modal from '@/components/common/Modal';
 import RoomForm from '@/components/room/RoomForm';
 import RoomJoin from '@/components/room/RoomJoin';
 
+// Mock user and rooms data
+const MOCK_USER = {
+    username: 'DemoCoder',
+    email: 'demo@example.com',
+    emailVerified: true,
+    createdAt: new Date().toISOString(),
+};
+
+const MOCK_ROOMS = [
+    { id: '1', name: 'Casual Coding', privacy: 'public', totalParticipants: 3, creator: { username: 'dev_king' }, status: 'WAITING' },
+    { id: '2', name: 'Algorithm Battle', privacy: 'private', totalParticipants: 8, creator: { username: 'algo_master' }, status: 'WAITING' },
+];
+
 export default function DashboardPage() {
     const router = useRouter();
-    const { isAuthenticated, user: cachedUser } = useAuth();
-    const { logout } = useLogout();
-    const { execute: getCurrentUser, data: userData, loading: userLoading } = useCurrentUser();
-    const { data: roomsData, loading: roomsLoading, refetch: refetchRooms } = useRooms({ status: 'WAITING', limit: 6 });
-
     const [mounted, setMounted] = useState(false);
     const [showCreateModal, setShowCreateModal] = useState(false);
     const [showJoinModal, setShowJoinModal] = useState(false);
+    const [rooms, setRooms] = useState(MOCK_ROOMS);
+    const [creatingRoom, setCreatingRoom] = useState(false);
 
-    const { execute: createRoom, loading: creatingRoom } = useCreateRoom();
-
-    const user = userData || cachedUser;
+    const user = MOCK_USER;
 
     useEffect(() => {
         setMounted(true);
     }, []);
 
-    useEffect(() => {
-        if (!mounted) return;
-
-        if (!isAuthenticated) {
-            router.push('/auth/login');
-            return;
-        }
-        getCurrentUser();
-    }, [mounted, isAuthenticated, router, getCurrentUser]);
-
-    const handleCreateRoom = async (formData) => {
-        try {
-            await createRoom(formData);
+    const handleCreateRoom = (formData) => {
+        setCreatingRoom(true);
+        setTimeout(() => {
+            const newRoom = {
+                id: Date.now().toString(),
+                name: formData.roomName || 'New Room',
+                privacy: formData.privacy || 'public',
+                totalParticipants: 1,
+                creator: { username: user.username },
+                status: 'WAITING',
+            };
+            setRooms(prev => [newRoom, ...prev]);
             setShowCreateModal(false);
-            refetchRooms();
-        } catch (error) {
-            console.error('Create room error:', error);
-        }
+            setCreatingRoom(false);
+        }, 800);
     };
 
     const handleJoinSuccess = () => {
         setShowJoinModal(false);
-        refetchRooms();
     };
 
     const handleLogout = () => {
-        logout();
+        router.push('/auth/login');
     };
 
-    // Don't render until mounted to prevent hydration mismatch
-    if (!mounted || userLoading) {
+    if (!mounted) {
         return (
             <div className="min-h-screen bg-gray-50 flex items-center justify-center">
                 <div className="text-center">
@@ -182,13 +183,9 @@ export default function DashboardPage() {
                                 <h3 className="text-xl font-bold text-gray-900">🎮 Available Rooms</h3>
                             </div>
 
-                            {roomsLoading ? (
-                                <div className="text-center py-8">
-                                    <div className="w-8 h-8 border-4 border-gray-900 border-t-transparent rounded-full animate-spin mx-auto"></div>
-                                </div>
-                            ) : roomsData?.rooms?.length > 0 ? (
+                            {rooms.length > 0 ? (
                                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                                    {roomsData.rooms.slice(0, 4).map((room) => (
+                                    {rooms.slice(0, 4).map((room) => (
                                         <RoomCard key={room.id} room={room} />
                                     ))}
                                 </div>
@@ -298,7 +295,7 @@ export default function DashboardPage() {
                 onClose={() => setShowJoinModal(false)}
                 title="Join Room"
             >
-                <RoomJoin onSuccess={handleJoinSuccess} />
+                <RoomJoin onJoin={handleJoinSuccess} />
             </Modal>
         </div>
     );

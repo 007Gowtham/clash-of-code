@@ -2,8 +2,6 @@
 
 import { useEffect, useState } from 'react';
 import { useRouter, useSearchParams } from 'next/navigation';
-import authAPI from '@/lib/api/services/auth';
-import { toast } from 'react-hot-toast';
 
 export default function AuthCallbackPage() {
     const router = useRouter();
@@ -11,39 +9,18 @@ export default function AuthCallbackPage() {
     const [processing, setProcessing] = useState(true);
 
     useEffect(() => {
-        const handleCallback = async () => {
-            const token = searchParams.get('token');
-            const error = searchParams.get('error');
+        const error = searchParams.get('error');
 
-            if (error) {
-                toast.error('Authentication failed: ' + error);
-                router.push('/auth/login');
-                return;
-            }
+        if (error) {
+            router.push('/auth/login');
+            return;
+        }
 
-            if (!token) {
-                toast.error('No authentication token received');
-                router.push('/auth/login');
-                return;
-            }
-
-            try {
-                // Handle Google callback directly with auth service
-                await authAPI.handleGoogleCallback(token);
-
-                toast.success('Successfully logged in with Google');
-                // Redirect to room page as that seems to be the main app area
-                router.push('/room');
-            } catch (err) {
-                console.error('Callback error:', err);
-                toast.error('Failed to complete authentication');
-                router.push('/auth/login');
-            } finally {
-                setProcessing(false);
-            }
-        };
-
-        handleCallback();
+        // Simulate processing and redirect
+        setTimeout(() => {
+            setProcessing(false);
+            router.push('/room');
+        }, 800);
     }, [searchParams, router]);
 
     return (

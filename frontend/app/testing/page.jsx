@@ -1,21 +1,71 @@
 'use client';
 
 import { useState, useEffect } from 'react';
-import { useRouter } from 'next/navigation';
 import Editor from '@monaco-editor/react';
 import { Play, Send, CheckCircle, XCircle, Clock, Database } from 'lucide-react';
-import { toast } from 'react-hot-toast';
 import ErrorDisplay from '@/components/testing/errors/ErrorDisplay';
-import api from '@/lib/api';
+
+// Mock questions data
+const MOCK_QUESTIONS = [
+    {
+        id: 'q1',
+        title: 'Two Sum',
+        difficulty: 'EASY',
+        points: 100,
+        description: 'Given an array of integers nums and an integer target, return indices of the two numbers such that they add up to target.\n\nYou may assume that each input would have exactly one solution, and you may not use the same element twice.',
+        testCases: [
+            { input: 'nums = [2,7,11,15], target = 9', output: '[0,1]', explanation: 'Because nums[0] + nums[1] == 9, we return [0, 1].' },
+            { input: 'nums = [3,2,4], target = 6', output: '[1,2]' },
+        ],
+        constraints: ['2 <= nums.length <= 10^4', '-10^9 <= nums[i] <= 10^9', 'Only one valid answer exists.'],
+        hints: ['A really brute force way would be to search for all possible pairs of numbers...', 'So, if we fix one of the numbers, say x, we have to scan the entire array to find the next number y which is value - x.'],
+        templates: {
+            python: { userFunction: '# Write your solution here\ndef twoSum(nums, target):\n    pass\n' },
+            javascript: { userFunction: '// Write your solution here\nfunction twoSum(nums, target) {\n    \n}\n' },
+            cpp: { userFunction: '#include <vector>\nusing namespace std;\n\nvector<int> twoSum(vector<int>& nums, int target) {\n    // Write your solution here\n}\n' },
+            java: { userFunction: 'class Solution {\n    public int[] twoSum(int[] nums, int target) {\n        // Write your solution here\n    }\n}\n' },
+            c: { userFunction: '#include <stdio.h>\n\nint* twoSum(int* nums, int numsSize, int target, int* returnSize) {\n    // Write your solution here\n}\n' },
+        }
+    },
+    {
+        id: 'q2',
+        title: 'Reverse Linked List',
+        difficulty: 'EASY',
+        points: 150,
+        description: 'Given the head of a singly linked list, reverse the list, and return the reversed list.',
+        testCases: [
+            { input: 'head = [1,2,3,4,5]', output: '[5,4,3,2,1]' },
+            { input: 'head = [1,2]', output: '[2,1]' },
+        ],
+        constraints: ['The number of nodes in the list is the range [0, 5000].', '-5000 <= Node.val <= 5000'],
+        hints: [],
+        templates: {
+            python: { userFunction: '# Write your solution here\nclass Solution:\n    def reverseList(self, head):\n        pass\n' },
+            javascript: { userFunction: '// Write your solution here\nfunction reverseList(head) {\n    \n}\n' },
+        }
+    },
+    {
+        id: 'q3',
+        title: 'Maximum Subarray',
+        difficulty: 'MEDIUM',
+        points: 200,
+        description: 'Given an integer array nums, find the subarray with the largest sum, and return its sum.',
+        testCases: [
+            { input: 'nums = [-2,1,-3,4,-1,2,1,-5,4]', output: '6', explanation: 'The subarray [4,-1,2,1] has the largest sum 6.' },
+        ],
+        constraints: ['1 <= nums.length <= 10^5', '-10^4 <= nums[i] <= 10^4'],
+        hints: ['If you have figured out the O(n) solution, try coding another solution using the divide and conquer approach.'],
+        templates: {
+            python: { userFunction: '# Write your solution here\ndef maxSubArray(nums):\n    pass\n' },
+            javascript: { userFunction: '// Write your solution here\nfunction maxSubArray(nums) {\n    \n}\n' },
+        }
+    }
+];
 
 export default function TestingPage() {
-    const router = useRouter();
-    const [isAuthenticated, setIsAuthenticated] = useState(false);
-    const [loading, setLoading] = useState(true);
-
     // Question state
     const [question, setQuestion] = useState(null);
-    const [questions, setQuestions] = useState([]);
+    const [questions] = useState(MOCK_QUESTIONS);
     const [selectedQuestionId, setSelectedQuestionId] = useState(null);
 
     // Editor state
@@ -27,69 +77,35 @@ export default function TestingPage() {
     const [isSubmitting, setIsSubmitting] = useState(false);
     const [runResult, setRunResult] = useState(null);
     const [submitResult, setSubmitResult] = useState(null);
-    const [activeTab, setActiveTab] = useState('description'); // description, testcases, submissions
+    const [activeTab, setActiveTab] = useState('description');
 
-    // Check authentication
     useEffect(() => {
-        const token = localStorage.getItem('token');
-        if (!token) {
-            router.push('/login');
-            return;
+        if (questions.length > 0) {
+            loadQuestion(questions[0].id);
         }
-        setIsAuthenticated(true);
-        setLoading(false);
-        fetchQuestions();
-    }, [router]);
+        // eslint-disable-next-line react-hooks/exhaustive-deps
+    }, []);
 
-    // Fetch all questions
-    const fetchQuestions = async () => {
-        try {
-            const response = await api.get('/testing/questions');
-            const data = response.data;
-            setQuestions(data.data.questions || []);
-            if (data.data.questions?.length > 0) {
-                loadQuestion(data.data.questions[0].id);
-            }
-        } catch (error) {
-            console.error('Error fetching questions:', error);
-            // Error handled by api.js interceptor
-        }
+    const loadQuestion = (questionId) => {
+        const q = MOCK_QUESTIONS.find(q => q.id === questionId);
+        if (!q) return;
+        setQuestion(q);
+        setSelectedQuestionId(questionId);
+        loadTemplateCode(q, language);
+        setRunResult(null);
+        setSubmitResult(null);
     };
 
-    // Load a specific question
-    const loadQuestion = async (questionId) => {
-        try {
-            const response = await api.get(`/testing/questions/${questionId}`);
-            const data = response.data;
-            setQuestion(data.data);
-            setSelectedQuestionId(questionId);
-
-            // Load template code for current language
-            loadTemplateCode(data.data, language);
-
-            setRunResult(null);
-            setSubmitResult(null);
-        } catch (error) {
-            console.error('Error loading question:', error);
-            // Error handled by api.js interceptor
-        }
-    };
-
-    // Load template code from question templates
     const loadTemplateCode = (questionData, lang) => {
         if (!questionData) return;
-
         const template = questionData.templates?.[lang];
         if (template && template.userFunction) {
-            // Use the userFunction from templates
             setCode(template.userFunction);
         } else {
-            // Fallback to empty template if no userFunction found
             setCode(getDefaultCode(lang));
         }
     };
 
-    // Fallback default code templates (used only if templates not available)
     const getDefaultCode = (lang) => {
         const templates = {
             python: '# Write your solution here\ndef solution():\n    pass\n\n',
@@ -101,79 +117,44 @@ export default function TestingPage() {
         return templates[lang] || '';
     };
 
-    // Run code
-    const handleRun = async () => {
-        if (!question) {
-            toast.error('Please select a question first');
-            return;
-        }
-
+    const handleRun = () => {
+        if (!question) return;
         setIsRunning(true);
         setRunResult(null);
-
-        try {
-            const response = await api.post(`/testing/run/${question.id}`, {
-                code,
-                language
+        setTimeout(() => {
+            setRunResult({
+                verdict: 'ACCEPTED',
+                testsPassed: question.testCases.length,
+                totalTests: question.testCases.length,
+                results: question.testCases.map((tc, i) => ({
+                    status: 'PASSED',
+                    input: tc.input,
+                    expectedOutput: tc.output,
+                    actualOutput: tc.output,
+                    executionTime: Math.random() * 50 + 5,
+                    memory: Math.random() * 5 + 1,
+                }))
             });
-
-            const data = response.data;
-            setRunResult(data.data);
-            toast.success(`${data.data.testsPassed}/${data.data.totalTests} test cases passed`);
-        } catch (error) {
-            console.error('Run error:', error);
-            // Error handled by api.js
-        } finally {
             setIsRunning(false);
-        }
+        }, 1200);
     };
 
-    // Submit code
-    const handleSubmit = async () => {
-        if (!question) {
-            toast.error('Please select a question first');
-            return;
-        }
-
+    const handleSubmit = () => {
+        if (!question) return;
         setIsSubmitting(true);
         setSubmitResult(null);
-
-        try {
-            const response = await api.post(`/testing/submit/${question.id}`, {
-                code,
-                language
+        setTimeout(() => {
+            setSubmitResult({
+                verdict: 'ACCEPTED',
+                testsPassed: question.testCases.length,
+                totalTests: question.testCases.length,
+                executionTime: Math.random() * 50 + 5,
+                memory: Math.random() * 5 + 1,
+                points: question.points,
             });
-
-            const data = response.data;
-            setSubmitResult(data.data);
-
-            if (data.data.verdict === 'ACCEPTED') {
-                toast.success(`🎉 Accepted! Runtime: ${data.data.executionTime?.toFixed(2)}ms`);
-            } else {
-                toast.error(`${data.data.verdict}`);
-            }
-        } catch (error) {
-            console.error('Submit error:', error);
-            // Error handled by api.js
-        } finally {
             setIsSubmitting(false);
-        }
+        }, 1500);
     };
-
-    if (loading) {
-        return (
-            <div className="min-h-screen flex items-center justify-center bg-gray-50">
-                <div className="text-center">
-                    <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-blue-600 mx-auto"></div>
-                    <p className="mt-4 text-gray-600">Loading...</p>
-                </div>
-            </div>
-        );
-    }
-
-    if (!isAuthenticated) {
-        return null;
-    }
 
     return (
         <div className="min-h-screen bg-gray-50">

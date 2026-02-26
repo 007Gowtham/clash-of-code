@@ -3,29 +3,24 @@
 import React, { useState } from 'react';
 import Link from 'next/link';
 import { useRouter } from 'next/navigation';
-import { motion } from 'framer-motion';
 import { ArrowLeft, Mail } from 'lucide-react';
 import Input from '@/components/common/Input';
 import Button from '@/components/common/Button';
-import { useForgotPassword } from '@/lib/api/hooks';
 import { PageTransition } from '@/components/common/PageTransition';
 
 const ForgotPasswordPage = () => {
     const [email, setEmail] = useState('');
-    const { execute, loading } = useForgotPassword();
+    const [loading, setLoading] = useState(false);
     const router = useRouter();
 
-    const handleSubmit = async (e) => {
+    const handleSubmit = (e) => {
         e.preventDefault();
         if (!email) return;
-
-        try {
-            await execute({ email });
-            // Redirect to verification page with email pre-filled
+        setLoading(true);
+        setTimeout(() => {
+            setLoading(false);
             router.push(`/auth/verify-forgot-password?email=${encodeURIComponent(email)}`);
-        } catch (err) {
-            console.error('Forgot password error:', err);
-        }
+        }, 800);
     };
 
     return (
